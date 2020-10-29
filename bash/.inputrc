@@ -1,0 +1,20 @@
+# Make Tab autocomplete regardless of filename case
+ set completion-ignore-case on
+
+# List all matches in case multiple possible completions are possible
+ set show-all-if-ambiguous on
+
+# Immediately add a trailing slash when autocompleting symlinks to directories
+ set mark-symlinked-directories on
+
+# Merge already written word with tab-completed one , e.g.
+# mozla <tab> -> mozilla instead of mozillala
+ set skip-completed-text on
+
+set editing-mode vi
+$if mode=vi
+	set keymap vi-command
+	Control-l:clear-screen
+	set keymap vi-insert
+	Control-l:clear-screen
+$endif

@@ -1,0 +1,46 @@
+direnv_layout_dir() {
+  echo "${direnv_layout_dir:-$PWD/.direnv}"
+}
+
+lay_custom_python(){
+  local old_env
+  local python=${1:-python}
+  [[ $# -gt 0 ]] && shift
+  old_env=$(direnv_layout_dir)/virtualenv
+  unset PYTHONHOME
+  if [[ -d $old_env && $python == python ]]; then
+    VIRTUAL_ENV=$old_env
+  else
+    local python_version ve
+    # shellcheck disable=SC2046
+    read -r python_version ve <<<`python3 -c "import pkgutil as u, platform as p;ve='venv' if u.find_loader('venv') else ('virtualenv' if u.find_loader('virtualenv') else '');print(p.python_version()+' '+ve)"`
+    if [[ -z $python_version ]]; then
+      log_error "Could not find python's version"
+      return 1
+    fi
+
+    VIRTUAL_ENV=$(direnv_layout_dir)/python-$python_version
+    case $ve in
+      "venv")
+        if [[ ! -d $VIRTUAL_ENV ]]; then
+          `python3 -m venv "$@" "$VIRTUAL_ENV"`
+        fi
+        ;;
+      "virtualenv")
+        if [[ ! -d $VIRTUAL_ENV ]]; then
+          $python -m virtualenv "$@" "$VIRTUAL_ENV"
+        fi
+        ;;
+      *)
+        log_error "Error: neither venv nor virtualenv are available."
+        return 1
+        ;;
+    esac
+  fi
+  export VIRTUAL_ENV
+  PATH_add "$VIRTUAL_ENV/bin"
+}
+
+custom_python3(){
+  lay_custom_python python3 "$@"
+}
