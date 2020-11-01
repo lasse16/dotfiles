@@ -1,12 +1,13 @@
 #/bin/sh
 # Write a script that allows for shortcut calls ala 'config vim' to open .vimrc in favourite editor
-DOTFILE_FOLDER=$HOME/dotfiles
+DOTFILE_FOLDER="$HOME/dotfiles"
 config ()
 {
 	if  [[ $1 ]]
 	then 	
 		local config_folder=$1
 		local config_file=".$1rc"
+		echo "$DOTFILE_FOLDER"
 		if [[ $2 ]] 
 		then
 			config_file=$2

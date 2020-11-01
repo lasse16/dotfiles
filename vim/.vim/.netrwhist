@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/lasse/.vim/plugged'
 let g:netrw_dirhist_2='/mnt/c/Users/Lasse/source/repos/test_project/.direnv'
 let g:netrw_dirhist_3='/mnt/c/Users/Lasse/source/repos/crowd/.git'
 let g:netrw_dirhist_4='/home/lasse/dotfiles/.git'
+let g:netrw_dirhist_5='/home/lasse/dotfiles/direnv/.config'
+let g:netrw_dirhist_6='/mnt/c/Users/Lasse/source/repos/test_project/.direnv'

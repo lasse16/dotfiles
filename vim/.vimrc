@@ -4,15 +4,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'tmhedberg/simpylfold'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'	
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-commentary'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+Plug 'wellle/targets.vim'
+Plug 'rhysd/clever-f.vim'
 Plug 'dense-analysis/ale'
-Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " Call plugin configurations from different files
@@ -40,6 +39,10 @@ highlight LineNr ctermfg=darkGrey cterm=italic term=italic
 
 " Disable line wrapping
 set nowrap
+
+" Disable the .viminfo file, it would normally store the commands and buffers
+" used in vim
+set viminfo=""
 
 " This enables relative line numbering mode. With both number and
 " relativenumber enabled, the current line shows the true line number, while

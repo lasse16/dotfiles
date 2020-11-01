@@ -3,3 +3,4 @@ stow -D direnv/
 stow -D git/
 stow -D tmux/
 stow -D vim/
+exec bash

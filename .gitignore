@@ -1,2 +1,2 @@
 vim/.vim/plugged
-direnv/.config/direnv/allow
+direnv/.local/share/direnv/allow

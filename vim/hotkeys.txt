@@ -1,0 +1,6 @@
+This is a quick summary of some plugins hotkeys, I'm unfamiliar with.
+Instead of forgetting them, I use this document to write them down:
+	tpope/commentary: https://github.com/tpope/vim-commentary
+		- [Visual] gc  -- Toggle comment 
+		- gcc          -- Toggle line comment
+		- gc {motion}  -- Toggle comment

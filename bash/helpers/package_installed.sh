@@ -1,4 +1,5 @@
 #!/bin/bash
+#TODO this is not working
 package_installed()
 {
 	echo "$1";

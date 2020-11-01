@@ -1,4 +1,0 @@
-TODO:
-Create a quick command which opens vim for path copied in the windows explorer.
-	Basically runnning wslpath before opening vim.
-	$vim "`wslpath "$1"`"
