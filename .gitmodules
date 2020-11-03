@@ -1,0 +1,33 @@
+[submodule "vim/.vim/plugged/ale"]
+	path = vim/.vim/plugged/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "vim/.vim/plugged/clever-f.vim"]
+	path = vim/.vim/plugged/clever-f.vim
+	url = https://github.com/rhysd/clever-f.vim.git
+[submodule "vim/.vim/plugged/colorizer"]
+	path = vim/.vim/plugged/colorizer
+	url = https://github.com/lilydjwg/colorizer.git
+[submodule "vim/.vim/plugged/targets.vim"]
+	path = vim/.vim/plugged/targets.vim
+	url = https://github.com/wellle/targets.vim.git
+[submodule "vim/.vim/plugged/ultisnips"]
+	path = vim/.vim/plugged/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/.vim/plugged/vim-airline"]
+	path = vim/.vim/plugged/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/.vim/plugged/vim-commentary"]
+	path = vim/.vim/plugged/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/.vim/plugged/vim-fugitive"]
+	path = vim/.vim/plugged/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/.vim/plugged/vim-polyglot"]
+	path = vim/.vim/plugged/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/.vim/plugged/vim-snippets"]
+	path = vim/.vim/plugged/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/.vim/plugged/vim-surround"]
+	path = vim/.vim/plugged/vim-surround
+	url = https://github.com/tpope/vim-surround.git

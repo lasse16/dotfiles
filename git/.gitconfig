@@ -10,7 +10,7 @@
 	unstage = reset HEAD --
 	co = checkout
 	br = branch
-	cm = "commit -m "
+	cm = commit -m
 	unstageall = reset --soft HEAD^
 	lp = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate
 	listaliases = !git config -l | grep alias | cut -c 7-
