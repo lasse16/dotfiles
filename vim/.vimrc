@@ -19,6 +19,8 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'lighttiger2505/deoplete-vim-lsp'
 call plug#end()
 
+let g:deoplete#enable_at_startup = 1
+
 " Call plugin configurations from different files
 runtime plugged/plugins.vim
 
