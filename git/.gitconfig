@@ -10,7 +10,7 @@
 	unstage = reset HEAD --
 	co = checkout
 	br = branch
-	cm = "commit -m "
+	cm = commit -m
 	unstageall = reset --soft HEAD^
 	lp = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate
 	listaliases = !git config -l | grep alias | cut -c 7-
@@ -24,6 +24,7 @@
 	mt = mergetool
 	cleanup-branches = "branch -vv | grep ': gone]'|  grep -v * | awk '{ print ; }' | xargs -r git branch -d"
 	fuck-up = reset HEAD --hard
+	root = "rev-parse --show-toplevel"
 [merge]
     tool = vimdiff3
 [mergetool "vscode"]
