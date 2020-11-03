@@ -40,3 +40,9 @@
 [submodule "vim/.vim/plugged/vim-hug-neovim-rpc"]
 	path = vim/.vim/plugged/vim-hug-neovim-rpc
 	url = https://github.com/roxma/vim-hug-neovim-rpc.git
+[submodule "vim/.vim/plugged/deoplete-vim-lsp"]
+	path = vim/.vim/plugged/deoplete-vim-lsp
+	url = https://github.com/lighttiger2505/deoplete-vim-lsp.git
+[submodule "vim/.vim/plugged/vim-lsp"]
+	path = vim/.vim/plugged/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
