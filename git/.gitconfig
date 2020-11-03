@@ -3,6 +3,7 @@
 	email = 5haffke@informatik.uni-hamburg.de
 [alias]
 	pullall = !git pull && git submodule update --init --recursive
+	push = push -u
 	st = status
 	unstage = reset HEAD --
 	co = checkout
@@ -22,11 +23,11 @@
 	cleanup-branches = "branch -vv | grep ': gone]'|  grep -v * | awk '{ print ; }' | xargs -r git branch -d"
 	fuck-up = reset HEAD --hard
 [merge]
-    tool = vscode
+    tool = vimdiff3
 [mergetool "vscode"]
     cmd = code --wait $MERGED
 [diff]
-    tool = vscode
+    tool = vimdiff3
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [push]
