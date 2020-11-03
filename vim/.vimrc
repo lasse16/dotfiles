@@ -12,6 +12,11 @@ Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'rhysd/clever-f.vim'
 Plug 'dense-analysis/ale'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'lighttiger2505/deoplete-vim-lsp'
 call plug#end()
 
 " Call plugin configurations from different files
