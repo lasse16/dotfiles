@@ -1,6 +1,8 @@
 [user]
 	name = Lasse Haffke
 	email = 5haffke@informatik.uni-hamburg.de
+[init]
+	defaultBranch = main
 [alias]
 	pullall = !git pull && git submodule update --init --recursive
 	push = push -u
