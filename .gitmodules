@@ -31,3 +31,12 @@
 [submodule "vim/.vim/plugged/vim-surround"]
 	path = vim/.vim/plugged/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/.vim/plugged/deoplete.nvim"]
+	path = vim/.vim/plugged/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "vim/.vim/plugged/nvim-yarp"]
+	path = vim/.vim/plugged/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp.git
+[submodule "vim/.vim/plugged/vim-hug-neovim-rpc"]
+	path = vim/.vim/plugged/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc.git
