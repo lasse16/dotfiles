@@ -24,7 +24,6 @@
 	mt = mergetool
 	cleanup-branches = "branch -vv | grep ': gone]'|  grep -v * | awk '{ print ; }' | xargs -r git branch -d"
 	fuck-up = reset HEAD --hard
-	root = "rev-parse --show-toplevel"
 [merge]
     tool = vimdiff3
 [mergetool "vscode"]
