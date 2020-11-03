@@ -16,5 +16,6 @@ stow_bash
 stow direnv
 stow tmux
 stow vim
+#TODO vim :PlugInstall/PlugUpdate and install pynvim so deoplete runs
 source "$dotfile_directory/config_helper.sh"
 exec bash
