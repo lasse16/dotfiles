@@ -20,6 +20,8 @@ Plug 'lighttiger2505/deoplete-vim-lsp'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
+# Disable diagnostics via language server as these are handled by ALE
+let g:lsp_diagnostics_enabled = 0
 
 " Call plugin configurations from different files
 runtime plugged/plugins.vim
