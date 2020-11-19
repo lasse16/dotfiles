@@ -31,6 +31,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+
+    # Change the background color for writable and sticky directories
+    # Currently green and nord theme are working together to make it unreadable
+    LS_COLORS="${LS_COLORS}tw=30:ow=34:"
+    export LS_COLORS
 fi
 
 # Alias definitions.
