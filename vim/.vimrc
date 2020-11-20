@@ -23,6 +23,20 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 " Disable diagnostics via language server as these are handled by ALE
 let g:lsp_diagnostics_enabled = 0
+" Unbind this as per default it is bound to <Tab> which conflicts with auto
+" completion
+let g:UltiSnipsExpandTrigger = '<Nop>'
+
+call deoplete#custom#option({
+\ 'auto_complete_popup': 'auto',
+\ 'smart_case': v:true,
+\ 'auto_complete': 1,
+\ })
+
+imap <expr> <TAB> pumvisible() ? "\<C-n>" : deoplete#manual_complete()
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+inoremap <expr> <Enter> pumvisible() ? "\<C-y>" : "\<Enter>"
+inoremap <expr> <ESC> pumvisible() ? "\<C-e>" : "\<ESC>"
 
 " Call plugin configurations from different files
 runtime plugged/plugins.vim
