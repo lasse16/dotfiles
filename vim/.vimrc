@@ -21,12 +21,11 @@ Plug 'mattn/vim-lsp-settings'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
-# Disable diagnostics via language server as these are handled by ALE
+" Disable diagnostics via language server as these are handled by ALE
 let g:lsp_diagnostics_enabled = 0
 
 " Call plugin configurations from different files
 runtime plugged/plugins.vim
-
 
 " Vi-compatibility mode and enables useful Vim functionality. This
 " configuration option turns out not to be necessary for the file named
