@@ -27,6 +27,10 @@ let g:lsp_diagnostics_enabled = 0
 " completion
 let g:UltiSnipsExpandTrigger = '<Nop>'
 
+" Disable the preview window opening at the top of the screen when using the
+" completion
+set completeopt-=preview
+
 call deoplete#custom#option({
 \ 'auto_complete_popup': 'auto',
 \ 'smart_case': v:true,
