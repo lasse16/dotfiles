@@ -22,3 +22,5 @@ runtime **/config.vim
 
 "|g:ale_fix_on_save| - Fix files when they are saved.
 
+"LET ALE USE THE FIXERS/LINTERS DEFINED IN THE LSP_VENV in
+"~/.local/share/vim-lsp-settings/servers
