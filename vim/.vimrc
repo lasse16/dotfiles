@@ -17,6 +17,7 @@ Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'lighttiger2505/deoplete-vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
