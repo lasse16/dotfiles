@@ -35,6 +35,14 @@ call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 " completion
 set completeopt-=preview
 
+" These are currently not working for whatever reason
+" nnoremap <A-j> :m .+1<CR>==
+" nnoremap <A-k> :m .-2<CR>==
+" inoremap <A-j> <Esc>:m .+1<CR>==gi
+" inoremap <A-k> <Esc>:m .-2<CR>==gi
+" vnoremap <A-j> :m '>+1<CR>gv=gv
+" vnoremap <A-k> :m '<-2<CR>gv=gv
+
 call deoplete#custom#option({
 \ 'auto_complete_popup': 'auto',
 \ 'smart_case': v:true,
