@@ -27,6 +27,10 @@ let g:lsp_diagnostics_enabled = 0
 " completion
 let g:UltiSnipsExpandTrigger = '<Nop>'
 
+" Look for snippets via fuzzy matching, so short snippets are no longer
+" ignored
+call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+
 " Disable the preview window opening at the top of the screen when using the
 " completion
 set completeopt-=preview
@@ -37,7 +41,29 @@ call deoplete#custom#option({
 \ 'auto_complete': 1,
 \ })
 
-imap <expr> <TAB> pumvisible() ? "\<C-n>" : deoplete#manual_complete()
+" Shamelessly stolen from https://stackoverflow.com/a/61275100
+function! HandleTab() abort
+	" Then, check if we're in a completion menu
+	if pumvisible()
+		return "\<C-n>"
+	endif
+	" First, try to expand or jump on UltiSnips.
+	call UltiSnips#ExpandSnippetOrJump()
+	if g:ulti_expand_or_jump_res > 0
+		return ""
+	endif
+	" Then check if we're indenting.
+	let col = col('.') - 1
+	if !col || getline('.')[col - 1] =~ '\s'
+		return "\<Tab>"
+	endif
+	" Finally, trigger deoplete
+	" completion.
+	return
+	deoplete#manual_complete()
+endfunction
+
+inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 inoremap <expr> <Enter> pumvisible() ? "\<C-y>" : "\<Enter>"
 inoremap <expr> <ESC> pumvisible() ? "\<C-e>" : "\<ESC>"
