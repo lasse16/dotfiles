@@ -95,5 +95,6 @@ fi
 
 export EDITOR=vim
 
+export PATH=$PATH:~/.platformio/penv/bin
 # Hook up direnv to
 eval "$(direnv hook bash)"
