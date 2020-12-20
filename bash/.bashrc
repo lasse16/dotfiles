@@ -94,7 +94,8 @@ if [ -f ./wsl_enabled.sh ] && source ./wsl_enabled.sh && is_wsl; then
 fi
 
 export EDITOR=vim
-
 export PATH=$PATH:~/.platformio/penv/bin
+export DOTFILES="$HOME/dotfiles"
+
 # Hook up direnv to
 eval "$(direnv hook bash)"
