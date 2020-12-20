@@ -49,3 +49,9 @@
 [submodule "vim/.vim/plugged/vim-lsp-settings"]
 	path = vim/.vim/plugged/vim-lsp-settings
 	url = https://github.com/mattn/vim-lsp-settings.git
+[submodule "/home/lasse/dotfiles/vim/.vim/plugged/fzf.vim"]
+	path = /home/lasse/dotfiles/vim/.vim/plugged/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "/home/lasse/dotfiles/vim/.vim/plugged/fzf"]
+	path = /home/lasse/dotfiles/vim/.vim/plugged/fzf
+	url = https://github.com/junegunn/fzf.git
