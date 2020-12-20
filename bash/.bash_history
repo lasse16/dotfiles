@@ -2317,3 +2317,172 @@ cat bin_2/accuracy
 cat bin_255/accuracy 
 cd ..
 ll
+cd $DOTFILES
+git st
+git add bash/.bashrc 
+git c
+git fuck-up 
+ll
+git st
+git log
+git push
+apt-cache show fzf
+vim /usr/share/doc/fzf/README.Debian 
+cd $_
+cd /usr/share/doc/fzf/
+ll
+cd examples/
+ll
+cd plugin/
+l
+ll
+vim fzf.vim 
+cd ..
+ll
+vim key-bindings.bash 
+l
+vim fzf.vim 
+ll
+man mv
+mkdir fzf
+mkdir \$DOTFILES/bash/fzf
+mkdir "$DOTFILES/bash/fzf"
+mv -t $_ key-bindings.bash fzf.vim 
+echo $_
+mv -t "$DOTFILES/bash/fzf" key-bindings.bash fzf.vim 
+sudo mv -t "$DOTFILES/bash/fzf" key-bindings.bash fzf.vim 
+cp -t "$DOTFILES/bash/fzf" key-bindings.bash fzf.vim 
+cd $DOTFILES
+ll
+cd bahs
+cd bash/
+ll
+cd fzf/
+l
+mv fzf.vim ../../vim/.vim/plugged/
+ll
+cd ..
+ll
+vim .bashrc 
+exec bash
+`__fzf_cd__`
+git st
+git add fzf/
+git add .bashrc 
+git c
+git st
+cd ..
+cd vim/
+l
+ll
+vim .vimrc 
+ll
+find .
+find . | fzf
+ll
+find . | fzf
+`__fzf_cd__`
+cd `fzf`
+find . | cd `fzf`
+cd dotfiles/vim/
+l
+lll
+ll
+cd .vim/
+fzf
+cd *fzf
+cd **
+cd plugged 
+ll
+rm fzf.vim 
+cd fzf/
+ll
+dc plugin/
+cd plugin/
+ll
+:q
+cd ..
+ll
+cd ..
+ll
+cd ..
+cd bash/
+vim .bashrc 
+cd ..
+cd vim/
+vim .vimrc 
+ll
+apt remove fzf
+sudo  apt remove fzf
+ll
+cd .vim/
+cd plugged/
+ll
+cd fzf
+ll
+vim BUILD.md 
+vim CHANGELOG.md 
+./install 
+exec bash
+cd ..
+git st
+cd $DOTFILES
+öö
+ll
+cd bash/
+ll
+git st
+git diff .bashrc
+vim .bashrc 
+ll
+rm -rf fzf/
+git st
+git ls-files -m
+git ls-files
+cd ..
+ll
+git ls
+git ls-files
+git ls-files -m
+ll
+git st
+git add bash/.bashrc 
+git diff `git ls-files -m | fzf`
+git add `git ls-files -m | fzf`
+git st
+cd bash/
+ll
+fzf
+cd one-time-scripts/
+ll
+vim git_remote_url_getter.sh 
+./git_remote_url_getter.sh `git ls-files --untracked |fzf`
+git st
+find $DOTFILES | fzf |xargs git add
+git rm --cached vim/.vim/plugged/fzf
+git rm --cached ../../vim/.vim/plugged/fzf
+git st
+git rm --cached ../../vim/.vim/plugged/fzf -f
+git st
+./git_remote_url_getter.sh `find $DOTFILES | fzf`
+ll
+vim  git_remote_url_getter.sh 
+find / | fzf
+find / | fzf | cd
+find / | fzf
+vim submodule_adder.sh 
+vim submodule_adder.sh `find / | fzf`
+./submodule_adder.sh `find / | fzf`
+ll
+rm -rf vim/
+vim submodule_adder.sh 
+find / | fzf > selected.txt
+ll
+vim selected.txt 
+cat selected.txt > vim -o
+cat selected.txt > vim
+vim < selected.txt 
+cat selected.txt 
+cat selected.txt | vim 
+
+cat selected.txt |xargs vim
