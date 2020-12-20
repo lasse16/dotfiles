@@ -93,6 +93,10 @@ if [ -f ./wsl_enabled.sh ] && source ./wsl_enabled.sh && is_wsl; then
 	echo "WSL"
 fi
 
+if [[ -f "$DOTFILES/bash/fzf/key-bindings.bash" ]]; then
+  source "$DOTFILES/bash/fzf/key-bindings.bash"
+fi
+
 export EDITOR=vim
 export PATH=$PATH:~/.platformio/penv/bin
 export DOTFILES="$HOME/dotfiles"
