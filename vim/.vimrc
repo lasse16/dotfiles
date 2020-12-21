@@ -1,6 +1,7 @@
 " Comments in Vimscript start with a `"`.
 
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -36,6 +37,9 @@ call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 " Disable the preview window opening at the top of the screen when using the
 " completion
 set completeopt-=preview
+
+" Align visual selection
+xmap ga <Plug>(EasyAlign)
 
 " These are currently not working for whatever reason
 " nnoremap <A-j> :m .+1<CR>==

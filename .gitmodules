@@ -55,3 +55,6 @@
 [submodule "/home/lasse/dotfiles/vim/.vim/plugged/fzf"]
 	path = /home/lasse/dotfiles/vim/.vim/plugged/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "vim/.vim/plugged/vim-easy-align"]
+	path = vim/.vim/plugged/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
