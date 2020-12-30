@@ -27,6 +27,9 @@ call plug#end()
 let g:ale_sign_warning ='🞄'
 let g:ale_sign_error ='⬤'
 
+" Start scolling before the cursor reaches top or bottom line
+set scrolloff=5
+
 let g:deoplete#enable_at_startup = 1
 " Disable diagnostics via language server as these are handled by ALE
 let g:lsp_diagnostics_enabled = 0
