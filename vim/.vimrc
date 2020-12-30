@@ -23,6 +23,10 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
+" Change ALEs display symbols
+let g:ale_sign_warning ='🞄'
+let g:ale_sign_error ='⬤'
+
 let g:deoplete#enable_at_startup = 1
 " Disable diagnostics via language server as these are handled by ALE
 let g:lsp_diagnostics_enabled = 0
