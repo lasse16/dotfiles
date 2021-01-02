@@ -21,6 +21,7 @@ Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 " Change ALEs display symbols
