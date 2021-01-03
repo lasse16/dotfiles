@@ -101,3 +101,4 @@ export DOTFILES="$HOME/dotfiles"
 eval "$(direnv hook bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source "/home/lasse/rust/.cargo/env"
