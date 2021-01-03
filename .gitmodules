@@ -61,3 +61,6 @@
 [submodule "vim/.vim/plugged/vim-highlightedyank"]
 	path = vim/.vim/plugged/vim-highlightedyank
 	url = https://github.com/machakann/vim-highlightedyank.git
+[submodule "vim/.vim/plugged/vimspector"]
+	path = vim/.vim/plugged/vimspector
+	url = https://github.com/puremourning/vimspector.git
