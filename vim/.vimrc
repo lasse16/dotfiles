@@ -1,4 +1,4 @@
-" Comments in Vimscript start with a `"`.
+
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
@@ -32,7 +32,7 @@ let g:ale_sign_error ='⬤'
 " Set ALE to use the language server rust-analyzer for linting
 " TODO once there is better integration between vim-lsp and ALE
 " Maybe ALE does not need to know the direct path to the executable
-let g:ale_rust_analyzer_executable='/home/lasse/.local/share/vim-lsp-settings/servers/rust-analyzer/rust-analyzer' 
+let g:ale_rust_analyzer_executable='/home/lasse/.local/share/vim-lsp-settings/servers/rust-analyzer/rust-analyzer'
 
  let g:ale_fixers = {
 			 \ '*': ['remove_trailing_lines', 'trim_whitespace']
@@ -101,6 +101,9 @@ inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 inoremap <expr> <Enter> pumvisible() ? "\<C-y>" : "\<Enter>"
 inoremap <expr> <ESC> pumvisible() ? "\<C-e>" : "\<ESC>"
+
+" Map <Ctrl-S> to saving the current open document
+noremap <C-s> <ESC>:w<CR>
 
 " Call plugin configurations from different files
 runtime plugged/plugins.vim
