@@ -11,11 +11,7 @@ Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'rhysd/clever-f.vim'
 Plug 'dense-analysis/ale'
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -41,16 +37,9 @@ let g:ale_rust_analyzer_executable='/home/lasse/.local/share/vim-lsp-settings/se
 " Start scolling before the cursor reaches top or bottom line
 set scrolloff=5
 
-let g:deoplete#enable_at_startup = 1
-" Disable diagnostics via language server as these are handled by ALE
-let g:lsp_diagnostics_enabled = 0
 " Unbind this as per default it is bound to <Tab> which conflicts with auto
 " completion
 let g:UltiSnipsExpandTrigger = '<Nop>'
-
-" Look for snippets via fuzzy matching, so short snippets are no longer
-" ignored
-call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 
 " Disable the preview window opening at the top of the screen when using the
 " completion
@@ -66,12 +55,6 @@ xmap ga <Plug>(EasyAlign)
 " inoremap <A-k> <Esc>:m .-2<CR>==gi
 " vnoremap <A-j> :m '>+1<CR>gv=gv
 " vnoremap <A-k> :m '<-2<CR>gv=gv
-
-call deoplete#custom#option({
-\ 'auto_complete_popup': 'auto',
-\ 'smart_case': v:true,
-\ 'auto_complete': 1,
-\ })
 
 " Shamelessly stolen from https://stackoverflow.com/a/61275100
 function! HandleTab() abort
@@ -89,10 +72,8 @@ function! HandleTab() abort
 	if !col || getline('.')[col - 1] =~ '\s'
 		return "\<Tab>"
 	endif
-	" Finally, trigger deoplete
-	" completion.
+	"TODO Trigger  completion here
 	return
-	deoplete#manual_complete()
 endfunction
 
 inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
