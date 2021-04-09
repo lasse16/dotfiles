@@ -30,6 +30,9 @@ let g:ale_sign_error ='⬤'
 " Start scolling before the cursor reaches top or bottom line
 set scrolloff=5
 
+" Provide an extra window for completion in command mode
+set wildmenu
+
 " Unbind this as per default it is bound to <Tab> which conflicts with auto
 " completion
 let g:UltiSnipsExpandTrigger = '<Nop>'
