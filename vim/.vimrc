@@ -44,13 +44,15 @@ set completeopt-=preview
 " Align visual selection
 xmap ga <Plug>(EasyAlign)
 
-" These are currently not working for whatever reason
-" nnoremap <A-j> :m .+1<CR>==
-" nnoremap <A-k> :m .-2<CR>==
-" inoremap <A-j> <Esc>:m .+1<CR>==gi
-" inoremap <A-k> <Esc>:m .-2<CR>==gi
-" vnoremap <A-j> :m '>+1<CR>gv=gv
-" vnoremap <A-k> :m '<-2<CR>gv=gv
+" Update termcaps sent by Alt-key
+execute "set <A-j>=\ej"
+execute "set <A-k>=\ek"
+
+" Move lines up and down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-k> :m '<-2<CR>gv=gv
+vnoremap <A-j> :m '>+1<CR>gv=gv
 
 " Shamelessly stolen from https://stackoverflow.com/a/61275100
 function! HandleTab() abort
