@@ -11,8 +11,6 @@ Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'rhysd/clever-f.vim'
 Plug 'dense-analysis/ale'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-highlightedyank'
@@ -22,11 +20,6 @@ call plug#end()
 " Change ALEs display symbols
 let g:ale_sign_warning ='🞄'
 let g:ale_sign_error ='⬤'
-
-" Set ALE to use the language server rust-analyzer for linting
-" TODO once there is better integration between vim-lsp and ALE
-" Maybe ALE does not need to know the direct path to the executable
-let g:ale_rust_analyzer_executable='/home/lasse/.local/share/vim-lsp-settings/servers/rust-analyzer/rust-analyzer'
 
  let g:ale_fixers = {
 			 \ '*': ['remove_trailing_lines', 'trim_whitespace']
