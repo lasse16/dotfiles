@@ -61,8 +61,8 @@ fi
 
 # Start SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
-if [ -f "$HOME/helpers/ssh_agent.sh" ] ; then 
-	source $HOME/helpers/ssh_agent.sh 
+if [ -f "$HOME/helpers/ssh_agent.sh" ] ; then
+	source $HOME/helpers/ssh_agent.sh
 	if [ -f "${SSH_ENV}" ]; then
   		run_ssh_env;
 		ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
@@ -94,7 +94,7 @@ if [ -f ./wsl_enabled.sh ] && source ./wsl_enabled.sh && is_wsl; then
 fi
 
 export EDITOR=vim
-export PATH=$PATH:~/.platformio/penv/bin
+export PATH=$PATH:~/.local/share/lsp-servers
 export DOTFILES="$HOME/dotfiles"
 
 # Hook up direnv to

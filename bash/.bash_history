@@ -2486,3 +2486,232 @@ cat selected.txt
 cat selected.txt | vim 
 
 cat selected.txt |xargs vim
+cd Downloads/
+cp ll
+ll
+mv rust-analyzer-linux ~/.local/share/lsp-servers/
+cd
+ll
+cd dotfiles/
+ll
+cd bash/
+ll
+vim .bashrc 
+source .bash
+source .bashrc 
+path
+man rust-analyzer
+which rust-analyzer 
+git br
+git br -a
+cd
+ll
+cd dotfiles/
+ll
+git st
+git diff vim .vimr
+git diff vim/.vimrc
+git br
+git br -a
+git st
+git log
+ll
+git st
+git fuck-up 
+git st
+git clean
+git clean -n
+git clean -f
+git st
+rm vim/.vim/UltiSnips/
+rm vim/.vim/UltiSnips/ -r
+git st
+ll
+git log
+git co -b
+git co -b remove-deoplete
+config vim
+ll
+cd vim/
+ll
+vim .vimrc 
+git st
+git diff .vimrc
+git reset .vimrc
+git st
+git co .vimrc --
+git restore .vimrc
+git st
+git add .
+git c --amend
+git st
+vim .vimrc 
+git rebase main
+git push -u
+git merge main
+git co  main
+git merge remove-deoplete 
+git log
+git br -vv
+git br -v
+git push
+git listaliases
+git cleanup
+git cleanup-branchE
+git listaliases
+git st
+git br -a
+git log
+git br
+git br -v
+git br -vv
+git push
+git fetch
+git br -vv
+git br -d make-netrw-usable 
+git br -d tmux-scroll-copy-mode 
+git br -d remove-deoplete 
+git br -d remove-tmux-in-favor-of-windows-terminal-splitter 
+git br
+git push
+git br
+git br -vv
+git log
+git st
+git br
+git diff tmux-scroll-copy-mode 
+ll
+git br
+git br -D tmux-scroll-copy-mode 
+ll
+git br
+git br -a
+git fetch
+git remote prune  origin 
+git br
+git br -a
+git co -b remove-lsps
+vim .vimrc 
+git st
+git add .
+git c
+git st
+vim .vimrc 
+git push
+ll
+cd ..
+ll
+cd ..
+ll
+cd .local/
+ll
+cd share/
+ll
+cd direnv/
+ll
+cd allow/
+ll
+cd ..
+cd vim-lsp-settings/
+ll
+cd  servers/
+ll
+cd rust-analyzer/
+ll
+cd ..
+cd pyls-all/
+ll
+cd ..
+ll
+rm vim-lsp-settings/ -rf
+ll
+cd ..
+ll
+cd dotfiles/
+cd main
+git co main 
+git merge remove-lsps 
+git push
+cd
+cd src/
+ll
+cd soup_parser/
+ll
+vim .envrc 
+cp .envrc $DOTFILES 
+cd $_
+ll
+mv .envrc direnv/
+cd $:
+cd direnv/
+ll
+mv .envrc .envrc_example_python3
+vim .envrc_example_python3 
+git st
+git add .
+git c
+git push
+cd ..
+cd vim/
+vim 
+vim .vimrc 
+showkeys
+showkey
+man showkey
+showkey -k
+showkey -a
+vim 
+showkey 
+showkey -a
+vim .vimrc 
+git st
+git add .vimrc 
+git c
+git st
+git log
+git c --edit
+git c --amend
+git log
+git st
+ll
+cd ..
+ll
+vim t
+rm t
+ll
+cd vim/
+git lgo
+git log
+ll
+git push
+vim
+git st
+git add .
+git c
+vim .vimrc 
+
+ll
+cd ..
+ll
+cd .local/share/
+ll
+mkdir lsp-servers
+ll
+cd lsp-servers/
+ll
+$ git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
+git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
+cargo xtask install --server
+ll
+cd ..
+rm rust-analyzer/
+rm rust-analyzer/ -rf
+ll
+mv rust-analyzer-linux rust-analyzer
+ll
+./rust-analyzer 
+ll
+path
+
+exec bsah
+exec bash
