@@ -21,7 +21,16 @@ call plug#end()
 let g:ale_sign_warning ='🞄'
 let g:ale_sign_error ='⬤'
 
+" Show hints from LSPs too
+let g:ale_lsp_suggestions = 1
+
+" set up proper linters
+let g:ale_linters = {
+			\ 'rust': ['analyzer']
+			\}
+
  let g:ale_fixers = {
+			\ 'rust': ['rustfmt'],
 			 \ '*': ['remove_trailing_lines', 'trim_whitespace']
 			 \}
 
