@@ -50,11 +50,10 @@ set norunexec
 
 colorscheme onedark
 
-" Format for displaying time in file list. For example:
-" TIME_STAMP_FORMAT=%m/%d-%H:%M
+" Format for displaying time in file list.
 " See man date or man strftime for details.
 
-set timefmt=%m/%d\ %H:%M
+set timefmt=%d.%m %H:%M
 
 " Show list of matches on tab completion in command-line mode
 
