@@ -99,7 +99,9 @@ set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 " :mark mark /full/directory/path [filename]
 
-mark b ~/bin/
+" TODO setup proper system to store favourites, like Downloads folder etc.
+" I would prefer to have them as environment variables, so that they can be used in shell commands as well
+" So syncing them, is the second part of the task
 mark h ~/
 
 " ------------------------------------------------------------------------------
