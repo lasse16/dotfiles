@@ -16,5 +16,7 @@ stow_bash
 stow direnv
 stow tmux
 stow vim
+stow vifm
+
 source "$dotfile_directory/config_helper.sh"
 exec bash
