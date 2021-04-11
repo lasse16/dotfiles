@@ -217,12 +217,11 @@ nnoremap O :!gvim %f<cr>
 nnoremap gb :file &<cr>l
 
 " Interaction with system clipboard
-if has('win')
 " Yank current directory path to Windows clipboard with forward slashes
-nnoremap yp :!echo %"d:gs!\!/! %i | clip<cr>
+nnoremap yp :!echo %"d:gs!\!/! %i | clip.exe<cr>
 " Yank path to current file to Windows clipboard with forward slashes
-nnoremap yf :!echo %"c:gs!\!/! %i | clip<cr>
-elseif executable('xclip')
+nnoremap yf :!echo %"c:gs!\!/! %i | clip.exe<cr>
+if executable('xclip')
 " Yank current directory path into the clipboard
 nnoremap yd :!echo %d | xclip %i<cr>
 " Yank current file path into the clipboard
