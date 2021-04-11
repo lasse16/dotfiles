@@ -22,7 +22,7 @@ set trash
 
 " This is how many directories to store in the directory history.
 
-set history=100
+set history=10
 
 " Automatically resolve symbolic links on l or Enter.
 
@@ -34,7 +34,7 @@ set sortnumbers
 
 " Maximum number of changes that can be undone.
 
-set undolevels=100
+set undolevels=10
 
 " Use Vim's format of help file (has highlighting and "hyperlinks").
 " If you would rather use a plain text help file set novimhelp.
