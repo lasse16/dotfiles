@@ -1,11 +1,4 @@
 " vim: filetype=vifm :
-" Sample configuration file for vifm (last updated: 13 December, 2020)
-" You can edit this file by hand.
-" The " character at the beginning of a line comments out the line.
-" Blank lines are ignored.
-" The basic format for each item is shown with an example.
-
-" ------------------------------------------------------------------------------
 
 " Command used to edit files in various contexts.  The default is vim.
 " If you would like to use another vi clone such as Elvis or Vile
