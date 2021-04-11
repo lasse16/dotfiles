@@ -50,7 +50,7 @@ colorscheme onedark
 " Format for displaying time in file list.
 " See man date or man strftime for details.
 
-set timefmt=%d.%m %H:%M
+set timefmt=%D
 
 " Show list of matches on tab completion in command-line mode
 
