@@ -2,7 +2,7 @@
 dotfile_directory=$HOME/dotfiles/
 
 stow_bash(){
-	if [ -f "$HOME/.bash_history" ] ; then 
+	if [ -f "$HOME/.bash_history" ] ; then
 		cat "$HOME/.bash_history" >> "$dotfile_directory/bash/.bash_history"
 		rm "$HOME/.bash_history"
 	fi
