@@ -97,6 +97,10 @@ export EDITOR=vim
 export PATH=$PATH:~/.local/share/lsp-servers
 export DOTFILES="$HOME/dotfiles"
 
+# Set vim as a pager for man pages, if possible use nvim
+export MANPAGER="vim -M +MANPAGER -"
+command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
+
 # Hook up direnv to
 eval "$(direnv hook bash)"
 
