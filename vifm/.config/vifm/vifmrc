@@ -1,6 +1,3 @@
-" Let vim detect this file as of type vifm
-vim: filetype=vifm :
-
 " Open with default vim binary
 set vicmd=vim
 
