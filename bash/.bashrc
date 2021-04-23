@@ -96,6 +96,7 @@ fi
 export EDITOR=vim
 export PATH=$PATH:~/.local/share/lsp-servers
 export DOTFILES="$HOME/dotfiles"
+export PATH=$PATH:"$DOTFILES/bash/scripts"
 
 # Set vim as a pager for man pages, if possible use nvim
 export MANPAGER="vim -M +MANPAGER -"
