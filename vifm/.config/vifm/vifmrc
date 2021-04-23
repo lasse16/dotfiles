@@ -134,43 +134,28 @@ command! reload :write | restart full
 " The command macros like %f, %F, %d, %D may be used in the commands.
 " The %a macro is ignored.  To use a % you must put %%.
 
-" Pdf
-fileviewer {*.pdf},<application/pdf> pdftotext -nopgbrk %c -
-
-" Audio
-fileviewer {*.mp3},<audio/mpeg> mp3info
-
 " Man page
 filetype {*.[1-8]},<text/troff> man ./%c
 fileviewer {*.[1-8]},<text/troff> man ./%c | col -b
 
+fileviewer {*.pdf},<application/pdf> pdftotext %c -
+filetype {*.pdf},<application/pdf> wslview %c
+
 " Images
-fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*> identify %f
+			fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*> magick identify %c
+			filetype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*> wslview
 
-" Office files
-fileviewer {*.doc},<application/msword> catdoc %c
-fileviewer {*.docx},
-\<application/
-\vnd.openxmlformats-officedocument.wordprocessingml.document>
-\ docx2txt.pl %f -
+" Coding
+		fileviewer {*.py, *.pyc, *.rs, *.ino, *.h, *.cpp} view
+		filetype {*.py, *.pyc, *.rs, *.ino, *.h, *.cpp} vim
 
-" Syntax highlighting in preview
-"
-" Explicitly set highlight type for some extensions
-"
-" 256-color terminal
-" fileviewer *.[ch],*.[ch]pp highlight -O xterm256 -s dante --syntax c %c
-" fileviewer Makefile,Makefile.* highlight -O xterm256 -s dante --syntax make %c
-"
-" 16-color terminal
-" fileviewer *.c,*.h highlight -O ansi -s dante %c
-"
-" Or leave it for automatic detection
-"
-" fileviewer *[^/] pygmentize -O style=monokai -f console256 -g
+" Markdown
+		fileviewer {*.md, *.markdown} view
+		filetype {*.md, *.markdown} vim
 
-" Open all other files in normal  windows
-filetype * vim, wslview, start, explorer
+" Open all other file     normal  windows
+" fileviewer * view
+" filetype * vim, wslview, start, explorer
 
 " ------------------------------------------------------------------------------
 
