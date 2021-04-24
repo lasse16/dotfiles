@@ -1,8 +1,6 @@
 {
   "parser-directories": [
-    "/home/lasse/github",
-    "/home/lasse/src",
-    "/home/lasse/source"
+    "/home/lasse/.local/share/"
   ],
   "theme": {
     "embedded": null,
