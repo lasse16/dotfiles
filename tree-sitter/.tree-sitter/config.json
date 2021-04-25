@@ -1,0 +1,53 @@
+{
+  "parser-directories": [
+    "/home/lasse/.local/share/"
+  ],
+  "theme": {
+    "embedded": null,
+    "punctuation.delimiter": 239,
+    "constant": 94,
+    "string.special": 30,
+    "punctuation.bracket": 239,
+    "operator": {
+      "color": 239,
+      "bold": true
+    },
+    "variable.builtin": {
+      "bold": true
+    },
+    "attribute": {
+      "italic": true,
+      "color": 124
+    },
+    "constant.builtin": {
+      "bold": true,
+      "color": 94
+    },
+    "comment": {
+      "italic": true,
+      "color": 245
+    },
+    "string": 28,
+    "number": {
+      "bold": true,
+      "color": 94
+    },
+    "property": 124,
+    "variable.parameter": {
+      "underline": true
+    },
+    "constructor": 136,
+    "function": 26,
+    "keyword": 56,
+    "tag": 18,
+    "type": 23,
+    "type.builtin": {
+      "bold": true,
+      "color": 23
+    },
+    "function.builtin": {
+      "bold": true,
+      "color": 26
+    }
+  }
+}

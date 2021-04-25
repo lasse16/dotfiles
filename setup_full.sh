@@ -16,6 +16,7 @@ stow_bash
 stow direnv
 stow tmux
 stow vim
+stow tree-sitter
 stow vifm
 
 source "$dotfile_directory/config_helper.sh"
