@@ -111,7 +111,6 @@ set shortmess+=I
 " Show line numbers.
 set number
 set numberwidth=4
-highlight LineNr ctermfg=darkGrey cterm=italic term=italic
 
 " Disable line wrapping
 set nowrap
@@ -157,6 +156,7 @@ set noerrorbells visualbell t_vb=
 set mouse+=a
 
 set background=dark
+colorscheme updated-default
 
 set encoding=utf-8
 
