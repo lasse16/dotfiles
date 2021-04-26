@@ -1,0 +1,1 @@
+/home/lasse/dotfiles/colors/updated-default.vim
