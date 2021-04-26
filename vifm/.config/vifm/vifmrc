@@ -92,6 +92,10 @@ endif
 
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
+" Display a border between two windows
+set tuioptions="pv"
+set fillchars=vborder:l
+
 " ------------------------------------------------------------------------------
 
 " :mark mark /full/directory/path [filename]
