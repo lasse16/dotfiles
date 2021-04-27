@@ -4,12 +4,12 @@
   ],
   "theme": {
     "embedded": null,
-    "punctuation.delimiter": 239,
-    "constant": 94,
-    "string.special": 30,
-    "punctuation.bracket": 239,
+    "punctuation.delimiter": "brightBlack",
+    "constant": "Yellow",
+    "string.special": "Cyan",
+    "punctuation.bracket": "brightBlack",
     "operator": {
-      "color": 239,
+      "color": "brightBlack",
       "bold": true
     },
     "variable.builtin": {
@@ -17,37 +17,37 @@
     },
     "attribute": {
       "italic": true,
-      "color": 124
+      "color": "Red"
     },
     "constant.builtin": {
       "bold": true,
-      "color": 94
+      "color": "Yellow"
     },
     "comment": {
       "italic": true,
-      "color": 245
+      "color": 236
     },
-    "string": 28,
+    "string": "Green",
     "number": {
       "bold": true,
-      "color": 94
+      "color": "Yellow"
     },
-    "property": 124,
+    "property": "Red",
     "variable.parameter": {
       "underline": true
     },
-    "constructor": 136,
-    "function": 26,
-    "keyword": 56,
-    "tag": 18,
-    "type": 23,
+    "constructor": "Yellow",
+    "function": "Blue",
+    "keyword": "BrightBlue",
+    "tag": "Blue",
+    "type": "Cyan",
     "type.builtin": {
       "bold": true,
-      "color": 23
+      "color": "Cyan"
     },
     "function.builtin": {
       "bold": true,
-      "color": 26
+      "color": "Blue"
     }
   }
 }

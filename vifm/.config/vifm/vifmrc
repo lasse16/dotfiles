@@ -45,7 +45,7 @@ set norunexec
 
 " List of color schemes to try (picks the first one supported by the terminal)
 
-colorscheme onedark
+colorscheme custom-onedark
 
 " Format for displaying time in file list.
 " See man date or man strftime for details.
@@ -91,6 +91,10 @@ endif
 " Set custom status line look
 
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+
+" Display a border between two windows
+set tuioptions="pv"
+set fillchars=vborder:l
 
 " ------------------------------------------------------------------------------
 

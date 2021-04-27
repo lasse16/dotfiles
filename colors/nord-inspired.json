@@ -1,0 +1,23 @@
+{
+	"name": "nord-inspired",
+	"background": "#2E3440",
+	"foreground": "#D8DEE9",
+	"cursorColor": "#FFFFFF",
+	"selectionBackground": "#FFFFFF",
+	"black": "#3B4252",
+	"blue": "#81A1C1",
+	"cyan": "#88C0D0",
+	"green": "#A3BE8C",
+	"purple": "#B48EAD",
+	"red": "#BF616A",
+	"white": "#E5E9F0",
+	"yellow": "#EBCB8B",
+	"brightBlack": "#4C566A",
+	"brightBlue": "#81A1C1",
+	"brightCyan": "#8FBCBB",
+	"brightGreen": "#A3BE8C",
+	"brightPurple": "#B48EAD",
+	"brightRed": "#BF616A",
+	"brightWhite": "#ECEFF4",
+	"brightYellow": "#EBCB8B"
+}
