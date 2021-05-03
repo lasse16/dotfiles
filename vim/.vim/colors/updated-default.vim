@@ -1,7 +1,7 @@
 " Using the default vim color scheme is fine with me, in combinations with the nord-inspired terminal scheme.
 " But there are two additions I want to make.
 " Source this file in " Using the default color scheme is fine with me.
-" But there are three additions I want to make.
+" But there are only a few additions I want to make.
 "
 
 " Darken the shown line numbers and show them in italic
@@ -14,3 +14,6 @@ highlight Comment ctermfg=darkGrey cterm=italic term=italic
 
 " Display the line seperating vertical panes as dark pipes
 highlight VertSplit ctermbg=NONE ctermfg=black cterm=NONE
+
+" Display comments in italic
+highlight EndOfBuffer ctermfg=black cterm=italic term=italic
