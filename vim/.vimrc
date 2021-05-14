@@ -21,6 +21,10 @@ call plug#end()
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
+" Disable ALE as its sign column shifts characters some times
+" Disable until fixed an further investigated
+let g:ale_enabled = 0
+
 " Change ALEs display symbols
 let g:ale_sign_warning ='🞄'
 let g:ale_sign_error ='⬤'
