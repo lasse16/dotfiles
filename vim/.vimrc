@@ -17,6 +17,10 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'puremourning/vimspector'
 call plug#end()
 
+" Airline setup
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+
 " Change ALEs display symbols
 let g:ale_sign_warning ='🞄'
 let g:ale_sign_error ='⬤'
@@ -29,12 +33,12 @@ let g:ale_linters = {
 			\ 'rust': ['analyzer']
 			\}
 
- let g:ale_fixers = {
+let g:ale_fixers = {
 			\ 'rust': ['rustfmt'],
 			 \ '*': ['remove_trailing_lines', 'trim_whitespace']
 			 \}
 
- let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1
 
 " Start scolling before the cursor reaches top or bottom line
 set scrolloff=5
