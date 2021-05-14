@@ -1,7 +1,6 @@
-# [Requirement] fzf 
-# [Requirement] [Custom] git root 
-# [Alias] git ls-files -> git ls
+# [Requirement] fzf
+# [Requirement] [Custom] git root
 
-# Add git files from the list of modified files by git ls-files 
+# Add git files from the list of modified files by git ls-files
 
-git ls --modified `git root` | fzf | xargs git add
+git ls -files --modified `git root` | fzf | xargs git add
