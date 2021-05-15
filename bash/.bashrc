@@ -106,4 +106,4 @@ command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
 eval "$(direnv hook bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-source "/home/lasse/rust/.cargo/env"
+[ -f ~/rust/.cargo/env ] && source "/home/lasse/rust/.cargo/env"
