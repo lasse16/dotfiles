@@ -1,5 +1,6 @@
-# Set $DOTFILES environment variable if not already set
-"${DOTFILES:=$HOME/dotfiles}";
+# Set $DOTFILES environment variables if not already set
+${DOTFILES:=$HOME/dotfiles}
+${DOTFILES_BASH:=$DOTFILES/bash}
 
 # If not running interactively, don't do anything
 case $- in
@@ -43,11 +44,8 @@ fi
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
-# ~/bash_aliases, instead of adding them here directly.
-
-if [ -f ~/aliases/bash_aliases ]; then
-    . ~/aliases/bash_aliases
-fi
+# ~/.bash_aliases, instead of adding them here directly.
+FILE="$DOTFILES_BASH/aliases/bash_aliases" && test -f $FILE && source $FILE
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -58,32 +56,33 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fi
+  fi
 
 
 
 # Start SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
-if [ -f "$HOME/helpers/ssh_agent.sh" ] ; then
-	source $HOME/helpers/ssh_agent.sh
-	if [ -f "${SSH_ENV}" ]; then
-  		run_ssh_env;
-		ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-		start_ssh_agent;
- 		}
-	else
+if [ -f "$DOTFILES_BASH/helpers/ssh_agent.sh" ] ; then
+  source "$DOTFILES_BASH/helpers/ssh_agent.sh"
+  if [ -f "${SSH_ENV}" ]; then
+    run_ssh_env;
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+      start_ssh_agent;
+    }
+else
   start_ssh_agent;
-fi
-fi
+  fi
+  fi
 
 #include git branch in prompt
 parse_git_branch(){
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+
 show_virtual_env(){
-	if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
-		echo "($(basename $VIRTUAL_ENV))"
-	fi
+  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
 }
 export -f parse_git_branch
 export -f show_virtual_env
@@ -91,14 +90,14 @@ export PS1="\$(show_virtual_env) \u@\h \[\033[32m\]\w\[\033[33m\] \$(parse_git_b
 
 #Set default display for WSL GUI applications
 if [ -f ./wsl_enabled.sh ] && source ./wsl_enabled.sh && is_wsl; then
-	export DISPLAY:=0
-	[ -f ./wsl_aliases.sh ] && . wsl_aliases.sh
-	echo "WSL"
+  export DISPLAY:=0
+  [ -f ./wsl_aliases.sh ] && . wsl_aliases.sh
+  echo "WSL"
 fi
 
 export EDITOR=vim
 export PATH=$PATH:~/.local/share/lsp-servers
-export PATH=$PATH:"$DOTFILES/bash/scripts"
+export PATH=$PATH:"$DOTFILES_BASH/scripts"
 
 # Set vim as a pager for man pages, if possible use nvim
 export MANPAGER="vim -M +MANPAGER -"
