@@ -1,0 +1,14 @@
+I had to install some packages manually in order to use my dotfiles on my raspberry pi.
+
+Packages:
+	git,  vim, stow
+
+Steps to get dotfiles working:
+	1. download from git
+	2. Remove preconfigured/example .bashrc and .profile
+	3. Install direnv / Feature flag direnv hook in bashrc
+	4. Remove hardcoded ssh keys in agent.env/ start_ssh_agent function in bash
+
+
+Concerns:
+	vim recent version ? I know I needed a newer vim version than apt provided, but I forgot what for. So hoping it works.
