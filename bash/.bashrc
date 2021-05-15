@@ -1,6 +1,7 @@
-# Set $DOTFILES environment variables if not already set
-${DOTFILES:=$HOME/dotfiles}
+# Set $DOTFILES_BASH environment variables if not already set
 ${DOTFILES_BASH:=$DOTFILES/bash}
+export DOTFILES_BASH
+export PATH=$PATH:"$DOTFILES_BASH/scripts"
 
 # If not running interactively, don't do anything
 case $- in
@@ -95,16 +96,8 @@ if [ -f ./wsl_enabled.sh ] && source ./wsl_enabled.sh && is_wsl; then
   echo "WSL"
 fi
 
-export EDITOR=vim
-export PATH=$PATH:~/.local/share/lsp-servers
-export PATH=$PATH:"$DOTFILES_BASH/scripts"
-
-# Set vim as a pager for man pages, if possible use nvim
-export MANPAGER="vim -M +MANPAGER -"
-command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
 
 # Hook up direnv to
 eval "$(direnv hook bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f ~/rust/.cargo/env ] && source "/home/lasse/rust/.cargo/env"
