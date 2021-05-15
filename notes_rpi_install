@@ -1,5 +1,8 @@
 I had to install some packages manually in order to use my dotfiles on my raspberry pi.
 
+TODO:
+- Fail gracefully when installation aborts inbetween files.
+
 Packages:
 	git,  vim, stow
 
