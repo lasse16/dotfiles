@@ -2,6 +2,7 @@ I had to install some packages manually in order to use my dotfiles on my raspbe
 
 TODO:
 - Fail gracefully when installation aborts inbetween files.
+- Only source config files for packages actually installed.
 
 Packages:
 	git,  vim, stow
