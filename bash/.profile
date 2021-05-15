@@ -8,6 +8,16 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# Set $DOTFILES environment repo if not already set
+${DOTFILES:=$HOME/dotfiles}
+export DOTFILES
+export EDITOR=vim
+export PATH=$PATH:~/.local/share/lsp-servers
+
+# Set vim as a pager for man pages, if possible use nvim
+export MANPAGER="vim -M +MANPAGER -"
+command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
