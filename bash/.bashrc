@@ -85,6 +85,7 @@ show_virtual_env(){
     echo "($(basename $VIRTUAL_ENV))"
   fi
 }
+
 export -f parse_git_branch
 export -f show_virtual_env
 export PS1="\$(show_virtual_env) \u@\h \[\033[32m\]\w\[\033[33m\] \$(parse_git_branch)\n \[\033[00m\]$ "
