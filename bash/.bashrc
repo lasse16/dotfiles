@@ -1,3 +1,6 @@
+# Set $DOTFILES environment variable if not already set
+"${DOTFILES:=$HOME/dotfiles}";
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -95,7 +98,6 @@ fi
 
 export EDITOR=vim
 export PATH=$PATH:~/.local/share/lsp-servers
-export DOTFILES="$HOME/dotfiles"
 export PATH=$PATH:"$DOTFILES/bash/scripts"
 
 # Set vim as a pager for man pages, if possible use nvim
