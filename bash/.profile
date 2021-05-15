@@ -35,4 +35,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-source "/home/lasse/rust/.cargo/env"
+
+FILE="$CARGO_HOME/env" && test -f $FILE && source $FILE
