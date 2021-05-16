@@ -36,4 +36,5 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-FILE="$CARGO_HOME/env" && test -f $FILE && source $FILE
+# Sourcecargo environment if $CARGO_HOME is set
+FILE="${CARGO_HOME:?}/env" && test -f $FILE && source $FILE
