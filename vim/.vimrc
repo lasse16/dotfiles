@@ -3,8 +3,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-" Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -14,7 +12,11 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-highlightedyank'
-" Plug 'puremourning/vimspector'
+if has('python3')
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
+	Plug 'puremourning/vimspector'
+endif
 call plug#end()
 
 " Change ALEs display symbols
