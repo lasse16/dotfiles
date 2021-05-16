@@ -65,15 +65,22 @@ nnoremap <A-k> :m .-2<CR>==
 vnoremap <A-k> :m '<-2<CR>gv=gv
 vnoremap <A-j> :m '>+1<CR>gv=gv
 
+function! SnippetExpandOrJump() abort
+	if has_key(g:plugs,"ultisnips")
+		call UltiSnips#ExpandSnippetOrJump()
+		return g:ulti_expand_or_jump_res > 0
+	endif
+	return 0
+endfunction
+
+
 " Shamelessly stolen from https://stackoverflow.com/a/61275100
 function! HandleTab() abort
-	" Then, check if we're in a completion menu
+	" Check if we're in a completion menu
 	if pumvisible()
 		return "\<C-n>"
 	endif
-	" First, try to expand or jump on UltiSnips.
-	call UltiSnips#ExpandSnippetOrJump()
-	if g:ulti_expand_or_jump_res > 0
+	if SnippetExpandOrJump()
 		return ""
 	endif
 	" Then check if we're indenting.
@@ -82,7 +89,7 @@ function! HandleTab() abort
 		return "\<Tab>"
 	endif
 	"TODO Trigger  completion here
-	return
+	return "\<Tab>"
 endfunction
 
 inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
