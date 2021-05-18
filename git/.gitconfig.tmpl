@@ -1,0 +1,38 @@
+[user]
+#TODO machine specific
+	name = Lasse Haffke
+#TODO machine specific
+	email = 5haffke@informatik.uni-hamburg.de
+[init]
+	defaultBranch = main
+[alias]
+	pullall = !git pull && git submodule update --init --recursive
+	push = push -u
+	st = status
+	unstage = reset HEAD --
+	co = checkout
+	br = branch
+	cm = commit -m
+	unstageall = reset --soft HEAD^
+	lp = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate
+	listaliases = !git config -l | grep alias | cut -c 7-
+	diff = diff --word-diff
+	lastHash = rev-parse --verify HEAD
+	lh = lastHash
+	c = commit
+	adog = log --all --decorate --oneline --graph
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	cleanup = branch -vv | grep origin | grep gone | awk '{print }'|xargs -L 1 git branch -d
+	mt = mergetool
+	fuck-up = reset HEAD --hard
+	ls = ls-files
+[merge]
+    tool = vimdiff3
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[diff]
+    tool = vimdiff3
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[push]
+	default = current
