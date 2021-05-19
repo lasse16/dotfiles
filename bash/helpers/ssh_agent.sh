@@ -12,10 +12,4 @@ function start_ssh_agent {
 
   # TODO Make a list or setting which keys to enable on which machine
   # Alternatively enable every key in ssh directory (SECURITY)
-  #ssh-add ~/.ssh/id_rsa;
-  #ssh-add ~/.ssh/id_gitlab;
-  #ssh-add ~/.ssh/id_mafiasi;
-  #ssh-add ~/.ssh/id_gitlab_uhh;
-  #ssh-add ~/.ssh/id_rpi0;
 }
-
