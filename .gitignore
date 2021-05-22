@@ -2,4 +2,4 @@ direnv/.local/share/direnv/allow
 direnv/.local/lib
 direnv/.local/include
 
-local.data
+local-data.toml
