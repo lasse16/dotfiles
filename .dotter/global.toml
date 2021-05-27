@@ -1,0 +1,23 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+"README.md" = ""
+bash = ""
+colors = ""
+"config_helper.sh" = ""
+direnv = ""
+"disable_all.sh" = ""
+dotter = ""
+git = ""
+"local-data.toml" = ""
+notes_rpi_install = ""
+"setup_full.sh" = ""
+tmux = ""
+tree-sitter = ""
+vifm = ""
+vim = ""
+
+[default.variables]
