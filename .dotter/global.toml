@@ -1,13 +1,13 @@
 [bash]
 [bash.files]
-"bash/.bashrc"="~/.bashrc"
+"bash/.bashrc.tmpl"= { target = "~/.bashrc", type="template"}
 "bash/.inputrc"="~/.inputrc"
-"bash/.profile"="~/.profile"
+"bash/.profile.tmpl"={ target="~/.profile", type="template"}
 "bash/.bash_history"="~/.bash_history"
 
 [git]
 [git.files]
-"git/.gitconfig"="~/.gitconfig"
+"git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
 
 [git.variables]
 "git.name"=""
