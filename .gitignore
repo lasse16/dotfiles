@@ -3,3 +3,7 @@ direnv/.local/lib
 direnv/.local/include
 
 local-data.toml
+
+.dotter/cache.toml
+.dotter/cache
+.dotter/local.toml
