@@ -19,7 +19,11 @@
 
 [tree-sitter]
 [tree-sitter.files]
-"tree-sitter/.tree-sitter"="~"
+"tree-sitter/.tree-sitter/bin"="~/.tree-sitter/bin"
+"tree-sitter/.tree-sitter/config.json.tmpl"={target= "~/.tree-sitter/config.json", type="template"}
+
+[tree-sitter.variables]
+"tree-sitter.parser-directory"=""
 
 [vifm]
 [vifm.files]
