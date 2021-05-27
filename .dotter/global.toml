@@ -20,4 +20,36 @@ tree-sitter = ""
 vifm = ""
 vim = ""
 
-[default.variables]
+[bash]
+[bash.files]
+"bash/.bashrc"="~/.bashrc"
+"bash/.inputrc"="~/.inputrc"
+"bash/.profile"="~/.profile"
+"bash/.bash_history"="~/.bash_history"
+
+[git]
+[git.files]
+"git/.gitconfig"="~/.gitconfig"
+
+[git.variables]
+"git.name"=""
+"git.email"=""
+
+[tmux]
+[tmux.files]
+"tmux/.tmux.conf"="~/.tmux.conf"
+
+[tree-sitter]
+[tree-sitter.files]
+"tree-sitter/.tree-sitter"="~"
+
+[vifm]
+[vifm.files]
+"vifm/.config/vifm/colors"="~/.config/vifm"
+"vifm/.config/vifm/scripts"="~/.config/vifm"
+"vifm/.config/vifm/vifmrc"="~/.config/vifm/vifmrc"
+
+[vim]
+[vim.files]
+"vim/.vim"="~"
+"vim/.vimrc"="~"
