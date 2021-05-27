@@ -33,5 +33,5 @@
 
 [vim]
 [vim.files]
-"vim/.vim"="~"
-"vim/.vimrc"="~"
+"vim/.vim"={target= "~/.vim", type="symbolic"}
+"vim/.vimrc"= {target="~/.vimrc", type="symbolic"}
