@@ -772,3 +772,5 @@ ll
 vim .bashrc 
 exec bhas
 exec bash
+env
+exec bash
