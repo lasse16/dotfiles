@@ -1,9 +1,8 @@
 [bash]
-# Checks for CARGO_HOME
 # Sets DOTFILES_BASH based on DOTFILES specified in environment
 # Sources ~.fzf.bash if present
 # Hook up to direnv
-depends = [ rust, environment, fzf, direnv]
+depends = [  environment, fzf, direnv]
 
 
 [bash.files]
@@ -68,4 +67,7 @@ depends = ["bash"]
 depends= [ vim ]
 
 [rust]
+[rust.variables]
+"rust.cargo_home"="~/.cargo"
+
 [direnv]

@@ -40,5 +40,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Sourcecargo environment if $CARGO_HOME is set
+# Source cargo environment if $CARGO_HOME is set
+{{#if dotter.packages.rust}}
 FILE="${CARGO_HOME:?}/env" && test -f $FILE && source $FILE
+{{/if}}
