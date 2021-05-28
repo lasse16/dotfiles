@@ -5,6 +5,11 @@
 "bash/.profile.tmpl"={ target="~/.profile", type="template"}
 "bash/.bash_history"="~/.bash_history"
 
+[environment]
+[environment.variables]
+# Replace this by future dotter built-in variable (Maybe)
+"environment.dotfile_folder"="~/dotfiles"
+
 [git]
 [git.files]
 "git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
