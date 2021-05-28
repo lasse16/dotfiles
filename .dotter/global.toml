@@ -1,4 +1,12 @@
 [bash]
+# Sets MANPAGER as vim
+# Checks for CARGO_HOME
+# Sets DOTFILES_BASH based on DOTFILES specified in environment
+# Sources ~.fzf.bash if present
+# Hook up to direnv
+depends = [ vim , rust, environment, fzf, direnv]
+
+
 [bash.files]
 "bash/.bashrc.tmpl"= { target = "~/.bashrc", type="template"}
 "bash/.inputrc"="~/.inputrc"
@@ -11,6 +19,9 @@
 "environment.dotfile_folder"="~/dotfiles"
 
 [git]
+# Mergetool is currently configured as vimdiff3
+depends = [ vim ]
+
 [git.files]
 "git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
 
@@ -31,6 +42,9 @@
 "tree-sitter.parser-directory"=""
 
 [vifm]
+# Uses vim as a previewer and opening tool
+depends=[vim]
+
 [vifm.files]
 "vifm/.config/vifm/colors"="~/.config/vifm"
 "vifm/.config/vifm/scripts"="~/.config/vifm"
@@ -49,3 +63,13 @@ depends = ["bash"]
 
 [ssh.variables]
 "ssh.key-files"=[]
+
+[fzf]
+# Currently fzf is installed as a vim package
+# So, to avoid duplication the binary installed via the package
+# is referenced when using on CLI.
+# Hence the dependence on vim
+depends= [ vim ]
+
+[rust]
+[direnv]
