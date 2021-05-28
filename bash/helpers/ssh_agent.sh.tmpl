@@ -12,8 +12,7 @@ function start_ssh_agent {
 }
 
 function add_ssh_keys {
-  local ssh-keys={{ssh.key-files}};
-  for key in "$ssh-keys"; do
-    ssh-add $key;
-  done;
+  {{#each ssh.key-files}}
+  ssh-add {{this}};
+  {{/each}}
 }
