@@ -1,9 +1,26 @@
-[bash]
-# Sets DOTFILES_BASH based on DOTFILES specified in environment
-# Sources ~.fzf.bash if present
-# Hook up to direnv
-depends = [ "environment" ]
+# Possible packages
 
+[bash]
+depends = [ "environment" ]
+[direnv]
+[environment]
+[fzf]
+# Currently fzf is installed as a vim package
+# So, to avoid duplication the binary installed via the package
+# is referenced when using on CLI.
+depends= [ "vim" ]
+[git]
+[tmux]
+[tree-sitter]
+[vifm]
+# Uses vim as a previewer and opening tool
+depends=[ "vim" ]
+[vim]
+[ssh]
+depends = [ "bash" ]
+[rust]
+
+################################################################################
 
 [bash.files]
 "bash/.bashrc.tmpl"= { target = "~/.bashrc", type="template"}
@@ -11,12 +28,10 @@ depends = [ "environment" ]
 "bash/.profile.tmpl"={ target="~/.profile", type="template"}
 "bash/.bash_history"="~/.bash_history"
 
-[environment]
 [environment.variables]
 # Replace this by future dotter built-in variable (Maybe)
 "environment.dotfile_folder"="~/dotfiles"
 
-[git]
 [git.files]
 "git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
 
@@ -24,11 +39,9 @@ depends = [ "environment" ]
 "git.name"=""
 "git.email"=""
 
-[tmux]
 [tmux.files]
 "tmux/.tmux.conf"="~/.tmux.conf"
 
-[tree-sitter]
 [tree-sitter.files]
 "tree-sitter/.tree-sitter/bin"={target="~/.tree-sitter/bin",type="symbolic"}
 "tree-sitter/.tree-sitter/config.json.tmpl"={target= "~/.tree-sitter/config.json", type="template"}
@@ -36,22 +49,15 @@ depends = [ "environment" ]
 [tree-sitter.variables]
 "tree-sitter.parser-directory"=""
 
-[vifm]
-# Uses vim as a previewer and opening tool
-depends=[ "vim" ]
 
 [vifm.files]
 "vifm/.config/vifm/colors"="~/.config/vifm"
 "vifm/.config/vifm/scripts"="~/.config/vifm"
 "vifm/.config/vifm/vifmrc"="~/.config/vifm/vifmrc"
 
-[vim]
 [vim.files]
 "vim/.vim"={target= "~/.vim", type="symbolic"}
 "vim/.vimrc"= {target="~/.vimrc", type="symbolic"}
-
-[ssh]
-depends = [ "bash" ]
 
 [ssh.files]
 "bash/helpers/ssh_agent.sh.tmpl"="bash/helpers/ssh_agent.sh"
@@ -59,15 +65,6 @@ depends = [ "bash" ]
 [ssh.variables]
 "ssh.key-files"=[]
 
-[fzf]
-# Currently fzf is installed as a vim package
-# So, to avoid duplication the binary installed via the package
-# is referenced when using on CLI.
-# Hence the dependence on vim
-depends= [ "vim" ]
 
-[rust]
 [rust.variables]
 "rust.cargo_home"="~/.cargo"
-
-[direnv]
