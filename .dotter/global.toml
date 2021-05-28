@@ -68,3 +68,4 @@ depends = [ "bash" ]
 
 [rust.variables]
 "rust.cargo_home"="~/.cargo"
+"rust.rustup_home"="~/.rustup"
