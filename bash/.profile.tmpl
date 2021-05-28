@@ -11,12 +11,16 @@
 # Set $DOTFILES environment repo if not already set
 ${DOTFILES:=$HOME/dotfiles}
 export DOTFILES
-export EDITOR=vim
 export PATH=$PATH:~/.local/share/lsp-servers
 
-# Set vim as a pager for man pages, if possible use nvim
+{{#if dotter.packages.vim}}
+# Set vim as a pager for man pages
+export EDITOR=vim
 export MANPAGER="vim -M +MANPAGER -"
-command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
+{{/if}}
+
+# NVIM as manpager with this command
+# command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
