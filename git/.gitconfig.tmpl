@@ -25,7 +25,9 @@
 	fuck-up = reset HEAD --hard
 	ls = ls-files
 [merge]
+{{#if dotter.packages.vim}}
     tool = vimdiff3
+		{{/if}}
 [mergetool "vscode"]
     cmd = code --wait $MERGED
 [diff]

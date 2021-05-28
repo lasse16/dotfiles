@@ -19,9 +19,6 @@ depends = [ vim , rust, environment, fzf, direnv]
 "environment.dotfile_folder"="~/dotfiles"
 
 [git]
-# Mergetool is currently configured as vimdiff3
-depends = [ vim ]
-
 [git.files]
 "git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
 
