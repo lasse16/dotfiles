@@ -39,5 +39,8 @@
 [ssh]
 depends = ["bash"]
 
+[ssh.files]
+"bash/helpers/ssh_agent.sh.tmpl"="bash/helpers/ssh_agent.sh"
+
 [ssh.variables]
 "ssh.key-files"=[]
