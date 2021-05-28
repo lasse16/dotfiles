@@ -13,9 +13,9 @@ cd "$DOTFILES" || exit
 append_bash_history;
 ./dotter deploy
 
+# shellcheck source=/home/lasse/dotfiles/.dotter/cache/.dotter/pre_deploy.sh
+source "$DOTFILES/.dotter/cache/.dotter/pre_deploy.sh"
 exec bash
-# # shellcheck source=/home/lasse/dotfiles/.dotter/cache/.dotter/pre_deploy.sh
-# source "$DOTFILES/.dotter/cache/.dotter/pre_deploy.sh"
 
 # # shellcheck source=/home/lasse/dotfiles/config_helper.sh
 # source "$DOTFILES/config_helper.sh"
