@@ -2,7 +2,7 @@
 # Sets DOTFILES_BASH based on DOTFILES specified in environment
 # Sources ~.fzf.bash if present
 # Hook up to direnv
-depends = [  environment, fzf, direnv]
+depends = [ environment ]
 
 
 [bash.files]

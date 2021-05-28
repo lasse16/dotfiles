@@ -5,8 +5,8 @@ export PATH=$PATH:"$DOTFILES_BASH/scripts"
 
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+  *i*) ;;
+  *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -28,14 +28,14 @@ shopt -s checkwinsize
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  #alias dir='dir --color=auto'
+  #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 
     # Change the background color for writable and sticky directories
     # Currently green and nord theme are working together to make it unreadable
@@ -57,11 +57,11 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-  fi
+fi
 
 
 
-  {{#if dotter.packages.ssh}}
+{{#if dotter.packages.ssh}}
 # Start SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
 if [ -f "$DOTFILES_BASH/helpers/ssh_agent.sh" ] ; then
@@ -71,13 +71,13 @@ if [ -f "$DOTFILES_BASH/helpers/ssh_agent.sh" ] ; then
     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
       start_ssh_agent;
           add_ssh_keys;
-    }
-else
-  start_ssh_agent;
+        }
+    else
+      start_ssh_agent;
   fi
-  fi
+fi
 
-  {{/if}}
+{{/if}}
 
 #include git branch in prompt
 parse_git_branch(){
@@ -101,8 +101,11 @@ if [ -f ./wsl_enabled.sh ] && source ./wsl_enabled.sh && is_wsl; then
   echo "WSL"
 fi
 
-
+{{#if dotter.packages.direnv}}
 # Hook up direnv to
 eval "$(direnv hook bash)"
+{{/if}}
 
+{{#if dotter.packages.fzf}}
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+{{/if}}
