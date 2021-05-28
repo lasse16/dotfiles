@@ -9,8 +9,10 @@ function start_ssh_agent {
   sudo chmod 600 "${SSH_ENV}"
 
   run_ssh_env;
+}
 
-  # TODO Make a list or setting which keys to enable on which machine
-  # Alternatively enable every key in ssh directory (SECURITY)
-  {{ LIST ssh-key }}
+function add_ssh_keys {
+  {{#each ssh.key-files}}
+  ssh-add {{this}};
+  {{/each}}
 }

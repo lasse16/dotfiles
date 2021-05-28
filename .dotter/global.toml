@@ -35,3 +35,12 @@
 [vim.files]
 "vim/.vim"={target= "~/.vim", type="symbolic"}
 "vim/.vimrc"= {target="~/.vimrc", type="symbolic"}
+
+[ssh]
+depends = ["bash"]
+
+[ssh.files]
+"bash/helpers/ssh_agent.sh.tmpl"="bash/helpers/ssh_agent.sh"
+
+[ssh.variables]
+"ssh.key-files"=[]
