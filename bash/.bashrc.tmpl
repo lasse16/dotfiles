@@ -61,6 +61,7 @@ if ! shopt -oq posix; then
 
 
 
+  {{#if dotter.packages.ssh}}
 # Start SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
 if [ -f "$DOTFILES_BASH/helpers/ssh_agent.sh" ] ; then
@@ -74,6 +75,7 @@ else
   start_ssh_agent;
   fi
   fi
+  {{/if}}
 
 #include git branch in prompt
 parse_git_branch(){
