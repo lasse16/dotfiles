@@ -38,3 +38,6 @@
 
 [ssh]
 depends = ["bash"]
+
+[ssh.variables]
+"ssh.key-files"=[]
