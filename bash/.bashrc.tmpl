@@ -70,13 +70,13 @@ if [ -f "$DOTFILES_BASH/helpers/ssh_agent.sh" ] ; then
     run_ssh_env;
     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
       start_ssh_agent;
+          add_ssh_keys;
     }
 else
   start_ssh_agent;
   fi
   fi
 
-  add_ssh_keys;
   {{/if}}
 
 #include git branch in prompt
