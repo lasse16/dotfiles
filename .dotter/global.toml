@@ -2,7 +2,7 @@
 # Sets DOTFILES_BASH based on DOTFILES specified in environment
 # Sources ~.fzf.bash if present
 # Hook up to direnv
-depends = [ environment ]
+depends = [ "environment" ]
 
 
 [bash.files]
@@ -38,7 +38,7 @@ depends = [ environment ]
 
 [vifm]
 # Uses vim as a previewer and opening tool
-depends=[vim]
+depends=[ "vim" ]
 
 [vifm.files]
 "vifm/.config/vifm/colors"="~/.config/vifm"
@@ -51,7 +51,7 @@ depends=[vim]
 "vim/.vimrc"= {target="~/.vimrc", type="symbolic"}
 
 [ssh]
-depends = ["bash"]
+depends = [ "bash" ]
 
 [ssh.files]
 "bash/helpers/ssh_agent.sh.tmpl"="bash/helpers/ssh_agent.sh"
@@ -64,7 +64,7 @@ depends = ["bash"]
 # So, to avoid duplication the binary installed via the package
 # is referenced when using on CLI.
 # Hence the dependence on vim
-depends= [ vim ]
+depends= [ "vim" ]
 
 [rust]
 [rust.variables]
