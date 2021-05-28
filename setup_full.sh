@@ -1,23 +1,21 @@
 #!/bin/bash
-dotfile_directory=$HOME/dotfiles/
+export DOTFILES=~/dotfiles
 
-stow_bash(){
+append_bash_history(){
 	if [ -f "$HOME/.bash_history" ] ; then
-		cat "$HOME/.bash_history" >> "$dotfile_directory/bash/.bash_history"
+		cat "$HOME/.bash_history" >> "$DOTFILES/bash/.bash_history"
 		rm "$HOME/.bash_history"
 	fi
-	stow bash
 }
 
 # install packages with configurations
-cd "$dotfile_directory"|| exit
-stow git
-stow_bash
-stow direnv
-stow tmux
-stow vim
-stow tree-sitter
-stow vifm
+cd "$DOTFILES" || exit
+append_bash_history;
+./dotter deploy
 
-source "$dotfile_directory/config_helper.sh"
 exec bash
+# # shellcheck source=/home/lasse/dotfiles/.dotter/cache/.dotter/pre_deploy.sh
+# source "$DOTFILES/.dotter/cache/.dotter/pre_deploy.sh"
+
+# # shellcheck source=/home/lasse/dotfiles/config_helper.sh
+# source "$DOTFILES/config_helper.sh"
