@@ -1,10 +1,9 @@
 [bash]
-# Sets MANPAGER as vim
 # Checks for CARGO_HOME
 # Sets DOTFILES_BASH based on DOTFILES specified in environment
 # Sources ~.fzf.bash if present
 # Hook up to direnv
-depends = [ vim , rust, environment, fzf, direnv]
+depends = [ rust, environment, fzf, direnv]
 
 
 [bash.files]
