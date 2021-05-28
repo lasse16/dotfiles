@@ -3,6 +3,7 @@ export DOTFILES=~/dotfiles
 
 append_bash_history(){
 	if [ -f "$HOME/.bash_history" ] ; then
+		# Copies the entire bash history upon startup, then sets up a symlink
 		cat "$HOME/.bash_history" >> "$DOTFILES/bash/.bash_history"
 		rm "$HOME/.bash_history"
 	fi
