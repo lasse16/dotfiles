@@ -52,9 +52,9 @@ depends = [ "bash" ]
 
 
 [vifm.files]
-"vifm/.config/vifm/colors"="~/.config/vifm"
-"vifm/.config/vifm/scripts"="~/.config/vifm"
-"vifm/.config/vifm/vifmrc"="~/.config/vifm/vifmrc"
+"vifm/colors"="~/.config/vifm"
+"vifm/scripts"="~/.config/vifm"
+"vifm/vifmrc"="~/.config/vifm/vifmrc"
 
 [vim.files]
 "vim/.vim"={target= "~/.vim", type="symbolic"}
