@@ -9,3 +9,5 @@ local-data.toml
 .dotter/local.toml
 
 bash/helpers/ssh_agent.sh
+
+folder_shortcuts
