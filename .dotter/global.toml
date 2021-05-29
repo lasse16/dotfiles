@@ -44,8 +44,8 @@ depends = [ "bash" ]
 "tmux/.tmux.conf"="~/.tmux.conf"
 
 [tree-sitter.files]
-"tree-sitter/.tree-sitter/bin"={target="~/.tree-sitter/bin",type="symbolic"}
-"tree-sitter/.tree-sitter/config.json.tmpl"={target= "~/.tree-sitter/config.json", type="template"}
+"tree-sitter/bin"={target="~/.tree-sitter/bin",type="symbolic"}
+"tree-sitter/config.json.tmpl"={target= "~/.tree-sitter/config.json", type="template"}
 
 [tree-sitter.variables]
 "tree-sitter.parser-directory"=""
