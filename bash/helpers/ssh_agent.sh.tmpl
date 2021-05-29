@@ -12,7 +12,7 @@ function start_ssh_agent {
 }
 
 function add_ssh_keys {
-  {{#each ssh.key-files}}
+  {{~#each ssh.key-files}}
   ssh-add {{this}};
-  {{/each}}
+  {{~/each}}
 }
