@@ -774,3 +774,33 @@ exec bhas
 exec bash
 env
 exec bash
+cd
+vim .vimrc 
+ll
+cd dotfiles/
+./disable_all.sh 
+vim disable_all.sh 
+vim .dotter/global.toml 
+ll
+git st
+exec bash
+ll
+cd 
+ll
+vim .vimrc 
+git st
+cd dotfiles/
+git st
+./disable_all.sh 
+vim vim/.vimrc.tmpl 
+ll
+git st
+exec bash
+cd 
+rm .vimrc 
+cd dotfiles/
+./disable_all.sh 
+exec bash
+ll
+git st
+exec bash
