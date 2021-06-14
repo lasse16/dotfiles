@@ -1,0 +1,34 @@
+# List the packages you want to install on the current machine
+# A full list is specified in global.toml
+packages = [
+"bash",
+"direnv",
+"environment",
+"fzf",
+"git",
+"ssh",
+"tmux",
+"tree-sitter",
+"vifm",
+"vim",
+"rust",
+]
+
+# Override file-paths with machine-specific locations
+# Find the list of specified file-paths in the global.toml
+[files]
+
+# Override file locations with machine-specific locations
+# Find the list of named variables in the global.toml
+# If you do not use anything of the packages then do not override the variables
+[variables]
+
+git.name = "YOUR_GIT_NAME"
+git.email = "YOUR_GIT_EMAIL"
+
+tree-sitter.parser-directory= "PATH TO STORED TREE-SITTER BINARIES"
+
+ssh.key-files = [ "LIST", "OF", "PATHS", "TO", "SSH_KEYFILES", "TO ADD TO SSH_AGENT"]
+
+rust.cargo_home="CARGO_HOME"
+rust.rustup_home="RUSTUP_HOME"
