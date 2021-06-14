@@ -31,7 +31,7 @@ depends = [ "bash" ]
 
 [environment.variables]
 # Replace this by future dotter built-in variable (Maybe)
-"environment.dotfile_folder"="$HOME/dotfiles"
+"environment.dotfile_folder"="$DOTFILES"
 
 [git.files]
 "git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
