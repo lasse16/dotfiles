@@ -1,1 +1,1 @@
-./dotter undeploy -y
+./dotter undeploy
