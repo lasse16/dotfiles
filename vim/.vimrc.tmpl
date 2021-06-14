@@ -1,3 +1,8 @@
+" Include .vim directory in dotfile folder to avoid symlinking it
+" MUST BE CALLED before Plug-section so runtimepath is properly set for
+" vim-plug
+exe 'set rtp+=' . expand('{{environment.dotfile_folder}}/vim/.vim')
+
 call plug#begin('{{environment.dotfile_folder}}/vim/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
@@ -18,6 +23,7 @@ if has('python3')
 	Plug 'puremourning/vimspector'
 endif
 call plug#end()
+
 
 " Change ALEs display symbols
 let g:ale_sign_warning ='🞄'
