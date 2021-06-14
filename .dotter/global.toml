@@ -16,6 +16,7 @@ depends= [ "vim" ]
 # Uses vim as a previewer and opening tool
 depends=[ "vim" ]
 [vim]
+depends=[ "environment" ]
 [ssh]
 depends = [ "bash" ]
 [rust]
@@ -57,7 +58,7 @@ depends = [ "bash" ]
 
 [vim.files]
 "vim/.vim"={target= "~/.vim", type="symbolic"}
-"vim/.vimrc"= {target="~/.vimrc", type="symbolic"}
+"vim/.vimrc.tmpl"= {target="~/.vimrc", type="template"}
 
 [ssh.files]
 "bash/helpers/ssh_agent.sh.tmpl"="bash/helpers/ssh_agent.sh"
