@@ -57,7 +57,6 @@ depends = [ "bash" ]
 "vifm/vifmrc"="~/.config/vifm/vifmrc"
 
 [vim.files]
-"vim/.vim"={target= "~/.vim", type="symbolic"}
 "vim/.vimrc.tmpl"= {target="~/.vimrc", type="template"}
 
 [ssh.files]
