@@ -1,0 +1,71 @@
+# Possible packages
+
+[bash]
+depends = [ "environment" ]
+[direnv]
+[environment]
+[fzf]
+# Currently fzf is installed as a vim package
+# So, to avoid duplication the binary installed via the package
+# is referenced when using on CLI.
+depends= [ "vim" ]
+[git]
+[tmux]
+[tree-sitter]
+[vifm]
+# Uses vim as a previewer and opening tool
+depends=[ "vim" ]
+[vim]
+depends=[ "environment" ]
+[ssh]
+depends = [ "bash" ]
+[rust]
+
+################################################################################
+
+[bash.files]
+"bash/.bashrc.tmpl"= { target = "~/.bashrc", type="template"}
+"bash/.inputrc"="~/.inputrc"
+"bash/.profile.tmpl"={ target="~/.profile", type="template"}
+"bash/.bash_history"="~/.bash_history"
+
+[environment.variables]
+# Replace this by future dotter built-in variable (Maybe)
+"environment.dotfile_folder"="$DOTFILES"
+
+[git.files]
+"git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
+
+[git.variables]
+"git.name"=""
+"git.email"=""
+
+[tmux.files]
+"tmux/.tmux.conf"="~/.tmux.conf"
+
+[tree-sitter.files]
+"tree-sitter/bin"={target="~/.tree-sitter/bin",type="symbolic"}
+"tree-sitter/config.json.tmpl"={target= "~/.tree-sitter/config.json", type="template"}
+
+[tree-sitter.variables]
+"tree-sitter.parser-directory"=""
+
+
+[vifm.files]
+"vifm/colors"="~/.config/vifm"
+"vifm/scripts"="~/.config/vifm"
+"vifm/vifmrc"="~/.config/vifm/vifmrc"
+
+[vim.files]
+"vim/.vimrc.tmpl"= {target="~/.vimrc", type="template"}
+
+[ssh.files]
+"bash/helpers/ssh_agent.sh.tmpl"="bash/helpers/ssh_agent.sh"
+
+[ssh.variables]
+"ssh.key-files"=[]
+
+
+[rust.variables]
+"rust.cargo_home"="~/.cargo"
+"rust.rustup_home"="~/.rustup"
