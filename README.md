@@ -1,6 +1,10 @@
 # dotfiles
 These are my dotfiles, including a basic setup and disable script.
 
+
+THIS ENTIRE REPO IS A WORK IN PROGRESS. :grin
+As it is going to be during my entire programming career.
+
 ## Installation
 This repository uses [Dotter](https://github.com/SuperCuber/dotter) for templating and rendering of machine-specific details.
 For convenience, a binary is included in this repo.
@@ -24,6 +28,3 @@ Changes to symlinked files, are directly reflected at the original location.
 
 
 If you are not going to update the location of your dotfile repository, you can bypass the use of the `setup.sh` script by simply calling Dotter directly with `./dotter deploy`.
-There is also a helper utility, `config_helper.sh`, which provides shortcuts to access the config files of the programs.
-THIS ENTIRE REPO IS A WORK IN PROGRESS. :)
-As it is going to be during my entire programming career.
