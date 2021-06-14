@@ -10,9 +10,6 @@
 [submodule "vim/.vim/plugged/targets.vim"]
 	path = vim/.vim/plugged/targets.vim
 	url = https://github.com/wellle/targets.vim.git
-[submodule "vim/.vim/plugged/ultisnips"]
-	path = vim/.vim/plugged/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
 [submodule "vim/.vim/plugged/vim-airline"]
 	path = vim/.vim/plugged/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
@@ -25,30 +22,9 @@
 [submodule "vim/.vim/plugged/vim-polyglot"]
 	path = vim/.vim/plugged/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "vim/.vim/plugged/vim-snippets"]
-	path = vim/.vim/plugged/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
 [submodule "vim/.vim/plugged/vim-surround"]
 	path = vim/.vim/plugged/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/.vim/plugged/deoplete.nvim"]
-	path = vim/.vim/plugged/deoplete.nvim
-	url = https://github.com/Shougo/deoplete.nvim.git
-[submodule "vim/.vim/plugged/nvim-yarp"]
-	path = vim/.vim/plugged/nvim-yarp
-	url = https://github.com/roxma/nvim-yarp.git
-[submodule "vim/.vim/plugged/vim-hug-neovim-rpc"]
-	path = vim/.vim/plugged/vim-hug-neovim-rpc
-	url = https://github.com/roxma/vim-hug-neovim-rpc.git
-[submodule "vim/.vim/plugged/deoplete-vim-lsp"]
-	path = vim/.vim/plugged/deoplete-vim-lsp
-	url = https://github.com/lighttiger2505/deoplete-vim-lsp.git
-[submodule "vim/.vim/plugged/vim-lsp"]
-	path = vim/.vim/plugged/vim-lsp
-	url = https://github.com/prabirshrestha/vim-lsp.git
-[submodule "vim/.vim/plugged/vim-lsp-settings"]
-	path = vim/.vim/plugged/vim-lsp-settings
-	url = https://github.com/mattn/vim-lsp-settings.git
 [submodule "vim/.vim/plugged/fzf.vim"]
 	path = vim/.vim/plugged/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
@@ -64,3 +40,9 @@
 [submodule "vim/.vim/plugged/vimspector"]
 	path = vim/.vim/plugged/vimspector
 	url = https://github.com/puremourning/vimspector.git
+[submodule "vim/.vim/plugged/vim-snippets"]
+	path = vim/.vim/plugged/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/.vim/plugged/ultisnips"]
+	path = vim/.vim/plugged/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
