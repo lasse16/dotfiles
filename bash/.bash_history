@@ -804,3 +804,8 @@ exec bash
 ll
 git st
 exec bash
+git submodule adde
+git submodule add https://github.com/puremourning/vimspector.git
+git submodule add https://github.com/honza/vim-snippets.git
+git submodule add https://github.com/SirVer/ultisnips.git
+:q
