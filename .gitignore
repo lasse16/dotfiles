@@ -1,3 +1,13 @@
 direnv/.local/share/direnv/allow
 direnv/.local/lib
 direnv/.local/include
+
+local-data.toml
+
+.dotter/cache.toml
+.dotter/cache
+.dotter/local.toml
+
+bash/helpers/ssh_agent.sh
+
+folder_shortcuts
