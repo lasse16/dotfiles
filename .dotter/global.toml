@@ -5,10 +5,6 @@ depends = [ "environment" ]
 [direnv]
 [environment]
 [fzf]
-# Currently fzf is installed as a vim package
-# So, to avoid duplication the binary installed via the package
-# is referenced when using on CLI.
-depends= [ "vim" ]
 [git]
 [tmux]
 [tree-sitter]
