@@ -5,10 +5,6 @@ depends = [ "environment" ]
 [direnv]
 [environment]
 [fzf]
-# Currently fzf is installed as a vim package
-# So, to avoid duplication the binary installed via the package
-# is referenced when using on CLI.
-depends= [ "vim" ]
 [git]
 [tmux]
 [tree-sitter]
@@ -32,6 +28,9 @@ depends = [ "bash" ]
 [environment.variables]
 # Replace this by future dotter built-in variable (Maybe)
 "environment.dotfile_folder"="$DOTFILES"
+
+[fzf.variables]
+"fzf.home_directory"="$HOME/src/fzf"
 
 [git.files]
 "git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
