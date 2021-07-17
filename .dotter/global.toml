@@ -33,6 +33,9 @@ depends = [ "bash" ]
 # Replace this by future dotter built-in variable (Maybe)
 "environment.dotfile_folder"="$DOTFILES"
 
+[fzf.variables]
+"fzf.home_directory"="$HOME/src/fzf"
+
 [git.files]
 "git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
 
