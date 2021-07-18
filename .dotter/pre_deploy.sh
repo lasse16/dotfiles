@@ -7,3 +7,14 @@ vim -c PlugInstall -c qa
 # Source  environment variable for FZF options
 . fzf/fzf_setup.sh
 {{/if}}
+
+{{#if  dotter.packages.environment }}
+# Create file containing folder bookmarks
+FILE="$DOTFILES/bookmarks"
+  echo "" >  "$FILE"
+  {{~#each environment.bookmarks}}
+  echo {{this}} >> "$FILE";
+  {{~/each}}
+sed '/^[[:space:]]*$/d' -i "$FILE"
+source "$DOTFILES/fzf/bookmark_searcher.sh"
+{{/if}}
