@@ -16,5 +16,4 @@ FILE="$DOTFILES/bookmarks"
   echo {{this}} >> "$FILE";
   {{~/each}}
 sed '/^[[:space:]]*$/d' -i "$FILE"
-source "$DOTFILES/fzf/bookmark_searcher.sh"
 {{/if}}
