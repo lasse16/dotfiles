@@ -24,20 +24,4 @@ if has('python3')
 endif
 call plug#end()
 
-
-
-" Align visual selection
-xmap ga <Plug>(EasyAlign)
-
-" Update termcaps sent by Alt-key
-execute "set <A-j>=\ej"
-execute "set <A-k>=\ek"
-
-
-
-" Call plugin configurations from different files
-runtime plugged/plugins.vim
-
-
-
 colorscheme updated-default
