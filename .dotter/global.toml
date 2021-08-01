@@ -6,6 +6,9 @@ depends = [ "environment" ]
 [environment]
 [fzf]
 [git]
+[nvim]
+# Currently uses the saem configuration as Vim does
+depends=[ "vim" ]
 [tmux]
 [tree-sitter]
 [vifm]
@@ -39,6 +42,9 @@ depends = [ "bash" ]
 [git.variables]
 "git.name"=""
 "git.email"=""
+
+[nvim.files]
+"nvim/init.vim"={target= "~/.config/nvim/init.vim", type = "symbolic"}
 
 [tmux.files]
 "tmux/.tmux.conf"="~/.tmux.conf"
