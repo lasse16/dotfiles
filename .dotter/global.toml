@@ -9,9 +9,6 @@ depends = [ "environment" ]
 [nvim]
 [tmux]
 [tree-sitter]
-[vifm]
-# Uses vim as a previewer and opening tool
-depends=[ "vim" ]
 [vim]
 depends=[ "environment" ]
 [ssh]
@@ -59,12 +56,6 @@ depends = [ "bash" ]
 [tree-sitter.variables]
 "tree-sitter.parser-directory"=""
 
-
-[vifm.files]
-"vifm/colors"="~/.config/vifm"
-"vifm/scripts"="~/.config/vifm"
-"vifm/vifmrc"="~/.config/vifm/vifmrc"
-
 [vim.files]
 "vim/.vimrc.tmpl"= {target="~/.vimrc", type="template"}
 
@@ -73,7 +64,6 @@ depends = [ "bash" ]
 
 [ssh.variables]
 "ssh.key-files"=[]
-
 
 [rust.variables]
 "rust.cargo_home"="~/.cargo"
