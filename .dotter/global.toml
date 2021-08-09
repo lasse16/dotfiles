@@ -6,6 +6,7 @@ depends = [ "environment" ]
 [environment]
 [fzf]
 [git]
+[lf]
 [nvim]
 [tmux]
 [tree-sitter]
@@ -37,6 +38,9 @@ depends = [ "bash" ]
 [git.variables]
 "git.name"=""
 "git.email"=""
+
+[lf.files]
+"lf/lfrc"={target= "~/.config/lf/lfrc", type = "symbolic"}
 
 [nvim.files]
 "nvim/init.lua"={target= "~/.config/nvim/init.lua", type = "symbolic"}
