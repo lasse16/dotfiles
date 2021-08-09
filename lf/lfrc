@@ -59,3 +59,6 @@ cmd fzf_jump ${{
 }}
 
 map <c-f> :fzf_jump
+
+map <esc> quit
+map <c-c> quit
