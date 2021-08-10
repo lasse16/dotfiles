@@ -63,3 +63,6 @@ map <c-f> :fzf_jump
 map <esc> quit
 map <c-c> quit
 map ZZ quit
+
+cmd yank-path $printf '%s' "$fx" | win32yank.exe -i
+cmd yank-dirname $dirname -- "$f" | head -c-1 | win32yank.exe -i
