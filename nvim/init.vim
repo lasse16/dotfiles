@@ -1,17 +1,27 @@
-    set runtimepath^=~/.vim runtimepath+=~/.vim/after
-    let &packpath = &runtimepath
-    source ~/.vimrc
+let &packpath = &runtimepath
 
-set clipboard+=unnamedplus
-let g:clipboard = {
-            \   'name': 'win32yank-wsl',
-            \   'copy': {
-            \      '+': 'win32yank.exe -i --crlf',
-            \      '*': 'win32yank.exe -i --crlf',
-            \    },
-            \   'paste': {
-            \      '+': 'win32yank.exe -o --lf',
-            \      '*': 'win32yank.exe -o --lf',
-            \   },
-            \   'cache_enabled': 0,
-            \ }
+call plug#begin('~/.config/nvim/plugged')
+Plug 'junegunn/vim-easy-align'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'lilydjwg/colorizer'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'wellle/targets.vim'
+Plug 'rhysd/clever-f.vim'
+Plug 'dense-analysis/ale'
+Plug '$HOME/src/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'machakann/vim-highlightedyank'
+if has('python3')
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
+	Plug 'puremourning/vimspector'
+endif
+call plug#end()
+
+colorscheme updated-default
+
+lua require('example')
+lua require('clipboard')

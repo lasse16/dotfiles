@@ -7,8 +7,6 @@ depends = [ "environment" ]
 [fzf]
 [git]
 [nvim]
-# Currently uses the saem configuration as Vim does
-depends=[ "vim" ]
 [tmux]
 [tree-sitter]
 [vifm]
@@ -45,6 +43,11 @@ depends = [ "bash" ]
 
 [nvim.files]
 "nvim/init.vim"={target= "~/.config/nvim/init.vim", type = "symbolic"}
+"nvim/lua"={target= "~/.config/nvim/lua", type = "symbolic"}
+"nvim/autoload"={target= "~/.config/nvim/autoload", type = "symbolic"}
+"nvim/colors"={target= "~/.config/nvim/colors", type = "symbolic"}
+"nvim/plugin"={target= "~/.config/nvim/plugin", type = "symbolic"}
+"nvim/after"={target= "~/.config/nvim/after", type = "symbolic"}
 
 [tmux.files]
 "tmux/.tmux.conf"="~/.tmux.conf"
