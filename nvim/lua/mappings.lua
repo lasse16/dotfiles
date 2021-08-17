@@ -1,6 +1,4 @@
 vim.cmd([[
-
-
 function! SnippetExpandOrJump() abort
 	if has_key(g:plugs,"ultisnips")
 		call UltiSnips#ExpandSnippetOrJump()
@@ -12,7 +10,6 @@ endfunction
 
 " Shamelessly stolen from https://stackoverflow.com/a/61275100
 function! HandleTab() abort
-	echo " HANDLING TAB "
 	" Check if we're in a completion menu
 	if pumvisible()
 		return "\<C-n>"
