@@ -1,0 +1,1 @@
+../nvim/colors/updated-default.vim
