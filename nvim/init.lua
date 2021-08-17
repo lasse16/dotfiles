@@ -1,5 +1,9 @@
-let &packpath = &runtimepath
+vim.g.packpath = vim.g.runtimepath
+require('clipboard')
 
+vim.cmd('colorscheme updated-default')
+
+vim.cmd([[
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
@@ -20,7 +24,7 @@ if has('python3')
 	Plug 'puremourning/vimspector'
 endif
 call plug#end()
+]])
 
-colorscheme updated-default
 
-lua require('clipboard')
+print("INIT.LUA completed")
