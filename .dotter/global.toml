@@ -7,8 +7,6 @@ depends = [ "environment" ]
 [fzf]
 [git]
 [nvim]
-# Currently uses the saem configuration as Vim does
-depends=[ "vim" ]
 [tmux]
 [tree-sitter]
 [vifm]
