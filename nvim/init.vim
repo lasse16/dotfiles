@@ -23,5 +23,4 @@ call plug#end()
 
 colorscheme updated-default
 
-lua require('example')
 lua require('clipboard')
