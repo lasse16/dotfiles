@@ -1,7 +1,6 @@
-    set runtimepath^=~/.vim runtimepath+=~/.vim/after
-    let &packpath = &runtimepath
+let &packpath = &runtimepath
 
-call plug#begin('/home/lasse/dotfiles/vim/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
