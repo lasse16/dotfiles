@@ -7,6 +7,7 @@ vim.cmd('colorscheme updated-default')
 
 vim.cmd([[
 call plug#begin('~/.config/nvim/plugged')
+Plug 'neovim/nvim-lspconfig'
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
@@ -28,5 +29,7 @@ call plug#end()
 ]])
 
 vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false}')
+
+vim.cmd(' let g:python3_host_prog = "/home/lasse/.local/share/nvim/python_environment/bin/python3"')
 
 print("INIT.LUA completed")
