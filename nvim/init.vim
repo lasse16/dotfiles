@@ -15,3 +15,5 @@ let g:clipboard = {
             \   },
             \   'cache_enabled': 0,
             \ }
+
+lua require('example')

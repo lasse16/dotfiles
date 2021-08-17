@@ -45,6 +45,7 @@ depends = [ "bash" ]
 
 [nvim.files]
 "nvim/init.vim"={target= "~/.config/nvim/init.vim", type = "symbolic"}
+"nvim/lua"={target= "~/.config/nvim/lua", type = "symbolic"}
 
 [tmux.files]
 "tmux/.tmux.conf"="~/.tmux.conf"
