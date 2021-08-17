@@ -1,7 +1,4 @@
 vim.cmd([[
-" Map <Ctrl-S> to saving the current open document
-nnoremap <C-s> <ESC>:update<CR>
-
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
@@ -36,12 +33,16 @@ endfunction
 
 inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
 	]])
+
 -- Move lines up and down
 noremap={ noremap= true}
 vim.api.nvim_set_keymap('n','<A-j>',':m .+1<CR>==', noremap)
 vim.api.nvim_set_keymap('n','<A-k>',':m .-2<CR>==', noremap)
 vim.api.nvim_set_keymap('v','<A-k>',":m '<-2<CR>gv=gv", noremap)
 vim.api.nvim_set_keymap('v','<A-j>',":m '>+1<CR>gv=gv", noremap)
+
+-- Map <Ctrl-S> to saving the current open document
+vim.api.nvim_set_keymap('n', '<C-s>', '<ESC>:update<CR>', noremap)
 
 
 -- Set up popup menu navigation
