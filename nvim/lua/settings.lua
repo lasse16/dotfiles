@@ -69,3 +69,5 @@ set mouse+=a
 set background=dark
 
 set encoding=utf-8
+
+print("SETTINGS COMPLETED")
