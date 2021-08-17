@@ -40,8 +40,12 @@ function! HandleTab() abort
 endfunction
 
 inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
-inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-inoremap <expr> <Enter> pumvisible() ? "\<C-y>" : "\<Enter>"
-inoremap <expr> <ESC> pumvisible() ? "\<C-e>" : "\<ESC>"
 	]])
+
+-- Set up popup menu navigation
+noremap_expr={ noremap=true, expr=true }
+vim.api.nvim_set_keymap('i', '<S-TAB>', 'pumvisible() ? "<C-p>" : "<S-TAB>" ', noremap_expr)
+vim.api.nvim_set_keymap('i', '<Enter>', 'pumvisible() ? "<C-y>" : "<Enter>" ', noremap_expr)
+vim.api.nvim_set_keymap('i', '<Esc>', 'pumvisible() ? "<C-e>" : "<Esc>" ', noremap_expr)
+
 print('MAPPINGS COMPLETED')
