@@ -1,10 +1,4 @@
 vim.cmd([[
-" Move lines up and down
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-vnoremap <A-k> :m '<-2<CR>gv=gv
-vnoremap <A-j> :m '>+1<CR>gv=gv
-
 " Map <Ctrl-S> to saving the current open document
 nnoremap <C-s> <ESC>:update<CR>
 
@@ -23,6 +17,7 @@ endfunction
 
 " Shamelessly stolen from https://stackoverflow.com/a/61275100
 function! HandleTab() abort
+	echo " HANDLING TAB "
 	" Check if we're in a completion menu
 	if pumvisible()
 		return "\<C-n>"
@@ -41,6 +36,13 @@ endfunction
 
 inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
 	]])
+-- Move lines up and down
+noremap={ noremap= true}
+vim.api.nvim_set_keymap('n','<A-j>',':m .+1<CR>==', noremap)
+vim.api.nvim_set_keymap('n','<A-k>',':m .-2<CR>==', noremap)
+vim.api.nvim_set_keymap('v','<A-k>',":m '<-2<CR>gv=gv", noremap)
+vim.api.nvim_set_keymap('v','<A-j>',":m '>+1<CR>gv=gv", noremap)
+
 
 -- Set up popup menu navigation
 noremap_expr={ noremap=true, expr=true }
