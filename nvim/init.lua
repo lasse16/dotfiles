@@ -1,5 +1,6 @@
 vim.g.packpath = vim.g.runtimepath
 require('clipboard')
+require('settings')
 
 vim.cmd('colorscheme updated-default')
 
