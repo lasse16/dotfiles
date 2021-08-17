@@ -20,11 +20,9 @@ Plug 'rhysd/clever-f.vim'
 Plug 'dense-analysis/ale'
 Plug '$HOME/src/fzf'
 Plug 'junegunn/fzf.vim'
-if has('python3')
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
-	Plug 'puremourning/vimspector'
-endif
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'puremourning/vimspector'
 call plug#end()
 ]])
 
