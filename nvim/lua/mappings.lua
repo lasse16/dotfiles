@@ -1,3 +1,4 @@
+vim.cmd([[
 " Move lines up and down
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
@@ -42,3 +43,5 @@ inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 inoremap <expr> <Enter> pumvisible() ? "\<C-y>" : "\<Enter>"
 inoremap <expr> <ESC> pumvisible() ? "\<C-e>" : "\<ESC>"
+	]])
+print('MAPPINGS COMPLETED')
