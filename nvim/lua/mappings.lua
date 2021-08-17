@@ -1,6 +1,4 @@
 vim.cmd([[
-" Unbind some useless/annoying default key bindings.
-nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
 
 function! SnippetExpandOrJump() abort
@@ -44,6 +42,8 @@ vim.api.nvim_set_keymap('v','<A-j>',":m '>+1<CR>gv=gv", noremap)
 -- Map <Ctrl-S> to saving the current open document
 vim.api.nvim_set_keymap('n', '<C-s>', '<ESC>:update<CR>', noremap)
 
+-- Unbind some useless/annoying default key bindings.
+vim.api.nvim_set_keymap('n', 'Q' , '<Nop>', {}) -- 'Q' in normal mode enters Ex mode. You almost never want this.
 
 -- Set up popup menu navigation
 noremap_expr={ noremap=true, expr=true }
