@@ -19,7 +19,6 @@ Plug 'rhysd/clever-f.vim'
 Plug 'dense-analysis/ale'
 Plug '$HOME/src/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'machakann/vim-highlightedyank'
 if has('python3')
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
@@ -28,5 +27,6 @@ endif
 call plug#end()
 ]])
 
+vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false}')
 
 print("INIT.LUA completed")
