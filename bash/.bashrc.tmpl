@@ -1,7 +1,10 @@
 # Set $DOTFILES_BASH environment variables if not already set
 ${DOTFILES_BASH:=$DOTFILES/bash}
 export DOTFILES_BASH
-export PATH=$PATH:"$DOTFILES_BASH/scripts"
+
+# Source helpers
+source "$DOTFILES_BASH/helpers/pathadd.bash"
+pathadd "$DOTFILES_BASH/scripts"
 
 # If not running interactively, don't do anything
 case $- in

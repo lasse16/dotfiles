@@ -11,7 +11,7 @@
 # Set $DOTFILES environment repo if not already set
 ${DOTFILES:=$HOME/dotfiles}
 export DOTFILES
-export PATH=$PATH:~/.local/share/lsp-servers
+pathadd "$HOME/.local/share/lsp-servers"
 
 {{#if dotter.packages.vim}}
 # Set vim as a pager for man pages
