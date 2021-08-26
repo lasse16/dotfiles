@@ -29,6 +29,11 @@ local on_attach = function(client, bufnr)
 
 end
 
-require('lspconfig').rust_analyzer.setup({})
+require('lspconfig').rust_analyzer.setup({
+  on_attach=on_attach,
+  flags = {
+    debounce_text_changes = 200, 
+  }
+})
 
 print("LSP config finished")
