@@ -17,3 +17,9 @@ highlight VertSplit ctermbg=NONE ctermfg=black cterm=NONE
 
 " Display comments in italic
 highlight EndOfBuffer ctermfg=black cterm=italic term=italic
+
+" Change the background of the completion window
+highlight Pmenu ctermbg=black ctermfg=darkGrey
+
+" Change the background of the completion window
+highlight PmenuSel ctermbg=black ctermfg=white
