@@ -23,3 +23,6 @@ highlight Pmenu ctermbg=black ctermfg=darkGrey
 
 " Change the background of the completion window
 highlight PmenuSel ctermbg=black ctermfg=white
+
+" Set border of popup and floating windows
+highlight FloatBorder ctermbg=NONE ctermfg=black
