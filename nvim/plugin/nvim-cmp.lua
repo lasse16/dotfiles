@@ -1,11 +1,10 @@
+local cmp = require('cmp')
 local compare = require('cmp.config.compare')
 local types = require('cmp.types')
 
 local WIDE_HEIGHT = 40
 
----@return cmp.ConfigSchema
-return function()
-  return {
+cmp.setup({
     completion = {
       autocomplete = {
         types.cmp.TriggerEvent.TextChanged,
@@ -69,5 +68,4 @@ return function()
     },
 
     sources = {},
-  }
-end
+})
