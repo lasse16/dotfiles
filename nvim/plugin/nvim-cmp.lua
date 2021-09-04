@@ -47,5 +47,7 @@ cmp.setup({
       ghost_text = false,
     },
 
-    sources = {},
+    sources = {
+      { name = 'buffer'}
+    },
 })
