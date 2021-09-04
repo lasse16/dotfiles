@@ -9,12 +9,7 @@ cmp.setup({
       autocomplete = {
         types.cmp.TriggerEvent.TextChanged,
       },
-      completeopt = 'menu,menuone,noselect',
-      keyword_pattern = [[\%(-\?\d\+\%(\.\d\+\)\?\|\h\w*\%(-\w*\)*\)]],
-      keyword_length = 1,
-      get_trigger_characters = function(trigger_characters)
-        return trigger_characters
-      end
+      completeopt = 'menu,noselect',
     },
 
     snippet = {
@@ -28,8 +23,6 @@ cmp.setup({
     documentation = {
       border = { '', '', '', ' ', '', '', '', ' ' },
       winhighlight = 'NormalFloat:CmpDocumentation,FloatBorder:CmpDocumentationBorder',
-      maxwidth = math.floor((WIDE_HEIGHT * 2) * (vim.o.columns / (WIDE_HEIGHT * 2 * 16 / 9))),
-      maxheight = math.floor(WIDE_HEIGHT * (WIDE_HEIGHT / vim.o.lines)),
     },
 
     confirmation = {
@@ -37,19 +30,6 @@ cmp.setup({
       get_commit_characters = function(commit_characters)
         return commit_characters
       end
-    },
-
-    sorting = {
-      priority_weight = 2,
-      comparators = {
-        compare.offset,
-        compare.exact,
-        compare.score,
-        compare.kind,
-        compare.sort_text,
-        compare.length,
-        compare.order,
-      }
     },
 
     event = {},
