@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp', { 'branch' : 'main' }
 Plug 'hrsh7th/cmp-buffer', { 'branch' : 'main' }
+Plug 'hrsh7th/cmp-nvim-lsp', { 'branch' : 'main' }
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'

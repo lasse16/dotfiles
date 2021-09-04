@@ -48,6 +48,7 @@ cmp.setup({
     },
 
     sources = {
-      { name = 'buffer'}
+      { name = 'buffer'},
+      { name = 'nvim_lsp'},
     },
 })

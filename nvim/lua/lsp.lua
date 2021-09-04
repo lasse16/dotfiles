@@ -29,8 +29,13 @@ local on_attach = function(client, bufnr)
 
 end
 
+-- Setup completion engine
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 require('lspconfig').rust_analyzer.setup({
   on_attach=on_attach,
+  capabilities=capabilities,
   flags = {
     debounce_text_changes = 200,
   }
