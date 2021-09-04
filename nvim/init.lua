@@ -1,6 +1,7 @@
 vim.cmd([[
 call plug#begin('~/.config/nvim/plugged')
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp', { 'branch' : 'main' }
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
