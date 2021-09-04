@@ -13,8 +13,8 @@ cmp.setup({
     },
 
     snippet = {
-      expand = function()
-        error('snippet engine is not configured.')
+      expand = function(args)
+        vim.fn['UltiSnips#Anon'](args.body)
       end,
     },
 
@@ -50,5 +50,6 @@ cmp.setup({
     sources = {
       { name = 'buffer'},
       { name = 'nvim_lsp'},
+      { name = 'ultisnips'},
     },
 })
