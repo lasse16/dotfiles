@@ -32,10 +32,6 @@ cmp.setup({
       end
     },
 
-    event = {},
-
-    mapping = {},
-
     formatting = {
       deprecated = true,
       format = function(_, vim_item)
