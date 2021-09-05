@@ -47,5 +47,6 @@ cmp.setup({
       { name = 'buffer'},
       { name = 'nvim_lsp'},
       { name = 'ultisnips'},
+      { name = 'path'},
     },
 })
