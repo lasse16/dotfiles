@@ -7,7 +7,7 @@ local WIDE_HEIGHT = 40
 cmp.setup({
     completion = {
       autocomplete = {
-        types.cmp.TriggerEvent.TextChanged,
+        false
       },
       completeopt = 'menu,noselect',
     },
