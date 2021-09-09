@@ -44,9 +44,9 @@ cmp.setup({
     },
 
     sources = {
-      { name = 'buffer'},
+      { name = 'path'},
       { name = 'nvim_lsp'},
       { name = 'ultisnips'},
-      { name = 'path'},
+      { name = 'buffer'},
     },
 })
