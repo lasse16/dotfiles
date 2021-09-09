@@ -22,8 +22,8 @@ function! HandleTab() abort
 	if !col || getline('.')[col - 1] =~ '\s'
 		return "\<Tab>"
 	endif
-	"TODO Trigger  completion here
-	return "\<Tab>"
+	lua require('cmp').complete()
+	return ""
 endfunction
 
 inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
