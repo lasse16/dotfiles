@@ -21,6 +21,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'puremourning/vimspector'
+Plug 'kosayoda/nvim-lightbulb'
 call plug#end()
 ]])
 
