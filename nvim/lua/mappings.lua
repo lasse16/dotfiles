@@ -29,23 +29,26 @@ endfunction
 inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
 	]])
 
+-- utils
+local function set_global_key(...) vim.api.nvim_set_keymap(...) end
+
 -- Move lines up and down
 noremap={ noremap= true}
-vim.api.nvim_set_keymap('n','<A-j>',':m .+1<CR>==', noremap)
-vim.api.nvim_set_keymap('n','<A-k>',':m .-2<CR>==', noremap)
-vim.api.nvim_set_keymap('v','<A-k>',":m '<-2<CR>gv=gv", noremap)
-vim.api.nvim_set_keymap('v','<A-j>',":m '>+1<CR>gv=gv", noremap)
+set_global_key('n','<A-j>',':m .+1<CR>==', noremap)
+set_global_key('n','<A-k>',':m .-2<CR>==', noremap)
+set_global_key('v','<A-k>',":m '<-2<CR>gv=gv", noremap)
+set_global_key('v','<A-j>',":m '>+1<CR>gv=gv", noremap)
 
 -- Map <Ctrl-S> to saving the current open document
-vim.api.nvim_set_keymap('n', '<C-s>', '<ESC>:update<CR>', noremap)
+set_global_key('n', '<C-s>', '<ESC>:update<CR>', noremap)
 
 -- Unbind some useless/annoying default key bindings.
-vim.api.nvim_set_keymap('n', 'Q' , '<Nop>', {}) -- 'Q' in normal mode enters Ex mode. You almost never want this.
+set_global_key('n', 'Q' , '<Nop>', {}) -- 'Q' in normal mode enters Ex mode. You almost never want this.
 
 -- Set up popup menu navigation
 noremap_expr={ noremap=true, expr=true }
-vim.api.nvim_set_keymap('i', '<S-TAB>', 'pumvisible() ? "<C-p>" : "<S-TAB>" ', noremap_expr)
-vim.api.nvim_set_keymap('i', '<Enter>', 'pumvisible() ? "<C-y>" : "<Enter>" ', noremap_expr)
-vim.api.nvim_set_keymap('i', '<Esc>', 'pumvisible() ? "<C-e>" : "<Esc>" ', noremap_expr)
+set_global_key('i', '<S-TAB>', 'pumvisible() ? "<C-p>" : "<S-TAB>" ', noremap_expr)
+set_global_key('i', '<Enter>', 'pumvisible() ? "<C-y>" : "<Enter>" ', noremap_expr)
+set_global_key('i', '<Esc>', 'pumvisible() ? "<C-e>" : "<Esc>" ', noremap_expr)
 
 print('MAPPINGS COMPLETED')
