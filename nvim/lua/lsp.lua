@@ -1,3 +1,14 @@
+local border = {
+  {"╭",  "FloatBorder"},
+  {"─", "FloatBorder"},
+  {"╮", "FloatBorder"},
+  {"│", "FloatBorder"},
+  {"╯","FloatBorder"},
+  {"─", "FloatBorder"},
+  {"╰", "FloatBorder"},
+  {"│", "FloatBorder"},
+}
+
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -26,6 +37,10 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<C-r>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+  -- Draw hover and signature help windows with a specified border
+  vim.lsp.handlers["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border})
+  vim.lsp.handlers["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border})
 
 end
 

@@ -25,7 +25,7 @@ highlight Pmenu ctermbg=black ctermfg=darkGrey
 highlight PmenuSel ctermbg=black ctermfg=white
 
 " Set border of popup and floating windows
-highlight FloatBorder ctermbg=NONE ctermfg=black
+highlight FloatBorder ctermbg=black ctermfg=darkGrey
 
 " Darken the background of the Gutter/SignColumn
 highlight SignColumn ctermbg=NONE
