@@ -29,3 +29,23 @@ highlight FloatBorder ctermbg=NONE ctermfg=black
 
 " Darken the background of the Gutter/SignColumn
 highlight SignColumn ctermbg=NONE
+
+if has_key(g:plugs,'nvim-lspconfig')
+	"default highlight groups for LSP messages
+	highlight LspDiagnosticsDefaultError ctermfg=red ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsDefaultWarning ctermfg=yellow ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsDefaultInformation ctermfg=white ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsDefaultHint ctermfg=grey ctermbg=NONE cterm=italic
+
+	" Highlight virtual text
+	highlight LspDiagnosticsVirtualTextError ctermfg=red ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsVirtualTextWarning ctermfg=yellow ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsVirtualTextInformation ctermfg=white ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsVirtualTextHint ctermfg=grey ctermbg=NONE cterm=italic
+
+	" Change displays in the sign column
+	highlight LspDiagnosticsSignError ctermfg=red ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsSignWarning ctermfg=yellow ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsSignInformation ctermfg=white ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsSignHint ctermfg=grey ctermbg=NONE cterm=italic
+endif
