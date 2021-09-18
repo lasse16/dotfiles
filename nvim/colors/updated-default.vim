@@ -32,10 +32,10 @@ highlight SignColumn ctermbg=NONE
 
 if has_key(g:plugs,'nvim-lspconfig')
 	"default highlight groups for LSP messages
-	highlight LspDiagnosticsDefaultError ctermfg=red ctermbg=NONE cterm=italic
-	highlight LspDiagnosticsDefaultWarning ctermfg=yellow ctermbg=NONE cterm=italic
-	highlight LspDiagnosticsDefaultInformation ctermfg=white ctermbg=NONE cterm=italic
-	highlight LspDiagnosticsDefaultHint ctermfg=grey ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsDefaultError ctermfg=red ctermbg=NONE cterm=underline,italic
+	highlight LspDiagnosticsDefaultWarning ctermfg=yellow ctermbg=NONE cterm=underline,italic
+	highlight LspDiagnosticsDefaultInformation ctermfg=white ctermbg=NONE cterm=underline,italic
+	highlight LspDiagnosticsDefaultHint ctermfg=grey ctermbg=NONE cterm=underline,italic
 
 	" Highlight virtual text
 	highlight LspDiagnosticsVirtualTextError ctermfg=red ctermbg=NONE cterm=italic
