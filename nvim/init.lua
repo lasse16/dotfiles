@@ -22,6 +22,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'puremourning/vimspector'
 Plug 'kosayoda/nvim-lightbulb'
+Plug 'nathanmsmith/nvim-ale-diagnostic', { 'branch' : 'main' }
 call plug#end()
 ]])
 
