@@ -27,6 +27,11 @@ if vim.fn.has_key(vim.g.plugs, 'ale') then
 ]])
 
 	vim.g.ale_fix_on_save = 1
+
+	-- Disable LSP features as they are handled by nvim-lspconfig
+	vim.g.ale_disable_lsp = 1
+
+
 else
 	print(string.format('ALE config present at %s but plugin is not installed', vim.cmd("expand('%:p')")))
 end
