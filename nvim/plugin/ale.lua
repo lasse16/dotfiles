@@ -12,6 +12,8 @@ if vim.fn.has_key(vim.g.plugs, 'ale') then
 	-- Border characters
 	vim.g.ale_floating_window_border = { "│", "─", "╭", "╮", "╯",  "╰" }
 
+	-- Do not lint on entering a new file
+	vim.g.ale_lint_on_enter = 0
 
 	vim.cmd( [[
 	let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'] }
