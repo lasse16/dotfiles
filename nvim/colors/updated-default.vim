@@ -44,8 +44,8 @@ if has_key(g:plugs,'nvim-lspconfig')
 	highlight LspDiagnosticsVirtualTextHint ctermfg=grey ctermbg=NONE cterm=italic
 
 	" Change displays in the sign column
-	highlight LspDiagnosticsSignError ctermfg=red ctermbg=NONE cterm=italic
-	highlight LspDiagnosticsSignWarning ctermfg=yellow ctermbg=NONE cterm=italic
-	highlight LspDiagnosticsSignInformation ctermfg=white ctermbg=NONE cterm=italic
-	highlight LspDiagnosticsSignHint ctermfg=grey ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsSignError ctermfg=red ctermbg=NONE
+	highlight LspDiagnosticsSignWarning ctermfg=yellow ctermbg=NONE
+	highlight LspDiagnosticsSignInformation ctermfg=white ctermbg=NONE
+	highlight LspDiagnosticsSignHint ctermfg=grey ctermbg=NONE
 endif
