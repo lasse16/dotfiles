@@ -3,7 +3,7 @@
 " vim-plug
 exe 'set rtp+=' . expand('{{environment.dotfile_folder}}/vim/.vim')
 
-call plug#begin('{{environment.dotfile_folder}}/vim/.vim/plugged')
+call plug#begin('{{vim.plugin_dir}}')
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
