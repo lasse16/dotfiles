@@ -17,3 +17,35 @@ highlight VertSplit ctermbg=NONE ctermfg=black cterm=NONE
 
 " Display comments in italic
 highlight EndOfBuffer ctermfg=black cterm=italic term=italic
+
+" Change the background of the completion window
+highlight Pmenu ctermbg=black ctermfg=darkGrey
+
+" Change the background of the completion window
+highlight PmenuSel ctermbg=black ctermfg=white
+
+" Set border of popup and floating windows
+highlight FloatBorder ctermbg=black ctermfg=darkGrey
+
+" Darken the background of the Gutter/SignColumn
+highlight SignColumn ctermbg=NONE
+
+if has_key(g:plugs,'nvim-lspconfig')
+	"default highlight groups for LSP messages
+	highlight LspDiagnosticsDefaultError ctermfg=red ctermbg=NONE cterm=underline,italic
+	highlight LspDiagnosticsDefaultWarning ctermfg=yellow ctermbg=NONE cterm=underline,italic
+	highlight LspDiagnosticsDefaultInformation ctermfg=white ctermbg=NONE cterm=underline,italic
+	highlight LspDiagnosticsDefaultHint ctermfg=grey ctermbg=NONE cterm=underline,italic
+
+	" Highlight virtual text
+	highlight LspDiagnosticsVirtualTextError ctermfg=red ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsVirtualTextWarning ctermfg=yellow ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsVirtualTextInformation ctermfg=white ctermbg=NONE cterm=italic
+	highlight LspDiagnosticsVirtualTextHint ctermfg=grey ctermbg=NONE cterm=italic
+
+	" Change displays in the sign column
+	highlight LspDiagnosticsSignError ctermfg=red ctermbg=NONE
+	highlight LspDiagnosticsSignWarning ctermfg=yellow ctermbg=NONE
+	highlight LspDiagnosticsSignInformation ctermfg=white ctermbg=NONE
+	highlight LspDiagnosticsSignHint ctermfg=grey ctermbg=NONE
+endif

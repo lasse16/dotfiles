@@ -809,3 +809,260 @@ git submodule add https://github.com/puremourning/vimspector.git
 git submodule add https://github.com/honza/vim-snippets.git
 git submodule add https://github.com/SirVer/ultisnips.git
 :q
+cd
+cd dotfiles/
+git st
+git log
+git reset HEAD --hard
+git reset HEAD~ --hard
+git st
+lf
+git st
+ll
+nvim lua/mappings.lua 
+nvim plugin/nvim-cmp.lua 
+nvim lua/mappings.lua 
+nvim
+nvim plugin/nvim-cmp.lua 
+nvim lua/mappings.lua 
+git st
+git add -p
+git st 
+git c
+git st
+git fuck-up 
+nvim plugin/nvim-cmp.lua 
+git st
+git add plugin/nvim-cmp.lua 
+git c
+man look
+git st
+git push -u
+git co setup-nvim-lsp 
+git push -u
+git st
+git fetch
+git fetch --prune
+git pull
+gitt st
+git st
+git lg
+git trim
+git-trim
+git br -d setup--c
+git br -d setup-completion 
+git br
+git br -v
+git br -d replace-file-manager seperate-nvim-from-vim  transition-nvim-to-lua 
+git br -a
+cd
+cd src/
+ll
+cd rust-analyzer/
+ll
+nvim $(fzf)
+cd
+cd dotfiles/
+ll
+nvim nvim/colors/updated-default.vim 
+cd
+cd src/rust-analyzer/
+nvim $(fzf)
+git st
+cd
+cd dotfiles/
+git st
+git add  nvim/
+git c
+nvim $(fzf)
+cd
+cd dotfiles/
+ll
+git log
+ll
+cd nvim/
+ll
+touch TODO_1
+touch TODO_2
+nvim TODO_*
+nvim TODO_3
+nvim TODO_4
+nvim $(fzf)
+cd
+cd dotfiles/nvim/
+nvim $(fzf)
+cd -
+nvim init.lua 
+cd -
+nvim lua/lsp.lua 
+cd -
+nvim lua/lsp.lua 
+nvim $(fzf)
+cd  -
+ll
+nvim lua/mappings.lua 
+cd -
+nvim $(fzf)
+cd  -
+git s
+git st
+git add lua 
+git c -v
+git log
+git c --amend
+git st
+cat lua/mappings.lua 
+lf
+cd
+cd dotfiles/
+l
+cd nvim/
+ll
+cat TODO_1 
+ll
+cat TODO_*
+cd
+cd dotfiles/nvim/
+ll
+cd colors/
+ll
+nvim
+ll
+git  st
+git st
+mv updated-default.vim updated-default.lua
+nvim updated-default.lua 
+mv updated-default.lua updated-default.vim
+nvim
+ll
+nvim  updated-default.vim 
+nvim
+lf
+git st
+git add .
+git c
+git  st
+cd ..
+ll
+git st
+lf
+ll
+cd colors/
+nvim updated-default.vim 
+lf
+ll
+cd ..
+git  s
+git st
+git  diff
+git add lua/lsp.lua colors/updated-default.vim 
+git c -v
+ll
+git st
+rm TODO_2 
+ll
+git st
+nvim -O lua/mappings.lua lua/lsp.lua 
+git st
+git add lua/
+git  c -v
+git st
+nvim -O lua/mappings.lua lua/lsp.lua 
+lf
+nvim $(fzf)
+cd -
+cd dotfiles/
+ll
+cd nvim/
+ll
+nvim plugin/nvim-cnp.lua
+nvim $(fzf)
+nvim
+nvim $(fzf)
+nvim
+nvim $(fzf)
+cd ..
+nvim $(fzf)
+ll
+nvim .dotter/global.toml 
+cd ..
+cd dotfiles/
+./dotter deploy
+nvim
+cd nvim/
+git  st
+git add init.lua plugin/lightbulb.lua 
+git c -v
+git st
+nvim
+date
+cd
+cd dotfiles/nvim/
+nvim
+add_ssh_keys 
+nvim 
+nvim init.lua 
+nvim plugin/lightbulb.lua
+cd -
+lf
+cd
+googler bats shell
+cd ..
+source bash/commands/googler.sh 
+google bats shell
+google vim plug require lua
+exit
+source googler.sh q
+source googler.sh 
+cd ...
+cd .. 
+cd ..
+cd nvim/
+ll
+cat TODO_*
+nvim
+git st
+nvim
+mv ale.lua plugin/ale.lua
+nvim plugin/ale.lua 
+cd ..
+./dotter deploy
+cd nvim/
+nvim plugin/ale.lua 
+git st
+git add plugin/ale.lua 
+rm plugin/ale.vim 
+git st
+git add plugin/
+git c  -v
+git st
+nvim plugin/
+git add plugin/
+git c --amend --no-edit
+git st
+git log
+git log -p
+git st
+cd plugin/
+ll
+nvim ale.lua 
+git st
+nvim
+git st
+git add ale.lua 
+git c -v
+cd dotfiles/
+ll
+git log
+git tst
+git st
+cd nvim/
+ll
+git st
+git diff
+git st
+cd ..
+cd bash/
+git st
+ll
+lf

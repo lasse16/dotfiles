@@ -11,7 +11,7 @@
 # Set $DOTFILES environment repo if not already set
 ${DOTFILES:=$HOME/dotfiles}
 export DOTFILES
-export PATH=$PATH:~/.local/share/lsp-servers
+pathadd "$HOME/.local/share/lsp-servers"
 
 {{#if dotter.packages.vim}}
 # Set vim as a pager for man pages
@@ -44,5 +44,7 @@ fi
 
 # Source cargo environment if $CARGO_HOME is set
 {{#if dotter.packages.rust}}
-FILE="${CARGO_HOME:?}/env" && test -f $FILE && source $FILE
+export RUSTUP_HOME={{rust.rustup_home}}
+export CARGO_HOME={{rust.cargo_home}}
+FILE="${CARGO_HOME}/env" && test -f $FILE && source $FILE
 {{/if}}
