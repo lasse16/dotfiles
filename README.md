@@ -2,7 +2,7 @@
 These are my dotfiles, including a basic setup and disable script.
 
 
-THIS ENTIRE REPO IS A WORK IN PROGRESS. :grin
+THIS ENTIRE REPO IS A WORK IN PROGRESS. 😁
 As it is going to be during my entire programming career.
 
 ## Installation
