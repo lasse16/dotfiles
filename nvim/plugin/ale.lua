@@ -7,6 +7,11 @@ if vim.fn.has_key(vim.g.plugs, 'ale') then
 	vim.g.ale_virtualtext_prefix =' ◁◁◁◁ '
 
 	vim.g.ale_virtualtext_cursor = 1
+	vim.g.ale_detail_to_floating_preview = 1
+
+	-- Border characters
+	vim.g.ale_floating_window_border = { "│", "─", "╭", "╮", "╯",  "╰" }
+
 
 	vim.cmd( [[
 	let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'] }
