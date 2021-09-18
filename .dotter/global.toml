@@ -62,6 +62,8 @@ depends = [ "bash" ]
 
 [vim.files]
 "vim/.vimrc.tmpl"= {target="~/.vimrc", type="template"}
+[vim.variables]
+"vim.plugin_dir"="~/.vim/plugged"
 
 [ssh.files]
 "bash/helpers/ssh_agent.sh.tmpl"="bash/helpers/ssh_agent.sh"
