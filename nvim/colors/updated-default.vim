@@ -49,3 +49,43 @@ if has_key(g:plugs,'nvim-lspconfig')
 	highlight LspDiagnosticsSignInformation ctermfg=white ctermbg=NONE
 	highlight LspDiagnosticsSignHint ctermfg=grey ctermbg=NONE
 endif
+
+if has_key(g:plugs,'nvim-treesitter')
+	"default highlights for treesitter
+	highlight TSAttribute ctermfg=darkblue ctermbg=NONE
+	highlight link TSCharacter Character
+	highlight link TSComment Comment
+	highlight link TSConstBuiltin Boolean
+	highlight link TSConstMacro Boolean
+	highlight link TSError LspDiagnosticsDefaultError
+	highlight TSException ctermfg=yellow
+	highlight TSField ctermfg=yellow ctermbg=NONE
+	highlight TSFunction ctermfg=cyan ctermbg=NONE
+	highlight link TSFuncBuiltin TSFunction
+	highlight link TSFuncMacro TSfunction
+	highlight TSKeyword ctermfg=lightgreen ctermbg=NONE
+	highlight TSKeywordFunction ctermfg=magenta ctermbg=NONE
+	highlight TSKeywordOperator ctermfg=darkgreen ctermbg=NONE
+	highlight link TSKeywordReturn TSKeywordFunction
+	highlight link TSMethod TSFunction
+	highlight TSParameter ctermfg=darkyellow ctermbg=NONE
+	highlight link TSParameterReference TSParameter
+	highlight link TSProperty TSField
+	highlight TSPunctDelimiter ctermfg=blue ctermbg=NONE
+	highlight link TSPunctBracket TSPunctDelimiter
+	highlight TSPunctSpecial ctermfg=darkmagenta ctermbg=NONE
+	highlight link TSStringRegex TSString
+	highlight TSStringEscape ctermfg=white ctermbg=NONE
+	highlight TSStringSpecial ctermfg=darkmagenta ctermbg=NONE
+	highlight link TSTagDelimiter TSPunctDelimiter
+	highlight TSURI ctermfg=lightcyan ctermbg=NONE cterm=underline
+	highlight TSMath ctermfg=lightgray ctermbg=NONE
+	highlight TSTextReference ctermfg=lightgray ctermbg=NONE cterm=italic
+	highlight link TSNote LspDiagnosticsDefaultHint
+	highlight link TSWarning LspDiagnosticsDefaultWarning
+	highlight link TSDanger LspDiagnosticsDefaultError
+	highlight TSType ctermfg=lightcyan ctermbg=NONE
+	highlight TSVariable ctermfg=blue ctermbg=NONE
+	highlight link TSVariableBuiltin TSVariable
+
+endif
