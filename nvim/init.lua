@@ -32,6 +32,7 @@ require('clipboard')
 require('settings')
 require('mappings')
 require('lsp')
+require('treesitter')
 
 vim.cmd('colorscheme updated-default')
 
