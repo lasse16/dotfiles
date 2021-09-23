@@ -24,6 +24,7 @@ Plug 'puremourning/vimspector'
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'nathanmsmith/nvim-ale-diagnostic', { 'branch' : 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'mfussenegger/nvim-dap'
 call plug#end()
 ]])
 
