@@ -33,6 +33,7 @@ require('settings')
 require('mappings')
 require('lsp')
 require('treesitter')
+require('nvim-dap')
 
 vim.cmd('colorscheme updated-default')
 
