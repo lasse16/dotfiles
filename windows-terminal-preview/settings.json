@@ -3,7 +3,7 @@
     // Add custom actions and keybindings to this array.
     // To unbind a key combination from your defaults.json, set the command to "unbound".
     // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
-    "actions": 
+    "actions":
     [
         // Press Ctrl+Shift+F to open the search box
         {
@@ -15,7 +15,7 @@
             "keys": "ctrl+v"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "adjustFontSize",
                 "delta": 1
@@ -27,7 +27,7 @@
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
         // To learn more about panes, visit https://aka.ms/terminal-panes
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "auto",
@@ -39,14 +39,14 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "colorScheme": "nord",
             "fontFace": "JetBrains Mono"
         },
-        "list": 
+        "list":
         [
             {
                 "commandline": "powershell.exe",
@@ -74,30 +74,30 @@
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
+            "name": "nord-inspired",
             "background": "#2E3440",
             "black": "#3B4252",
-            "blue": "#81A1C1",
+            "blue": "#5867A1",
             "brightBlack": "#4C566A",
-            "brightBlue": "#81A1C1",
+            "brightBlue": "#909DDE",
             "brightCyan": "#8FBCBB",
-            "brightGreen": "#A3BE8C",
-            "brightPurple": "#B48EAD",
-            "brightRed": "#BF616A",
+            "brightGreen": "#ABC793",
+            "brightPurple": "#CC9EBC",
+            "brightRed": "#E07E7F",
             "brightWhite": "#ECEFF4",
-            "brightYellow": "#EBCB8B",
+            "brightYellow": "#EDEDA6",
             "cursorColor": "#FFFFFF",
-            "cyan": "#88C0D0",
+            "cyan": "#6B97A3",
             "foreground": "#D8DEE9",
-            "green": "#A3BE8C",
-            "name": "nord",
-            "purple": "#B48EAD",
-            "red": "#BF616A",
+            "green": "#6E965D",
+            "purple": "#A872A6",
+            "red": "#AB5E5F",
             "selectionBackground": "#FFFFFF",
             "white": "#E5E9F0",
-            "yellow": "#EBCB8B"
+            "yellow": "#E0DA74"
         }
     ]
 }
