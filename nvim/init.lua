@@ -20,7 +20,6 @@ Plug '$HOME/src/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'puremourning/vimspector'
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'nathanmsmith/nvim-ale-diagnostic', { 'branch' : 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
