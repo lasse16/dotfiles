@@ -86,16 +86,15 @@ end
 
 function M.set_debugger_keymappings()
 	vim.cmd([[
-		let mapleader = "<Space>"
 		nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
 		nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
 		nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
 		nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
-		nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
-		nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
-		nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-		nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
-		nnoremap <silent> <leader>dl :lua require'dap'.run_last()<CR>
+		nnoremap <silent> <space>b :lua require'dap'.toggle_breakpoint()<CR>
+		nnoremap <silent> <space>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+		nnoremap <silent> <space>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+		nnoremap <silent> <space>dr :lua require'dap'.repl.open()<CR>
+		nnoremap <silent> <space>dl :lua require'dap'.run_last()<CR>
 		]])
 	print("Debugger mappings set")
 end
