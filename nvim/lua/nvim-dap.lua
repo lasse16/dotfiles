@@ -137,6 +137,6 @@ dap.configurations.rust = {
       return vim.fn.input("Path to executable: ", cwd_parent .. '/target/debug/' .. cwd_parent_name, "file")
     end,
     stopOnEntry = false,
-    args = {},
+    sourceLanguages = { 'rust'},
       },
 }
