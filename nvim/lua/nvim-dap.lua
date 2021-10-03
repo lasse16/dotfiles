@@ -2,6 +2,42 @@ require('mappings').set_debugger_keymappings()
 
 local dap = require('dap')
 
+-- UI
+-- dap.defaults.fallback.terminal_win_cmd = 'belowright 15split'
+
+require("dapui").setup({
+  icons = { expanded = "▾", collapsed = "▸" },
+  mappings = {
+    expand = { "<CR>", "<2-LeftMouse>" },
+    open = "o",
+    remove = "d",
+    edit = "e",
+    repl = "r",
+  },
+  sidebar = {
+    elements = {
+      { id = "breakpoints", size = 0.1 },
+      { id = "watches", size = 0.45 },
+      { id = "scopes", size = 0.45 },
+    },
+    size = 40,
+    position = "left",
+  },
+  tray = {
+    elements = { "repl" },
+    size = 30,
+    position = "right",
+  },
+  floating = {
+    max_height = nil,
+    max_width = nil,
+    mappings = {
+      close = { "q", "<Esc>" },
+    },
+  },
+  windows = { indent = 1 },
+})
+
 -- Python
 dap.adapters.python = {
    type = 'executable',
