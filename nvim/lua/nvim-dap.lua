@@ -34,14 +34,55 @@ dap.configurations.python = {
 }
 
 -- Rust
-local codelldb_port=4000
 local codelldb_path='/home/lasse/.local/share/dap/lldb/adapter/codelldb'
 
-dap.adapters.lldb = function(callback, config)
-  -- NOT WORKING TODO was an attempt to start the server upon launching the debugee
-  -- os.execute(codelldb_path .. '--port ' .. config.port)
-  callback({ type = "server", host= '127.0.0.1', port = config.port })
-end
+dap.adapters.lldb = function(on_adapter)
+  local stdout = vim.loop.new_pipe(false)
+  local stderr = vim.loop.new_pipe(false)
+
+  local cmd = codelldb_path
+  local handle, pid_or_err
+  local opts = {
+    stdio = {nil, stdout, stderr},
+    detached = true,
+  }
+  handle, pid_or_err = vim.loop.spawn(cmd, opts, function(code)
+    stdout:close()
+    stderr:close()
+    handle:close()
+    if code ~= 0 then
+      print("codelldb exited with code", code)
+    end
+  end)
+  assert(handle, "Error running codelldb: " .. tostring(pid_or_err))
+  stdout:read_start(function(err, chunk)
+    assert(not err, err)
+    if chunk then
+      local port = chunk:match('Listening on port (%d+)')
+      if port then
+        vim.schedule(function()
+          on_adapter({
+              type = 'server',
+              host = '127.0.0.1',
+              port = port
+            })
+          end)
+        else
+          vim.schedule(function()
+            require("dap.repl").append(chunk)
+          end)
+        end
+      end
+    end)
+    stderr:read_start(function(err, chunk)
+      assert(not err, err)
+      if chunk then
+        vim.schedule(function()
+          require("dap.repl").append(chunk)
+        end)
+      end
+    end)
+  end
 
 dap.configurations.rust = {
   {
@@ -52,7 +93,6 @@ dap.configurations.rust = {
 
     -- Options below are for CodeLLDB
     cwd = "${workspaceFolder}";
-    port = codelldb_port,
     program = function()
       local current_working_dir = vim.fn.getcwd()
       local cwd_parent = vim.fn.fnamemodify(current_working_dir,':p:h:h')
