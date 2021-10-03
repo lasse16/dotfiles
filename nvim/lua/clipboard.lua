@@ -1,4 +1,3 @@
-vim.opt.clipboard:append('unnamedplus')
 vim.g.clipboard= {
                name= 'win32yank-wsl',
                copy= {
