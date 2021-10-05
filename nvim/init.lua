@@ -25,6 +25,8 @@ Plug 'nathanmsmith/nvim-ale-diagnostic', { 'branch' : 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
+Plug 'simrat39/rust-tools.nvim'
+Plug 'nvim-lua/plenary.nvim'
 call plug#end()
 ]])
 

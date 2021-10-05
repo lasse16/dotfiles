@@ -40,12 +40,20 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-require('lspconfig').rust_analyzer.setup({
-  on_attach=on_attach,
-  capabilities=capabilities,
-  flags = {
-    debounce_text_changes = 200,
-  }
-})
+-- MOVED TO ../plugin/
+-- require('lspconfig').rust_analyzer.setup({
+--   on_attach=on_attach,
+--   capabilities=capabilities,
+--   flags = {
+--     debounce_text_changes = 200,
+--   }
+-- })
 
 print("LSP config finished")
+
+config = {
+  on_attach=on_attach,
+  capabilites=capabilities
+}
+
+return config
