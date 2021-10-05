@@ -130,11 +130,10 @@ dap.configurations.rust = {
     -- Options below are for CodeLLDB
     cwd = "${workspaceFolder}";
     program = function()
-      local current_working_dir = vim.fn.getcwd()
-      local cwd_parent = vim.fn.fnamemodify(current_working_dir,':p:h:h')
-      local cwd_parent_name = vim.fn.fnamemodify(cwd_parent,':t')
+      local workspaceRoot = require'lspconfig'.rust_analyzer.get_root_dir()
+      local workspaceName = vim.fn.fnamemodify(workspaceRoot,':t')
 
-      return vim.fn.input("Path to executable: ", cwd_parent .. '/target/debug/' .. cwd_parent_name, "file")
+      return vim.fn.input("Path to executable: ", workspaceRoot .. '/target/debug/' .. workspaceName, "file")
     end,
     stopOnEntry = false,
     sourceLanguages = { 'rust'},
