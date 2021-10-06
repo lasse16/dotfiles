@@ -80,7 +80,9 @@ dap.adapters.lldb = function(on_adapter)
   local handle, pid_or_err
   local opts = {
     stdio = {nil, stdout, stderr},
+    args= {'--params', '{"showDisassembly":"never" }', },
     detached = true,
+    verbatim=true,
   }
   handle, pid_or_err = vim.loop.spawn(cmd, opts, function(code)
     stdout:close()
@@ -90,6 +92,7 @@ dap.adapters.lldb = function(on_adapter)
       print("codelldb exited with code", code)
     end
   end)
+
   assert(handle, "Error running codelldb: " .. tostring(pid_or_err))
   stdout:read_start(function(err, chunk)
     assert(not err, err)
