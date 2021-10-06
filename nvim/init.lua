@@ -20,10 +20,13 @@ Plug '$HOME/src/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'puremourning/vimspector'
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'nathanmsmith/nvim-ale-diagnostic', { 'branch' : 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'simrat39/rust-tools.nvim'
+Plug 'nvim-lua/plenary.nvim'
 call plug#end()
 ]])
 
@@ -33,6 +36,7 @@ require('settings')
 require('mappings')
 require('lsp')
 require('treesitter')
+require('nvim-dap')
 
 vim.cmd('colorscheme updated-default')
 
