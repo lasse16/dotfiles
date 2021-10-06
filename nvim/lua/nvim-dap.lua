@@ -3,7 +3,7 @@ require('mappings').set_debugger_keymappings()
 local dap = require('dap')
 
 -- UI
--- dap.defaults.fallback.terminal_win_cmd = 'belowright 15split'
+dap.defaults.fallback.terminal_win_cmd = 'below 10new'
 
 require("dapui").setup({
   icons = { expanded = "▾", collapsed = "▸" },
