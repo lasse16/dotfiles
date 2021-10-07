@@ -48,3 +48,8 @@ export RUSTUP_HOME={{rust.rustup_home}}
 export CARGO_HOME={{rust.cargo_home}}
 FILE="${CARGO_HOME}/env" && test -f $FILE && source $FILE
 {{/if}}
+
+{{#if dotter.packages.volta}}
+export VOLTA_HOME={{volta.home}}
+export PATH="$VOLTA_HOME/bin:$PATH"
+{{/if}}
