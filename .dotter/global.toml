@@ -11,6 +11,7 @@ depends = [ "environment" ]
 [tmux]
 [tree-sitter]
 [vim]
+[volta]
 depends=[ "environment" ]
 [ssh]
 depends = [ "bash" ]
@@ -74,3 +75,6 @@ depends = [ "bash" ]
 [rust.variables]
 "rust.cargo_home"="~/.cargo"
 "rust.rustup_home"="~/.rustup"
+
+[volta.variables]
+"volta.home"="~/.config/volta"
