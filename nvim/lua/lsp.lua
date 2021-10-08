@@ -47,4 +47,9 @@ config = {
   capabilites=capabilities
 }
 
+require'lspconfig'.pyright.setup({
+    on_attach=on_attach,
+    capabilites=capabilites,
+  })
+
 return config
