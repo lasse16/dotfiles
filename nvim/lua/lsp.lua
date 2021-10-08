@@ -47,9 +47,15 @@ config = {
   capabilites=capabilities
 }
 
-require'lspconfig'.pyright.setup({
-    on_attach=on_attach,
+-- Setup default config for specified servers
+local server_with_default_setup= { 'pyright', 'bashls' }
+for _, lsp in ipairs(server_with_default_setup) do
+  require('lspconfig')[lsp].setup {
+    on_attach = on_attach,
     capabilites=capabilites,
-  })
+    flags = {
+      debounce_text_changes = 150,
+    }
+  }
 
 return config
