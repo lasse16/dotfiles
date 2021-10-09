@@ -48,7 +48,7 @@ config = {
 }
 
 -- Setup default config for specified servers
-local server_with_default_setup= { 'pyright', 'bashls' }
+local server_with_default_setup= { 'pyright', 'bashls', 'ansiblels', }
 for _, lsp in ipairs(server_with_default_setup) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
@@ -57,5 +57,6 @@ for _, lsp in ipairs(server_with_default_setup) do
       debounce_text_changes = 150,
     }
   }
+end
 
 return config
