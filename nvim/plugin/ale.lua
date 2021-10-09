@@ -22,6 +22,7 @@ if vim.fn.has_key(vim.g.plugs, 'ale') then
 	ale_fixers["*"] = { 'remove_trailing_lines', 'trim_whitespace' }
 	ale_fixers["sh"] = { 'shfmt', 'remove_trailing_lines', 'trim_whitespace' }
 	ale_fixers["python"] = { 'black', 'remove_trailing_lines', 'trim_whitespace' }
+	ale_fixers["lua"] = { 'stylua', 'remove_trailing_lines', 'trim_whitespace' }
 	vim.g.ale_fixers = ale_fixers
 
 	-- nvim-lsp is always displayed as an external source
