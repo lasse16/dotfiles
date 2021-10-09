@@ -18,9 +18,17 @@ if vim.fn.has_key(vim.g.plugs, 'ale') then
 	-- Do not lint on entering a new file
 	vim.g.ale_lint_on_enter = 0
 
-	vim.cmd( [[
-	let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'] }
-]])
+	local ale_fixers = {}
+	ale_fixers["*"] = { 'remove_trailing_lines', 'trim_whitespace' }
+	vim.g.ale_fixers = ale_fixers
+
+	-- nvim-lsp is always displayed as an external source
+	local ale_linters = {}
+	ale_linters["rust"] = {}
+	ale_linters["sh"] = {'shellcheck'}
+	vim.g.ale_linters = ale_linters
+
+	vim.g.ale_sh_shellcheck_options = '-x'
 
 	vim.cmd( [[
 
