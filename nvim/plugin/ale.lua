@@ -26,7 +26,6 @@ if vim.fn.has_key(vim.g.plugs, 'ale') then
 
 	-- nvim-lsp is always displayed as an external source
 	local ale_linters = {}
-	ale_linters["rust"] = {}
 	ale_linters["sh"] = {'shellcheck'}
 	vim.g.ale_linters = ale_linters
 
