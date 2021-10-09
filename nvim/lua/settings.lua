@@ -1,6 +1,9 @@
 -- Start scolling before the cursor reaches top or bottom line
 vim.opt.scrolloff=5
 
+-- Always show the gutter
+vim.wo.signcolumn = "yes"
+
 -- Provide an extra window for completion in command mode
 vim.opt.wildmenu=true
 
