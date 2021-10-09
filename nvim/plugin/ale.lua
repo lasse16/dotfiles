@@ -20,6 +20,8 @@ if vim.fn.has_key(vim.g.plugs, 'ale') then
 
 	local ale_fixers = {}
 	ale_fixers["*"] = { 'remove_trailing_lines', 'trim_whitespace' }
+	ale_fixers["sh"] = { 'shfmt', 'remove_trailing_lines', 'trim_whitespace' }
+	ale_fixers["python"] = { 'black', 'remove_trailing_lines', 'trim_whitespace' }
 	vim.g.ale_fixers = ale_fixers
 
 	-- nvim-lsp is always displayed as an external source
@@ -28,7 +30,9 @@ if vim.fn.has_key(vim.g.plugs, 'ale') then
 	ale_linters["sh"] = {'shellcheck'}
 	vim.g.ale_linters = ale_linters
 
+	-- Additional fixer setup
 	vim.g.ale_sh_shellcheck_options = '-x'
+	vim.g.ale_python_black_executable = '/home/lasse/.local/share/nvim/python_environment/bin/black'
 
 	vim.cmd( [[
 
