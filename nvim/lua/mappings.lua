@@ -35,7 +35,20 @@ function! HandleTab() abort
 	return ""
 endfunction
 
+function! HandleShiftTab() abort
+	" Check if we're in a completion menu
+	if pumvisible()
+		return "\<C-p>"
+	endif
+	if CompletionWindowVisible()
+		lua require'cmp'.select_prev_item()
+		return ""
+	endif
+	return "\<S-Tab>"
+endfunction
+
 inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
+inoremap <silent> <S-Tab> <C-R>=HandleShiftTab()<CR>
 	]])
 
 -- utils
@@ -58,12 +71,10 @@ set_global_key('n', '<C-s>', '<ESC>:update<CR>', noremap)
 set_global_key('n', 'Q' , '<Nop>', {}) -- 'Q' in normal mode enters Ex mode. You almost never want this.
 
 -- Set up popup menu navigation
-set_global_key('i', '<S-TAB>', 'pumvisible() ? "<C-p>" : "<S-TAB>" ', noremap_expr)
-set_global_key('i', '<Enter>', 'pumvisible() ? "<C-y>" : "<Enter>" ', noremap_expr)
-set_global_key('i', '<Esc>', 'pumvisible() ? "<C-e>" : "<Esc>" ', noremap_expr)
+set_global_key("i", "<Enter>", 'pumvisible() ? "<C-y>" : "<Enter>" ', noremap_expr)
+set_global_key("i", "<Esc>", 'pumvisible() ? "<C-e>" : "<Esc>" ', noremap_expr)
 
-print('MAPPINGS COMPLETED')
-
+print("MAPPINGS COMPLETED")
 
 function M.set_lsp_keymappings(bufnr)
 
