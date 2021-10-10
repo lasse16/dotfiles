@@ -9,12 +9,19 @@ function! SnippetExpandOrJump() abort
 	return 0
 endfunction
 
+function! CompletionWindowVisible() abort
+	return luaeval("require'cmp'.visible()")
+endfunction
 
 " Shamelessly stolen from https://stackoverflow.com/a/61275100
 function! HandleTab() abort
 	" Check if we're in a completion menu
 	if pumvisible()
 		return "\<C-n>"
+	endif
+	if CompletionWindowVisible()
+		lua require'cmp'.select_next_item()
+		return ""
 	endif
 	if SnippetExpandOrJump()
 		return ""
