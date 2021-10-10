@@ -31,16 +31,16 @@ call plug#end()
 ]])
 
 vim.g.packpath = vim.g.runtimepath
-require('clipboard')
-require('settings')
-require('mappings')
-require('lsp')
-require('treesitter')
-require('nvim-dap')
+require("clipboard")
+require("settings")
+require("mappings")
+require("lsp")
+require("treesitter")
+require("nvim-dap")
 
-vim.cmd('colorscheme updated-default')
+vim.cmd("colorscheme updated-default")
 
-vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false}')
+vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false}")
 
 vim.cmd(' let g:python3_host_prog = "/home/lasse/.local/share/nvim/python_environment/bin/python3"')
 
