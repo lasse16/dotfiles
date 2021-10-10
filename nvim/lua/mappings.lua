@@ -47,8 +47,32 @@ function! HandleShiftTab() abort
 	return "\<S-Tab>"
 endfunction
 
+function! HandleEnter() abort
+	if pumvisible()
+		return "\<C-y>"
+	endif
+	if CompletionWindowVisible()
+		lua require'cmp'.confirm({select = true})
+		return ""
+	endif
+	return "\<Enter>"
+endfunction
+
+function! HandleEscape() abort
+	if pumvisible()
+		return "\<C-e>"
+	endif
+	if CompletionWindowVisible()
+		lua require'cmp'.close()
+		return ""
+	endif
+	return "\<Escape>"
+endfunction
+
 inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
 inoremap <silent> <S-Tab> <C-R>=HandleShiftTab()<CR>
+inoremap <silent> <Enter> <C-R>=HandleEnter()<CR>
+inoremap <silent> <Escape> <C-R>=HandleEscape()<CR>
 	]])
 
 -- utils
@@ -73,10 +97,6 @@ set_global_key("n", "<C-s>", "<ESC>:update<CR>", noremap)
 
 -- Unbind some useless/annoying default key bindings.
 set_global_key("n", "Q", "<Nop>", {}) -- 'Q' in normal mode enters Ex mode. You almost never want this.
-
--- Set up popup menu navigation
-set_global_key("i", "<Enter>", 'pumvisible() ? "<C-y>" : "<Enter>" ', noremap_expr)
-set_global_key("i", "<Esc>", 'pumvisible() ? "<C-e>" : "<Esc>" ', noremap_expr)
 
 print("MAPPINGS COMPLETED")
 
