@@ -61,7 +61,7 @@ dap.configurations.python = {
 
 			print(virtual_env)
 			if virtual_env ~= nil then
-				python_env = virtual_env .. "bin/python"
+				python_env = virtual_env .. "/bin/python"
 			end
 
 			return python_env
