@@ -65,4 +65,8 @@ vim.opt.background = "dark"
 
 vim.opt.encoding = "utf-8"
 
+-- Open new windows to the right or below the current window
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 print("SETTINGS COMPLETED")
