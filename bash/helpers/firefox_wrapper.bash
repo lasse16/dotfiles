@@ -12,16 +12,27 @@
 firefox() {
 	local browser_executable=/mnt/c/'Program Files'/'Mozilla Firefox'/firefox.exe
 
+	# Prefix all args that do not start with '-' or '\' or 'http'
+	# Prefix : 'https://www.'
+	local prefixed_urls
+	for arg in "$@"; do
+		if ! [[ $arg == -* ]] || [[ $arg == \* ]] || [[ $arg == http* ]]; then
+			arg="https://www.$arg"
+		fi
+		prefixed_urls="$prefixed_urls $arg"
+	done
+
 	# Replace -t and -w with their long options
 	local replaced_tabs
-	replaced_tabs=${*//\ -t/\ --new-tab}
+	replaced_tabs=${prefixed_urls//\ -t/\ --new-tab}
 
 	local replaced_windows
 	replaced_windows=${replaced_tabs//\ -w/\ --new-window}
 
-	local final_args=$replaced_windows
-	echo "$final_args"
-	"$browser_executable" "$final_args"
+	local final_args
+	readarray -td' ' final_args <<<"$replaced_windows"
+
+	"$browser_executable" "${final_args[@]}"
 }
 
 export -f firefox
