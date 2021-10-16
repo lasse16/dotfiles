@@ -1,7 +1,7 @@
 if vim.fn.has_key(vim.g.plugs, "ale") then
 	-- Change ALEs display symbols
-	vim.g.ale_sign_warning = "🞄"
-	vim.g.ale_sign_error = "⬤"
+	vim.g.ale_sign_warning = "w"
+	vim.g.ale_sign_error = "e"
 	vim.g.ale_sign_info = "!"
 	vim.g.ale_virtualtext_prefix = " ◁◁◁◁ "
 
