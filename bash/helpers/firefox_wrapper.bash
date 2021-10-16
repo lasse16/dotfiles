@@ -11,7 +11,17 @@
 
 firefox() {
 	local browser_executable=/mnt/c/'Program Files'/'Mozilla Firefox'/firefox.exe
-	"$browser_executable" "$1"
+
+	# Replace -t and -w with their long options
+	local replaced_tabs
+	replaced_tabs=${*//\ -t/\ --new-tab}
+
+	local replaced_windows
+	replaced_windows=${replaced_tabs//\ -w/\ --new-window}
+
+	local final_args=$replaced_windows
+	echo "$final_args"
+	"$browser_executable" "$final_args"
 }
 
 export -f firefox
