@@ -1066,3 +1066,473 @@ cd bash/
 git st
 ll
 lf
+nvim 
+nvim .tmux.conf 
+ps -o state= -o comm= -t '#{pane_tty}'
+ps --help
+man ps
+#{pane_tty}
+echo #{pane_tty}
+nvim
+nvim .tmux.conf 
+nvim
+nvim .tmux.conf 
+nvim lua/mappings.lua plugin/multifunction_tab.vim  -O
+mv plugin/multifunction_tab.vim plugin/multifunction_tab.vim.tmp
+nvim init.lua 
+ll
+cd
+ll
+rm test 
+rm nvim/ -rf
+cd dotfiles/
+ll
+cd nvim/
+ll
+nvim init.lua 
+nvim lua/mappings.lua 
+cd ..
+./dotter deploy
+nvim .dotter/cache.toml 
+./dotter deploy
+nvim
+cd nvim/
+ll
+nvim lua/mappings.lua 
+nvim plugin/nvim-cmp.lua 
+nvim 
+cd
+cd .config/nvim/plugged/
+ll
+cd nvim-cmp/
+ll
+git st
+git log
+cd $DOTFILES
+ll
+cd nvim/
+ll
+nvim after/multifunction_tab.lua
+nvim
+git st
+git fuck-up 
+git st
+git clean
+git clean -f
+git st
+nvim init.lua 
+nvim lua/mappings.lua 
+grep <tab> -i
+grep .  <tab> -i
+man grep
+nvim
+nvi,
+nvim
+git st
+nvim lua/mappings.lua 
+git st
+git add lua/mappings.lua 
+git c -v
+git reset
+git add lua/ -p
+git c -v
+git st
+nvim lua/mappings.lua 
+git add lua/mappings.lua -p
+git st
+git add lua/mappings.lua -p
+git st
+git c -v
+git st
+git add lua -p
+git c -v
+git st
+git diff
+git fuck-up 
+
+nvim init.lua 
+nvim lua/mappings.lua 
+git st
+git add lua/
+git c -v
+nvim lua/lsp.lua 
+git st
+fzf
+fzf -h
+nvim -O $(fzf -m)
+git st
+nvim lua/
+git log
+git add -p
+git c 
+dc ..
+cd .
+cd ..
+ll
+cd tmux/
+ll
+nvim .tmux.conf 
+tmux 
+nvim .tmux.conf 
+tmux
+nvim .tmux.conf 
+tmux
+man bind
+tmux -h
+
+nvim .tmux.conf 
+tmux 
+nvim .tmux.conf 
+git st
+git fuck-up 
+cd ..
+nvim nvim/lua/settings.lua 
+cd tmux/
+nvim .tmux.conf 
+tmux 
+nvim .tmux.conf 
+tmux 
+nvim
+nvim .tmux.conf 
+"ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
+"ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
+ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'
+ps -o 
+ps -o state= -o comm=
+ps -o state= -o comm= -t '#{pane_tty}'
+#{pane_tty}
+ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'
+tmux -c "ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
+tmux
+git st
+git add .tmux.conf 
+git c -v
+git st
+git add ../nvim/ -p
+git c
+nvim
+tmux
+sses import dataclass
+@dataclass(frozen=True, eq=True)
+class BagType:
+python
+c 
+dc
+cd
+cd dotfiles/
+ll
+git log
+git push -u
+cd ..
+ll
+cd src/
+ll
+git clone git@github.com:lasse16/aoc_2020.git
+cd aoc_2020/
+ll
+nvim README.md 
+git st
+git add .
+git c 
+git push
+ll
+mkdir 7
+cd 7/
+ll
+pip list
+which pip
+nvim .envrc
+direnv allow .
+ll
+cd ..
+cd 7/
+ll
+nvim main.py
+nvim input.txt
+nvim input.txt 
+ll
+nvim main.py input.txt -O
+nvim input.txt 
+ll
+cd $DOTFILES
+cd nvim/
+ll
+nvim lua/nvim-dap.lua 
+git st
+git add lua/nvim-dap.lua 
+git c
+git c --amend
+cd -
+cd .
+cd -
+cd
+cd src/aoc_2020/7
+ll
+nvim main.py 
+ll
+nvim input.txt 
+nvim main.py 
+git st
+git add .
+git st
+git unstage .
+nvim .gitignore
+git st
+git add .
+git st
+git c 
+nvim main.py 
+python
+nvim main.py 
+:q
+cd ..
+cd debug-test/
+cd src/
+nvim main.rs 
+cd ..
+cd debug-test/
+ll
+cd src/
+nvim main.rs 
+cd ../../rust-tools.nvim/
+ll
+git co -b improve-dap-error-logging
+ll
+cd lua/
+ll
+cd rust-tools/
+ll
+nvim dap.lua 
+nvim
+cd $DOTFILES
+git co -b test_rust_tools_function
+cd nvim/
+nvim plugin/rust-tools.lua 
+:w
+nvim init.lua 
+cd
+cd .local/share/dap/
+ll
+cd lldb/
+ll
+lf
+cd
+cd src/debug-test/
+nvim src/main.rs 
+cd ..
+cd rust-tools.nvim/lua/rust-tools/
+ll
+nvim dap.lua 
+git st
+nvim dap.lua 
+git add dap.lua -p
+git st
+nvim dap.lua 
+git add dap.lua 
+git unstage dap.lua
+git add . -p
+git st
+git fuck-up 
+nvim dap.lua 
+git add dap.lua -p
+git fuck-up 
+ll
+nvim dap.lua 
+git fuck-up 
+nvim dap.lua 
+git st
+git add dap.lua -p
+git c 
+git st
+git remote add origin git@github.com:lasse16/rust-tools.nvim.git
+git remote add fork git@github.com:lasse16/rust-tools.nvim.git
+git remote -v
+git remote rm origin
+git remote -v
+git push -u
+git push -u fork
+cd $DOTFILES
+ll
+nvim nvim/plugin/rust-tools.lua 
+git st
+git diff nvim/
+git co main 
+git st
+git diff nvim/
+git restore nvim/
+git st
+git co test_rust_tools_function 
+git st
+git co main 
+git br -d test_rust_tools_function 
+ll
+source /bin/activate
+ll
+ll bin/
+cd bin/
+./activate
+source activate
+pip install rope
+deactivate 
+cd
+cd dotfiles/
+ll
+cd nvim/
+nvim init.lua 
+git st
+cd
+cd dotfiles/tmux/
+git diff .
+git add .tmux.conf 
+git c
+cd 
+cd src/
+ll
+git clone git@github.com:simrat39/rust-tools.nvim.git
+cd rust-tools.nvim/
+ll
+tmux
+cd $DOTFILES
+cd nvim/
+nvim plugin/rust-tools.lua 
+cd 
+cd src/
+cd debug-test/
+nvim src/main.rs 
+cd $DOTFILES
+ll
+cd nvim/
+ll
+cd 
+cd src/rust-tools.nvim/
+ll
+cd lua/rust-tools/
+nvim dap.lua 
+cd 
+cd src/debug-test/
+nvim src/main.rs 
+cd -
+cd src/rust-tools.nvim/lua/rust-tools/
+nvim dap.lua 
+cd
+cd src/debug-test/
+nvim src/main.rs 
+cd 
+cd src/rust-tools.nvim/lua/rust-tools/
+nvim dap.lua 
+cd
+cd src/debug-test/
+nvim src/main.rs 
+tmux
+ll
+cd
+cd
+lf
+cd
+cd dotfiles/
+ll
+cd nvim/
+nvim init.lua 
+firefox.exe
+cd ..
+cd bash/
+ll
+cd helpers/
+ll
+nivm wsl_enabled.sh 
+nvim wsl_enabled.sh 
+source wsl_enabled.sh 
+is_wsl 
+$?
+ll
+man grep
+nvim wsl_enabled.sh 
+man grep
+ll
+nvim firefox_wrapper.bash
+source firefox_wrapper.bash 
+firefox 
+nvim firefox_wrapper.bash 
+source firefox_wrapper.bash 
+firefox 
+which firefox
+nvim firefox_wrapper.bash 
+/mnt/c/Programme/Mozilla Firefox/firefox.exe
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe"
+nvim firefox_wrapper.bash 
+source firefox_wrapper.bash 
+firefox 
+nvim firefox_wrapper.bash 
+source firefox_wrapper.bash 
+firefox 
+source firefox_wrapper.bash 
+firefox 
+nvim firefox_wrapper.bash 
+source firefox_wrapper.bash 
+firefox 
+nvim firefox_wrapper.bash 
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe"
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" -h
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" /h
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" 
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" -new-tab
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" -?
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" /?
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" "https://www.google.de"
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" -new-window "https://www.google.de"
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" help
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" googl
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" -h | less
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" -h | nvim -
+nvim firefox_wrapper.bash 
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" --browser
+"/mnt/c/Programme/Mozilla Firefox/firefox.exe" --search welt
+nvim firefox_wrapper.bash 
+source firefox_wrapper.bash 
+firefox 
+nvim firefox_wrapper.bash 
+source firefox_wrapper.bash 
+firefox 
+cd "/mnt/c/Program Files/
+"
+ll
+cd "/mnt/c/Program Files/"
+ll
+cd Mozilla\ Firefox/
+ll
+fzf
+cd ..
+cd Programme/
+ll
+cd ..
+cd 
+cd dotfiles/
+cd bash/
+ll
+cd helpers/
+ll
+nvim firefox_wrapper.bash 
+source firefox_wrapper.bash 
+firefox 
+"/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
+cd
+cd dotfiles/
+ll
+cd bash/
+cd helpers/
+source firefox_wrapper.bash 
+firefox --browser
+"/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
+BROWSER="/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
+echo $BROWSER 
+$BROWSER
+BROWSER=\"$BROWSER\"
+echo $BROWSER 
+$BROWSER 
+echo $BROWSER | bash
+ll
+firefox -h | nvim  -
+man readarray
+readarray -h
