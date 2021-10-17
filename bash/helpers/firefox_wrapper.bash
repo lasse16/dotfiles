@@ -30,7 +30,7 @@ firefox() {
 	replaced_windows=${replaced_tabs//\ -w/\ --new-window}
 
 	local final_args
-	readarray -td' ' final_args <<<"$replaced_windows"
+	readarray -td' ' final_args < <(printf '%s' "$replaced_windows")
 
 	"$browser_executable" "${final_args[@]}"
 }
