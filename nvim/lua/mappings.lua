@@ -98,6 +98,12 @@ set_global_key("n", "<C-s>", "<ESC>:update<CR>", noremap)
 -- Unbind some useless/annoying default key bindings.
 set_global_key("n", "Q", "<Nop>", {}) -- 'Q' in normal mode enters Ex mode. You almost never want this.
 
+-- Close terminal mode with <Esc>
+-- stylua: ignore start
+set_global_key("t", "<Esc>", [[<C-\><C-n>]], noremap)
+set_global_key("t", "<C-w>", [[<C-\><C-n><C-w>]], noremap)
+-- stylua: ignore end
+
 print("MAPPINGS COMPLETED")
 
 function M.set_lsp_keymappings(bufnr)
