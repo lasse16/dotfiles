@@ -27,6 +27,7 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'simrat39/rust-tools.nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'hkupty/iron.nvim'
 call plug#end()
 ]])
 
