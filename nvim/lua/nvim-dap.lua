@@ -16,16 +16,16 @@ require("dapui").setup({
 	},
 	sidebar = {
 		elements = {
-			{ id = "breakpoints", size = 0.1 },
 			{ id = "watches", size = 0.45 },
 			{ id = "scopes", size = 0.45 },
+			{ id = "breakpoints", size = 0.1 },
 		},
-		size = 40,
+		size = 50,
 		position = "left",
 	},
 	tray = {
 		elements = { "repl" },
-		size = 30,
+		size = 50,
 		position = "right",
 	},
 	floating = {
