@@ -143,7 +143,7 @@ end
 
 function M.set_debugger_keymappings()
 	vim.cmd([[
-		nnoremap <silent> <F5> :lua require'dap'.continue() require'dapui'.toggle()<CR>
+		nnoremap <silent> <F5> :lua require'dap'.continue() require'dapui'.open()<CR>
 		nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
 		nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
 		nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
