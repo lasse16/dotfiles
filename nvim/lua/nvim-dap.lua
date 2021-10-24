@@ -38,6 +38,12 @@ require("dapui").setup({
 	windows = { indent = 1 },
 })
 
+vim.cmd([[
+	command! DebugUIClose lua require'dapui'.close()
+	command! DebugUIOpen lua require'dapui'.open()
+	command! DebugUIToggle lua require'dapui'.toggle()
+	]])
+
 -- Python
 dap.adapters.python = {
 	type = "executable",
