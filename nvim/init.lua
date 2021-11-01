@@ -38,6 +38,7 @@ require("mappings")
 require("lsp")
 require("treesitter")
 require("nvim-dap")
+require("commands")
 
 vim.cmd("colorscheme updated-default")
 
