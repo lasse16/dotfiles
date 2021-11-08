@@ -16,7 +16,7 @@ firefox() {
 	# Prefix : 'https://www.'
 	local prefixed_urls
 	for arg in "$@"; do
-		if ! { [[ "$arg" == -* ]] || [[ "$arg" == \* ]] || [[ "$arg" == http* ]]; }; then
+		if ! { [[ "$arg" == -* ]] || [[ "$arg" == \* ]] || [[ "$arg" == http* ]] || [[ "$arg" != *"."* ]]; }; then
 			arg="https://www.$arg"
 		fi
 		prefixed_urls="$prefixed_urls $arg"
