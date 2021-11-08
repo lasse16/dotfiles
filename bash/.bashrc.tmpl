@@ -4,6 +4,9 @@ export DOTFILES_BASH
 
 # Source helpers
 source "$DOTFILES_BASH/helpers/pathadd.bash"
+source "$DOTFILES_BASH/helpers/firefox_wrapper.bash"
+source "$DOTFILES_BASH/commands/googler.sh"
+source "$DOTFILES_BASH/commands/shellcheck_wiki.bash"
 pathadd "$DOTFILES_BASH/scripts"
 
 # If not running interactively, don't do anything
