@@ -27,7 +27,12 @@ if vim.fn.has_key(vim.g.plugs, "ale") then
 	-- nvim-lsp is always displayed as an external source
 	local ale_linters = {}
 	ale_linters["sh"] = { "shellcheck" }
+	ale_linters["python"] = { "flake8", "pylint" }
 	vim.g.ale_linters = ale_linters
+
+	-- Additional linter setup
+	vim.g.ale_python_pylint_executable = "/home/lasse/.local/share/nvim/python_environment/bin/pylint"
+	vim.g.ale_python_flake8_executable = "/home/lasse/.local/share/nvim/python_environment/bin/flake8"
 
 	-- Additional fixer setup
 	vim.g.ale_sh_shellcheck_options = "-x"
