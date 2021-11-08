@@ -18,8 +18,11 @@ export EDITOR=vim
 export MANPAGER="vim -M +MANPAGER -"
 {{/if}}
 
+{{#if dotter.packages.nvim}}
 # NVIM as manpager with this command
-# command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
+export EDITOR=nvim
+command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
+{{/if}}
 
 export BROWSER=/mnt/c/'Program Files'/'Mozilla Firefox'/firefox.exe
 
