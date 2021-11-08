@@ -12,18 +12,6 @@
 ${DOTFILES:=$HOME/dotfiles}
 export DOTFILES
 
-{{#if dotter.packages.vim}}
-# Set vim as a pager for man pages
-export EDITOR=vim
-export MANPAGER="vim -M +MANPAGER -"
-{{/if}}
-
-{{#if dotter.packages.nvim}}
-# NVIM as manpager with this command
-export EDITOR=nvim
-command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
-{{/if}}
-
 export BROWSER=/mnt/c/'Program Files'/'Mozilla Firefox'/firefox.exe
 
 # if running bash
@@ -43,6 +31,18 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+{{#if dotter.packages.vim}}
+# Set vim as a pager for man pages
+export EDITOR=vim
+export MANPAGER="vim -M +MANPAGER -"
+{{/if}}
+
+{{#if dotter.packages.nvim}}
+# NVIM as manpager with this command
+export EDITOR=nvim
+command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
+{{/if}}
 
 # Source cargo environment if $CARGO_HOME is set
 {{#if dotter.packages.rust}}
