@@ -6,6 +6,7 @@ depends = [ "environment" ]
 [environment]
 [fzf]
 [git]
+[himalaya]
 [lf]
 [nvim]
 [tmux]
@@ -39,6 +40,12 @@ depends = [ "bash" ]
 [git.variables]
 "git.name"=""
 "git.email"=""
+
+[himalaya.variables]
+"himalaya.name" = ""
+
+[himalaya.files]
+"himalaya/config.toml" ={target = "~/.config/himalaya/config.toml", type = "symbolic"}
 
 [lf.files]
 "lf/lfrc.tmpl"={target= "~/.config/lf/lfrc", type = "template"}
