@@ -9,7 +9,7 @@ Plug 'quangnguyen30192/cmp-nvim-ultisnips', { 'branch' : 'main' }
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
