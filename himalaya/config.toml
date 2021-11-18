@@ -1,53 +1,47 @@
-name = "Paul DURANT"
-downloads-dir = "~/Downloads"
-signature = "Cordialement,\nPaul DURANT"
-default-page-size = 50
+name = "Lasse Haffke"
+downloads-dir = "~/mail_attachments"
+default-page-size = 20
 watch-cmds = ["mbsync -a"]
 
-[gmail]
-default = true
-email = "p.durant@gmail.com"
+[uni]
+email = "lasse.haffke@studium.uni-hamburg.de"
 
-imap-host = "imap.gmail.com"
+imap-host = "exchange.uni-hamburg.de"
 imap-port = 993
-imap-login = "p.durant@gmail.com"
-imap-passwd-cmd = "pass show gmail"
+imap-login = 'uni-hamburg\BAO1136'
+imap-passwd-cmd = " bw get password stine"
 
-smtp-host = "smtp.gmail.com"
-smtp-port = 465
-smtp-login = "p.durant@gmail.com"
-smtp-passwd-cmd = "pass show gmail"
-
-[outlook]
-default-page-size = 25
-signature = """
-Regards,
-Paul DURANT
-Sent from Outlook
-"""
-
-imap-host = "outlook.office365.com"
-imap-port = 993
-imap-login = "pdurant@outlook.com"
-imap-passwd-cmd = "echo -n password"
-
-smtp-host = "smtp.office365.com"
+smtp-host = "exchange.uni-hamburg.de"
 smtp-port = 587
 smtp-starttls = true
-smtp-login = "pdurant@outlook.com"
-smtp-passwd-cmd = "echo password"
+smtp-login = "BAO1136"
+smtp-passwd-cmd = " bw get password stine"
 
-[posteo]
-name = "Paul D."
-downloads-dir = "~/Downloads/posteo"
-email = "paul.durant@posteo.test"
 
-imap-host = "posteo.de"
+[professional]
+email = "lasse@haffke.me"
+default = true
+
+imap-host = "mail.privateemail.com"
 imap-port = 993
-imap-login = "paul.durant@posteo.com"
-imap-passwd-cmd = "security find-internet-password -gs posteo -w"
+imap-login = "lasse@haffke.me"
+imap-passwd-cmd = " bw get password namecheap_mail"
 
-smtp-host = "posteo.de"
+smtp-host = "mail.privateemail.com"
 smtp-port = 465
-smtp-login = "paul.durant@posteo.com"
-smtp-passwd-cmd = "security find-internet-password -gs posteo -w"
+smtp-login = "lasse@haffke.me"
+smtp-passwd-cmd = " bw get password namecheap_mail"
+
+
+[private]
+email = "lahaffke@gmx.de"
+
+imap-host = "imap.gmx.net"
+imap-port = 993
+imap-login = "lahaffke@gmx.de"
+imap-passwd-cmd = " bw get password gmx_mail"
+
+smtp-host = "mail.gmx.net"
+smtp-port = 465
+smtp-login = "lahaffke@gmx.de"
+smtp-passwd-cmd = " bw get password gmx_mail"
