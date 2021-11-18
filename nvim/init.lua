@@ -29,6 +29,7 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'hkupty/iron.nvim'
 Plug 'AndrewRadev/sideways.vim'
+Plug 'soywod/himalaya', {'rtp': 'vim'}
 call plug#end()
 ]])
 
