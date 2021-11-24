@@ -1,5 +1,7 @@
 if vim.fn.has_key(vim.g.plugs, "ale") then
 	-- Change ALEs display symbols
+	vim.g.ale_set_highlights = 1
+	vim.g.ale_set_signs = 1
 	vim.g.ale_sign_warning = "w"
 	vim.g.ale_sign_error = "e"
 	vim.g.ale_sign_info = "!"
