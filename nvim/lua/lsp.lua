@@ -49,7 +49,7 @@ config = {
 }
 
 -- Setup default config for specified servers
-local server_with_default_setup = { "pyright", "bashls", "ansiblels" }
+local server_with_default_setup = { "pyright", "bashls", "ansiblels", "tsserver" }
 for _, lsp in ipairs(server_with_default_setup) do
 	require("lspconfig")[lsp].setup({
 		on_attach = on_attach,
