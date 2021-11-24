@@ -22,12 +22,14 @@ if vim.fn.has_key(vim.g.plugs, "ale") then
 	ale_fixers["sh"] = { "shfmt", "remove_trailing_lines", "trim_whitespace" }
 	ale_fixers["python"] = { "black", "remove_trailing_lines", "trim_whitespace" }
 	ale_fixers["lua"] = { "stylua", "remove_trailing_lines", "trim_whitespace" }
+	ale_fixers["javascript"] = { "prettier-standard" }
 	vim.g.ale_fixers = ale_fixers
 
 	-- nvim-lsp is always displayed as an external source
 	local ale_linters = {}
 	ale_linters["sh"] = { "shellcheck" }
 	ale_linters["python"] = { "flake8", "pylint" }
+	ale_linters["javascript"] = { "prettier-standard" }
 	vim.g.ale_linters = ale_linters
 
 	-- Additional linter setup
