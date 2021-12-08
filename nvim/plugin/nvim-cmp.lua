@@ -9,7 +9,7 @@ cmp.setup({
 		autocomplete = {
 			false,
 		},
-		completeopt = "menu,noselect",
+		completeopt = "menu,noselect,noinsert",
 	},
 
 	snippet = {

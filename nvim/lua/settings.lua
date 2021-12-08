@@ -11,6 +11,12 @@ vim.opt.wildmenu = true
 -- completion
 vim.opt.completeopt:remove("preview")
 
+-- Do not insert text until selection is made
+vim.opt.completeopt:append("noinsert")
+
+-- Do not select text when opening window
+vim.opt.completeopt:append("noselect")
+
 -- Turn on syntax highlighting.
 vim.cmd("syntax on")
 
