@@ -1,6 +1,7 @@
 name = "Lasse Haffke"
 downloads-dir = "~/mail_attachments"
 default-page-size = 20
+notify-cmd = 'toast.exe --app-id "Himalaya"  --title "Mail"  --message "You got new mail."'
 watch-cmds = ["mbsync -a"]
 
 [uni]
