@@ -33,6 +33,7 @@ if vim.fn.has_key(vim.g.plugs, "ale") then
 	ale_linters["sh"] = { "shellcheck" }
 	ale_linters["python"] = { "flake8", "pylint" }
 	ale_linters["javascript"] = { "prettier-standard" }
+	ale_linters["rust"] = { "cargo" }
 	vim.g.ale_linters = ale_linters
 
 	-- Additional linter setup
@@ -43,6 +44,7 @@ if vim.fn.has_key(vim.g.plugs, "ale") then
 	vim.g.ale_sh_shellcheck_options = "-x"
 	vim.g.ale_python_black_executable = "/home/lasse/.local/share/nvim/python_environment/bin/black"
 
+	vim.g.ale_rust_cargo_use_clippy = vim.fn.executable("cargo-clippy")
 	vim.cmd([[
 
 	highlight link ALEError LspDiagnosticsDefaultError
