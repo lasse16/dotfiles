@@ -10,6 +10,8 @@ highlight LineNr ctermfg=darkGrey cterm=italic term=italic
 " Display comments in italic
 highlight Comment ctermfg=darkGrey cterm=italic term=italic
 
+" Display comments in italic
+highlight Visual ctermbg=Black
 
 " Display the line seperating vertical panes as dark pipes
 highlight VertSplit ctermbg=NONE ctermfg=black cterm=NONE
