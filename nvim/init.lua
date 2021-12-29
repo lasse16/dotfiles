@@ -15,13 +15,11 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'rhysd/clever-f.vim'
-Plug 'dense-analysis/ale'
 Plug '$HOME/src/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'kosayoda/nvim-lightbulb'
-Plug 'nathanmsmith/nvim-ale-diagnostic', { 'branch' : 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
