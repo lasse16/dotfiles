@@ -27,6 +27,7 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'soywod/himalaya', {'rtp': 'vim'}
+Plug 'jose-elias-alvarez/null-ls.nvim', {'branch' : 'main'}
 call plug#end()
 ]])
 
