@@ -18,3 +18,10 @@ null_ls.setup({
 		require("lsp").on_attach(client, 0)
 	end,
 })
+
+-- Setup default trimming for every filetype
+null_ls.register({
+	name = "whitespace_trimming",
+	filetypes = {},
+	sources = { formatters.trim_whitespace, formatters.trim_newlines },
+})
