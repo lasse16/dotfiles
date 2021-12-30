@@ -15,13 +15,11 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'rhysd/clever-f.vim'
-Plug 'dense-analysis/ale'
 Plug '$HOME/src/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'kosayoda/nvim-lightbulb'
-Plug 'nathanmsmith/nvim-ale-diagnostic', { 'branch' : 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
@@ -29,6 +27,7 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'soywod/himalaya', {'rtp': 'vim'}
+Plug 'jose-elias-alvarez/null-ls.nvim', {'branch' : 'main'}
 call plug#end()
 ]])
 
