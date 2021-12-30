@@ -28,10 +28,16 @@ local on_attach = function(client, bufnr)
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border })
 
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-		underline = true,
+		underline = false,
 		virtual_text = true,
 		signs = true,
 		update_in_insert = false,
+	})
+
+	vim.diagnostic.config({
+		virtual_text = {
+			prefix = "◁◁◁◁ ",
+		},
 	})
 
 	if client.resolved_capabilities.document_formatting then
