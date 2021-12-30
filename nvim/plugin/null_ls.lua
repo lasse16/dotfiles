@@ -14,9 +14,6 @@ null_ls.setup({
 	},
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 	on_attach = function(client)
-		require("lsp").on_attach()
-		if client.resolved_capabilities.document_formatting then
-			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-		end
+		require("lsp").on_attach(client, 0)
 	end,
 })
