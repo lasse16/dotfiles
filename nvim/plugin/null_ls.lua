@@ -11,6 +11,7 @@ null_ls.setup({
 		linters.shellcheck,
 		linters.flake8.with({ command = neovim_python_env .. "flake8", name = "flake8" }),
 		linters.pylint.with({ command = neovim_python_env .. "pylint", name = "pylint" }),
+		linters.proselint,
 	},
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 	on_attach = function(client)
