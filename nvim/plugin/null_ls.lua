@@ -12,6 +12,7 @@ null_ls.setup({
 		linters.flake8.with({ command = neovim_python_env .. "flake8", name = "flake8" }),
 		linters.pylint.with({ command = neovim_python_env .. "pylint", name = "pylint" }),
 		linters.proselint,
+		linters.stylelint,
 	},
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 	on_attach = function(client)
