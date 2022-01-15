@@ -86,21 +86,6 @@ fi
 
 {{/if}}
 
-#include git branch in prompt
-parse_git_branch(){
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
-show_virtual_env(){
-  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
-    echo "($(basename $VIRTUAL_ENV))"
-  fi
-}
-
-export -f parse_git_branch
-export -f show_virtual_env
-export PS1="\$(show_virtual_env) \u@\h \[\033[32m\]\w\[\033[33m\] \$(parse_git_branch)\n \[\033[00m\]$ "
-
 #Set default display for WSL GUI applications
 if [ -f ./wsl_enabled.sh ] && source ./wsl_enabled.sh && is_wsl; then
   export DISPLAY:=0
@@ -121,4 +106,22 @@ eval "$(direnv hook bash)"
 # Enable starship
 export STARSHIP_CONFIG="/home/lasse/.config/starship/starship.toml"
 eval "$(starship init bash)"
+
+{{else}}
+
+#include git branch in prompt
+parse_git_branch(){
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+show_virtual_env(){
+  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+
+export -f parse_git_branch
+export -f show_virtual_env
+export PS1="\$(show_virtual_env) \u@\h \[\033[32m\]\w\[\033[33m\] \$(parse_git_branch)\n \[\033[00m\]$ "
+
 {{/if}}
