@@ -16,6 +16,8 @@ depends = [ "environment" ]
 depends=[ "environment" ]
 [ssh]
 depends = [ "bash" ]
+[starship]
+depends = [ "bash" ]
 [rust]
 
 ################################################################################
@@ -78,6 +80,9 @@ depends = [ "bash" ]
 
 [ssh.variables]
 "ssh.key-files"=[]
+
+[starship.files]
+"starship/config.toml"={target = "~/.config/starship.toml", type="symbolic"}
 
 [rust.variables]
 "rust.cargo_home"="~/.cargo"
