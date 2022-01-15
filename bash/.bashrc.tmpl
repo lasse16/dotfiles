@@ -119,5 +119,6 @@ eval "$(direnv hook bash)"
 
 {{#if dotter.packages.starship}}
 # Enable starship
+export STARSHIP_CONFIG="/home/lasse/.config/starship/starship.toml"
 eval "$(starship init bash)"
 {{/if}}

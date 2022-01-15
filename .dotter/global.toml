@@ -82,7 +82,7 @@ depends = [ "bash" ]
 "ssh.key-files"=[]
 
 [starship.files]
-"starship/config.toml"={target = "~/.config/starship.toml", type="symbolic"}
+"starship/config.toml"= {target = "~/.config/starship/starship.toml", type="symbolic"}
 
 [rust.variables]
 "rust.cargo_home"="~/.cargo"
