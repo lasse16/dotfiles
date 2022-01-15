@@ -156,4 +156,14 @@ function M.set_debugger_keymappings()
 	print("Debugger mappings set")
 end
 
+function M.setup_harpoon_keybindings()
+	vim.cmd([[
+		nnoremap <silent> <space>m :lua require("harpoon.mark").add_file()<CR>
+		nnoremap <silent> <space>M :lua require("harpoon.ui").toggle_quick_menu()<CR>
+		nnoremap <silent> <space>M1 :lua require("harpoon.ui").nav_file(1)<CR>
+		nnoremap <silent> <space>M2 :lua require("harpoon.ui").nav_file(2)<CR>
+		nnoremap <silent> <space>M3 :lua require("harpoon.ui").nav_file(3)<CR>
+		]])
+	print("Harpoon mappings set")
+end
 return M

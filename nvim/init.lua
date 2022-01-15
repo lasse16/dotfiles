@@ -28,6 +28,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'soywod/himalaya', {'rtp': 'vim'}
 Plug 'jose-elias-alvarez/null-ls.nvim', {'branch' : 'main'}
+Plug 'ThePrimeagen/harpoon'
+Plug 'rcarriga/nvim-notify'
+Plug 'folke/trouble.nvim', {'branch' : 'main'}
 call plug#end()
 ]])
 
