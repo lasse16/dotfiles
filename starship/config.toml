@@ -1,10 +1,29 @@
-# Inserts a blank line between shell prompts
-add_newline = true
+format = '${username:hostname}$directory$git_branch$git_state$python$line_break$character'
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+[username]
+format = "[($user])($style)"
+
+[directory]
+# Do not truncate the path if in git repo
+truncate_to_repo = false
+
+repo_root_style = "bright-green"
+style = "green"
+
+[git_branch]
+format = "[($symbol$branch)]($style)"
+style = "yellow"
+
+[git_state]
+
+[python]
+format = '[(\($virtualenv\))]($style)'
 
 # Disable the package module, hiding it from the prompt completely
 [package]
+disabled = true
+
+# Disable the command duration prompt
+[cmd_duration]
 disabled = true
