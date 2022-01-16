@@ -18,7 +18,7 @@ repo_root_style = "bright-blue"
 style = "blue"
 
 [git_branch]
-format = "[]($style)[($symbol$branch)](fg:black bg:$style)[]($style)"
+format = "[]($style)[($symbol$branch)](fg:black bg:$style)[]($style) "
 style = "cyan"
 
 [git_state]
@@ -31,11 +31,11 @@ time_format = '%R'
 style = "blue"
 
 [python]
-format = '[]($style)[($virtualenv)](bold fg:black bg:$style)[]($style)'
+format = '[]($style)[($virtualenv)](bold fg:black bg:$style)[]($style) '
 style = 'bright-blue'
 
 [rust]
-format = '[]($style)[($version)](bold fg:black bg:$style)[]($style)'
+format = '[]($style)[($version)](bold fg:black bg:$style)[]($style) '
 style = 'bright-red'
 
 [character]
