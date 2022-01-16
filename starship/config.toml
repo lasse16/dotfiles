@@ -1,4 +1,4 @@
-format = '${username:hostname}$directory$git_branch$git_state$python$line_break$character'
+format = '${username:hostname}$directory$git_branch$git_state$python$line_break$time$character'
 
 
 [username]
@@ -16,6 +16,11 @@ format = "[($symbol$branch)]($style)"
 style = "yellow"
 
 [git_state]
+
+[time]
+disabled = false
+format = '[$time]($style) '
+time_format = '%R'
 
 [python]
 format = '[(\($virtualenv\))]($style)'
