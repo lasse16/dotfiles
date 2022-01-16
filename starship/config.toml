@@ -2,7 +2,7 @@ format = '${username:hostname}$directory$git_branch$git_state$python$rust$line_b
 
 
 [username]
-format = "[($user])($style)"
+format = "[($user)]($style)"
 
 style_user = 'bold bright-green'
 style_root = 'bold red'
