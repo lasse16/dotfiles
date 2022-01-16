@@ -4,31 +4,36 @@ format = '${username:hostname}$directory$git_branch$git_state$python$line_break$
 [username]
 format = "[($user])($style)"
 
+style_user = 'bold bright-green'
+style_root = 'bold red'
+
+[hostname]
+style = 'bold dimmed green'
+
 [directory]
 # Do not truncate the path if in git repo
 truncate_to_repo = false
 
-repo_root_style = "bright-green"
-style = "green"
+repo_root_style = "bright-blue"
+style = "blue"
 
 [git_branch]
-format = "[($symbol$branch)]($style)"
-style = "yellow"
+format = "[]($style)[($symbol$branch)](fg:black bg:$style)[]($style)"
+style = "cyan"
 
 [git_state]
+style = 'bold bright-blue'
 
 [time]
 disabled = false
 format = '[$time]($style) '
 time_format = '%R'
+style = "blue"
 
 [python]
-format = '[(\($virtualenv\))]($style)'
+format = '[]($style)[($virtualenv)](bold fg:black bg:$style)[]($style)'
+style = 'bright-blue'
 
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
-
-# Disable the command duration prompt
-[cmd_duration]
-disabled = true
+[character]
+success_symbol = '[❯](bold cyan)'
+error_symbol = '[❯](bold red)'
