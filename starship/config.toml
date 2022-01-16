@@ -1,4 +1,4 @@
-format = '${username:hostname}$directory$git_branch$git_state$python$line_break$time$character'
+format = '${username:hostname}$directory$git_branch$git_state$python$rust$line_break$time$character'
 
 
 [username]
@@ -33,6 +33,10 @@ style = "blue"
 [python]
 format = '[]($style)[($virtualenv)](bold fg:black bg:$style)[]($style)'
 style = 'bright-blue'
+
+[rust]
+format = '[]($style)[($version)](bold fg:black bg:$style)[]($style)'
+style = 'bright-red'
 
 [character]
 success_symbol = '[❯](bold cyan)'
