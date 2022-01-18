@@ -13,6 +13,8 @@ style = 'bold dimmed green'
 [directory]
 # Do not truncate the path if in git repo
 truncate_to_repo = false
+truncation_length = 5
+truncation_symbol = "..."
 
 repo_root_style = "bright-blue"
 style = "blue"
