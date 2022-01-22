@@ -13,6 +13,7 @@ null_ls.setup({
 		linters.pylint.with({ command = neovim_python_env .. "pylint", name = "pylint" }),
 		linters.proselint,
 		linters.stylelint,
+		linters.eslint_d,
 	},
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 	on_attach = function(client)
