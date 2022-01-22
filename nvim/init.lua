@@ -25,7 +25,7 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'simrat39/rust-tools.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'AndrewRadev/sideways.vim'
+Plug 'mizlan/iswap.nvim'
 Plug 'soywod/himalaya', {'rtp': 'vim'}
 Plug 'jose-elias-alvarez/null-ls.nvim', {'branch' : 'main'}
 Plug 'ThePrimeagen/harpoon'
