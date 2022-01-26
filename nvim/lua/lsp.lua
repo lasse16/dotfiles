@@ -63,9 +63,6 @@ local server_with_default_setup = {
 	"bashls",
 	"ansiblels",
 	"tsserver",
-	"cssls",
-	"html",
-	"jsonls",
 	"emmet_ls",
 	"taplo",
 }
