@@ -32,6 +32,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim', {'branch' : 'main'}
 Plug 'ThePrimeagen/harpoon'
 Plug 'rcarriga/nvim-notify'
 Plug 'folke/trouble.nvim', {'branch' : 'main'}
+Plug 'stevearc/dressing.nvim'
 call plug#end()
 ]])
 
