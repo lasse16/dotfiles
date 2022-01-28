@@ -48,5 +48,6 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "ultisnips" },
 		{ name = "buffer" },
+		{ name = "omni" },
 	},
 })
