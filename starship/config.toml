@@ -1,4 +1,4 @@
-format = '${username:hostname}$directory$git_branch$git_state$python$rust$line_break$time$character'
+format = '$username$hostname$directory$git_branch$git_state$python$rust$line_break$time$character'
 
 
 [username]
@@ -8,6 +8,7 @@ style_user = 'bold bright-green'
 style_root = 'bold red'
 
 [hostname]
+format = "[@$hostname]($style) "
 style = 'bold dimmed green'
 
 [directory]
