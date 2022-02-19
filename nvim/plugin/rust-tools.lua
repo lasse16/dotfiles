@@ -6,6 +6,13 @@ local rust_analyzer_opts = {
 	flags = {
 		debounce_text_changes = 200,
 	},
+	settings = {
+		["rust-analyzer"] = {
+			procMacro = {
+				enable = false,
+			},
+		},
+	},
 }
 
 local rust_tools_options = {
