@@ -8,7 +8,7 @@ Plug 'hrsh7th/cmp-path', { 'branch' : 'main' }
 Plug 'hrsh7th/cmp-omni', { 'branch' : 'main' }
 Plug 'quangnguyen30192/cmp-nvim-ultisnips', { 'branch' : 'main' }
 Plug 'junegunn/vim-easy-align'
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lilydjwg/colorizer'
