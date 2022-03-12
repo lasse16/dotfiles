@@ -49,7 +49,7 @@ vim.opt.laststatus = 2
 -- by default, you can't backspace before the insertion point set with 'i'.
 -- This configuration makes backspace behave more reasonably, in that you can
 -- backspace over anything.
-vim.opt.backspace = { indent = true, eol = true, start = true }
+vim.opt.backspace = "indent,eol,start"
 
 -- This setting makes search case-insensitive when all characters in the string
 -- being searched are lowercase. However, the search becomes case-sensitive if
