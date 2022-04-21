@@ -9,5 +9,6 @@ local-data.toml
 .dotter/local.toml
 
 bash/helpers/ssh_agent.sh
+bash/.bash_history
 
 bookmarks
