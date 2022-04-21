@@ -54,7 +54,6 @@ depends = [ "bash" ]
 [nvim.files]
 "nvim/init.lua"={target= "~/.config/nvim/init.lua", type = "symbolic"}
 "nvim/lua"={target= "~/.config/nvim/lua", type = "symbolic"}
-"nvim/autoload"={target= "~/.config/nvim/autoload", type = "symbolic"}
 "nvim/colors"={target= "~/.config/nvim/colors", type = "symbolic"}
 "nvim/plugin"={target= "~/.config/nvim/plugin", type = "symbolic"}
 "nvim/after"={target= "~/.config/nvim/after", type = "symbolic"}
