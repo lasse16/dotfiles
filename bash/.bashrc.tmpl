@@ -16,6 +16,9 @@ case $- in
   *) return;;
 esac
 
+# disable <C-s> stopping data flow to the terminal
+stty -ixon
+
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
