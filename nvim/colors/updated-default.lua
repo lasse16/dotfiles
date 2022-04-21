@@ -1,3 +1,6 @@
+local installed = require("utils").installed
+
+vim.cmd([[
 " Using the default vim color scheme is fine with me, in combinations with the nord-inspired terminal scheme.
 " But there are two additions I want to make.
 " Source this file in " Using the default color scheme is fine with me.
@@ -33,8 +36,10 @@ highlight SignColumn ctermbg=NONE
 
 " Highlight strings in green
 highlight String ctermfg=darkgreen ctermbg=NONE
+]])
 
-if has_key(g:plugs,'nvim-lspconfig')
+if installed("nvim-lspconfig") then
+	vim.cmd([[
 	"default highlight groups for LSP messages
 	highlight LspDiagnosticsDefaultError ctermfg=red ctermbg=NONE cterm=underline,italic
 	highlight LspDiagnosticsDefaultWarning ctermfg=yellow ctermbg=NONE cterm=underline,italic
@@ -52,9 +57,12 @@ if has_key(g:plugs,'nvim-lspconfig')
 	highlight LspDiagnosticsSignWarning ctermfg=yellow ctermbg=NONE
 	highlight LspDiagnosticsSignInformation ctermfg=white ctermbg=NONE
 	highlight LspDiagnosticsSignHint ctermfg=grey ctermbg=NONE
-endif
 
-if has_key(g:plugs,'nvim-treesitter')
+]])
+end
+
+if installed("nvim-treesitter") then
+	vim.cmd([[
 	"default highlights for treesitter
 	highlight TSAttribute ctermfg=darkblue ctermbg=NONE
 	highlight link TSCharacter Character
@@ -91,5 +99,5 @@ if has_key(g:plugs,'nvim-treesitter')
 	highlight TSType ctermfg=lightcyan ctermbg=NONE
 	highlight TSVariable ctermfg=blue ctermbg=NONE
 	highlight link TSVariableBuiltin TSVariable
-
-endif
+	]])
+end
