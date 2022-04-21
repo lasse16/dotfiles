@@ -20,9 +20,11 @@ cmp.setup({
 
 	preselect = types.cmp.PreselectMode.Item,
 
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-		winhighlight = "NormalFloat:CmpDocumentation,FloatBorder:CmpDocumentationBorder",
+	window = {
+		documentation = {
+			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+			winhighlight = "NormalFloat:CmpDocumentation,FloatBorder:CmpDocumentationBorder",
+		},
 	},
 
 	confirmation = {
