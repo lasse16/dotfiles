@@ -2,7 +2,7 @@ M = {}
 
 vim.cmd([[
 function! SnippetExpandOrJump() abort
-	if has_key(g:plugs,"ultisnips")
+	if luaeval("require'utils'.installed('ultisnips')")
 		call UltiSnips#ExpandSnippetOrJump()
 		return g:ulti_expand_or_jump_res > 0
 	endif

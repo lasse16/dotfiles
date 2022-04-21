@@ -20,7 +20,7 @@ packer = require("packer").startup({
 		use("rhysd/clever-f.vim")
 		use("$HOME/src/fzf")
 		use("junegunn/fzf.vim")
-		-- use("SirVer/ultisnips")
+		use("SirVer/ultisnips")
 		use("honza/vim-snippets")
 		use("kosayoda/nvim-lightbulb")
 		use("nvim-treesitter/nvim-treesitter", { cmd = ":TSUpdate" })
