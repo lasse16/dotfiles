@@ -51,5 +51,6 @@ cmp.setup({
 		{ name = "ultisnips" },
 		{ name = "buffer" },
 		{ name = "omni" },
+		{ name = "nvim_lsp_signature_help" },
 	},
 })

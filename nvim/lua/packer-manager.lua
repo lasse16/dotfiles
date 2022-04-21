@@ -10,6 +10,7 @@ packer = require("packer").startup({
 				{ "hrsh7th/cmp-buffer", branch = "main" },
 				{ "hrsh7th/cmp-path", branch = "main" },
 				{ "hrsh7th/cmp-omni", branch = "main" },
+				{ "hrsh7th/cmp-nvim-lsp-signature-help", branch = "main" },
 				{ "quangnguyen30192/cmp-nvim-ultisnips", branch = "main", requires = "SirVer/ultisnips" },
 			},
 		})
