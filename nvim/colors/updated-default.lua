@@ -101,3 +101,25 @@ if installed("nvim-treesitter") then
 	highlight link TSVariableBuiltin TSVariable
 	]])
 end
+
+if installed("nvim-notify") then
+	vim.cmd([[
+	highlight NotifyERRORBorder ctermfg=red
+	highlight NotifyWARNBorder ctermfg=darkyellow
+	highlight NotifyINFOBorder ctermfg=gray
+	highlight NotifyDEBUGBorder ctermfg=darkgray
+	highlight NotifyTRACEBorder ctermfg=black
+	
+	highlight link NotifyERRORIcon NotifyERRORBorder
+	highlight link NotifyWARNIcon NotifyWARNBorder  
+	highlight link NotifyINFOIcon NotifyINFOBorder  
+	highlight link NotifyDEBUGIcon NotifyDEBUGBorder  
+	highlight link NotifyTRACEIcon NotifyTRACEBorder  
+
+	highlight link NotifyERRORTitle NotifyERRORBorder   
+	highlight link NotifyWARNTitle NotifyWARNBorder 
+	highlight link NotifyINFOTitle NotifyINFOBorder 
+	highlight link NotifyDEBUGTitle NotifyDEBUGBorder   
+	highlight link NotifyTRACETitle NotifyTRACEBorder   
+	]])
+end
