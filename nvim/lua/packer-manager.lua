@@ -18,7 +18,7 @@ packer = require("packer").startup({
 		use("tpope/vim-fugitive")
 		use("nvim-lualine/lualine.nvim")
 		use("lilydjwg/colorizer")
-		use("tpope/vim-commentary")
+		use("numToStr/Comment.nvim")
 		use("tpope/vim-surround")
 		use("wellle/targets.vim")
 		use("rhysd/clever-f.vim")
