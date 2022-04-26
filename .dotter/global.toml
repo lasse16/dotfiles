@@ -1,5 +1,6 @@
 # Possible packages
 
+[alacritty]
 [bash]
 depends = [ "environment" ]
 [direnv]
@@ -20,6 +21,8 @@ depends = [ "bash" ]
 [rust]
 
 ################################################################################
+[alacritty.files]
+"alacritty/alacritty.yml"= { target = "~/.config/alacritty/alacritty.yml", type="symbolic"}
 
 [bash.files]
 "bash/.bashrc.tmpl"= { target = "~/.bashrc", type="template"}
