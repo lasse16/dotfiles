@@ -13,8 +13,8 @@ highlight LineNr ctermfg=darkGrey cterm=italic term=italic
 " Display comments in italic
 highlight Comment ctermfg=darkGrey cterm=italic term=italic
 
-" Display comments in italic
-highlight Visual ctermbg=Black
+" Highlight visual selection
+highlight Visual ctermbg=darkgrey
 
 " Display the line seperating vertical panes as dark pipes
 highlight VertSplit ctermbg=NONE ctermfg=black cterm=NONE
@@ -30,7 +30,6 @@ highlight PmenuSel ctermbg=black ctermfg=white
 
 " Set border of popup and floating windows
 highlight FloatBorder ctermbg=black ctermfg=darkGrey
-
 " Darken the background of the Gutter/SignColumn
 highlight SignColumn ctermbg=NONE
 
