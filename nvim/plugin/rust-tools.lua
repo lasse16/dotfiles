@@ -11,6 +11,9 @@ local rust_analyzer_opts = {
 			procMacro = {
 				enable = false,
 			},
+			checkOnSave = {
+				command = "clippy",
+			},
 		},
 	},
 }
