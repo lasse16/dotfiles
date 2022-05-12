@@ -1,6 +1,9 @@
 [user]
 	name = {{ git.name }}
 	email = {{ git.email }}
+{{#if dotter.packages.gpg}}
+	signingkey = {{ gpg.signingKey }}
+		{{/if}}
 [init]
 	defaultBranch = main
 [alias]
@@ -45,3 +48,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+{{#if dotter.packages.gpg}}
+[commit]
+	gpgsign = true
+		{{/if}}

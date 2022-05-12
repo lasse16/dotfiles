@@ -96,6 +96,10 @@ if [ -f ./wsl_enabled.sh ] && source ./wsl_enabled.sh && is_wsl; then
   echo "WSL"
 fi
 
+{{#if dotter.packages.gpg}}
+export GPG_TTY=$(tty)
+{{/if}}
+
 {{#if dotter.packages.direnv}}
 # Hook up direnv to
 eval "$(direnv hook bash)"
