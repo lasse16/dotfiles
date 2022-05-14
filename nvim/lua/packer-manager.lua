@@ -32,7 +32,6 @@ packer = require("packer").startup({
 			"simrat39/rust-tools.nvim",
 			requires = { "neovim/nvim-lspconfig", "mfussenegger/nvim-dap", "nvim-lua/plenary.nvim" },
 		})
-		use("mizlan/iswap.nvim")
 		use({ "soywod/himalaya", rtp = "vim" })
 		use({ "jose-elias-alvarez/null-ls.nvim", branch = "main", requires = "nvim-lua/plenary.nvim" })
 		use({ "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" })
