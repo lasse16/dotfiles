@@ -81,4 +81,6 @@ vim.opt.encoding = "utf-8"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+vim.opt.termguicolors = true
+
 print("SETTINGS COMPLETED")
