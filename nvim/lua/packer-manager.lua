@@ -17,7 +17,7 @@ packer = require("packer").startup({
 		use("junegunn/vim-easy-align")
 		use("tpope/vim-fugitive")
 		use("nvim-lualine/lualine.nvim")
-		use("lilydjwg/colorizer")
+		use("ap/vim-css-color")
 		use("numToStr/Comment.nvim")
 		use("tpope/vim-surround")
 		use("wellle/targets.vim")
