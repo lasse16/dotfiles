@@ -38,6 +38,9 @@ packer = require("packer").startup({
 		use("rcarriga/nvim-notify")
 		use({ "folke/trouble.nvim", branch = "main" })
 		use("stevearc/dressing.nvim")
+		use("windwp/nvim-autopairs")
+		use({ "folke/which-key.nvim" })
+		use({ "ahmedkhalf/project.nvim" })
 	end,
 })
 -- Load file directly, see https://github.com/wbthomason/packer.nvim/discussions/651
