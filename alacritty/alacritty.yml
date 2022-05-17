@@ -3,6 +3,8 @@
 
 env:
   TERM: xterm-256color
+  COLORTERM: truecolor
+  WSLENV: TERM:COLORTERM
 
 window:
   opacity: 0.9
