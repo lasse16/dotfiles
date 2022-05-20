@@ -12,6 +12,7 @@ packer = require("packer").startup({
 				{ "hrsh7th/cmp-omni", branch = "main" },
 				{ "hrsh7th/cmp-nvim-lsp-signature-help", branch = "main" },
 				{ "saadparwaiz1/cmp_luasnip", requires = "L3MON4D3/LuaSnip" },
+				{ "hrsh7th/cmp-cmdline", branch = "main" },
 			},
 		})
 		use("junegunn/vim-easy-align")
