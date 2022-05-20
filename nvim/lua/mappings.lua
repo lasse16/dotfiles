@@ -7,6 +7,7 @@ end
 local function set_buffer_key(bufnr, ...)
 	vim.api.nvim_buf_set_keymap(bufnr, ...)
 end
+
 local noremap = { noremap = true }
 local noremap_silent = { noremap = true, silent = true }
 local noremap_expr = { noremap = true, expr = true }
@@ -93,4 +94,5 @@ function M.setup_harpoon_keybindings()
 		]])
 	print("Harpoon mappings set")
 end
+
 return M
