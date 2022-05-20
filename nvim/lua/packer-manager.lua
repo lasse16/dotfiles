@@ -11,7 +11,7 @@ packer = require("packer").startup({
 				{ "hrsh7th/cmp-path", branch = "main" },
 				{ "hrsh7th/cmp-omni", branch = "main" },
 				{ "hrsh7th/cmp-nvim-lsp-signature-help", branch = "main" },
-				{ "quangnguyen30192/cmp-nvim-ultisnips", branch = "main", requires = "SirVer/ultisnips" },
+				{ "saadparwaiz1/cmp_luasnip", requires = "L3MON4D3/LuaSnip" },
 			},
 		})
 		use("junegunn/vim-easy-align")
@@ -24,7 +24,7 @@ packer = require("packer").startup({
 		use("rhysd/clever-f.vim")
 		use("$HOME/src/fzf")
 		use({ "junegunn/fzf.vim", requires = "$HOME/src/fzf" })
-		use({ "SirVer/ultisnips", requires = "honza/vim-snippets" })
+		use({ "L3MON4D3/LuaSnip", requires = "rafamadriz/friendly-snippets" })
 		use("kosayoda/nvim-lightbulb")
 		use("nvim-treesitter/nvim-treesitter", { cmd = ":TSUpdate" })
 		use({ "mfussenegger/nvim-dap", requires = "rcarriga/nvim-dap-ui" })
