@@ -3,6 +3,11 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# ls aliasies exa-style
+alias ll='exa -aalF'
+alias la='exa -a'
+alias l='exa -CF'
+
 alias pwdf="readlink -f"
 alias python="python3"
 alias grip="grip -b --quiet"
