@@ -93,7 +93,6 @@ fi
 if [ -f ./wsl_enabled.sh ] && source ./wsl_enabled.sh && is_wsl; then
   export DISPLAY:=0
   [ -f ./wsl_aliases.sh ] && . wsl_aliases.sh
-  echo "WSL"
 fi
 
 {{#if dotter.packages.gpg}}
