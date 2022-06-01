@@ -14,8 +14,10 @@ export DOTFILES=${DOTFILES:=$HOME/dotfiles}
 export BROWSER="$DOTFILES/bash/helpers/wsl_aware_wslview.sh"
 
 # Log into BitWarden
-bw login
-export BW_SESSION=$(bw unlock --raw)
+if [ ! -v "$NO_AUTHENTICATE" ]; then
+	bw login
+	export BW_SESSION=$(bw unlock --raw)
+fi
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
