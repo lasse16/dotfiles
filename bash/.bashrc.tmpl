@@ -1,6 +1,5 @@
 # Set $DOTFILES_BASH environment variables if not already set
-${DOTFILES_BASH:=$DOTFILES/bash}
-export DOTFILES_BASH
+export DOTFILES_BASH=${DOTFILES_BASH:=$DOTFILES/bash}
 
 # Source helpers
 source "$DOTFILES_BASH/helpers/pathadd.bash"
@@ -106,6 +105,7 @@ eval "$(direnv hook bash)"
 
 {{#if dotter.packages.fzf}}
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$DOTFILES/fzf/fzf_setup.sh"
 {{/if}}
 
 {{#if dotter.packages.starship}}

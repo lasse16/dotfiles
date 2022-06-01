@@ -9,8 +9,7 @@
 #umask 022
 
 # Set $DOTFILES environment repo if not already set
-${DOTFILES:=$HOME/dotfiles}
-export DOTFILES
+export DOTFILES=${DOTFILES:=$HOME/dotfiles}
 
 export BROWSER="$DOTFILES/bash/helpers/wsl_aware_wslview.sh"
 
