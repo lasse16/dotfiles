@@ -37,7 +37,7 @@ font:
 
 colors:
   primary:
-    background: "#1e2125"
+    background: "#0F1417"
     foreground: "#D8DEE9"
 
   cursor:
@@ -53,14 +53,14 @@ colors:
     background: "#ffffff"
 
   normal:
-    black: "#3B4252"
+    black: "#0E1316"
     red: "#AB5E5F"
     green: "#6E965D"
     yellow: "#E0DA74"
     blue: "#5867A1"
     magenta: "#A872A6"
     cyan: "#6B97A3"
-    white: "#E5E9F0"
+    white: "#F4FEFD"
 
   bright:
     black: "#4C566A"
@@ -70,7 +70,7 @@ colors:
     blue: "#909DDE"
     magenta: "#CC9EBC"
     cyan: "#8FBCBB"
-    white: "#ECEFF4"
+    white: "#f6fffe"
 
 bell:
   duration: 0

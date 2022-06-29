@@ -1,0 +1,23 @@
+{
+  "name": "minimalist-dark-green",
+  "background": "#0F1417",
+  "black": "#0E1316",
+  "blue": "#5867A1",
+  "brightBlack": "#4C566A",
+  "brightBlue": "#909DDE",
+  "brightCyan": "#8FBCBB",
+  "brightGreen": "#ABC793",
+  "brightPurple": "#CC9EBC",
+  "brightRed": "#E07E7F",
+  "brightWhite": "#ECEFF4",
+  "brightYellow": "#EDEDA6",
+  "cursorColor": "#FFFFFF",
+  "cyan": "#6B97A3",
+  "foreground": "#D8DEE9",
+  "green": "#6E965D",
+  "purple": "#A872A6",
+  "red": "#AB5E5F",
+  "selectionBackground": "#FFFFFF",
+  "white": "#F4FEFD",
+  "yellow": "#E0DA74"
+}
