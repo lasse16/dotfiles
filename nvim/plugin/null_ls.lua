@@ -7,7 +7,7 @@ null_ls.setup({
 		formatters.stylua,
 		formatters.black.with({ command = neovim_python_env .. "black" }),
 		formatters.shfmt,
-		formatters.prettier.with({ disabled_filetypes = { "scss", "css", "json" } }),
+		formatters.prettier.with({ disabled_filetypes = { "scss", "css" } }),
 		formatters.stylelint,
 		linters.shellcheck,
 		linters.flake8.with({ command = neovim_python_env .. "flake8", name = "flake8" }),
