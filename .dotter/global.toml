@@ -2,96 +2,100 @@
 
 [alacritty]
 [bash]
-depends = [ "environment" ]
+depends = ["environment"]
 [direnv]
 [environment]
 [fzf]
 [git]
 [gpg]
 [himalaya]
+[khard]
 [lf]
 [nvim]
 [tmux]
 [tree-sitter]
 [vim]
 [volta]
-depends=[ "environment" ]
+depends = ["environment"]
 [ssh]
-depends = [ "bash" ]
+depends = ["bash"]
 [starship]
 [rust]
 
 ################################################################################
 [alacritty.files]
-"alacritty/alacritty.yml"= { target = "~/.config/alacritty/alacritty.yml", type="symbolic"}
+"alacritty/alacritty.yml" = { target = "~/.config/alacritty/alacritty.yml", type = "symbolic" }
 
 [bash.files]
-"bash/.bashrc.tmpl"= { target = "~/.bashrc", type="template"}
-"bash/.inputrc"="~/.inputrc"
-"bash/.profile.tmpl"={ target="~/.profile", type="template"}
-"bash/.bash_history"="~/.bash_history"
+"bash/.bashrc.tmpl" = { target = "~/.bashrc", type = "template" }
+"bash/.inputrc" = "~/.inputrc"
+"bash/.profile.tmpl" = { target = "~/.profile", type = "template" }
+"bash/.bash_history" = "~/.bash_history"
 
 [environment.variables]
 # Replace this by future dotter built-in variable (Maybe)
-"environment.dotfile_folder"="$DOTFILES"
-"environment.bookmarks"=[]
+"environment.dotfile_folder" = "$DOTFILES"
+"environment.bookmarks" = []
 
 [fzf.variables]
-"fzf.home_directory"="$HOME/src/fzf"
+"fzf.home_directory" = "$HOME/src/fzf"
 
 [git.files]
-"git/.gitconfig.tmpl"={target= "~/.gitconfig", type = "template"}
+"git/.gitconfig.tmpl" = { target = "~/.gitconfig", type = "template" }
 
 [git.variables]
-"git.name"=""
-"git.email"=""
+"git.name" = ""
+"git.email" = ""
 
 [gpg.variables]
-"gpg.signingKey"=""
+"gpg.signingKey" = ""
 
 [himalaya.variables]
 "himalaya.name" = ""
 
 [himalaya.files]
-"himalaya/config.toml" ={target = "~/.config/himalaya/config.toml", type = "symbolic"}
+"himalaya/config.toml" = { target = "~/.config/himalaya/config.toml", type = "symbolic" }
+
+[khard.files]
+"khard/khard.conf" = { target = "~/.config/khard/khard.conf", type = "symbolic" }
 
 [lf.files]
-"lf/lfrc.tmpl"={target= "~/.config/lf/lfrc", type = "template"}
+"lf/lfrc.tmpl" = { target = "~/.config/lf/lfrc", type = "template" }
 
 [nvim.files]
-"nvim/init.lua"={target= "~/.config/nvim/init.lua", type = "symbolic"}
-"nvim/lua"={target= "~/.config/nvim/lua", type = "symbolic"}
-"nvim/colors"={target= "~/.config/nvim/colors", type = "symbolic"}
-"nvim/plugin"={target= "~/.config/nvim/plugin", type = "symbolic"}
-"nvim/after"={target= "~/.config/nvim/after", type = "symbolic"}
+"nvim/init.lua" = { target = "~/.config/nvim/init.lua", type = "symbolic" }
+"nvim/lua" = { target = "~/.config/nvim/lua", type = "symbolic" }
+"nvim/colors" = { target = "~/.config/nvim/colors", type = "symbolic" }
+"nvim/plugin" = { target = "~/.config/nvim/plugin", type = "symbolic" }
+"nvim/after" = { target = "~/.config/nvim/after", type = "symbolic" }
 
 [tmux.files]
-"tmux/.tmux.conf"="~/.tmux.conf"
+"tmux/.tmux.conf" = "~/.tmux.conf"
 
 [tree-sitter.files]
-"tree-sitter/bin"={target="~/.tree-sitter/bin",type="symbolic"}
-"tree-sitter/config.json.tmpl"={target= "~/.tree-sitter/config.json", type="template"}
+"tree-sitter/bin" = { target = "~/.tree-sitter/bin", type = "symbolic" }
+"tree-sitter/config.json.tmpl" = { target = "~/.tree-sitter/config.json", type = "template" }
 
 [tree-sitter.variables]
-"tree-sitter.parser-directory"=""
+"tree-sitter.parser-directory" = ""
 
 [vim.files]
-"vim/.vimrc.tmpl"= {target="~/.vimrc", type="template"}
+"vim/.vimrc.tmpl" = { target = "~/.vimrc", type = "template" }
 [vim.variables]
-"vim.plugin_dir"="~/.vim/plugged"
+"vim.plugin_dir" = "~/.vim/plugged"
 
 [ssh.files]
-"bash/helpers/ssh_agent.sh.tmpl"="bash/helpers/ssh_agent.sh"
+"bash/helpers/ssh_agent.sh.tmpl" = "bash/helpers/ssh_agent.sh"
 
 [ssh.variables]
-"ssh.key-files"=[]
+"ssh.key-files" = []
 
 [starship.files]
-"starship/config.toml"= {target = "~/.config/starship/starship.toml", type="symbolic"}
+"starship/config.toml" = { target = "~/.config/starship/starship.toml", type = "symbolic" }
 
 [rust.variables]
-"rust.cargo_home"="~/.cargo"
-"rust.rustup_home"="~/.rustup"
+"rust.cargo_home" = "~/.cargo"
+"rust.rustup_home" = "~/.rustup"
 
 [volta.variables]
-"volta.home"="~/.config/volta"
+"volta.home" = "~/.config/volta"
