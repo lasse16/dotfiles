@@ -89,3 +89,5 @@ require("neotest").setup({
 		},
 	},
 })
+
+require("commands").enable_test_running_commands()
