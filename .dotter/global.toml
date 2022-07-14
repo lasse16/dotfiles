@@ -35,7 +35,6 @@ depends = ["bash"]
 [environment.variables]
 # Replace this by future dotter built-in variable (Maybe)
 "environment.dotfile_folder" = "$DOTFILES"
-"environment.bookmarks" = []
 
 [fzf.variables]
 "fzf.home_directory" = "$HOME/src/fzf"
