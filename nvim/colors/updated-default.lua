@@ -19,17 +19,18 @@ highlight Visual ctermbg=darkgrey guibg=#3c3c3c
 " Display the line seperating vertical panes as dark pipes
 highlight VertSplit ctermbg=NONE ctermfg=black cterm=NONE guibg=NONE guifg=#0e0e0e gui=NONE
 
-" Display comments in italic
+" Darken end of file symbols in line number column
 highlight EndOfBuffer ctermfg=black cterm=italic term=italic guifg=#0e0e0e gui=italic
 
 " Change the background of the completion window
 highlight Pmenu ctermbg=black ctermfg=darkGrey guibg=#0e1316 guifg=#4c566a
 
-" Change the background of the completion window
+" Change the background of the selected item in completion window
 highlight PmenuSel ctermbg=black ctermfg=white guibg=#0e1316 guifg=#f6fffe
 
 " Set border of popup and floating windows
 highlight FloatBorder ctermbg=black ctermfg=darkGrey guibg=#0e1316 guifg=#4c566a
+
 " Darken the background of the Gutter/SignColumn
 highlight SignColumn ctermbg=NONE guibg=NONE
 
