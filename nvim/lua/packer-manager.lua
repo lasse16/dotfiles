@@ -42,6 +42,13 @@ packer = require("packer").startup({
 		use("windwp/nvim-autopairs")
 		use({ "folke/which-key.nvim" })
 		use({ "ahmedkhalf/project.nvim" })
+		use({
+			"nvim-neotest/neotest",
+			requires = {
+				"nvim-lua/plenary.nvim",
+				"nvim-treesitter/nvim-treesitter",
+			},
+		})
 	end,
 })
 -- Load file directly, see https://github.com/wbthomason/packer.nvim/discussions/651
