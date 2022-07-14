@@ -47,6 +47,7 @@ packer = require("packer").startup({
 			requires = {
 				"nvim-lua/plenary.nvim",
 				"nvim-treesitter/nvim-treesitter",
+				"nvim-neotest/neotest-python",
 			},
 		})
 	end,

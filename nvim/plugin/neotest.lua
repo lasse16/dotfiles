@@ -1,5 +1,7 @@
 require("neotest").setup({
-	adapters = {},
+	adapters = {
+		require("neotest-python")({ dap = { justMyCode = false } }),
+	},
 	consumers = {},
 	diagnostic = {
 		enabled = true,
