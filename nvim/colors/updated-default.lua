@@ -14,7 +14,7 @@ highlight LineNr ctermfg=darkGrey cterm=italic term=italic guifg=#4c566a gui=ita
 highlight Comment ctermfg=darkGrey cterm=italic term=italic guifg=#4c566a gui=italic 
 
 " Highlight visual selection
-highlight Visual ctermbg=darkgrey guibg=#4c566a 
+highlight Visual ctermbg=darkgrey guibg=#3c3c3c 
 
 " Display the line seperating vertical panes as dark pipes
 highlight VertSplit ctermbg=NONE ctermfg=black cterm=NONE guibg=NONE guifg=#0e0e0e gui=NONE
