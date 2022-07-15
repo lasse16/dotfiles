@@ -50,6 +50,7 @@ packer = require("packer").startup({
 				"nvim-neotest/neotest-python",
 			},
 		})
+		use({ "folke/lua-dev.nvim" })
 	end,
 })
 -- Load file directly, see https://github.com/wbthomason/packer.nvim/discussions/651
