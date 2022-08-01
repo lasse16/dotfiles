@@ -117,3 +117,9 @@ cmp.setup.cmdline(":", {
 		{ name = "cmdline" },
 	}),
 })
+
+cmp.setup.filetype({ "dap-repl", "dapui_watches" }, {
+	sources = {
+		{ name = "dap" },
+	},
+})
