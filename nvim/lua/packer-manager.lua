@@ -52,6 +52,8 @@ packer = require("packer").startup({
 			},
 		})
 		use({ "folke/lua-dev.nvim" })
+		use({ "danymat/neogen" })
+		use({ "mrjones2014/smart-splits.nvim" })
 	end,
 })
 -- Load file directly, see https://github.com/wbthomason/packer.nvim/discussions/651
