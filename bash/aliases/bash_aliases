@@ -8,6 +8,9 @@ alias ll='exa -aalF'
 alias la='exa -a'
 alias l='exa -CF'
 
+# himalaya 
+alias mail='himalaya'
+
 alias pwdf="readlink -f"
 alias python="python3"
 alias grip="grip -b --quiet"
