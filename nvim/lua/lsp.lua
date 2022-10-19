@@ -66,6 +66,7 @@ local server_with_default_setup = {
 	"jsonls",
 	"cssls",
 	"marksman",
+	"terraformls",
 }
 for _, lsp in ipairs(server_with_default_setup) do
 	require("lspconfig")[lsp].setup({
