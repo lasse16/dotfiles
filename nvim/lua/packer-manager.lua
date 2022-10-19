@@ -28,7 +28,12 @@ packer = require("packer").startup({
 		use({ "junegunn/fzf.vim", requires = "$HOME/src/fzf" })
 		use({ "L3MON4D3/LuaSnip", requires = "rafamadriz/friendly-snippets" })
 		use("kosayoda/nvim-lightbulb")
-		use("nvim-treesitter/nvim-treesitter", { cmd = ":TSUpdate" })
+		use({
+			"nvim-treesitter/nvim-treesitter",
+			requires = {
+				"nvim-treesitter/nvim-treesitter-context",
+			},
+		})
 		use({ "mfussenegger/nvim-dap", requires = "rcarriga/nvim-dap-ui" })
 		use({
 			"simrat39/rust-tools.nvim",
