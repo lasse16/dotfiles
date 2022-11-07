@@ -15,6 +15,7 @@ null_ls.setup({
 		linters.proselint,
 		linters.stylelint,
 		linters.eslint_d,
+		linters.golangci_lint,
 	},
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 	on_attach = function(client)
