@@ -108,6 +108,10 @@ eval "$(direnv hook bash)"
 . "$DOTFILES/fzf/fzf_setup.sh"
 {{/if}}
 
+{{#if dotter.packages.go}}
+export PATH=$PATH:/usr/local/go/bin:~/go/bin
+{{/if}}
+
 {{#if dotter.packages.starship}}
 # Enable starship
 export STARSHIP_CONFIG="/home/lasse/.config/starship/starship.toml"
