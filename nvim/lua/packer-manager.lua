@@ -56,7 +56,7 @@ packer = require("packer").startup({
 				"nvim-neotest/neotest-python",
 			},
 		})
-		use({ "folke/lua-dev.nvim" })
+		use({ "folke/neodev.nvim" })
 		use({ "danymat/neogen" })
 		use({ "mrjones2014/smart-splits.nvim" })
 	end,
