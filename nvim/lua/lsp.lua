@@ -56,8 +56,7 @@ config = {
 
 -- Setup default config for specified servers
 local server_with_default_setup = {
-	"pyright",
-	"jedi_language_server",
+	"pylsp",
 	"bashls",
 	"ansiblels",
 	"tsserver",
