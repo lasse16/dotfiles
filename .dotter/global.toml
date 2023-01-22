@@ -15,7 +15,6 @@ depends = ["environment"]
 [nvim]
 [tmux]
 [tree-sitter]
-[vim]
 [volta]
 depends = ["environment"]
 [ssh]
@@ -78,11 +77,6 @@ depends = ["bash"]
 
 [tree-sitter.variables]
 "tree-sitter.parser-directory" = ""
-
-[vim.files]
-"vim/.vimrc.tmpl" = { target = "~/.vimrc", type = "template" }
-[vim.variables]
-"vim.plugin_dir" = "~/.vim/plugged"
 
 [ssh.files]
 "bash/helpers/ssh_agent.sh.tmpl" = "bash/helpers/ssh_agent.sh"
