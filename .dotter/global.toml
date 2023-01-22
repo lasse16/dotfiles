@@ -71,13 +71,6 @@ depends = ["bash"]
 [tmux.files]
 "tmux/.tmux.conf" = "~/.tmux.conf"
 
-[tree-sitter.files]
-"tree-sitter/bin" = { target = "~/.tree-sitter/bin", type = "symbolic" }
-"tree-sitter/config.json.tmpl" = { target = "~/.tree-sitter/config.json", type = "template" }
-
-[tree-sitter.variables]
-"tree-sitter.parser-directory" = ""
-
 [ssh.files]
 "bash/helpers/ssh_agent.sh.tmpl" = "bash/helpers/ssh_agent.sh"
 
