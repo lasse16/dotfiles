@@ -59,6 +59,7 @@ packer = require("packer").startup({
 		use({ "folke/neodev.nvim" })
 		use({ "danymat/neogen" })
 		use({ "mrjones2014/smart-splits.nvim" })
+		use({ "numToStr/Navigator.nvim" })
 	end,
 })
 -- Load file directly, see https://github.com/wbthomason/packer.nvim/discussions/651
