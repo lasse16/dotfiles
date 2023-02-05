@@ -78,4 +78,13 @@ for _, lsp in ipairs(server_with_default_setup) do
 	})
 end
 
+local lsp_config = require("lspconfig")
+
+lsp_config.sumneko_lua.setup(	 {
+	cmd = { "/home/lasse/.local/share/lua-lsp/bin/lua-language-server" },
+	on_attach = config.on_attach,
+	capabilities = config.capabilities,
+	}
+)
+
 return config
