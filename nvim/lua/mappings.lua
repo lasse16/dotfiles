@@ -4,6 +4,7 @@ M = {}
 local function set_global_key(...)
 	vim.api.nvim_set_keymap(...)
 end
+
 local function set_buffer_key(bufnr, ...)
 	vim.api.nvim_buf_set_keymap(bufnr, ...)
 end

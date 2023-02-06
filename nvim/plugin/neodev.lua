@@ -2,4 +2,3 @@
 	lspconfig = true,
 	setup_jsonls = false
 })
-
