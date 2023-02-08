@@ -6,7 +6,7 @@ alias l='ls -CF'
 # ls aliasies exa-style
 alias ll='exa -aalF'
 alias la='exa -a'
-alias l='exa -CF'
+alias l='exa -F'
 
 # himalaya 
 alias mail='himalaya'
