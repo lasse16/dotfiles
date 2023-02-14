@@ -2,4 +2,6 @@
 
 export DOTFILES_FZF=${DOTFILES_FZF:="$DOTFILES/fzf"}
 export FZF_DEFAULT_COMMAND='fd --hidden -E ".git"'
+
+source "$DOTFILES_FZF/aliases.sh"
 source "$DOTFILES_FZF/marks-fzf.sh"
