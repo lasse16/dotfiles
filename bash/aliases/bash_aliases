@@ -15,7 +15,3 @@ alias pwdf="readlink -f"
 alias python="python3"
 alias grip="grip -b --quiet"
 alias path='echo $PATH | tr -s ":" "\n"'
-
-# containerization  
-alias docker='docker.exe'
-alias kubectl='kubectl.exe'
