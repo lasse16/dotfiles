@@ -9,6 +9,9 @@ source "$DOTFILES_BASH/commands/shellcheck_wiki.bash"
 source "$DOTFILES_BASH/aliases/wsl_aliases.sh"
 source "$DOTFILES_BASH/keybindings.sh"
 
+# Add script folder to path
+export PATH=$PATH:"$DOTFILES_BASH/scripts/path-additions/"
+
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;
