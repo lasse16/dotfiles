@@ -1,6 +1,10 @@
+#!/bin/bash
 # [Requirement] fzf
-# [Requirement] [Custom] git root
 
 # Add git files from the list of modified files by git ls-files
 
-git ls -files --modified `git root` | fzf | xargs git add
+git_add_from_modified(){
+	git ls-files --modified $(git rev-parse --show-toplevel) | fzf --multi | xargs git add
+}
+
+export -f git_add_from_modified
