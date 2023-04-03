@@ -4,8 +4,10 @@ export DOTFILES_BASH=${DOTFILES_BASH:=$DOTFILES/bash}
 # Source helpers
 source "$DOTFILES_BASH/helpers/pathadd.bash"
 source "$DOTFILES_BASH/helpers/firefox_wrapper.bash"
-source "$DOTFILES_BASH/commands/googler.sh"
-source "$DOTFILES_BASH/commands/shellcheck_wiki.bash"
+source "$DOTFILES_BASH/helpers/git_root.sh"
+source "$DOTFILES_BASH/helpers/source_dotenv.sh"
+source "$DOTFILES_BASH/commands/git.sh"
+source "$DOTFILES_BASH/commands/env.sh"
 source "$DOTFILES_BASH/aliases/wsl_aliases.sh"
 source "$DOTFILES_BASH/keybindings.sh"
 
