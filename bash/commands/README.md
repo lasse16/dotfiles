@@ -1,6 +1,7 @@
 ## Commands
 
-This directory is for storing interesting commands, which do not quite warrant an alias or a custom function.
+This directory is for storing front-facing commands.
 
-If you are missing some commands from this directory, make sure to check out the 
-other [helpers](../helpers) and [aliases](../aliases).
+Commands can be anything from git-subcommands, additional options to built-in commands or full-fledged scripts/TUIs.
+
+Backends can mostly be found in the [helpers](../helpers) directory, while simple aliases can be found in the [aliases](../aliases) directory.
