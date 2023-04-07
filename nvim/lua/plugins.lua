@@ -25,7 +25,6 @@ packer = require("packer").startup({
 		use("wellle/targets.vim")
 		use("rhysd/clever-f.vim")
 		use({ "L3MON4D3/LuaSnip", requires = "rafamadriz/friendly-snippets" })
-		use("kosayoda/nvim-lightbulb")
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			requires = {
@@ -37,7 +36,6 @@ packer = require("packer").startup({
 			"simrat39/rust-tools.nvim",
 			requires = { "neovim/nvim-lspconfig", "mfussenegger/nvim-dap", "nvim-lua/plenary.nvim" },
 		})
-		use({ "soywod/himalaya", rtp = "vim" })
 		-- use({ "jose-elias-alvarez/null-ls.nvim", branch = "main", requires = "nvim-lua/plenary.nvim" })
 		use({ "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" })
 		use("rcarriga/nvim-notify")
@@ -55,7 +53,6 @@ packer = require("packer").startup({
 			},
 		})
 		use({ "folke/neodev.nvim" })
-		use({ "danymat/neogen" })
 		use({ "mrjones2014/smart-splits.nvim" })
 		use({ "numToStr/Navigator.nvim" })
 	end,
