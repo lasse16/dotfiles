@@ -1,5 +1,5 @@
 packer = require("packer").startup({
-	function()
+	function(use)
 		use("wbthomason/packer.nvim")
 		use("neovim/nvim-lspconfig")
 		use({
