@@ -9,4 +9,5 @@ export FZF_DEFAULT_COMMAND='fd --hidden -E ".git"'
 # source "$DOTFILES_FZF/pkgsearch-fzf.sh"
 # source "$DOTFILES_FZF/irg-fzf.sh"
 # source "$DOTFILES_FZF/tmux-url-parsing-fzf.sh"
+source "$DOTFILES_FZF/fzf-tmux.sh"
 source "$DOTFILES_FZF/key-bindings.bash"
