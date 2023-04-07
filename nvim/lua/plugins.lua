@@ -54,6 +54,10 @@ packer = require("packer").startup({
 		})
 		use({ "folke/neodev.nvim" })
 		use({ "mrjones2014/smart-splits.nvim" })
+		use ({
+			'nvim-telescope/telescope.nvim',tag = '0.1.1',
+			requires = { {'nvim-lua/plenary.nvim'} }
+		})   
 		use({ "numToStr/Navigator.nvim" })
 	end,
 })
