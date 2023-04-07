@@ -103,8 +103,7 @@ eval "$(direnv hook bash)"
 {{/if}}
 
 {{#if dotter.packages.fzf}}
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$DOTFILES/fzf/fzf_setup.sh"
+source "$DOTFILES/fzf/fzf_setup.sh"
 {{/if}}
 
 {{#if dotter.packages.go}}
