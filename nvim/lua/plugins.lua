@@ -24,8 +24,6 @@ packer = require("packer").startup({
 		use("tpope/vim-surround")
 		use("wellle/targets.vim")
 		use("rhysd/clever-f.vim")
-		use("$HOME/src/fzf")
-		use({ "junegunn/fzf.vim", requires = "$HOME/src/fzf" })
 		use({ "L3MON4D3/LuaSnip", requires = "rafamadriz/friendly-snippets" })
 		use("kosayoda/nvim-lightbulb")
 		use({
