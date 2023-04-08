@@ -51,17 +51,14 @@ function M.set_lsp_keymappings(bufnr)
 
 	set_current_buffer_normal_mode("<C-r>r", "<cmd>lua vim.lsp.buf.rename()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("<C-r><space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("<C-r>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", noremap_silent)
-	set_buffer_key(bufnr, "v", "<C-r><space>", ":<c-u>lua vim.lsp.buf.range_code_action()<cr>", noremap)
+	set_current_buffer_normal_mode("<C-r>f", "<cmd>lua vim.lsp.buf.format({ async=true })<CR>", noremap_silent)
+	set_buffer_key(bufnr, "v", "<C-r><space>", ":<c-u>lua vim.lsp.buf.code_action()<cr>", noremap)
 
-	set_current_buffer_normal_mode(
-		"<space>e",
-		"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>",
-		noremap_silent
-	)
-	set_current_buffer_normal_mode("[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", noremap_silent)
+	-- diagnostics
+	set_current_buffer_normal_mode("<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", noremap_silent)
+	set_current_buffer_normal_mode("[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", noremap_silent)
+	set_current_buffer_normal_mode("]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", noremap_silent)
+	set_current_buffer_normal_mode("<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", noremap_silent)
 	print("LSP Mappings set")
 end
 
