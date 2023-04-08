@@ -40,15 +40,18 @@ function M.set_lsp_keymappings(bufnr)
 		set_buffer_key(bufnr, "n", ...)
 	end
 
+	-- jumping commands
 	set_current_buffer_normal_mode("gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("gF", "<cmd>lua vim.lsp.buf.definition()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("gT", "<cmd>lua vim.lsp.buf.type_definition()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("gR", "<cmd>lua vim.lsp.buf.references()<CR>", noremap_silent)
 
+	-- Signature help
 	set_current_buffer_normal_mode("K", "<cmd>lua vim.lsp.buf.hover()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", noremap_silent)
 
+	-- Refactorings
 	set_current_buffer_normal_mode("<C-r>r", "<cmd>lua vim.lsp.buf.rename()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("<C-r><space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("<C-r>f", "<cmd>lua vim.lsp.buf.format({ async=true })<CR>", noremap_silent)
