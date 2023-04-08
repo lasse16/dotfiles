@@ -94,10 +94,10 @@ end
 function M.setup_navigator_keybindings()
 	-- Window management plugin with tmux integration and better pane resizing
 	local window_key = '<C-w>'
-	vim.keymap.set({'n','t'}, window_key .. 'h', require('Navigator').left)
-	vim.keymap.set({'n','t'}, window_key .. 'j', require('Navigator').down)
-	vim.keymap.set({'n','t'}, window_key .. 'k', require('Navigator').up)
-	vim.keymap.set({'n','t'}, window_key .. 'l', require('Navigator').right)
+	vim.keymap.set({ 'n', 't' }, window_key .. 'h', require('Navigator').left)
+	vim.keymap.set({ 'n', 't' }, window_key .. 'j', require('Navigator').down)
+	vim.keymap.set({ 'n', 't' }, window_key .. 'k', require('Navigator').up)
+	vim.keymap.set({ 'n', 't' }, window_key .. 'l', require('Navigator').right)
 	print("Navigator mappings set")
 end
 
