@@ -41,10 +41,14 @@ function M.set_lsp_keymappings(bufnr)
 	end
 
 	set_current_buffer_normal_mode("gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("<F12>", "<cmd>lua vim.lsp.buf.definition()<CR>", noremap_silent)
+	set_current_buffer_normal_mode("gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", noremap_silent)
+	set_current_buffer_normal_mode("gF", "<cmd>lua vim.lsp.buf.definition()<CR>", noremap_silent)
+	set_current_buffer_normal_mode("gT", "<cmd>lua vim.lsp.buf.type_definition()<CR>", noremap_silent)
+	set_current_buffer_normal_mode("gR", "<cmd>lua vim.lsp.buf.references()<CR>", noremap_silent)
+
 	set_current_buffer_normal_mode("K", "<cmd>lua vim.lsp.buf.hover()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", noremap_silent)
+
 	set_current_buffer_normal_mode("<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", noremap_silent)
 	set_current_buffer_normal_mode(
@@ -52,10 +56,11 @@ function M.set_lsp_keymappings(bufnr)
 		"<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
 		noremap_silent
 	)
-	set_current_buffer_normal_mode("<C-F12>", "<cmd>lua vim.lsp.buf.type_definition()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("<C-r>r", "<cmd>lua vim.lsp.buf.rename()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("<C-r><space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("<S-F12>", "<cmd>lua vim.lsp.buf.references()<CR>", noremap_silent)
+	set_current_buffer_normal_mode("<C-r>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", noremap_silent)
+	set_buffer_key(bufnr, "v", "<C-r><space>", ":<c-u>lua vim.lsp.buf.range_code_action()<cr>", noremap)
+
 	set_current_buffer_normal_mode(
 		"<space>e",
 		"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>",
@@ -64,9 +69,6 @@ function M.set_lsp_keymappings(bufnr)
 	set_current_buffer_normal_mode("[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", noremap_silent)
 	set_current_buffer_normal_mode("<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("<C-r>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", noremap_silent)
-
-	set_buffer_key(bufnr, "v", "<C-r><space>", ":<c-u>lua vim.lsp.buf.range_code_action()<cr>", noremap)
 	print("LSP Mappings set")
 end
 
