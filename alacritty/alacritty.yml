@@ -7,7 +7,7 @@ env:
   WSLENV: TERM:COLORTERM
 
 window:
-  opacity: 0.9
+  opacity: 1
 
 scrolling:
   # Specifying '0' will disable scrolling.
@@ -77,7 +77,7 @@ bell:
 
 shell:
   program: 'C:\Windows\System32\wsl.exe'
-working_directory: '\\wsl$\Ubuntu-20.04\home\lasse'
+working_directory: '\\wsl.localhost\Ubuntu-20.04\home\lasse'
 hints:
   enabled:
     - regex:
