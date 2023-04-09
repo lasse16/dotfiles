@@ -5,25 +5,41 @@ local function map_key(...)
 	vim.keymap.set(...)
 end
 
+local silent = { silent = true }
 local silent_buffer = { buffer = true, silent = true }
 
--- Move lines up and down
-map_key("n", "<A-j>", ":m .+1<CR>==")
-map_key("n", "<A-k>", ":m .-2<CR>==")
-map_key("v", "<A-k>", ":m '<-2<CR>gv=gv")
-map_key("v", "<A-j>", ":m '>+1<CR>gv=gv")
+local function add_mappings_from_table(mappings)
+	for _, opts in pairs(mappings) do
+		map_key(unpack(opts))
+	end
+end
 
--- Map <Ctrl-S> to saving the current open document
-map_key("n", "<C-s>", "<ESC>:update<CR>")
+------------------------------------------------------
 
--- Unbind some useless/annoying default key bindings.
-map_key("n", "Q", "<Nop>", {}) -- 'Q' in normal mode enters Ex mode. You almost never want this.
+local global_mappings =
+{
+	-- Move lines up and down
+	{ "n", "<A-j>", ":m .+1<CR>==" },
+	{ "n", "<A-k>", ":m .-2<CR>==" },
+	{ "v", "<A-k>", ":m '<-2<CR>gv=gv" },
+	{ "v", "<A-j>", ":m '>+1<CR>gv=gv" },
 
--- Close terminal mode with <Esc>
--- stylua: ignore start
-map_key("t", "<Esc>", [[<C-\><C-n>]])
-map_key("t", "<C-w>", [[<C-\><C-n><C-w>]])
--- stylua: ignore end
+	-- Map <Ctrl-S> to saving the current open document
+	{ "n", "<C-s>", "<ESC>:update<CR>" },
+
+	-- Unbind some useless/annoying default key bindings.
+	{ "n", "Q", "<Nop>", {} }, -- 'Q' in normal mode enters Ex mode. You almost never want this.
+
+	-- Close terminal mode with <Esc>
+	-- stylua: ignore start
+	{ "t", "<Esc>", [[<C-\><C-n>]] },
+	{ "t", "<C-w>", [[<C-\><C-n><C-w>]] },
+	-- stylua: ignore end
+
+}
+
+add_mappings_from_table(global_mappings)
+
 
 print("MAPPINGS COMPLETED")
 
@@ -53,45 +69,44 @@ function M.set_lsp_keymappings()
 		{ "n", "<space>q", vim.diagnostic.setloclist, silent_buffer },
 	}
 
-	for _, opts in pairs(lsp_mappings) do
-		map_key(unpack(opts))
-	end
+	add_mappings_from_table(lsp_mappings)
 end
 
 function M.set_debugger_keymappings()
-	vim.cmd([[
-		nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
-		nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
-		nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
-		nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
-		nnoremap <silent> <space>b :lua require'dap'.toggle_breakpoint()<CR>
-		nnoremap <silent> <space>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
-		nnoremap <silent> <space>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-		nnoremap <silent> <space>dr :lua require'dap'.repl.open()<CR>
-		nnoremap <silent> <space>dl :lua require'dap'.run_last()<CR>
-		]])
-	print("Debugger mappings set")
+	local debugger_mappings = {
+		{ "n", "<F5>", require 'dap'.continue, silent },
+		{ "n", "<F10>", require 'dap'.step_over, silent },
+		{ "n", "<F11>", require 'dap'.step_into, silent },
+		{ "n", "<F12>", require 'dap'.step_out, silent },
+		{ "n", "<space>b", require 'dap'.toggle_breakpoint, silent },
+		{ "n", "<space>B", require 'dap'.set_breakpoint, silent },
+		{ "n", "<space>lp", require 'dap'.set_breakpoint, silent },
+		{ "n", "<space>dr", require 'dap'.repl.open, silent },
+		{ "n", "<space>dl", require 'dap'.run_last, silent },
+
+	}
+
+	add_mappings_from_table(debugger_mappings)
 end
 
 function M.setup_harpoon_keybindings()
-	vim.cmd([[
-		nnoremap <silent> <space>m :lua require("harpoon.mark").add_file()<CR>
-		nnoremap <silent> <space>M :lua require("harpoon.ui").toggle_quick_menu()<CR>
-		nnoremap <silent> <space>M1 :lua require("harpoon.ui").nav_file(1)<CR>
-		nnoremap <silent> <space>M2 :lua require("harpoon.ui").nav_file(2)<CR>
-		nnoremap <silent> <space>M3 :lua require("harpoon.ui").nav_file(3)<CR>
-		]])
-	print("Harpoon mappings set")
+	local harpoon_mappings = {
+		{ "n", "<space>m", require("harpoon.mark").add_file },
+		{ "n", "<space>M", require("harpoon.ui").toggle_quick_menu },
+	}
+	add_mappings_from_table(harpoon_mappings)
 end
 
 function M.setup_navigator_keybindings()
 	-- Window management plugin with tmux integration and better pane resizing
 	local window_key = '<C-w>'
-	vim.keymap.set({ 'n', 't' }, window_key .. 'h', require('Navigator').left)
-	vim.keymap.set({ 'n', 't' }, window_key .. 'j', require('Navigator').down)
-	vim.keymap.set({ 'n', 't' }, window_key .. 'k', require('Navigator').up)
-	vim.keymap.set({ 'n', 't' }, window_key .. 'l', require('Navigator').right)
-	print("Navigator mappings set")
+	local tmux_navigator_mappings = {
+		map_key({ 'n', 't' }, window_key .. 'h', require('Navigator').left),
+		map_key({ 'n', 't' }, window_key .. 'j', require('Navigator').down),
+		map_key({ 'n', 't' }, window_key .. 'k', require('Navigator').up),
+		map_key({ 'n', 't' }, window_key .. 'l', require('Navigator').right),
+	}
+	add_mappings_from_table(tmux_navigator_mappings)
 end
 
 return M
