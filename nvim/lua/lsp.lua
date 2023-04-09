@@ -10,16 +10,7 @@ local border = {
 }
 
 local on_attach = function(client, bufnr)
-	local function buf_set_keymap(...)
-		vim.api.nvim_buf_set_keymap(bufnr, ...)
-	end
-
-	local function buf_set_option(...)
-		vim.api.nvim_buf_set_option(bufnr, ...)
-	end
-
-	-- Mappings.
-	require("mappings").set_lsp_keymappings(bufnr)
+	require("mappings").set_lsp_keymappings()
 
 	-- Draw hover and signature help windows with a specified border
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border })
