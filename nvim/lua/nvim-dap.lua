@@ -83,7 +83,6 @@ dap.configurations.python = {
 			local virtual_env = os.getenv("VIRTUAL_ENV")
 			local python_env = "/usr/bin/python3"
 
-			print(virtual_env)
 			if virtual_env ~= nil then
 				python_env = virtual_env .. "/bin/python"
 			end

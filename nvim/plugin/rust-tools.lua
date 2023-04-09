@@ -37,5 +37,3 @@ require("rust-tools").setup({
 		adapter = require("dap").adapters.lldb,
 	},
 })
-
-print("Rust-tools setup finished")

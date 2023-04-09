@@ -41,8 +41,6 @@ local global_mappings =
 add_mappings_from_table(global_mappings)
 
 
-print("MAPPINGS COMPLETED")
-
 function M.set_lsp_keymappings()
 
 	local lsp_mappings = {

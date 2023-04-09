@@ -5,7 +5,6 @@ vim.cmd([[
 commands = {}
 
 commands.enable_test_running_commands = function()
-	print("Loaded test running COMMAND")
 	vim.cmd([[
 	command RunTest lua require("neotest").run.run()
 	command RunTestFile lua require("neotest").run.run(vim.fn.expand("%"))

@@ -13,4 +13,3 @@ require("nvim-treesitter.parsers").get_parser_configs().just = {
 	},
 	maintainers = { "@IndianBoy42" },
 }
-print("Treesitter setup finished")

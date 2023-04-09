@@ -11,5 +11,3 @@ require("nvim-dap")
 require("commands")
 
 vim.cmd("colorscheme updated-default")
-
-print("INIT.LUA completed")
