@@ -1,68 +1,61 @@
 M = {}
 
 -- utils
-local function set_global_key(...)
-	vim.api.nvim_set_keymap(...)
+local function map_key(...)
+	vim.keymap.set(...)
 end
 
-local function set_buffer_key(bufnr, ...)
-	vim.api.nvim_buf_set_keymap(bufnr, ...)
-end
-
-local noremap = { noremap = true }
-local noremap_silent = { noremap = true, silent = true }
-local noremap_expr = { noremap = true, expr = true }
+local silent_buffer = { buffer = true, silent = true }
 
 -- Move lines up and down
-set_global_key("n", "<A-j>", ":m .+1<CR>==", noremap)
-set_global_key("n", "<A-k>", ":m .-2<CR>==", noremap)
-set_global_key("v", "<A-k>", ":m '<-2<CR>gv=gv", noremap)
-set_global_key("v", "<A-j>", ":m '>+1<CR>gv=gv", noremap)
+map_key("n", "<A-j>", ":m .+1<CR>==")
+map_key("n", "<A-k>", ":m .-2<CR>==")
+map_key("v", "<A-k>", ":m '<-2<CR>gv=gv")
+map_key("v", "<A-j>", ":m '>+1<CR>gv=gv")
 
 -- Map <Ctrl-S> to saving the current open document
-set_global_key("n", "<C-s>", "<ESC>:update<CR>", noremap)
+map_key("n", "<C-s>", "<ESC>:update<CR>")
 
 -- Unbind some useless/annoying default key bindings.
-set_global_key("n", "Q", "<Nop>", {}) -- 'Q' in normal mode enters Ex mode. You almost never want this.
+map_key("n", "Q", "<Nop>", {}) -- 'Q' in normal mode enters Ex mode. You almost never want this.
 
 -- Close terminal mode with <Esc>
 -- stylua: ignore start
-set_global_key("t", "<Esc>", [[<C-\><C-n>]], noremap)
-set_global_key("t", "<C-w>", [[<C-\><C-n><C-w>]], noremap)
+map_key("t", "<Esc>", [[<C-\><C-n>]])
+map_key("t", "<C-w>", [[<C-\><C-n><C-w>]])
 -- stylua: ignore end
 
 print("MAPPINGS COMPLETED")
 
-function M.set_lsp_keymappings(bufnr)
-	-- See `:help vim.lsp.*` for documentation on any of the below functions
+function M.set_lsp_keymappings()
 
-	local function set_current_buffer_normal_mode(...)
-		set_buffer_key(bufnr, "n", ...)
+	local lsp_mappings = {
+		-- jumping commands
+		{ "n", "gD", vim.lsp.buf.declaration, silent_buffer },
+		{ "n", "gI", vim.lsp.buf.implementation, silent_buffer },
+		{ "n", "gF", vim.lsp.buf.definition, silent_buffer },
+		{ "n", "gT", vim.lsp.buf.type_definition, silent_buffer },
+		{ "n", "gR", vim.lsp.buf.references, silent_buffer },
+
+		-- Signature help
+		{ "n", "K", vim.lsp.buf.hover, silent_buffer },
+		{ "n", "<C-k>", vim.lsp.buf.signature_help, silent_buffer },
+
+		-- Refactorings
+		{ "n", "<C-r>r", vim.lsp.buf.rename, silent_buffer },
+		{ { "n", "v" }, "<C-r><space>", vim.lsp.buf.code_action, silent_buffer },
+		{ "n", "<C-r>f", vim.lsp.buf.format, silent_buffer },
+
+		-- diagnostics
+		{ "n", "<space>e", vim.diagnostic.open_float, silent_buffer },
+		{ "n", "[d", vim.diagnostic.goto_prev, silent_buffer },
+		{ "n", "]d", vim.diagnostic.goto_next, silent_buffer },
+		{ "n", "<space>q", vim.diagnostic.setloclist, silent_buffer },
+	}
+
+	for _, opts in pairs(lsp_mappings) do
+		map_key(unpack(opts))
 	end
-
-	-- jumping commands
-	set_current_buffer_normal_mode("gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("gF", "<cmd>lua vim.lsp.buf.definition()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("gT", "<cmd>lua vim.lsp.buf.type_definition()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("gR", "<cmd>lua vim.lsp.buf.references()<CR>", noremap_silent)
-
-	-- Signature help
-	set_current_buffer_normal_mode("K", "<cmd>lua vim.lsp.buf.hover()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", noremap_silent)
-
-	-- Refactorings
-	set_current_buffer_normal_mode("<C-r>r", "<cmd>lua vim.lsp.buf.rename()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("<C-r><space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("<C-r>f", "<cmd>lua vim.lsp.buf.format({ async=true })<CR>", noremap_silent)
-	set_buffer_key(bufnr, "v", "<C-r><space>", ":<c-u>lua vim.lsp.buf.code_action()<cr>", noremap)
-
-	-- diagnostics
-	set_current_buffer_normal_mode("<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", noremap_silent)
-	set_current_buffer_normal_mode("<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", noremap_silent)
-	print("LSP Mappings set")
 end
 
 function M.set_debugger_keymappings()
