@@ -129,3 +129,9 @@ if installed("nvim-notify") then
 	highlight link NotifyTRACETitle NotifyTRACEBorder   
 	]])
 end
+
+if installed("gitsigns") then
+	vim.cmd([[
+	highlight link GitSignsCurrentLineBlame Comment
+	]])
+end
