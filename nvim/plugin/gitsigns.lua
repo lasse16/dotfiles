@@ -14,4 +14,5 @@ require('gitsigns').setup({
 		row = 0,
 		col = 1
 	},
+	on_attach = require('mappings').setup_gitsigns_mappings
 })

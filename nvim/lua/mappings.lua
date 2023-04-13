@@ -107,4 +107,15 @@ function M.setup_navigator_keybindings()
 	add_mappings_from_table(tmux_navigator_mappings)
 end
 
+function M.setup_gitsigns_mappings()
+	local git_signs = require('gitsigns')
+	local signs_mappings = {
+		{ "v", "<space>gs", git_signs.stage_hunk, silent_buffer },
+		{ "n", "<space>gu", git_signs.undo_stage_hunk, silent_buffer },
+		{ "n", "<space>gb", git_signs.blame_line, silent_buffer },
+	}
+
+	add_mappings_from_table(signs_mappings)
+end
+
 return M
