@@ -36,6 +36,12 @@ highlight SignColumn ctermbg=NONE guibg=NONE
 
 " Highlight strings in green
 highlight String ctermfg=darkgreen ctermbg=NONE guifg=#6e965d guibg=NONE
+
+" Change diff colors away from default blue, purple and red
+highlight DiffAdd ctermfg=NONE ctermbg=darkgreen guifg=NONE guibg=#6e965d
+highlight DiffDelete ctermfg=NONE ctermbg=darkred guifg=NONE guibg=#662222
+highlight DiffChange ctermfg=NONE ctermbg=darkblue guifg=NONE guibg=#112285
+highlight DiffText ctermfg=white ctermbg=NONE guifg=#bbbbbb guibg=NONE
 ]])
 
 if installed("nvim-lspconfig") then
