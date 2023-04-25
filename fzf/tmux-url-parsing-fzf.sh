@@ -8,7 +8,7 @@ tmux_url_parse() {
 	}
 
 	open_url() {
-		nohup "$BROWSER" "$@"
+		"$BROWSER" "$@"
 	}
 
 	content="$(tmux capture-pane -J -p)"
