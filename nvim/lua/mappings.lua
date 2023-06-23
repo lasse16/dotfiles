@@ -5,6 +5,10 @@ local function map_key(...)
 	vim.keymap.set(...)
 end
 
+local function unmap_key(mode, key)
+	vim.keymap.set(mode, key, "<Nop>", {})
+end
+
 local silent = { silent = true }
 local silent_buffer = { buffer = true, silent = true }
 
@@ -117,6 +121,18 @@ function M.setup_gitsigns_mappings()
 	}
 
 	add_mappings_from_table(signs_mappings)
+end
+
+function M.setup_telescope_mappings()
+	local telescope_builtins = require('telescope.builtin')
+	unmap_key("n", "<C-f>")
+	local telescope_mappings = {
+		{ "n", "<C-p>", telescope_builtins.find_files, silent_buffer },
+		{ "n", "<C-p>g", telescope_builtins.git_files, silent_buffer },
+		{ "n", "<C-f>", telescope_builtins.current_buffer_fuzzy_find, silent_buffer },
+	}
+
+	add_mappings_from_table(telescope_mappings)
 end
 
 return M

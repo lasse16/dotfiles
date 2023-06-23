@@ -10,3 +10,5 @@ telescope.setup({
 		}
 	}
 })
+require('mappings').setup_telescope_mappings()
+require('commands').enable_telescope_commands()
