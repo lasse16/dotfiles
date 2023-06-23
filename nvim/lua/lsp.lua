@@ -56,6 +56,7 @@ local server_with_default_setup = {
 	"cssls",
 	"marksman",
 	"terraformls",
+	"tflint",
 	"gopls",
 }
 for _, lsp in ipairs(server_with_default_setup) do
