@@ -1,70 +1,49 @@
-packer = require("packer").startup({
-	function(use)
-		use("wbthomason/packer.nvim")
-		use("neovim/nvim-lspconfig")
-		use({
-			"hrsh7th/nvim-cmp",
-			branch = "main",
-			requires = {
-				{ "hrsh7th/cmp-nvim-lsp", branch = "main" },
-				{ "hrsh7th/cmp-buffer", branch = "main" },
-				{ "hrsh7th/cmp-path", branch = "main" },
-				{ "hrsh7th/cmp-omni", branch = "main" },
-				{ "hrsh7th/cmp-nvim-lsp-signature-help", branch = "main" },
-				{ "saadparwaiz1/cmp_luasnip", requires = "L3MON4D3/LuaSnip" },
-				{ "hrsh7th/cmp-cmdline", branch = "main" },
-				{ "rcarriga/cmp-dap" },
-			},
-		})
-		use("junegunn/vim-easy-align")
-		use("tpope/vim-fugitive")
-		use("nvim-lualine/lualine.nvim")
-		use("lasse16/nvim-colorizer.lua")
-		use("numToStr/Comment.nvim")
-		use("tpope/vim-surround")
-		use("wellle/targets.vim")
-		use("rhysd/clever-f.vim")
-		use({ "L3MON4D3/LuaSnip", requires = "rafamadriz/friendly-snippets" })
-		use({
-			"nvim-treesitter/nvim-treesitter",
-			requires = {
-				"nvim-treesitter/nvim-treesitter-context",
-				"nvim-treesitter/nvim-treesitter-textobjects"
-			},
-		})
-		use({ "mfussenegger/nvim-dap", requires = "rcarriga/nvim-dap-ui" })
-		use({
-			"simrat39/rust-tools.nvim",
-			requires = { "neovim/nvim-lspconfig", "mfussenegger/nvim-dap", "nvim-lua/plenary.nvim" },
-		})
-		-- use({ "jose-elias-alvarez/null-ls.nvim", branch = "main", requires = "nvim-lua/plenary.nvim" })
-		use({ "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" })
-		use("rcarriga/nvim-notify")
-		use({ "folke/trouble.nvim", branch = "main" })
-		use("stevearc/dressing.nvim")
-		use("windwp/nvim-autopairs")
-		use({ "folke/which-key.nvim" })
-		use({ "ahmedkhalf/project.nvim" })
-		use({
-			"nvim-neotest/neotest",
-			requires = {
-				"nvim-lua/plenary.nvim",
-				"nvim-treesitter/nvim-treesitter",
-				"nvim-neotest/neotest-python",
-			},
-		})
-		use({ "folke/neodev.nvim" })
-		use({ "mrjones2014/smart-splits.nvim" })
-		use({
-			'nvim-telescope/telescope.nvim', tag = '0.1.1',
-			requires = { { 'nvim-lua/plenary.nvim' } }
-		})
-		use({ "numToStr/Navigator.nvim" })
-		use({
-			'lewis6991/gitsigns.nvim',
-			tag = 'release' })
-	end,
-})
--- Load file directly, see https://github.com/wbthomason/packer.nvim/discussions/651
-loadfile(packer.config.compile_path)
-return packer
+require("lazy").setup {
+	"wbthomason/packer.nvim",
+	"neovim/nvim-lspconfig",
+	{ "hrsh7th/nvim-cmp",
+		branch = "main",
+		dependencies = {
+			{ "hrsh7th/cmp-nvim-lsp", branch = "main" },
+			{ "hrsh7th/cmp-buffer", branch = "main" },
+			{ "hrsh7th/cmp-path", branch = "main" },
+			{ "hrsh7th/cmp-omni", branch = "main" },
+			{ "hrsh7th/cmp-nvim-lsp-signature-help", branch = "main" },
+			{ "saadparwaiz1/cmp_luasnip", dependencies = "L3MON4D3/LuaSnip" },
+			{ "hrsh7th/cmp-cmdline", branch = "main" },
+			{ "rcarriga/cmp-dap" },
+		}
+	},
+	"junegunn/vim-easy-align",
+	"tpope/vim-fugitive",
+	"nvim-lualine/lualine.nvim",
+	"lasse16/nvim-colorizer.lua",
+	"numToStr/Comment.nvim",
+	"tpope/vim-surround",
+	"wellle/targets.vim",
+	"rhysd/clever-f.vim",
+	{ "L3MON4D3/LuaSnip", dependencies = "rafamadriz/friendly-snippets" },
+	{ "nvim-treesitter/nvim-treesitter",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter-context",
+			"nvim-treesitter/nvim-treesitter-textobjects"
+		}
+	},
+	{ "mfussenegger/nvim-dap", dependencies = "rcarriga/nvim-dap-ui" },
+	{ "simrat39/rust-tools.nvim",
+		dependencies = { "neovim/nvim-lspconfig", "mfussenegger/nvim-dap", "nvim-lua/plenary.nvim" },
+	},
+	-- use({ "jose-elias-alvarez/null-ls.nvim", branch = "main", requires = "nvim-lua/plenary.nvim" })
+	{ "ThePrimeagen/harpoon", dependencies = "nvim-lua/plenary.nvim" },
+	"rcarriga/nvim-notify",
+	{ "folke/trouble.nvim", branch = "main" },
+	"stevearc/dressing.nvim",
+	"windwp/nvim-autopairs",
+	"folke/which-key.nvim",
+	"ahmedkhalf/project.nvim",
+	"folke/neodev.nvim",
+	"mrjones2014/smart-splits.nvim",
+	{ 'nvim-telescope/telescope.nvim', tag = '0.1.1', dependencies = { 'nvim-lua/plenary.nvim' } },
+	"numToStr/Navigator.nvim",
+	'lewis6991/gitsigns.nvim',
+}
