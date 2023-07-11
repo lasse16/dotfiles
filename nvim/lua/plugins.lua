@@ -29,6 +29,7 @@ packer = require("packer").startup({
 			"nvim-treesitter/nvim-treesitter",
 			requires = {
 				"nvim-treesitter/nvim-treesitter-context",
+				"nvim-treesitter/nvim-treesitter-textobjects"
 			},
 		})
 		use({ "mfussenegger/nvim-dap", requires = "rcarriga/nvim-dap-ui" })
