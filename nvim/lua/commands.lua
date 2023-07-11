@@ -21,7 +21,7 @@ end
 commands.enable_telescope_commands= function()
 	vim.cmd([[
 	command Help lua require("telescope.builtin").help_tags()
-	command Man lua require("telescope.builtin").man_pages()
+	command! Man lua require("telescope.builtin").man_pages()
 	]])
 end
 
