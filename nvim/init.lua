@@ -14,11 +14,10 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
---
-vim.g.packpath = vim.g.runtimepath
+
+require("settings")
 require("plugins")
 require("clipboard")
-require("settings")
 require("mappings")
 require("lsp")
 require("treesitter")
