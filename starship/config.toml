@@ -1,4 +1,4 @@
-format = '$username$hostname$directory$git_branch$git_state$python$rust$line_break$time$character'
+format = '$username$hostname$directory$git_branch$git_state$python$rust$nix_shell$line_break$time$character'
 
 
 [username]
@@ -40,6 +40,10 @@ style = 'bright-blue'
 [rust]
 format = '[]($style)[($version)](bold fg:black bg:$style)[]($style) '
 style = 'bright-red'
+
+[nix-shell]
+format = '[]($style)[($name:$state)](bold fg:black bg:$style)[]($style) '
+style = 'bright-green'
 
 [character]
 success_symbol = '[❯](bold cyan)'
