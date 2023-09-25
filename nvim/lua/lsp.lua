@@ -58,6 +58,7 @@ local server_with_default_setup = {
 	"terraformls",
 	"tflint",
 	"gopls",
+	"rnix",
 }
 for _, lsp in ipairs(server_with_default_setup) do
 	require("lspconfig")[lsp].setup({
