@@ -30,7 +30,6 @@ depends = ["bash"]
 "bash/.bashrc.tmpl" = { target = "~/.bashrc", type = "template" }
 "bash/.inputrc" = "~/.inputrc"
 "bash/.profile.tmpl" = { target = "~/.profile", type = "template" }
-"bash/.bash_history" = { target = "~/.bash_history", type = "symbolic" }
 
 [environment.variables]
 # Replace this by future dotter built-in variable (Maybe)
