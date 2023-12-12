@@ -37,6 +37,8 @@ depends = ["bash"]
 
 [git.files]
 "git/.gitconfig.tmpl" = { target = "~/.gitconfig", type = "template" }
+"git/helpers/git-root" = { target = "~/.local/bin/git-root", type = "symbolic" }
+"git/helpers/git-add" = { target = "~/.local/bin/git-add", type = "symbolic" }
 
 [git.variables]
 "git.name" = ""
