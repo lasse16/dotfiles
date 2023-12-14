@@ -45,7 +45,7 @@ require("lazy").setup({
 	"ahmedkhalf/project.nvim",
 	"folke/neodev.nvim",
 	"mrjones2014/smart-splits.nvim",
-	{ "nvim-telescope/telescope.nvim", tag = "0.1.1", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ 'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' } },
 	"numToStr/Navigator.nvim",
 	"lewis6991/gitsigns.nvim",
 	"benfowler/telescope-luasnip.nvim",
