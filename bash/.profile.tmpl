@@ -11,7 +11,14 @@
 # Set $DOTFILES environment repo if not already set
 export DOTFILES=${DOTFILES:=$HOME/dotfiles}
 
-export BROWSER="firefox"
+export BROWSER="firefox.exe"
+
+{{#if dotter.packages.nvim}}
+# NVIM as manpager with this command
+export EDITOR=nvim
+command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
+{{/if}}
+
 
 # Log into BitWarden
 if [ ! -v "$NO_AUTHENTICATE" ]; then
@@ -41,12 +48,6 @@ fi
 # Set vim as a pager for man pages
 export EDITOR=vim
 export MANPAGER="vim -M +MANPAGER -"
-{{/if}}
-
-{{#if dotter.packages.nvim}}
-# NVIM as manpager with this command
-export EDITOR=nvim
-command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
 {{/if}}
 
 # Source cargo environment if $CARGO_HOME is set
