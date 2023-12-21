@@ -47,4 +47,8 @@ require("lazy").setup {
 	"numToStr/Navigator.nvim",
 	'lewis6991/gitsigns.nvim',
 	'benfowler/telescope-luasnip.nvim',
+	{ 'creativenull/efmls-configs-nvim',
+		version = 'v1.4.0', -- version is optional, but recommended
+		dependencies = { 'neovim/nvim-lspconfig' },
+	}
 }
