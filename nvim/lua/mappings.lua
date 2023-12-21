@@ -20,8 +20,7 @@ end
 
 ------------------------------------------------------
 
-local global_mappings =
-{
+local global_mappings = {
 	-- Move lines up and down
 	{ "n", "<A-j>", ":m .+1<CR>==" },
 	{ "n", "<A-k>", ":m .-2<CR>==" },
@@ -39,14 +38,11 @@ local global_mappings =
 	{ "t", "<Esc>", [[<C-\><C-n>]] },
 	{ "t", "<C-w>", [[<C-\><C-n><C-w>]] },
 	-- stylua: ignore end
-
 }
 
 add_mappings_from_table(global_mappings)
 
-
 function M.set_lsp_keymappings()
-
 	local lsp_mappings = {
 		-- jumping commands
 		{ "n", "gD", vim.lsp.buf.declaration, silent_buffer },
@@ -76,16 +72,15 @@ end
 
 function M.set_debugger_keymappings()
 	local debugger_mappings = {
-		{ "n", "<F5>", require 'dap'.continue, silent },
-		{ "n", "<F10>", require 'dap'.step_over, silent },
-		{ "n", "<F11>", require 'dap'.step_into, silent },
-		{ "n", "<F12>", require 'dap'.step_out, silent },
-		{ "n", "<space>b", require 'dap'.toggle_breakpoint, silent },
-		{ "n", "<space>B", require 'dap'.set_breakpoint, silent },
-		{ "n", "<space>lp", require 'dap'.set_breakpoint, silent },
-		{ "n", "<space>dr", require 'dap'.repl.open, silent },
-		{ "n", "<space>dl", require 'dap'.run_last, silent },
-
+		{ "n", "<F5>", require("dap").continue, silent },
+		{ "n", "<F10>", require("dap").step_over, silent },
+		{ "n", "<F11>", require("dap").step_into, silent },
+		{ "n", "<F12>", require("dap").step_out, silent },
+		{ "n", "<space>b", require("dap").toggle_breakpoint, silent },
+		{ "n", "<space>B", require("dap").set_breakpoint, silent },
+		{ "n", "<space>lp", require("dap").set_breakpoint, silent },
+		{ "n", "<space>dr", require("dap").repl.open, silent },
+		{ "n", "<space>dl", require("dap").run_last, silent },
 	}
 
 	add_mappings_from_table(debugger_mappings)
@@ -101,18 +96,18 @@ end
 
 function M.setup_navigator_keybindings()
 	-- Window management plugin with tmux integration and better pane resizing
-	local window_key = '<C-w>'
+	local window_key = "<C-w>"
 	local tmux_navigator_mappings = {
-		map_key({ 'n', 't' }, window_key .. 'h', require('Navigator').left),
-		map_key({ 'n', 't' }, window_key .. 'j', require('Navigator').down),
-		map_key({ 'n', 't' }, window_key .. 'k', require('Navigator').up),
-		map_key({ 'n', 't' }, window_key .. 'l', require('Navigator').right),
+		map_key({ "n", "t" }, window_key .. "h", require("Navigator").left),
+		map_key({ "n", "t" }, window_key .. "j", require("Navigator").down),
+		map_key({ "n", "t" }, window_key .. "k", require("Navigator").up),
+		map_key({ "n", "t" }, window_key .. "l", require("Navigator").right),
 	}
 	add_mappings_from_table(tmux_navigator_mappings)
 end
 
 function M.setup_gitsigns_mappings()
-	local git_signs = require('gitsigns')
+	local git_signs = require("gitsigns")
 	local signs_mappings = {
 		{ "v", "<space>gs", git_signs.stage_hunk, silent_buffer },
 		{ "n", "<space>gs", git_signs.stage_hunk, silent_buffer },
@@ -124,7 +119,7 @@ function M.setup_gitsigns_mappings()
 end
 
 function M.setup_telescope_mappings()
-	local telescope_builtins = require('telescope.builtin')
+	local telescope_builtins = require("telescope.builtin")
 	unmap_key("n", "<C-f>")
 	local telescope_mappings = {
 		{ "n", "<C-p>", telescope_builtins.find_files, silent_buffer },

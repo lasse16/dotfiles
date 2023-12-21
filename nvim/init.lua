@@ -1,6 +1,6 @@
 vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false}")
 
--- bootsstrap lazy
+-- bootstrap lazy
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

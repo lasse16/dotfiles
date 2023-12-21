@@ -1,16 +1,16 @@
-local telescope = require('telescope')
-local actions = require('telescope.actions')
+local telescope = require("telescope")
+local actions = require("telescope.actions")
 telescope.setup({
 	defaults = {
 		mappings = {
 			i = {
 				["<C-j>"] = actions.move_selection_next,
 				["<C-k>"] = actions.move_selection_previous,
-			}
-		}
-	}
+			},
+		},
+	},
 })
-telescope.load_extension('luasnip')
+telescope.load_extension("luasnip")
 
-require('mappings').setup_telescope_mappings()
-require('commands').enable_telescope_commands()
+require("mappings").setup_telescope_mappings()
+require("commands").enable_telescope_commands()

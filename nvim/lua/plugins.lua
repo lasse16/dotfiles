@@ -1,7 +1,8 @@
-require("lazy").setup {
+require("lazy").setup({
 	"wbthomason/packer.nvim",
 	"neovim/nvim-lspconfig",
-	{ "hrsh7th/nvim-cmp",
+	{
+		"hrsh7th/nvim-cmp",
 		branch = "main",
 		dependencies = {
 			{ "hrsh7th/cmp-nvim-lsp", branch = "main" },
@@ -12,7 +13,7 @@ require("lazy").setup {
 			{ "saadparwaiz1/cmp_luasnip", dependencies = "L3MON4D3/LuaSnip" },
 			{ "hrsh7th/cmp-cmdline", branch = "main" },
 			{ "rcarriga/cmp-dap" },
-		}
+		},
 	},
 	"junegunn/vim-easy-align",
 	"tpope/vim-fugitive",
@@ -23,14 +24,16 @@ require("lazy").setup {
 	"wellle/targets.vim",
 	"rhysd/clever-f.vim",
 	{ "L3MON4D3/LuaSnip", dependencies = "rafamadriz/friendly-snippets" },
-	{ "nvim-treesitter/nvim-treesitter",
+	{
+		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context",
-			"nvim-treesitter/nvim-treesitter-textobjects"
-		}
+			"nvim-treesitter/nvim-treesitter-textobjects",
+		},
 	},
 	{ "mfussenegger/nvim-dap", dependencies = "rcarriga/nvim-dap-ui" },
-	{ "simrat39/rust-tools.nvim",
+	{
+		"simrat39/rust-tools.nvim",
 		dependencies = { "neovim/nvim-lspconfig", "mfussenegger/nvim-dap", "nvim-lua/plenary.nvim" },
 	},
 	{ "ThePrimeagen/harpoon", dependencies = "nvim-lua/plenary.nvim" },
@@ -42,12 +45,13 @@ require("lazy").setup {
 	"ahmedkhalf/project.nvim",
 	"folke/neodev.nvim",
 	"mrjones2014/smart-splits.nvim",
-	{ 'nvim-telescope/telescope.nvim', tag = '0.1.1', dependencies = { 'nvim-lua/plenary.nvim' } },
+	{ "nvim-telescope/telescope.nvim", tag = "0.1.1", dependencies = { "nvim-lua/plenary.nvim" } },
 	"numToStr/Navigator.nvim",
-	'lewis6991/gitsigns.nvim',
-	'benfowler/telescope-luasnip.nvim',
-	{ 'creativenull/efmls-configs-nvim',
-		version = 'v1.4.0', -- version is optional, but recommended
-		dependencies = { 'neovim/nvim-lspconfig' },
-	}
-}
+	"lewis6991/gitsigns.nvim",
+	"benfowler/telescope-luasnip.nvim",
+	{
+		"creativenull/efmls-configs-nvim",
+		version = "v1.4.0", -- version is optional, but recommended
+		dependencies = { "neovim/nvim-lspconfig" },
+	},
+})
