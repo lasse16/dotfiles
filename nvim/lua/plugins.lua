@@ -33,7 +33,6 @@ require("lazy").setup {
 	{ "simrat39/rust-tools.nvim",
 		dependencies = { "neovim/nvim-lspconfig", "mfussenegger/nvim-dap", "nvim-lua/plenary.nvim" },
 	},
-	-- use({ "jose-elias-alvarez/null-ls.nvim", branch = "main", requires = "nvim-lua/plenary.nvim" })
 	{ "ThePrimeagen/harpoon", dependencies = "nvim-lua/plenary.nvim" },
 	"rcarriga/nvim-notify",
 	{ "folke/trouble.nvim", branch = "main" },
