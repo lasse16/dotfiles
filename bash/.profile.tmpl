@@ -21,7 +21,7 @@ command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
 
 
 # Log into BitWarden
-if [ ! -v "$NO_AUTHENTICATE" ]; then
+if [ -v "$AUTHENTICATE" ]; then
 	bw login
 	export BW_SESSION=$(bw unlock --raw)
 fi
