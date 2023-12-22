@@ -12,7 +12,7 @@
     in
     {
       devShells.${system}.default = with pkgs; mkShell {
-        buildInputs = [ lua-language-server ];
+        buildInputs = [ lua-language-server stylua ];
 	DEV_SHELL = "DOTFILES-NVIM";
       };
     };
