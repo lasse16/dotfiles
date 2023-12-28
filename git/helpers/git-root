@@ -1,16 +1,14 @@
-git_root() {
-	toplevel_directory="$(git rev-parse --show-toplevel)"
-	echo "$toplevel_directory"
-	for arg in "$@"; do
-		case $arg in
+#!  /bin/bash
+
+toplevel_directory="$(git rev-parse --show-toplevel)"
+echo "$toplevel_directory"
+for arg in "$@"; do
+	case $arg in
 		--move | -m)
 			cd "$toplevel_directory" || return
 			;;
 		*)
 			echo "Unknown argument"
 			;;
-		esac
-	done
-}
-
-export -f git_root
+	esac
+done
