@@ -1,3 +1,11 @@
 #!  /bin/bash
 
-git ls-files --directory --other --exclude-standard --exclude .gitignore "$(git rev-parse --show-toplevel)" | fzf --multi --preview='cat' >> .gitignore
+toplevel_directory="$(git rev-parse --show-toplevel)"
+
+for arg in "$@"; do
+	if [[ "$arg" = "--repo" ]]; then
+		cd "$toplevel_directory" || exit
+	fi
+done
+
+git ls-files --directory --other --exclude-standard --exclude .gitignore "$toplevel_directory" | fzf --multi --preview='cat' >>.gitignore
