@@ -8,4 +8,4 @@ for arg in "$@"; do
 	fi
 done
 
-git ls-files --directory --other --exclude-standard --exclude .gitignore "$toplevel_directory" | fzf --multi --preview='cat' >>.gitignore
+files=$(git ls-files --directory --other --exclude-standard --exclude .gitignore "$toplevel_directory" | fzf  --multi --preview='cat') && echo $files >> .gitignore
