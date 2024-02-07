@@ -58,7 +58,6 @@ local server_with_default_setup = {
 	"terraformls",
 	"tflint",
 	"gopls",
-	"nil_ls",
 }
 for _, lsp in ipairs(server_with_default_setup) do
 	require("lspconfig")[lsp].setup({
@@ -69,5 +68,20 @@ for _, lsp in ipairs(server_with_default_setup) do
 		},
 	})
 end
+
+require("lspconfig").nil_ls.setup({
+	on_attach = on_attach,
+	capabilites = capabilites,
+	flags = {
+		debounce_text_changes = 150,
+	},
+	settings = {
+		nil_ls = {
+			formatting = {
+				command = { "alejandra", "qq"}
+			}
+		}
+	}
+})
 
 return config
