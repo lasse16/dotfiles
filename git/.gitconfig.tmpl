@@ -52,11 +52,12 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-{{#if dotter.packages.gpg}}
 [commit]
+	verbose = true
+{{#if dotter.packages.gpg}}
 	gpgsign = true
 		{{/if}}
 
 
-[IncludeIf "gitdir:~/src/work_lhsystems/**"]
-	path = ~/src/work_lhsystems/.gitconfig
+[IncludeIf "gitdir:~/src/personal/**"]
+	path = ~/src/personal/.gitconfig
