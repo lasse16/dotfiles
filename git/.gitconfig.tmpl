@@ -31,6 +31,9 @@
 {{#if dotter.packages.fzf}}
 	cb = forgit checkout_branch
 {{/if}}
+[core]
+	sshCommand = "ssh -i {{git.default_ssh_key}}"
+
 [merge]
 {{#if dotter.packages.nvim}}
     tool = neovim
