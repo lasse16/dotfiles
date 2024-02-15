@@ -82,3 +82,4 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.opt.termguicolors = true
+vim.opt.listchars = "tab:> ,space:•,precedes:«,extends:»,eol:⏎"
