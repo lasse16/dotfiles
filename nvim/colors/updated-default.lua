@@ -42,6 +42,11 @@ highlight DiffAdd ctermfg=NONE ctermbg=darkgreen guifg=NONE guibg=#6e965d
 highlight DiffDelete ctermfg=NONE ctermbg=darkred guifg=NONE guibg=#662222
 highlight DiffChange ctermfg=NONE ctermbg=darkblue guifg=NONE guibg=#112285
 highlight DiffText ctermfg=white ctermbg=NONE guifg=#bbbbbb guibg=NONE
+
+" Change color of listspace chars
+highlight WhiteSpace ctermfg=grey guifg=#5c5c5c
+highlight NonText ctermfg=grey guifg=#5c5c5c
+
 ]])
 
 if installed("nvim-lspconfig") then
@@ -63,7 +68,6 @@ if installed("nvim-lspconfig") then
 	highlight LspDiagnosticsSignWarning ctermfg=yellow ctermbg=NONE guifg=#e0da74 guibg=NONE
 	highlight LspDiagnosticsSignInformation ctermfg=white ctermbg=NONE guifg=#f6fffe guibg=NONE
 	highlight LspDiagnosticsSignHint ctermfg=grey ctermbg=NONE guifg=#4c566a guibg=NONE
-
 ]])
 end
 
