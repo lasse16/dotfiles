@@ -34,6 +34,8 @@
 [core]
 	sshCommand = "ssh -i {{git.default_ssh_key}}"
 
+[help]
+	autocorrect = prompt
 [merge]
 	conflictstyle = zdiff3
 {{#if dotter.packages.nvim}}
