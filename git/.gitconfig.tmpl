@@ -35,6 +35,7 @@
 	sshCommand = "ssh -i {{git.default_ssh_key}}"
 
 [merge]
+	conflictstyle = zdiff3
 {{#if dotter.packages.nvim}}
     tool = neovim
 		{{/if}}
