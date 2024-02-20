@@ -18,7 +18,7 @@ require("lazy").setup({
 	"junegunn/vim-easy-align",
 	"tpope/vim-fugitive",
 	"nvim-lualine/lualine.nvim",
-	"lasse16/nvim-colorizer.lua",
+	"NvChad/nvim-colorizer.lua",
 	"numToStr/Comment.nvim",
 	"tpope/vim-surround",
 	"wellle/targets.vim",
