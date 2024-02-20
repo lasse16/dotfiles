@@ -81,5 +81,8 @@ vim.opt.encoding = "utf-8"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+-- Enable 24-bit/true-color support
 vim.opt.termguicolors = true
-vim.opt.listchars = "tab:> ,space:•,precedes:«,extends:»,eol:⏎"
+
+-- Set the characters representing whitespace
+vim.opt.listchars = "tab:> ,space:•,trail:*,precedes:«,extends:»,eol:⏎"
