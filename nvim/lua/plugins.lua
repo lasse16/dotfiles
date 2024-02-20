@@ -1,5 +1,4 @@
 require("lazy").setup({
-	"wbthomason/packer.nvim",
 	"neovim/nvim-lspconfig",
 	{
 		"hrsh7th/nvim-cmp",
