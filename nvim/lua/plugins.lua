@@ -53,4 +53,5 @@ require("lazy").setup({
 		version = "v1.4.0", -- version is optional, but recommended
 		dependencies = { "neovim/nvim-lspconfig" },
 	},
+	{ 'quarto-dev/quarto-nvim', tag = 'v0.18.2', dependencies = { 'jmbuhr/otter.nvim' } },
 })
