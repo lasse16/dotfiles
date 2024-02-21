@@ -29,3 +29,6 @@ require("commander").add({
 		keys = { "n", "<C-o>" },
 	}
 })
+
+local commands = require('commands').default_vim_commands
+require("commander").add(commands)

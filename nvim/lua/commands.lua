@@ -4,6 +4,13 @@ vim.cmd([[
 
 commands = {}
 
+commands.default_vim_commands = {
+	{
+		desc = "Diff to original file",
+		cmd = "<CMD>vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis | wincmd p | diffthis<CR>"
+	}
+}
+
 commands.enable_test_running_commands = function()
 	vim.cmd([[
 	command RunTest lua require("neotest").run.run()
