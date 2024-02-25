@@ -8,6 +8,14 @@ commands.default_vim_commands = {
 	{
 		desc = "Diff to original file",
 		cmd = "<CMD>vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis | wincmd p | diffthis<CR>"
+	},
+	{
+		desc = "Look for repo on github",
+		cmd = function()
+			local current_word = vim.fn.expand('<cWORD>'):gsub("[^%w_/-.]", '')
+			vim.fn.system('gh repo view --web ' .. current_word)
+		end,
+		keys = {  "n" , 'gG' }
 	}
 }
 
