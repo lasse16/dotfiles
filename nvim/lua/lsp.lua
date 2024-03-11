@@ -52,6 +52,7 @@ local server_with_default_setup = {
 	"tsserver",
 	"emmet_ls",
 	"taplo",
+	"nil_ls",
 	"jsonls",
 	"cssls",
 	"marksman",
@@ -69,17 +70,34 @@ for _, lsp in ipairs(server_with_default_setup) do
 	})
 end
 
-require("lspconfig").nil_ls.setup({
+require("lspconfig").yamlls.setup({
 	on_attach = on_attach,
 	capabilites = capabilites,
 	flags = {
 		debounce_text_changes = 150,
 	},
 	settings = {
-		nil_ls = {
-			formatting = {
-				command = { "alejandra", "qq"}
-			}
+		yaml = {
+			format =
+			{
+				enable = true
+			},
+			validate =
+			{
+				enable = true
+			},
+			completion =
+			{
+				enable = true
+			},
+			hover =
+			{
+				enable = true
+			},
+			schemaStore =
+			{
+				enable = true
+			},
 		}
 	}
 })
