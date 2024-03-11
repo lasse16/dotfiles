@@ -21,6 +21,7 @@ require("lazy").setup({
 		},
 	},
 	{ "L3MON4D3/LuaSnip",              version = "2.2.0" },
+	{ "nvimtools/none-ls.nvim",        branch = "main",                                                                              dependencies = "nvim-lua/plenary.nvim" },
 	-- git
 	{ "lewis6991/gitsigns.nvim" },
 	{ "tpope/vim-fugitive" },
