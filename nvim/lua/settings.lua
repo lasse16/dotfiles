@@ -1,9 +1,3 @@
--- Python3 provider
-vim.g.python3_host_prog = "/home/lasse/.local/share/nvim/neovim_environment/bin/python"
-
--- Webbrowser for 'gx'
-vim.g.netrw_browsex_viewer = "wslview"
-
 -- Start scolling before the cursor reaches top or bottom line
 vim.opt.scrolloff = 5
 
