@@ -85,4 +85,4 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 
 -- Set the characters representing whitespace
-vim.opt.listchars = "tab:> ,space:•,trail:*,precedes:«,extends:»,eol:⏎"
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', eol = '⏎' }
