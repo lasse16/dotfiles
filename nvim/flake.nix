@@ -2,7 +2,7 @@
   description = "Dotfiles-NVIM";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/23.11";
   };
 
   outputs = { self, nixpkgs }:
