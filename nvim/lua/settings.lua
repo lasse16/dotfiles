@@ -57,9 +57,6 @@ vim.opt.smartcase = true
 -- Enable searching as you type, rather than waiting till you press enter.
 vim.opt.incsearch = true
 
--- Disable audible bell because it's annoying.
-vim.cmd("set noerrorbells visualbell t_vb=")
-
 -- Enable mouse support. You should avoid relying on this too much, but it can
 -- sometimes be convenient.
 vim.opt.mouse:append({ a = true })
