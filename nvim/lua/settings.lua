@@ -59,7 +59,7 @@ vim.opt.incsearch = true
 
 -- Enable mouse support. You should avoid relying on this too much, but it can
 -- sometimes be convenient.
-vim.opt.mouse:append({ a = true })
+vim.opt.mouse = "a"
 
 vim.opt.background = "dark"
 
