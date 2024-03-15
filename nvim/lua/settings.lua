@@ -17,9 +17,6 @@ vim.opt.completeopt:append("noinsert")
 -- Do not select text when opening window
 vim.opt.completeopt:append("noselect")
 
--- Turn on syntax highlighting.
-vim.cmd("syntax on")
-
 -- Disable the default Vim startup message.
 vim.opt.shortmess:append({ I = true })
 
