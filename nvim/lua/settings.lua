@@ -7,16 +7,6 @@ vim.wo.signcolumn = "yes"
 -- Provide an extra window for completion in command mode
 vim.opt.wildmenu = true
 
--- Disable the preview window opening at the top of the screen when using the
--- completion
-vim.opt.completeopt:remove("preview")
-
--- Do not insert text until selection is made
-vim.opt.completeopt:append("noinsert")
-
--- Do not select text when opening window
-vim.opt.completeopt:append("noselect")
-
 -- Disable the default Vim startup message.
 vim.opt.shortmess:append({ I = true })
 
