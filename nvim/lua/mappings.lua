@@ -38,6 +38,15 @@ local global_mappings = {
 	{ "t", "<Esc>", [[<C-\><C-n>]] },
 	{ "t", "<C-w>", [[<C-\><C-n><C-w>]] },
 	-- stylua: ignore end
+
+	-- Remove highlighting
+	{ "n", "<Esc>", "<cmd>nohlsearch<CR>" },
+
+	-- diagnostics
+	{ "n", "<space>e", vim.diagnostic.open_float, silent_buffer },
+	{ "n", "[d", vim.diagnostic.goto_prev, silent_buffer },
+	{ "n", "]d", vim.diagnostic.goto_next, silent_buffer },
+	{ "n", "<space>q", vim.diagnostic.setloclist, silent_buffer },
 }
 
 add_mappings_from_table(global_mappings)
@@ -59,12 +68,6 @@ function M.set_lsp_keymappings()
 		{ "n", "<C-r>r", vim.lsp.buf.rename, silent_buffer },
 		{ { "n", "v" }, "<C-r><space>", vim.lsp.buf.code_action, silent_buffer },
 		{ "n", "<C-r>f", vim.lsp.buf.format, silent_buffer },
-
-		-- diagnostics
-		{ "n", "<space>e", vim.diagnostic.open_float, silent_buffer },
-		{ "n", "[d", vim.diagnostic.goto_prev, silent_buffer },
-		{ "n", "]d", vim.diagnostic.goto_next, silent_buffer },
-		{ "n", "<space>q", vim.diagnostic.setloclist, silent_buffer },
 	}
 
 	add_mappings_from_table(lsp_mappings)
