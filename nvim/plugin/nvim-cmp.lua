@@ -81,20 +81,6 @@ cmp.setup({
 		}),
 	},
 
-	confirmation = {
-		default_behavior = types.cmp.ConfirmBehavior.Insert,
-		get_commit_characters = function(commit_characters)
-			return commit_characters
-		end,
-	},
-
-	formatting = {
-		deprecated = true,
-		format = function(_, vim_item)
-			return vim_item
-		end,
-	},
-
 	experimental = {
 		ghost_text = false,
 	},
@@ -103,9 +89,6 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
-		{ name = "buffer" },
-		{ name = "omni" },
-		{ name = "nvim_lsp_signature_help" },
 	},
 })
 
