@@ -14,10 +14,12 @@ commands.default_vim_commands = {
 		cmd = function()
 			vim.ui.input({ prompt = 'File: ' }, function(input)
 				if input ~= nil and input ~= '' then
-				print(input)
+					vim.cmd(":'<,'> w " .. input)
+					vim.cmd(":norm gvd")
 				end
 			end)
-		end
+		end,
+		keys = { "v", "<C-r>m" }
 	},
 	{
 		desc = "Look for repo on github",
