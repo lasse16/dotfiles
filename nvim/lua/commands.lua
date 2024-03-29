@@ -10,6 +10,16 @@ commands.default_vim_commands = {
 		cmd = "<CMD>vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis | wincmd p | diffthis<CR>"
 	},
 	{
+		desc = "Move selection to different file",
+		cmd = function()
+			vim.ui.input({ prompt = 'File: ' }, function(input)
+				if input ~= nil and input ~= '' then
+				print(input)
+				end
+			end)
+		end
+	},
+	{
 		desc = "Look for repo on github",
 		cmd = function()
 			local current_word = vim.fn.expand('<cWORD>'):gsub("[^%w_/-.]", '')

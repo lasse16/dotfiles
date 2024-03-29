@@ -9,7 +9,7 @@ require("lazy").setup({
 			"nvim-treesitter/nvim-treesitter-textobjects",
 		},
 	},
-	{ "mfussenegger/nvim-dap", version = "0.7.0", dependencies = "rcarriga/nvim-dap-ui" },
+	{ "mfussenegger/nvim-dap", version = "0.7.0" },
 	{
 		"hrsh7th/nvim-cmp",
 		branch = "main",
