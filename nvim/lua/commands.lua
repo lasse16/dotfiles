@@ -16,6 +16,7 @@ commands.default_vim_commands = {
 				if input ~= nil and input ~= '' then
 					vim.cmd(":'<,'> w " .. input)
 					vim.cmd(":norm gvd")
+					vim.cmd(":norm i " .. input)
 				end
 			end)
 		end,
