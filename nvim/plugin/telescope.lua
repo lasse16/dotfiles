@@ -27,3 +27,4 @@ require("commands").enable_telescope_commands()
 
 telescope.load_extension('fzf')
 telescope.load_extension("bibtex")
+telescope.load_extension("luasnip")
