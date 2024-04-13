@@ -19,6 +19,8 @@ require("lazy").setup({
 			{ "saadparwaiz1/cmp_luasnip", dependencies = "L3MON4D3/LuaSnip" },
 			{ "rcarriga/cmp-dap" },
 			{ "jc-doyle/cmp-pandoc-references" },
+			{ "kdheepak/cmp-latex-symbols" },
+			{ 'hrsh7th/cmp-cmdline' }
 		},
 	},
 	{ "L3MON4D3/LuaSnip",              version = "2.2.0" },
