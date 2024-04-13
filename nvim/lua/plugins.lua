@@ -18,6 +18,7 @@ require("lazy").setup({
 			{ "hrsh7th/cmp-buffer",       branch = "main" },
 			{ "saadparwaiz1/cmp_luasnip", dependencies = "L3MON4D3/LuaSnip" },
 			{ "rcarriga/cmp-dap" },
+			{ "jc-doyle/cmp-pandoc-references" },
 		},
 	},
 	{ "L3MON4D3/LuaSnip",              version = "2.2.0" },
