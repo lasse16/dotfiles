@@ -8,3 +8,5 @@ vim.api.nvim_create_user_command("Snippets", function(opts)
 end, {
 	desc = "Display all active snippets for this buffer",
 })
+
+snip.filetype_extend("quarto", {"markdown"})
