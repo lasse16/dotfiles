@@ -89,7 +89,6 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
-		{ name = 'pandoc_references' },
 		{ name = 'latex_symbols' }
 	},
 })
