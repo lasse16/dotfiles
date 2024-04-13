@@ -55,7 +55,6 @@ local server_with_default_setup = {
 	"nil_ls",
 	"jsonls",
 	"cssls",
-	"marksman",
 	"terraformls",
 	"tflint",
 	"gopls",
@@ -100,6 +99,16 @@ require("lspconfig").yamlls.setup({
 			},
 		}
 	}
+})
+
+require("lspconfig").marksman.setup({
+	on_attach = on_attach,
+	capabilites = capabilites,
+	flags = {
+		debounce_text_changes = 150,
+	},
+	filetypes = { "markdown", "quarto" },
+	root_dir = require("lspconfig.util").root_pattern(".git", ".marksman.toml", "_quarto.yml"),
 })
 
 return config
