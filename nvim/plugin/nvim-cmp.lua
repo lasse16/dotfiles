@@ -89,7 +89,8 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
-		{ name = 'latex_symbols' }
+		{ name = 'latex_symbols' },
+		{ name = 'cmp_pandoc' }
 	},
 })
 
@@ -107,3 +108,9 @@ cmp.setup.filetype({ "dap-repl", "dapui_watches" }, {
 		{ name = "dap" },
 	},
 })
+
+require 'cmp_pandoc'.setup(
+	{
+		filetypes = { "pandoc", "markdown", "rmd", "quarto" },
+	}
+)
