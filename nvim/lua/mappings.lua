@@ -133,4 +133,16 @@ function M.setup_telescope_mappings()
 	add_mappings_from_table(telescope_mappings)
 end
 
+function M.setup_quarto_mappings()
+	local quarto = require("quarto")
+	local quarto_mappings = {
+		{ "n", "<leader>qa", ":QuartoActivate<cr>",     silent_buffer },
+		{ "n", "<leader>qp", quarto.quartoPreview,      silent_buffer },
+		{ "n", "<leader>qq", quarto.quartoClosePreview, silent_buffer },
+		{ "n", "<leader>qh", ":QuartoHelp ",            silent_buffer },
+	}
+
+	add_mappings_from_table(quarto_mappings)
+end
+
 return M
