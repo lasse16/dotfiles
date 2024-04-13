@@ -22,3 +22,4 @@ require("mappings").setup_telescope_mappings()
 require("commands").enable_telescope_commands()
 
 telescope.load_extension('fzf')
+telescope.load_extension("bibtex")
