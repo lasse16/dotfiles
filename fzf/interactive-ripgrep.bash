@@ -20,7 +20,7 @@ INITIAL_QUERY="${*:-}"
     --header 'CTRL-T: Switch between ripgrep/fzf' \
     --preview 'cat  {1}' \
     --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
-    --bind 'enter:become(vim {1} +{2})'
+    --bind 'enter:become($EDITOR {1} +{2})'
 }
 
 export -f irg
