@@ -18,7 +18,7 @@ require("lazy").setup({
 			{ "hrsh7th/cmp-buffer",       branch = "main" },
 			{ "saadparwaiz1/cmp_luasnip", dependencies = "L3MON4D3/LuaSnip" },
 			{ "rcarriga/cmp-dap" },
-			{ "aspeddro/cmp-pandoc.nvim" },
+			{ "jmbuhr/cmp-pandoc-references" },
 			{ "kdheepak/cmp-latex-symbols" },
 			{ 'hrsh7th/cmp-cmdline' }
 		},
