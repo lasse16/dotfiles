@@ -20,7 +20,7 @@ cmp.setup({
 
 	snippet = {
 		expand = function(args)
-			require("luasnip").lsp_expand(args.body)
+			luasnip.lsp_expand(args.body)
 		end,
 	},
 
@@ -90,17 +90,17 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 		{ name = 'latex_symbols' },
-		{ name = 'pandoc-references' }
+		{ name = 'pandoc_references' }
 	},
 })
-
-cmp.setup.cmdline(":", {
+cmp.setup.cmdline(':', {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = cmp.config.sources({
-		{ name = "path" },
+		{ name = 'path' }
 	}, {
-		{ name = "cmdline" },
+		{ name = 'cmdline' }
 	}),
+	matching = { disallow_symbol_nonprefix_matching = false }
 })
 
 cmp.setup.filetype({ "dap-repl", "dapui_watches" }, {
