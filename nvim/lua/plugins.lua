@@ -14,16 +14,16 @@ require("lazy").setup({
 		"hrsh7th/nvim-cmp",
 		branch = "main",
 		dependencies = {
-			{ "hrsh7th/cmp-nvim-lsp",     branch = "main" },
-			{ "hrsh7th/cmp-buffer",       branch = "main" },
-			{ "saadparwaiz1/cmp_luasnip", dependencies = "L3MON4D3/LuaSnip" },
+			{ "hrsh7th/cmp-nvim-lsp",      branch = "main" },
+			{ "hrsh7th/cmp-buffer",        branch = "main" },
+			{ "saadparwaiz1/cmp_luasnip",  dependencies = "L3MON4D3/LuaSnip" },
 			{ "rcarriga/cmp-dap" },
 			{ "jmbuhr/cmp-pandoc-references" },
 			{ "kdheepak/cmp-latex-symbols" },
 			{ 'hrsh7th/cmp-cmdline' }
 		},
 	},
-	{ "L3MON4D3/LuaSnip",              version = "2.2.0" },
+	{ "L3MON4D3/LuaSnip",              version = "2.2.0",                                                                            dependencies = "lasse16/friendly-snippets" },
 	{ "nvimtools/none-ls.nvim",        branch = "main",                                                                              dependencies = "nvim-lua/plenary.nvim" },
 	-- git
 	{ "lewis6991/gitsigns.nvim" },
@@ -34,7 +34,7 @@ require("lazy").setup({
 	{ "folke/trouble.nvim",            branch = "main" },
 	-- development
 	{ "simrat39/rust-tools.nvim",      dependencies = { "neovim/nvim-lspconfig", "mfussenegger/nvim-dap", "nvim-lua/plenary.nvim" }, },
-	{ 'quarto-dev/quarto-nvim',        tag = 'v0.18.2',                                                                              dependencies = { 'jmbuhr/otter.nvim' } },
+	{ 'quarto-dev/quarto-nvim',        tag = 'v0.18.2',                                                                              ft = "quarto",                                                                                                                                                                         dependencies = { 'jmbuhr/otter.nvim' } },
 	{ "folke/neodev.nvim" },
 	-- additional features
 	{ "junegunn/vim-easy-align" },
@@ -43,7 +43,7 @@ require("lazy").setup({
 	{ "wellle/targets.vim" },
 	{ "windwp/nvim-autopairs" },
 	-- tools
-	{ 'nvim-telescope/telescope.nvim', tag = '0.1.5',                                                                                dependencies = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },"nvim-telescope/telescope-bibtex.nvim", "benfowler/telescope-luasnip.nvim" } },
+	{ 'nvim-telescope/telescope.nvim', tag = '0.1.5',                                                                                dependencies = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }, "nvim-telescope/telescope-bibtex.nvim", "benfowler/telescope-luasnip.nvim" } },
 	{ "FeiyouG/commander.nvim",        dependencies = { "nvim-telescope/telescope.nvim" },                                           tag = "v0.2.0" },
 	{ "NvChad/nvim-colorizer.lua" },
 	-- improvements on builtins

@@ -28,7 +28,7 @@ commands.default_vim_commands = {
 			local current_word = vim.fn.expand('<cWORD>'):gsub("[^%w_/-.]", '')
 			vim.fn.system('gh repo view --web ' .. current_word)
 		end,
-		keys = {  "n" , 'gG' }
+		keys = { "n", 'gG' }
 	}
 }
 
