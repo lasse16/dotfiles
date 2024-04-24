@@ -1,48 +1,51 @@
 name = "Lasse Haffke"
 downloads-dir = "~/mail_attachments"
-default-page-size = 20
-notify-cmd = 'toast.exe --app-id "Himalaya"  --title "Mail"  --message "You got new mail."'
-watch-cmds = ["mbsync -a"]
 
-[uni]
+[accounts.uni]
 email = "lasse.haffke@studium.uni-hamburg.de"
 
-imap-host = "exchange.uni-hamburg.de"
-imap-port = 993
-imap-login = 'uni-hamburg\BAO1136'
-imap-passwd-cmd = " bw get password stine"
+backend = "imap"
+imap.host = "exchange.uni-hamburg.de"
+imap.port = 993
+imap.login = 'uni-hamburg\BAO1136'
+imap.passwd.cmd = " bw get password stine"
 
-smtp-host = "exchange.uni-hamburg.de"
-smtp-port = 587
-smtp-starttls = true
-smtp-login = "BAO1136"
-smtp-passwd-cmd = " bw get password stine"
+message.send.backend = "smtp"
+smtp.host = "exchange.uni-hamburg.de"
+smtp.port = 587
+smtp.starttls = true
+smtp.login = "BAO1136"
+smtp.passwd.cmd = " bw get password stine"
 
 
-[professional]
+[accounts.professional]
 email = "lasse@haffke.me"
 default = true
 
-imap-host = "mail.privateemail.com"
-imap-port = 993
-imap-login = "lasse@haffke.me"
-imap-passwd-cmd = " bw get password namecheap_mail"
+backend = "imap"
+imap.host = "mail.privateemail.com"
+imap.port = 993
+imap.login = "lasse@haffke.me"
+imap.passwd.cmd = " bw get password namecheap_mail"
 
-smtp-host = "mail.privateemail.com"
-smtp-port = 465
-smtp-login = "lasse@haffke.me"
-smtp-passwd-cmd = " bw get password namecheap_mail"
+message.send.backend = "smtp"
+smtp.host = "mail.privateemail.com"
+smtp.port = 465
+smtp.login = "lasse@haffke.me"
+smtp.passwd.cmd = " bw get password namecheap_mail"
 
 
-[private]
+[accounts.private]
 email = "lahaffke@gmx.de"
 
-imap-host = "imap.gmx.net"
-imap-port = 993
-imap-login = "lahaffke@gmx.de"
-imap-passwd-cmd = " bw get password gmx_mail"
+backend = "imap"
+imap.host = "imap.gmx.net"
+imap.port = 993
+imap.login = "lahaffke@gmx.de"
+imap.passwd.cmd = " bw get password gmx_mail"
 
-smtp-host = "mail.gmx.net"
-smtp-port = 465
-smtp-login = "lahaffke@gmx.de"
-smtp-passwd-cmd = " bw get password gmx_mail"
+message.send.backend = "smtp"
+smtp.host = "mail.gmx.net"
+smtp.port = 465
+smtp.login = "lahaffke@gmx.de"
+smtp.passwd.cmd = " bw get password gmx_mail"
