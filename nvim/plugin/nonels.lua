@@ -5,7 +5,6 @@ require("null-ls").setup({
 		builtins.diagnostics.yamllint,
 		builtins.code_actions.gitsigns,
 		builtins.code_actions.refactoring,
-		builtins.diagnostics.vale.with({ extra_filetypes = { "quarto" } }),
 		builtins.formatting.alejandra,
 		builtins.formatting.yamlfmt,
 	},
