@@ -125,10 +125,10 @@ function M.setup_telescope_mappings()
 	local telescope_builtins = require("telescope.builtin")
 	unmap_key("n", "<C-f>")
 	local telescope_mappings = {
-		{ "n", "<C-p>",  telescope_builtins.find_files,                silent_buffer },
-		{ "n", "<C-p>g", telescope_builtins.git_files,                 silent_buffer },
-		{ "n", "<C-f>",  telescope_builtins.current_buffer_fuzzy_find, silent_buffer },
-		{ "n", "<C-b>",  telescope_builtins.buffers, silent_buffer },
+		{ "n", "<C-p>",  telescope_builtins.find_files,                silent },
+		{ "n", "<C-p>g", telescope_builtins.git_files,                 silent },
+		{ "n", "<C-f>",  telescope_builtins.current_buffer_fuzzy_find, silent },
+		{ "n", "<C-b>",  telescope_builtins.buffers,                   silent },
 	}
 
 	add_mappings_from_table(telescope_mappings)
