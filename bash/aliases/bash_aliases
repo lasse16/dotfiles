@@ -17,3 +17,4 @@ alias grip="grip -b --quiet"
 alias path='echo $PATH | tr -s ":" "\n"'
 
 alias tf=terraform
+alias tg=terragrunt

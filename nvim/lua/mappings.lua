@@ -42,6 +42,9 @@ local global_mappings = {
 	-- Remove highlighting
 	{ "n", "<Esc>",    "<cmd>nohlsearch<CR>" },
 
+	-- make ZW behave like ZZ and ZQ
+	{ "n", "ZW",    "<ESC>:update<CR>" },
+
 	-- diagnostics
 	{ "n", "<space>e", vim.diagnostic.open_float, silent_buffer },
 	{ "n", "[d",       vim.diagnostic.goto_prev,  silent_buffer },
