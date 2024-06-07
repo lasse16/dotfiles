@@ -50,6 +50,10 @@ local global_mappings = {
 	{ "n", "[d",       vim.diagnostic.goto_prev,  silent_buffer },
 	{ "n", "]d",       vim.diagnostic.goto_next,  silent_buffer },
 	{ "n", "<space>q", vim.diagnostic.setloclist, silent_buffer },
+
+	-- git
+	{ "n", "<space>gc", ":G c<CR>", silent_buffer },
+	{ "n", "<space>gp", ":G push<CR>", silent_buffer },
 }
 
 add_mappings_from_table(global_mappings)
