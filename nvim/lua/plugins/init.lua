@@ -33,8 +33,8 @@ return {
 	{ "stevearc/dressing.nvim" },
 	{ "folke/trouble.nvim",            branch = "main" },
 	-- development
-	{ "simrat39/rust-tools.nvim",      dependencies = { "neovim/nvim-lspconfig", "mfussenegger/nvim-dap", "nvim-lua/plenary.nvim" }, },
-	{ 'quarto-dev/quarto-nvim',        tag = 'v0.18.2',                                                                              ft = "quarto",                                                                                                                                                                         dependencies = { 'jmbuhr/otter.nvim' } },
+	{ 'mrcjkb/rustaceanvim',           version = '^4',                                     lazy = false, },
+	{ 'quarto-dev/quarto-nvim',        tag = 'v0.18.2',                                    ft = "quarto",                                                                                                                                                                         dependencies = { 'jmbuhr/otter.nvim' } },
 	{ "folke/neodev.nvim" },
 	-- additional features
 	{ "junegunn/vim-easy-align" },
