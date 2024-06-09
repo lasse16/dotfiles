@@ -9,7 +9,7 @@ return {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 		},
 	},
-	{ "mfussenegger/nvim-dap", version = "0.7.0" },
+	{ "mfussenegger/nvim-dap", version = "0.7.0",  dependencies = { { "rcarriga/nvim-dap-ui", dependencies = { "nvim-neotest/nvim-nio" } } } },
 	{
 		"hrsh7th/nvim-cmp",
 		branch = "main",

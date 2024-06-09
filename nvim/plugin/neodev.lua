@@ -2,6 +2,7 @@ require("neodev").setup({
 	lspconfig = true,
 	setup_jsonls = false,
 	pathStrict = true,
+	library = { plugins = { "nvim-dap-ui" }, types = true },
 })
 
 local lsp_config = require("lspconfig")
