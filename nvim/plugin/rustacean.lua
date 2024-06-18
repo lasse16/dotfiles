@@ -6,7 +6,7 @@ local rust_analyzer_opts = {
 	flags = {
 		debounce_text_changes = 200,
 	},
-	settings = {
+	default_settings = {
 		["rust-analyzer"] = {
 			procMacro = {
 				enable = false,
@@ -18,22 +18,6 @@ local rust_analyzer_opts = {
 	},
 }
 
-local rust_tools_options = {
-	tools = {
-		hover_with_actions = false,
-		runnables = {
-			use_telescope = false,
-		},
-		debuggables = {
-			use_telescope = false,
-		},
-	},
-}
-
-require("rust-tools").setup({
+vim.g.rustaceanvim = {
 	server = rust_analyzer_opts,
-	tools = rust_tools_options,
-	dap = {
-		adapter = require("dap").adapters.lldb,
-	},
-})
+}
