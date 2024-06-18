@@ -91,36 +91,3 @@ dap.configurations.python = {
 		end,
 	},
 }
-
--- Rust
-local codelldb_path = "/home/lasse/.local/share/dap/lldb/adapter/codelldb"
-
-dap.adapters.lldb = {
-	type = "server",
-	port = "${port}",
-	host = "127.0.0.1",
-	executable = {
-		command = codelldb_path,
-		args = { "--port", "${port}" },
-	},
-}
-
-dap.configurations.rust = {
-	{
-		-- The first three options are required by nvim-dap
-		type = "lldb",
-		request = "launch",
-		name = "Launch file",
-
-		-- Options below are for CodeLLDB
-		cwd = "${workspaceFolder}",
-		program = function()
-			local workspaceRoot = require("lspconfig").rust_analyzer.get_root_dir()
-			local workspaceName = vim.fn.fnamemodify(workspaceRoot, ":t")
-
-			return vim.fn.input("Path to executable: ", workspaceRoot .. "/target/debug/" .. workspaceName, "file")
-		end,
-		stopOnEntry = false,
-		sourceLanguages = { "rust" },
-	},
-}
