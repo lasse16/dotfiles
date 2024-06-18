@@ -43,7 +43,10 @@ highlight DiffText ctermfg=white ctermbg=NONE guifg=#bbbbbb guibg=NONE
 
 " Change color of listspace chars
 highlight WhiteSpace ctermfg=grey guifg=#5c5c5c
-highlight NonText ctermfg=grey guifg=#5c5c5c
+highlight NonText ctermfg=grey guifg=#5c5c5c guibg=NONE
+
+" Make background transparent to show terminal color
+highlight Normal guibg=NONE
 
 ]])
 
