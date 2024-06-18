@@ -15,7 +15,7 @@ highlight Comment ctermfg=darkGrey cterm=italic term=italic guifg=#4c566a gui=it
 highlight Visual ctermbg=darkgrey guibg=#3c3c3c
 
 " Display the line seperating vertical panes as dark pipes
-highlight VertSplit ctermbg=NONE ctermfg=black cterm=NONE guibg=NONE guifg=#0e0e0e gui=NONE
+highlight WinSeparator ctermbg=NONE ctermfg=black guibg=NONE guifg=#2c2c2c
 
 " Darken end of file symbols in line number column
 highlight EndOfBuffer ctermfg=black cterm=italic term=italic guifg=#0e0e0e gui=italic
