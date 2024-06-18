@@ -7,6 +7,9 @@ require("null-ls").setup({
 		builtins.code_actions.refactoring,
 		builtins.formatting.alejandra,
 		builtins.formatting.yamlfmt,
+		builtins.formatting.shfmt,
+		require("none-ls-shellcheck.diagnostics"),
+		require("none-ls-shellcheck.code_actions"),
 	},
 	update_in_insert = false,
 })
