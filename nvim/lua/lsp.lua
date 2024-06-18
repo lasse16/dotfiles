@@ -34,6 +34,8 @@ local on_attach = function(client, bufnr)
 	if client.server_capabilities.document_formatting then
 		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
 	end
+
+	vim.lsp.inlay_hint.enable(true)
 end
 
 -- Setup completion engine
