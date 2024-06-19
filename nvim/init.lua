@@ -24,4 +24,4 @@ require("treesitter")
 require("nvim-dap")
 require("commands")
 
-vim.cmd("colorscheme updated-default")
+vim.cmd("colorscheme catpuccin-macchiato")
