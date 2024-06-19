@@ -54,6 +54,10 @@ local global_mappings = {
 	-- git
 	{ "n", "<space>gc", ":G c<CR>", silent_buffer },
 	{ "n", "<space>gp", ":G push<CR>", silent_buffer },
+
+	-- 60% keyboard adjust
+	{ "c", "<c-j>", "<Down>", {} },
+	{ "c", "<C-k>", "<Up>", {} },
 }
 
 add_mappings_from_table(global_mappings)
