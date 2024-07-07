@@ -22,42 +22,42 @@ end
 
 local global_mappings = {
 	-- Move lines up and down
-	{ "n", "<A-j>",    ":m .+1<CR>==" },
-	{ "n", "<A-k>",    ":m .-2<CR>==" },
-	{ "v", "<A-k>",    ":m '<-2<CR>gv=gv" },
-	{ "v", "<A-j>",    ":m '>+1<CR>gv=gv" },
+	{ "n", "<A-j>",     ":m .+1<CR>==" },
+	{ "n", "<A-k>",     ":m .-2<CR>==" },
+	{ "v", "<A-k>",     ":m '<-2<CR>gv=gv" },
+	{ "v", "<A-j>",     ":m '>+1<CR>gv=gv" },
 
 	-- Map <Ctrl-S> to saving the current open document
-	{ "n", "<C-s>",    "<ESC>:update<CR>" },
+	{ "n", "<C-s>",     "<ESC>:update<CR>" },
 
 	-- Unbind some useless/annoying default key bindings.
-	{ "n", "Q",        "<Nop>",                   {} }, -- 'Q' in normal mode enters Ex mode. You almost never want this.
+	{ "n", "Q",         "<Nop>",                   {} }, -- 'Q' in normal mode enters Ex mode. You almost never want this.
 
 	-- Close terminal mode with <Esc>
 	-- stylua: ignore start
-	{ "t", "<Esc>",    [[<C-\><C-n>]] },
-	{ "t", "<C-w>",    [[<C-\><C-n><C-w>]] },
+	{ "t", "<Esc>",     [[<C-\><C-n>]] },
+	{ "t", "<C-w>",     [[<C-\><C-n><C-w>]] },
 	-- stylua: ignore end
 
 	-- Remove highlighting
-	{ "n", "<Esc>",    "<cmd>nohlsearch<CR>" },
+	{ "n", "<Esc>",     "<cmd>nohlsearch<CR>" },
 
 	-- make ZW behave like ZZ and ZQ
-	{ "n", "ZW",    "<ESC>:update<CR>" },
+	{ "n", "ZW",        "<ESC>:update<CR>" },
 
 	-- diagnostics
-	{ "n", "<space>e", vim.diagnostic.open_float, silent_buffer },
-	{ "n", "[d",       vim.diagnostic.goto_prev,  silent_buffer },
-	{ "n", "]d",       vim.diagnostic.goto_next,  silent_buffer },
-	{ "n", "<space>q", vim.diagnostic.setloclist, silent_buffer },
+	{ "n", "<space>e",  vim.diagnostic.open_float, silent_buffer },
+	{ "n", "[d",        vim.diagnostic.goto_prev,  silent_buffer },
+	{ "n", "]d",        vim.diagnostic.goto_next,  silent_buffer },
+	{ "n", "<space>q",  vim.diagnostic.setloclist, silent_buffer },
 
 	-- git
-	{ "n", "<space>gc", ":G c<CR>", silent_buffer },
-	{ "n", "<space>gp", ":G push<CR>", silent_buffer },
+	{ "n", "<space>gc", ":G c<CR>",                silent_buffer },
+	{ "n", "<space>gp", ":G push<CR>",             silent_buffer },
 
 	-- 60% keyboard adjust
-	{ "c", "<c-j>", "<Down>", {} },
-	{ "c", "<C-k>", "<Up>", {} },
+	{ "c", "<c-j>",     "<Down>",                  {} },
+	{ "c", "<C-k>",     "<Up>",                    {} },
 }
 
 add_mappings_from_table(global_mappings)
