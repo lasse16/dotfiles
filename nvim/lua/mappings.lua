@@ -56,8 +56,8 @@ local global_mappings = {
 	{ "n", "<space>gp", ":G push<CR>",             silent_buffer },
 
 	-- 60% keyboard adjust
-	{ "c", "<c-j>",     "<Down>",                  {} },
-	{ "c", "<C-k>",     "<Up>",                    {} },
+	{ "c", "<c-j>",     "<Down>",                  {desc="Select next command in Command mode history"} },
+	{ "c", "<C-k>",     "<Up>",                    {desc="Select previous command in Command mode history"} },
 }
 
 add_mappings_from_table(global_mappings)
