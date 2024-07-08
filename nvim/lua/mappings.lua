@@ -58,6 +58,8 @@ local global_mappings = {
 	-- 60% keyboard adjust
 	{ "c", "<c-j>",     "<Down>",                  {desc="Select next command in Command mode history"} },
 	{ "c", "<C-k>",     "<Up>",                    {desc="Select previous command in Command mode history"} },
+
+	{ "s", "<C-p>",     '<C-o>"+p',                    {desc="Paste system clipboard in select mode"} },
 }
 
 add_mappings_from_table(global_mappings)
