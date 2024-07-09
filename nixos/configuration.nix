@@ -26,7 +26,7 @@ in {
     hardwareClockInLocalTime = true;
   };
 
-  environment.systemPackages = [pkgs.wslu git ];
+  environment.systemPackages = [pkgs.wslu pkgs.git ];
 
   services = {
     openssh.enable = true;
