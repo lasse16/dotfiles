@@ -19,14 +19,14 @@ in {
   wsl.enable = true;
   wsl.defaultUser = user;
   wsl.usbip.enable = true;
-  users.users.${user}.packages = with pkgs; [neovim git starship eza fzf tmux direnv fd gh ripgrep git-trim just];
+  users.users.${user}.packages = with pkgs; [neovim starship eza fzf tmux direnv fd gh ripgrep git-trim just];
 
   time = {
     timeZone = "Europe/Berlin";
     hardwareClockInLocalTime = true;
   };
 
-  environment.systemPackages = [pkgs.wslu];
+  environment.systemPackages = [pkgs.wslu git ];
 
   services = {
     openssh.enable = true;
