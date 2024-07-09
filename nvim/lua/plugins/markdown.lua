@@ -13,7 +13,6 @@ return {
 		'MeanderingProgrammer/markdown.nvim',
 		name = 'render-markdown',
 		dependencies = { 'nvim-treesitter/nvim-treesitter' },
-		cmd = "RenderMarkdownToggle",
 		opts = {
 			code = {
 				style = 'normal',
