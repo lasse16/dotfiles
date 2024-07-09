@@ -12,6 +12,7 @@ depends = ["environment"]
 [himalaya]
 [khard]
 [lf]
+[nixos]
 [nvim]
 [tmux]
 [tree-sitter]
@@ -60,6 +61,10 @@ depends = ["bash"]
 
 [lf.files]
 "lf/lfrc.tmpl" = { target = "~/.config/lf/lfrc", type = "template" }
+
+[nixos.files]
+"nixos/configuration.nix" = { target = "/etc/nixos/configuration.nix", type ="symbolic" }
+"nixos/flake.nix" = { target = "/etc/nixos/flake.nix", type ="symbolic" }
 
 [nvim.files]
 "nvim/init.lua" = { target = "~/.config/nvim/init.lua", type = "symbolic" }
