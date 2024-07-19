@@ -142,6 +142,8 @@ function M.setup_telescope_mappings()
 		{ "n", "<C-p>g", telescope_builtins.git_files,                 silent },
 		{ "n", "<C-f>",  telescope_builtins.current_buffer_fuzzy_find, silent },
 		{ "n", "<C-b>",  telescope_builtins.buffers,                   silent },
+		{ "n", "<C-l>ds",  telescope_builtins.lsp_document_symbols,                   { silent = true, desc =" List document symbols"} },
+		{ "n", "<C-l>ws",  telescope_builtins.lsp_dynamic_workspace_symbols,           { silent = true, desc =" List workspace symbols"}        },
 	}
 
 	add_mappings_from_table(telescope_mappings)
