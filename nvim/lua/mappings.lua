@@ -60,6 +60,9 @@ local global_mappings = {
 	{ "c", "<C-k>",     "<Up>",                    {desc="Select previous command in Command mode history"} },
 
 	{ "s", "<C-p>",     '<C-o>"+p',                    {desc="Paste system clipboard in select mode"} },
+
+	{ "n", "+",     '<C-a>',                    {desc="Increment number"} },
+	{ "n", "-",     '<C-x>',                    {desc="Decrement number"} },
 }
 
 add_mappings_from_table(global_mappings)
