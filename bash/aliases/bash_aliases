@@ -16,5 +16,8 @@ alias python="python3"
 alias grip="grip -b --quiet"
 alias path='echo $PATH | tr -s ":" "\n"'
 
+# Shortening of common tools
 alias tf=terraform
 alias tg=terragrunt
+
+alias g=git
