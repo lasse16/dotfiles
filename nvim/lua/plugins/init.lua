@@ -24,17 +24,13 @@ return {
 		},
 	},
 	{ "L3MON4D3/LuaSnip",              version = "2.2.0",                                  dependencies = "lasse16/friendly-snippets" },
-	{ "nvimtools/none-ls.nvim",        branch = "main",                                    dependencies = { "nvim-lua/plenary.nvim", "gbprod/none-ls-shellcheck.nvim"} },
+	{ "nvimtools/none-ls.nvim",        branch = "main",                                    dependencies = { "nvim-lua/plenary.nvim", "gbprod/none-ls-shellcheck.nvim" } },
 	-- git
 	{ "lewis6991/gitsigns.nvim" },
 	{ "tpope/vim-fugitive" },
-	-- UI
-	{ "nvim-lualine/lualine.nvim" },
-	{ "stevearc/dressing.nvim" },
-	{ "folke/trouble.nvim",            branch = "main" },
 	-- development
 	{ 'mrcjkb/rustaceanvim',           version = '^4',                                     lazy = false, },
-	{ 'quarto-dev/quarto-nvim',        tag = 'v0.18.2',                                    ft = "quarto",                                                                                                                                                                         dependencies = { 'jmbuhr/otter.nvim' } },
+	{ 'quarto-dev/quarto-nvim',        tag = 'v0.18.2',                                    ft = "quarto",                                                                                                                                                                                                          dependencies = { 'jmbuhr/otter.nvim' } },
 	{ "folke/neodev.nvim" },
 	-- additional features
 	{ "junegunn/vim-easy-align" },
