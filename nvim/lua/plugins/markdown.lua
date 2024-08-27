@@ -9,18 +9,4 @@ return {
 			end
 		},
 	},
-	{
-		'MeanderingProgrammer/markdown.nvim',
-		name = 'render-markdown',
-		dependencies = { 'nvim-treesitter/nvim-treesitter' },
-		opts = {
-			code = {
-				style = 'normal',
-				highlight = 'ColorColumn',
-			},
-			latex = {
-				enabled = false
-			}
-		},
-	}
 }
