@@ -39,7 +39,7 @@ return {
 	{ "wellle/targets.vim" },
 	{ "windwp/nvim-autopairs" },
 	-- tools
-	{ 'nvim-telescope/telescope.nvim', tag = '0.1.5',                                      dependencies = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }, "nvim-telescope/telescope-bibtex.nvim", "benfowler/telescope-luasnip.nvim" } },
+	{ 'nvim-telescope/telescope.nvim', tag = '0.1.5',                                      dependencies = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }, "nvim-telescope/telescope-bibtex.nvim", "benfowler/telescope-luasnip.nvim", "tsakirist/telescope-lazy.nvim" } },
 	{ "FeiyouG/commander.nvim",        dependencies = { "nvim-telescope/telescope.nvim" }, tag = "v0.2.0" },
 	{ "NvChad/nvim-colorizer.lua" },
 	-- improvements on builtins
