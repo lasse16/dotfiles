@@ -55,8 +55,6 @@ local server_with_default_setup = {
 	"emmet_ls",
 	"taplo",
 	"nil_ls",
-	"jsonls",
-	"cssls",
 	"terraformls",
 	"tflint",
 	"gopls",
