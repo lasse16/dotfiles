@@ -36,6 +36,11 @@ in {
     ssh.startAgent = true;
     gnupg.agent = {
       enable = true;
+      settings = {
+	      default-cache-ttl = 28800;
+	      max-cache-ttl =  28800;
+	      allow-loopback-pinentry = true;
+      };
     };
   };
 
