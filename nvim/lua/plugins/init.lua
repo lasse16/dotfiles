@@ -34,7 +34,6 @@ return {
 	{ "folke/neodev.nvim" },
 	-- additional features
 	{ "junegunn/vim-easy-align" },
-	{ "numToStr/Comment.nvim" },
 	{ "tpope/vim-surround" },
 	{ "wellle/targets.vim" },
 	{ "windwp/nvim-autopairs" },
