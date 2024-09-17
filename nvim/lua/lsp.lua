@@ -58,7 +58,6 @@ local server_with_default_setup = {
 	"terraformls",
 	"tflint",
 	"gopls",
-	"ltex",
 }
 for _, lsp in ipairs(server_with_default_setup) do
 	require("lspconfig")[lsp].setup({
@@ -69,6 +68,22 @@ for _, lsp in ipairs(server_with_default_setup) do
 		},
 	})
 end
+
+require("lspconfig")["ltex"].setup({
+	on_attach = on_attach,
+	capabilites = capabilites,
+	flags = {
+		debounce_text_changes = 150,
+	},
+	settings = {
+		ltex = {
+			language = "en-GB",
+			additionalRules = {
+				languageModel = "~/.share/models/ngrams/",
+			},
+		},
+	},
+})
 
 require("lspconfig").yamlls.setup({
 	on_attach = on_attach,
