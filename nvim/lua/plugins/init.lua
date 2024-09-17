@@ -31,7 +31,7 @@ return {
 	-- development
 	{ 'mrcjkb/rustaceanvim',           version = '^4',                                     lazy = false, },
 	{ 'quarto-dev/quarto-nvim',        tag = 'v0.18.2',                                    ft = "quarto",                                                                                                                                                                                                          dependencies = { 'jmbuhr/otter.nvim' } },
-	{ "folke/neodev.nvim" },
+	{ "folke/lazydev.nvim" },
 	-- additional features
 	{ "junegunn/vim-easy-align" },
 	{ "tpope/vim-surround" },
