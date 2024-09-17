@@ -39,7 +39,6 @@ in {
       settings = {
 	      default-cache-ttl = 28800;
 	      max-cache-ttl =  28800;
-	      allow-loopback-pinentry = true;
       };
     };
   };
