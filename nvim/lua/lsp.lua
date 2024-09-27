@@ -51,7 +51,7 @@ config = {
 local server_with_default_setup = {
 	"pylsp",
 	"ansiblels",
-	"tsserver",
+	"ts_ls",
 	"emmet_ls",
 	"taplo",
 	"nil_ls",
