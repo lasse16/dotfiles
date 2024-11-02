@@ -6,7 +6,6 @@ require("null-ls").setup({
 		builtins.diagnostics.stylelint,
 		builtins.code_actions.gitsigns,
 		builtins.code_actions.refactoring,
-		builtins.formatting.alejandra,
 		builtins.formatting.yamlfmt,
 		builtins.formatting.stylelint,
 		builtins.formatting.shfmt,

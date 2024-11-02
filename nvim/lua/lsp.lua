@@ -55,7 +55,6 @@ local server_with_default_setup = {
 	"emmet_ls",
 	"taplo",
 	"nil_ls",
-	"nixd",
 	"terraformls",
 	"tflint",
 	"gopls",
@@ -70,6 +69,32 @@ for _, lsp in ipairs(server_with_default_setup) do
 	})
 end
 
+require("lspconfig").harper_ls.setup {
+	settings = {
+		["harper-ls"] = {
+			fileDictPath = vim.fn.getcwd() .. "dict.txt"
+		}
+	},
+	filetypes = { "quarto" }
+}
+
+require("lspconfig").nixd.setup({
+   settings = {
+      nixd = {
+         formatting = {
+            command = { "alejandra" },
+         },
+         options = {
+            nixos = {
+               expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.k-on.options',
+            },
+            home_manager = {
+               expr = '(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations."ruixi@k-on".options',
+            },
+         },
+      },
+   },
+})
 require("lspconfig")["ltex"].setup({
 	on_attach = on_attach,
 	capabilites = capabilites,
