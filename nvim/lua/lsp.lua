@@ -152,6 +152,21 @@ require("lspconfig").marksman.setup({
 	filetypes = { "markdown", "quarto" },
 	root_dir = require("lspconfig.util").root_pattern(".git", ".marksman.toml", "_quarto.yml"),
 })
+
+require("lspconfig").ruff.setup({
+	on_attach = on_attach,
+	capabilites = capabilites,
+	flags = {
+		debounce_text_changes = 150,
+	},
+	trace = 'messages',
+	init_options = {
+		settings = {
+			logLevel = 'debug',
+		}
+	}
+})
+
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
