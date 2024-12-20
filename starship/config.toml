@@ -34,7 +34,7 @@ time_format = '%R'
 style = "blue"
 
 [python]
-format = '[]($style)[($virtualenv)](bold fg:black bg:$style)[]($style) '
+format = '[]($style)[($virtualenv:)($version)](bold fg:black bg:$style)[]($style) '
 style = 'bright-blue'
 
 [rust]
