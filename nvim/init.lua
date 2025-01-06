@@ -29,19 +29,11 @@ require("lazy").setup({
 	ui = {
 		size = { width = 0.8, height = 0.8 },
 		wrap = true,
-		border = {
-			{ "╭", "FloatBorder" },
-			{ "─", "FloatBorder" },
-			{ "╮", "FloatBorder" },
-			{ "│", "FloatBorder" },
-			{ "╯", "FloatBorder" },
-			{ "─", "FloatBorder" },
-			{ "╰", "FloatBorder" },
-			{ "│", "FloatBorder" },
-		},
+		border = "rounded",
 		title = "Lazy",
 	},
 })
+
 require("clipboard")
 require("mappings")
 require("lsp")
