@@ -1,21 +1,10 @@
-local border = {
-	{ "╭", "FloatBorder" },
-	{ "─", "FloatBorder" },
-	{ "╮", "FloatBorder" },
-	{ "│", "FloatBorder" },
-	{ "╯", "FloatBorder" },
-	{ "─", "FloatBorder" },
-	{ "╰", "FloatBorder" },
-	{ "│", "FloatBorder" },
-}
-
 local on_attach = function(client, bufnr)
 	require("mappings").set_lsp_keymappings()
 
 	-- Draw hover and signature help windows with a specified border
-	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border })
+	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help,
-		{ border = border })
+		{ border = "rounded" })
 
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 		underline = true,
@@ -28,6 +17,7 @@ local on_attach = function(client, bufnr)
 		virtual_text = {
 			prefix = "◁◁◁◁ ",
 		},
+		float = { border = "rounded" }
 	})
 
 	-- If LSP-Server can format, format on write
@@ -80,21 +70,23 @@ require("lspconfig").harper_ls.setup {
 }
 
 require("lspconfig").nixd.setup({
-   settings = {
-      nixd = {
-         formatting = {
-            command = { "alejandra" },
-         },
-         options = {
-            nixos = {
-               expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.k-on.options',
-            },
-            home_manager = {
-               expr = '(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations."ruixi@k-on".options',
-            },
-         },
-      },
-   },
+	settings = {
+		nixd = {
+			formatting = {
+				command = { "alejandra" },
+			},
+			options = {
+				nixos = {
+					expr =
+					'(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.k-on.options',
+				},
+				home_manager = {
+					expr =
+					'(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations."ruixi@k-on".options',
+				},
+			},
+		},
+	},
 })
 require("lspconfig")["ltex"].setup({
 	on_attach = on_attach,
