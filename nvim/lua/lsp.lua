@@ -54,6 +54,7 @@ local server_with_default_setup = {
 	"ts_ls",
 	"emmet_ls",
 	"taplo",
+	"basedpyright",
 	"nil_ls",
 	"terraformls",
 	"tflint",
