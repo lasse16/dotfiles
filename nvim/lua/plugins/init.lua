@@ -45,4 +45,5 @@ return {
 	{ "numToStr/Navigator.nvim" },
 	{ "rhysd/clever-f.vim" },
 	{ "mrjones2014/smart-splits.nvim" },
+	{"mfussenegger/nvim-dap-python"},
 }
