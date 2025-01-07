@@ -44,7 +44,6 @@ local server_with_default_setup = {
 	"ts_ls",
 	"emmet_ls",
 	"taplo",
-	"basedpyright",
 	"nil_ls",
 	"terraformls",
 	"tflint",
@@ -156,6 +155,22 @@ require("lspconfig").ruff.setup({
 	init_options = {
 		settings = {
 			logLevel = 'debug',
+		}
+	}
+})
+
+require("lspconfig").basedpyright.setup({
+	on_attach = on_attach,
+	capabilites = capabilites,
+	flags = {
+		debounce_text_changes = 150,
+	},
+	settings = {
+		basedpyright = {
+			analysis = {
+				logLevel = "Error",
+				typeCheckingMode = "standard",
+			}
 		}
 	}
 })
