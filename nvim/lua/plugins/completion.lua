@@ -14,7 +14,7 @@ return {
 			menu = { border = 'rounded' },
 			documentation = { window = { border = 'rounded' } },
 		},
-		signature = { window = { border = 'rounded' } },
+		signature = { window = { border = 'rounded' }, enabled = true },
 	},
 	opts_extend = { "sources.default" }
 }
