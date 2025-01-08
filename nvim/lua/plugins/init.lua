@@ -10,19 +10,6 @@ return {
 		},
 	},
 	{ "mfussenegger/nvim-dap", version = "0.7.0", dependencies = { { "rcarriga/nvim-dap-ui", dependencies = { "nvim-neotest/nvim-nio" } } } },
-	{
-		"hrsh7th/nvim-cmp",
-		branch = "main",
-		dependencies = {
-			{ "hrsh7th/cmp-nvim-lsp",        branch = "main" },
-			{ "hrsh7th/cmp-buffer",          branch = "main" },
-			{ "saadparwaiz1/cmp_luasnip",    dependencies = "L3MON4D3/LuaSnip" },
-			{ "rcarriga/cmp-dap" },
-			{ "jmbuhr/cmp-pandoc-references" },
-			{ "kdheepak/cmp-latex-symbols" },
-			{ 'hrsh7th/cmp-cmdline' }
-		},
-	},
 	{ "L3MON4D3/LuaSnip",              version = "2.2.0",                                  dependencies = "lasse16/friendly-snippets" },
 	{ "nvimtools/none-ls.nvim",        branch = "main",                                    dependencies = { "nvim-lua/plenary.nvim", "gbprod/none-ls-shellcheck.nvim" } },
 	-- git
