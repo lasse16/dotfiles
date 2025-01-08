@@ -10,6 +10,11 @@ return {
 		sources = {
 			default = { 'lsp', 'path', 'snippets', 'buffer' },
 		},
+		completion = {
+			menu = { border = 'rounded' },
+			documentation = { window = { border = 'rounded' } },
+		},
+		signature = { window = { border = 'rounded' } },
 	},
 	opts_extend = { "sources.default" }
 }
