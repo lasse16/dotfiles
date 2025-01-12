@@ -65,6 +65,7 @@ local global_mappings = {
 	{ "n", "-",     '<C-x>',                    {desc="Decrement number"} },
 
 	{ "n",     '<C-a>',                    "gg<S-v>G",{desc="Select entire buffer"} },
+	{ "n",     '<space><space>',                    "<cmd>b#<CR>",{desc="Jump back to previous buffer"} },
 }
 
 add_mappings_from_table(global_mappings)
