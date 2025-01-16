@@ -14,7 +14,7 @@ return {
 		completion = {
 			menu = { auto_show = false, border = 'rounded' },
 			documentation = { auto_show = true, auto_show_delay_ms = 50, window = { border = 'rounded' } },
-			list = { selection = { preselect = false, auto_insert = false } },
+			list = { selection = { preselect = true, auto_insert = false } },
 		},
 		signature = { window = { border = 'rounded' }, enabled = true },
 		snippets = {
