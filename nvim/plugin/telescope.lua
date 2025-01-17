@@ -17,26 +17,28 @@ telescope.setup({
 						local selection = require("telescope.actions.state").get_selected_entry()
 						require("telescope.actions").close(prompt_bufnr)
 						if selection then
-							local buf = vim.api.nvim_get_current_buf()
-							local width = math.floor(vim.o.columns * 0.9)
-							local height = math.floor(vim.o.lines * 0.9)
-							local row = math.floor((vim.o.lines - height) / 2)
-							local col = math.floor((vim.o.columns - width) / 2)
-							local win = vim.api.nvim_open_win(buf, true, {
-								relative = 'editor',
+							local help_window = require('snacks').win({
+								width = 0.9,
+								height = 0.9,
+								position = "float",
 								title = " Help ",
 								title_pos = "center",
-								width = width,
-								height = height,
-								row = row,
-								col = col,
-								style = 'minimal',
-								border = 'rounded',
+								border = "rounded",
+								wo = {
+									conceallevel = 3,
+									concealcursor = "n",
+									foldenable = false,
+									number = false,
+									relativenumber = false,
+									cursorline = false,
+									signcolumn = "no",
+								},
+								bo = {
+									buftype = "help"
+								}
 							})
-							local bufnr = vim.api.nvim_win_get_buf(win)
-							vim.api.nvim_set_option_value('buftype', 'help', { buf = bufnr })
-							vim.api.nvim_command("help " .. selection.value)
 						end
+						vim.api.nvim_command("help " .. selection.value)
 					end
 				}
 			}
