@@ -50,6 +50,7 @@ return {
 			lazygit = { enabled = false },
 			notifier = { enabled = true },
 			profiler = { enabled = false },
+			picker = { enabled = false },
 			quickfile = { enabled = true },
 			scope = { enabled = false },
 			scratch = { enabled = true },
