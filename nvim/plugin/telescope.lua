@@ -24,18 +24,10 @@ telescope.setup({
 								title = " Help ",
 								title_pos = "center",
 								border = "rounded",
-								wo = {
-									conceallevel = 3,
-									concealcursor = "n",
-									foldenable = false,
-									number = false,
-									relativenumber = false,
-									cursorline = false,
-									signcolumn = "no",
-								},
 								bo = {
-									buftype = "help"
-								}
+									buftype = "help",
+									readonly = true
+								},
 							})
 						end
 						vim.api.nvim_command("help " .. selection.value)
