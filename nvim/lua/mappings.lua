@@ -22,50 +22,50 @@ end
 
 local global_mappings = {
 	-- Move lines up and down
-	{ "n", "<A-j>",     ":m .+1<CR>==" },
-	{ "n", "<A-k>",     ":m .-2<CR>==" },
-	{ "v", "<A-k>",     ":m '<-2<CR>gv=gv" },
-	{ "v", "<A-j>",     ":m '>+1<CR>gv=gv" },
+	{ "n", "<A-j>",          ":m .+1<CR>==" },
+	{ "n", "<A-k>",          ":m .-2<CR>==" },
+	{ "v", "<A-k>",          ":m '<-2<CR>gv=gv" },
+	{ "v", "<A-j>",          ":m '>+1<CR>gv=gv" },
 
 	-- Map <Ctrl-S> to saving the current open document
-	{ "n", "<C-s>",     "<ESC>:update<CR>" },
+	{ "n", "<C-s>",          "<ESC>:update<CR>" },
 
 	-- Unbind some useless/annoying default key bindings.
-	{ "n", "Q",         "<Nop>",                   {} }, -- 'Q' in normal mode enters Ex mode. You almost never want this.
+	{ "n", "Q",              "<Nop>",                   {} }, -- 'Q' in normal mode enters Ex mode. You almost never want this.
 
 	-- Close terminal mode with <Esc>
 	-- stylua: ignore start
-	{ "t", "<Esc>",     [[<C-\><C-n>]] },
-	{ "t", "<C-w>",     [[<C-\><C-n><C-w>]] },
+	{ "t", "<Esc>",          [[<C-\><C-n>]] },
+	{ "t", "<C-w>",          [[<C-\><C-n><C-w>]] },
 	-- stylua: ignore end
 
 	-- Remove highlighting
-	{ "n", "<Esc>",     "<cmd>nohlsearch<CR>" },
+	{ "n", "<Esc>",          "<cmd>nohlsearch<CR>" },
 
 	-- make ZW behave like ZZ and ZQ
-	{ "n", "ZW",        "<ESC>:update<CR>" },
+	{ "n", "ZW",             "<ESC>:update<CR>" },
 
 	-- diagnostics
-	{ "n", "<space>e",  vim.diagnostic.open_float, silent_buffer },
-	{ "n", "[d",        vim.diagnostic.goto_prev,  silent_buffer },
-	{ "n", "]d",        vim.diagnostic.goto_next,  silent_buffer },
-	{ "n", "<space>q",  vim.diagnostic.setloclist, silent_buffer },
+	{ "n", "<space>e",       vim.diagnostic.open_float, silent_buffer },
+	{ "n", "[d",             vim.diagnostic.goto_prev,  silent_buffer },
+	{ "n", "]d",             vim.diagnostic.goto_next,  silent_buffer },
+	{ "n", "<space>q",       vim.diagnostic.setloclist, silent_buffer },
 
 	-- git
-	{ "n", "<space>gc", ":G c<CR>",                silent_buffer },
-	{ "n", "<space>gp", ":G push<CR>",             silent_buffer },
+	{ "n", "<space>gc",      ":G c<CR>",                silent_buffer },
+	{ "n", "<space>gp",      ":G push<CR>",             silent_buffer },
 
 	-- 60% keyboard adjust
-	{ "c", "<c-j>",     "<Down>",                  {desc="Select next command in Command mode history"} },
-	{ "c", "<C-k>",     "<Up>",                    {desc="Select previous command in Command mode history"} },
+	{ "c", "<c-j>",          "<Down>",                  { desc = "Select next command in Command mode history" } },
+	{ "c", "<C-k>",          "<Up>",                    { desc = "Select previous command in Command mode history" } },
 
-	{ "s", "<C-p>",     '<C-o>"+p',                    {desc="Paste system clipboard in select mode"} },
+	{ "s", "<C-p>",          '<C-o>"+p',                { desc = "Paste system clipboard in select mode" } },
 
-	{ "n", "+",     '<C-a>',                    {desc="Increment number"} },
-	{ "n", "-",     '<C-x>',                    {desc="Decrement number"} },
+	{ "n", "+",              '<C-a>',                   { desc = "Increment number" } },
+	{ "n", "-",              '<C-x>',                   { desc = "Decrement number" } },
 
-	{ "n",     '<C-a>',                    "gg<S-v>G",{desc="Select entire buffer"} },
-	{ "n",     '<space><space>',                    "<cmd>b#<CR>",{desc="Jump back to previous buffer"} },
+	{ "n", '<C-a>',          "gg<S-v>G",                { desc = "Select entire buffer" } },
+	{ "n", '<space><space>', "<cmd>b#<CR>",             { desc = "Jump back to previous buffer" } },
 }
 
 add_mappings_from_table(global_mappings)
@@ -144,12 +144,13 @@ function M.setup_telescope_mappings()
 	local telescope_builtins = require("telescope.builtin")
 	unmap_key("n", "<C-f>")
 	local telescope_mappings = {
-		{ "n", "<C-p>",  telescope_builtins.find_files,                silent },
-		{ "n", "<C-p>g", telescope_builtins.git_files,                 silent },
-		{ "n", "<C-f>",  telescope_builtins.current_buffer_fuzzy_find, silent },
-		{ "n", "<C-b>",  telescope_builtins.buffers,                   silent },
-		{ "n", "<C-l>ds",  telescope_builtins.lsp_document_symbols,                   { silent = true, desc =" List document symbols"} },
-		{ "n", "<C-l>ws",  telescope_builtins.lsp_dynamic_workspace_symbols,           { silent = true, desc =" List workspace symbols"}        },
+		{ "n", "<C-p>",   telescope_builtins.find_files,                    silent },
+		{ "n", "<C-p>g",  telescope_builtins.git_files,                     silent },
+		{ "n", "<C-f>",   telescope_builtins.current_buffer_fuzzy_find,     silent },
+		{ "n", "<C-b>",   telescope_builtins.buffers,                       silent },
+		{ "n", "<C-l>ds", telescope_builtins.lsp_document_symbols,          { silent = true, desc = " List document symbols" } },
+		{ "n", "<C-l>ws", telescope_builtins.lsp_dynamic_workspace_symbols, { silent = true, desc = " List workspace symbols" } },
+		{ "n", "<C-h>",   telescope_builtins.help_tags,                     { silent = true, desc = " Open help" } },
 	}
 
 	add_mappings_from_table(telescope_mappings)
