@@ -29,8 +29,10 @@ telescope.setup({
 									readonly = true
 								},
 							})
+							-- for some reason window options dont work here
+							-- neither in snacks.win.config nor vim.api.set_option_value
+							vim.api.nvim_command("help " .. selection.value)
 						end
-						vim.api.nvim_command("help " .. selection.value)
 					end
 				}
 			}
