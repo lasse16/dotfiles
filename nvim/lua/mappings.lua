@@ -180,21 +180,21 @@ function M.setup_markdown_mappings(bufnr)
 	add_mappings_from_table(markdown_mappings)
 end
 
-local Snacks = require('snacks')
 local snacks_mappings = {
-	{ "<leader>z",  function() Snacks.zen() end,                   desc = "Toggle Zen Mode" },
-	{ "<leader>Z",  function() Snacks.zen.zoom() end,              desc = "Toggle Zoom" },
-	{ "<leader>.",  function() Snacks.scratch() end,               desc = "Toggle Scratch Buffer" },
-	{ "<leader>S",  function() Snacks.scratch.select() end,        desc = "Select Scratch Buffer" },
-	{ "<leader>n",  function() Snacks.notifier.show_history() end, desc = "Notification History" },
-	{ "<leader>gB", function() Snacks.gitbrowse() end,             desc = "Git Browse",               mode = { "n", "v" } },
-	{ "<leader>un", function() Snacks.notifier.hide() end,         desc = "Dismiss All Notifications" },
-	{ "<leader>t",      function() Snacks.terminal() end,              desc = "Toggle Terminal" },
+	{ "n",          "<space>z",  function() require("snacks").zen() end,                   desc = "Toggle Zen Mode" },
+	{ "n",          "<space>Z",  function() require("snacks").zen.zoom() end,              desc = "Toggle Zoom" },
+	{ "n",          "<space>.",  function() require("snacks").scratch() end,               desc = "Toggle Scratch Buffer" },
+	{ "n",          "<space>S",  function() require("snacks").scratch.select() end,        desc = "Select Scratch Buffer" },
+	{ "n",          "<space>n",  function() require("snacks").notifier.show_history() end, desc = "Notification History" },
+	{ { "n", "v" }, "<space>gB", function() require("snacks").gitbrowse() end,             desc = "Git Browse" },
+	{ "n",          "<space>un", function() require("snacks").notifier.hide() end,         desc = "Dismiss All Notifications" },
+	{ "n",          "<space>t",  function() require("snacks").terminal() end,              desc = "Toggle Terminal" },
 	{
-		"<leader>N",
+		"n",
+		"<space>n",
 		desc = "Neovim News",
 		function()
-			Snacks.win({
+			require("snacks").win({
 				file = vim.api.nvim_get_runtime_file("doc/news.txt", false)[1],
 				width = 0.6,
 				height = 0.6,
@@ -203,16 +203,19 @@ local snacks_mappings = {
 					wrap = false,
 					signcolumn = "yes",
 					statuscolumn = " ",
-					conceallevel = 3,
+					conceallevel = 0,
 				},
+				bo = {
+					readonly = true,
+				},
+
+				border = "rounded"
 			})
 		end,
 	}
 }
+add_mappings_from_table(snacks_mappings)
 
 M.Snacks_keys = snacks_mappings
-function M.set_snacks_keys()
-	add_mappings_from_table(M.Snacks_keys)
-end
 
 return M
