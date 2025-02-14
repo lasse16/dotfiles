@@ -65,6 +65,10 @@
 	gpgsign = true
 		{{/if}}
 
+[tag]
+{{#if dotter.packages.gpg}}
+	gpgSign = true
+		{{/if}}
 
 [IncludeIf "gitdir:~/src/personal/**"]
 	path = ~/src/personal/.gitconfig
