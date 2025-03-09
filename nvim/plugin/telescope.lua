@@ -17,20 +17,7 @@ telescope.setup({
 						local selection = require("telescope.actions.state").get_selected_entry()
 						require("telescope.actions").close(prompt_bufnr)
 						if selection then
-							local help_window = require('snacks').win({
-								width = 0.9,
-								height = 0.9,
-								position = "float",
-								title = " Help ",
-								title_pos = "center",
-								border = "rounded",
-								bo = {
-									buftype = "help",
-									readonly = true
-								},
-							})
-							-- for some reason window options dont work here
-							-- neither in snacks.win.config nor vim.api.set_option_value
+							require('windows').help_window:show()
 							vim.api.nvim_command("help " .. selection.value)
 						end
 					end

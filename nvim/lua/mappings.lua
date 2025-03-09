@@ -189,30 +189,8 @@ local snacks_mappings = {
 	{ { "n", "v" }, "<space>gB", function() require("snacks").gitbrowse() end,             desc = "Git Browse" },
 	{ "n",          "<space>un", function() require("snacks").notifier.hide() end,         desc = "Dismiss All Notifications" },
 	{ "n",          "<space>t",  function() require("snacks").terminal() end,              desc = "Toggle Terminal" },
-	{
-		"n",
-		"<space>n",
-		desc = "Neovim News",
-		function()
-			require("snacks").win({
-				file = vim.api.nvim_get_runtime_file("doc/news.txt", false)[1],
-				width = 0.6,
-				height = 0.6,
-				wo = {
-					spell = false,
-					wrap = false,
-					signcolumn = "yes",
-					statuscolumn = " ",
-					conceallevel = 0,
-				},
-				bo = {
-					readonly = true,
-				},
-
-				border = "rounded"
-			})
-		end,
-	}
+	{ "n",          "<space>n",  function() require 'windows'.news_window:toggle() end,    desc = "Toggle Neovim News", },
+	{ "n",          "<space>h",  function() require 'windows'.help_window:toggle() end,    desc = "Toggle the help window", }
 }
 add_mappings_from_table(snacks_mappings)
 
