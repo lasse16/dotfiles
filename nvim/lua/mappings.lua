@@ -133,7 +133,6 @@ function M.setup_gitsigns_mappings()
 	local signs_mappings = {
 		{ "v", "<space>gs", git_signs.stage_hunk,      silent_buffer },
 		{ "n", "<space>gs", git_signs.stage_hunk,      silent_buffer },
-		{ "n", "<space>gu", git_signs.undo_stage_hunk, silent_buffer },
 		{ "n", "<space>gb", git_signs.blame_line,      silent_buffer },
 	}
 
