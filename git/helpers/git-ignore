@@ -1,4 +1,4 @@
-#!  /bin/bash
+#!/usr/bin/env bash
 
 toplevel_directory="$(git rev-parse --show-toplevel)"
 

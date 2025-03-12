@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 # [Requirement] fzf
 
 # Add git files from the list of modified files by git ls-files
