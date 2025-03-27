@@ -190,16 +190,16 @@ function M.setup_markdown_mappings(bufnr)
 end
 
 local snacks_mappings = {
-	{ "n",          "<space>z",  function() require("snacks").zen() end,                   desc = "Toggle Zen Mode" },
-	{ "n",          "<space>Z",  function() require("snacks").zen.zoom() end,              desc = "Toggle Zoom" },
-	{ "n",          "<space>.",  function() require("snacks").scratch() end,               desc = "Toggle Scratch Buffer" },
-	{ "n",          "<space>S",  function() require("snacks").scratch.select() end,        desc = "Select Scratch Buffer" },
-	{ "n",          "<space>nh", function() require("snacks").notifier.show_history() end, desc = "Notification History" },
-	{ { "n", "v" }, "<space>gB", function() require("snacks").gitbrowse() end,             desc = "Git Browse" },
-	{ "n",          "<space>un", function() require("snacks").notifier.hide() end,         desc = "Dismiss All Notifications" },
-	{ "n",          "<space>t",  function() require("snacks").terminal() end,              desc = "Toggle Terminal" },
-	{ "n",          "<space>n",  function() require 'windows'.news_window:toggle() end,    desc = "Toggle Neovim News", },
-	{ "n",          "<space>h",  function() require 'windows'.help_window:toggle() end,    desc = "Toggle the help window", }
+	{ "n",          "<space>z",  function() require("snacks").zen() end,                   { desc = "Toggle Zen Mode" } },
+	{ "n",          "<space>Z",  function() require("snacks").zen.zoom() end,              { desc = "Toggle Zoom" } },
+	{ "n",          "<space>.",  function() require("snacks").scratch() end,               { desc = "Toggle Scratch Buffer" } },
+	{ "n",          "<space>S",  function() require("snacks").scratch.select() end,        { desc = "Select Scratch Buffer" } },
+	{ "n",          "<space>nh", function() require("snacks").notifier.show_history() end, { desc = "Notification History" } },
+	{ { "n", "v" }, "<space>gB", function() require("snacks").gitbrowse() end,             { desc = "Git Browse" } },
+	{ "n",          "<space>un", function() require("snacks").notifier.hide() end,         { desc = "Dismiss All Notifications" } },
+	{ "n",          "<space>t",  function() require("snacks").terminal() end,              { desc = "Toggle Terminal" } },
+	{ "n",          "<space>n",  function() require 'windows'.news_window:toggle() end,    { desc = "Toggle Neovim News" }, },
+	{ "n",          "<space>h",  function() require 'windows'.help_window:toggle() end,    { desc = "Toggle the help window" }, }
 }
 add_mappings_from_table(snacks_mappings)
 
