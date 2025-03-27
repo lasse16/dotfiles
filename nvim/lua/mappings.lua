@@ -12,6 +12,17 @@ end
 local silent = { silent = true }
 local silent_buffer = { buffer = true, silent = true }
 
+setmetatable(silent_buffer, {
+	__concat = function(t, other)
+		if type(other) == "table" then
+			-- Merge tables using vim.tbl_extend
+			return vim.tbl_extend("force", t, other)
+		else
+			error("Unsupported type for concatenation")
+		end
+	end
+})
+
 local function add_mappings_from_table(mappings)
 	for _, opts in pairs(mappings) do
 		map_key(unpack(opts))
