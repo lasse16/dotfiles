@@ -205,4 +205,25 @@ add_mappings_from_table(snacks_mappings)
 
 M.Snacks_keys = snacks_mappings
 
+local kalula_mappings = {
+	{ "n", "<localleader>r",  function() require('kulala').run() end,         silent_buffer .. { desc = "Run the current request" } },
+	{ "n", "<localleader>ra", function() require('kulala').run_all() end,     silent_buffer .. { desc = "Run all requests in the current buffer" } },
+	{ "n", "<localleader>rp", function() require('kulala').replay() end,      silent_buffer .. { desc = "Replay the last run request" } },
+	{ "n", "<localleader>ro", function() require('kulala').open() end,        silent_buffer .. { desc = "Open default UI in default view" } },
+	{ "n", "<localleader>k",  function() require('kulala').inspect() end,     silent_buffer .. { desc = "Inspect the current request" } },
+	{ "n", "<nop>",           function() require('kulala').show_stats() end,  silent_buffer .. { desc = "Show the statistics of the last run request" } },
+	{ "n", "<localleader>s",  function() require('kulala').scratchpad() end,  silent_buffer .. { desc = "Open the scratchpad" } },
+	{ "n", "<nop>",           function() require('kulala').copy() end,        silent_buffer .. { desc = "Copy the current request (as cURL command) to the clipboard" } },
+	{ "n", "<nop>",           function() require('kulala').from_curl() end,   silent_buffer .. { desc = "Parse the cURL command from the clipboard and write the HTTP spec into current buffer. It's useful for importing requests from other tools like browsers" } },
+	{ "n", "<localleader>rq", function() require('kulala').close() end,       silent_buffer .. { desc = "Close the kulala window and also the current buffer" } },
+	{ "n", "<nop>",           function() require('kulala').toggle_view() end, silent_buffer .. { desc = "Toggle between the body and headers view of the last run request" } },
+	{ "n", "<localleader>f",  function() require('kulala').search() end,      silent_buffer .. { desc = "Searche for all named requests in the current buffer" } },
+	{ "n", "<localleader>pr", function() require('kulala').jump_prev() end,   silent_buffer .. { desc = "Jump to the previous request" } },
+	{ "n", "<localleader>nr", function() require('kulala').jump_next() end,   silent_buffer .. { desc = "Jump to the next request" } },
+}
+M.Kalula = kalula_mappings
+function M.setup_kalula()
+	add_mappings_from_table(kalula_mappings)
+end
+
 return M
