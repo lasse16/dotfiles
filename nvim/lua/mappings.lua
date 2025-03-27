@@ -168,12 +168,12 @@ end
 
 function M.setup_markdown_mappings(bufnr)
 	local markdown_mappings = {
-		{ "n", "ds", '<Plug>(markdown_delete_emphasis)',          { silent = true, buffer = bufnr, desc = "Delete surrounding style" } },
-		{ "n", "cs", '<Plug>(markdown_change_emphasis)',          { silent = true, buffer = bufnr, desc = "Change surrounding style" } },
-		{ "n", "gl", '<Plug>(markdown_add_link)',                 { silent = true, buffer = bufnr, desc = "Add link over motion" } },
-		{ "v", "gl", '<Plug>(markdown_add_link_visual)',          { silent = true, buffer = bufnr, desc = "Add link over visual selection" } },
-		{ "n", "gx", '<Plug>(markdown_follow_link)',              { silent = true, buffer = bufnr, desc = "Follow paths and urls, paths are opened in neovim and urls in browser" } },
-		{ "n", "gX", '<Plug>(markdown_follow_link_default_app)`', { silent = true, buffer = bufnr, desc = "Follow paths and urls, everything is opened in the default app" } },
+		{ "n", "ds", '<Plug>(markdown_delete_emphasis)',          vim.tbl_extend("force", silent_buffer, { desc = "Delete surrounding style" }) },
+		{ "n", "cs", '<Plug>(markdown_change_emphasis)',          vim.tbl_extend("force", silent_buffer, { desc = "Change surrounding style" }) },
+		{ "n", "gl", '<Plug>(markdown_add_link)',                 vim.tbl_extend("force", silent_buffer, { desc = "Add link over motion" }) },
+		{ "v", "gl", '<Plug>(markdown_add_link_visual)',          vim.tbl_extend("force", silent_buffer, { desc = "Add link over visual selection" }) },
+		{ "n", "gx", '<Plug>(markdown_follow_link)',              vim.tbl_extend("force", silent_buffer, { desc = "Follow paths and urls, paths are opened in neovim and urls in browser" }) },
+		{ "n", "gX", '<Plug>(markdown_follow_link_default_app)`', vim.tbl_extend("force", silent_buffer, { desc = "Follow paths and urls, everything is opened in the default app" }) },
 	}
 	add_mappings_from_table(markdown_mappings)
 end
