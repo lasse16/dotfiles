@@ -1,4 +1,4 @@
-format = '$username$hostname$directory$git_branch$git_state$python$rust$nix_shell$line_break$time$character'
+format = '$username$hostname$directory$git_branch$git_state$python$rust$nix_shell$kubernetes$line_break$time$character'
 
 
 [username]
@@ -48,3 +48,9 @@ style = 'bright-green'
 [character]
 success_symbol = '[❯](bold cyan)'
 error_symbol = '[❯](bold red)'
+
+[kubernetes]
+format = "[]($style)[($symbol$context)](fg:black bg:$style)[]($style) "
+style = "blue"
+symbol = "󰠳 "
+disabled = false
