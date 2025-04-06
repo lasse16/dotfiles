@@ -50,7 +50,9 @@ success_symbol = '[❯](bold cyan)'
 error_symbol = '[❯](bold red)'
 
 [kubernetes]
+disabled = false
 format = "[]($style)[($symbol$context)](fg:black bg:$style)[]($style) "
 style = "blue"
 symbol = "󰠳 "
-disabled = false
+detect_files = [ '.k8s' ]
+detect_folders = [ 'charts' ]
