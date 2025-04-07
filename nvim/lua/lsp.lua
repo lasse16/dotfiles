@@ -43,6 +43,7 @@ local server_with_default_setup = {
 	"ansiblels",
 	"ts_ls",
 	"emmet_ls",
+	"kcl",
 	"taplo",
 	"nil_ls",
 	"terraformls",
