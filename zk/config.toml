@@ -16,7 +16,7 @@ extension = "md"
 # Template used to generate a note's content.
 template = "default.md"
 
-exclude = [ "*/README.md" ]
+exclude = [ "README.md" ]
 
 # MARKDOWN SETTINGS
 [format.markdown]
