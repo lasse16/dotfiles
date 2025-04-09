@@ -22,6 +22,7 @@ depends = ["environment"]
 depends = ["bash"]
 [starship]
 [rust]
+[zk]
 
 ################################################################################
 [alacritty.files]
@@ -91,3 +92,6 @@ depends = ["bash"]
 
 [volta.variables]
 "volta.home" = "~/.config/volta"
+
+[zk.files]
+"zk/config.toml" = { target = "~/.config/zk/config.toml", type = "symbolic" }
