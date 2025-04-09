@@ -1,0 +1,84 @@
+[notebook]
+dir = "~/src/notes"
+
+# NOTE SETTINGS
+[note]
+
+language = "en"
+
+default-title = "Untitled"
+
+# Template used to generate a note's filename, without extension.
+filename = "{{slug title}}"
+
+extension = "md"
+
+# Template used to generate a note's content.
+template = "default.md"
+
+exclude = [ "*/README.md" ]
+
+# MARKDOWN SETTINGS
+[format.markdown]
+# Enable support for #hashtags
+hashtags = true
+# Enable support for :colon:separated:tags:
+colon-tags = true
+
+
+# EXTERNAL TOOLS
+[tool]
+# Default shell used by aliases and commands.
+shell = "/usr/bin/env bash"
+
+# NAMED FILTERS
+[filter]
+recents = "--sort created- --created-after 'last two weeks'"
+
+# COMMAND ALIASES
+[alias]
+
+# Select a note to edit
+edit = 'zk edit --interactive "$@"'
+
+# List notes in directory
+ls = "zk list --format oneline $@"
+
+# Edit the last modified note.
+editlast = "zk edit --limit 1 --sort modified- $@"
+
+# Edit the notes selected interactively among the notes created the last two weeks.
+recent = "zk edit --sort created- --created-after 'last two weeks' --interactive"
+
+# Show a random note.
+random = "zk list --quiet --format full --sort random --limit 1"
+
+# List the file paths of all notes in the notebook
+paths = "zk list --format \"'{{path}}'\" --quiet --delimiter ' ' $@"
+
+# Send the note paths to an external command
+send-paths = "zk list --quiet --format path --delimiter0 $@ | xargs -0 "
+
+# Open local zk configuration file
+config = '$EDITOR "$ZK_NOTEBOOK_DIR/.zk/config.toml"'
+
+# LSP
+[lsp]
+[lsp.completion]
+# Label displayed in the completion pop-up for each note
+note-label = "{{title-or-path}}"
+
+# Text used as a source when filtering the completion pop-up with keystrokes
+note-filter-text = "{{title}} {{path}}"
+
+# Additional information about a completion item
+note-detail = "{{metadata}}"
+
+# Indicates whether additionalTextEdits will be used to remove the trigger characters
+use-additional-text-edits = false
+
+[lsp.diagnostics]
+# Report titles of wiki-links as hints.
+wiki-title = "hint"
+# Warn for dead links between notes.
+dead-link = "error"
