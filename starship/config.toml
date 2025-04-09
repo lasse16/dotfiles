@@ -42,7 +42,8 @@ format = '[]($style)[($version)](bold fg:black bg:$style)[]($style) '
 style = 'bright-red'
 
 [nix_shell]
-format = '[]($style)[($name:$state)](bold fg:black bg:$style)[]($style) '
+format = '[]($style)[($symbol$name:$state)](bold fg:black bg:$style)[]($style) '
+symbol = ' '
 style = 'bright-green'
 
 [character]
