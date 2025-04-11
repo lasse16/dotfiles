@@ -19,6 +19,9 @@ export EDITOR=nvim
 command -v nvim  2> /dev/null && export MANPAGER="nvim +Man!"
 {{/if}}
 
+{{#if dotter.packages.bash}}
+export SHELL=$(which bash)
+{{/if}}
 
 # Log into BitWarden
 if [ -v "$AUTHENTICATE" ]; then
