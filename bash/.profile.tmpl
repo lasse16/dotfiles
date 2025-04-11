@@ -21,20 +21,16 @@ export MANPAGER="nvim +Man!"
 
 {{#if dotter.packages.bash}}
 export SHELL=$(which bash)
+# include .bashrc if it exists
+if [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+fi
 {{/if}}
 
 # Log into BitWarden
 if [ -v "$AUTHENTICATE" ]; then
 	bw login
 	export BW_SESSION=$(bw unlock --raw)
-fi
-
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
 fi
 
 # set PATH so it includes user's private bin if it exists
