@@ -53,8 +53,8 @@ export EDITOR=vim
 export MANPAGER="vim -M +MANPAGER -"
 {{/if}}
 
-# Source cargo environment if $CARGO_HOME is set
 {{#if dotter.packages.rust}}
+# Source cargo environment if $CARGO_HOME is set
 export RUSTUP_HOME={{rust.rustup_home}}
 export CARGO_HOME={{rust.cargo_home}}
 FILE="${CARGO_HOME}/env" && test -f $FILE && source $FILE
