@@ -11,7 +11,7 @@
 # Set $DOTFILES environment repo if not already set
 export DOTFILES=${DOTFILES:=$HOME/dotfiles}
 
-export BROWSER="firefox.exe"
+export BROWSER="{{ bash.browser }}"
 
 {{#if dotter.packages.nvim}}
 # NVIM as manpager with this command

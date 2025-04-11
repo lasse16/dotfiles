@@ -33,6 +33,9 @@ depends = ["bash"]
 "bash/.inputrc" = "~/.inputrc"
 "bash/.profile.tmpl" = { target = "~/.profile", type = "template" }
 
+[bash.variables]
+"bash.browser" = "firefox"
+
 [environment.variables]
 # Replace this by future dotter built-in variable (Maybe)
 "environment.dotfile_folder" = "$DOTFILES"
