@@ -47,6 +47,7 @@ depends = ["bash"]
 "git.name" = ""
 "git.email" = ""
 "git.default_ssh_key" = ""
+"git.special-dirs" = []
 
 [gpg.variables]
 "gpg.signingKey" = ""

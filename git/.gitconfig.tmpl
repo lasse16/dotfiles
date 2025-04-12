@@ -73,11 +73,13 @@
 		{{/if}}
 
 [tag]
-{{#if dotter.packages.gpg}}
-	gpgSign = true
-		{{/if}}
+{{#if dotter.packages.gpg}} 
+    gpgSign = true 
+{{/if}}
 
-[IncludeIf "gitdir:~/src/personal/**"]
-	path = ~/src/personal/.gitconfig
+{{~#each git.special-dirs}}
+[IncludeIf "gitdir:{{this}}/**"]
+	path = {{this}}/.gitconfig {{~/each}}
+
 [trim]
 	bases = master,main
