@@ -21,3 +21,5 @@ alias tf=terraform
 alias tg=terragrunt
 
 alias g=git
+
+alias k=kubectl
