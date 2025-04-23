@@ -50,7 +50,9 @@
     cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [diff]
+    algorithm = histogram
     tool = neovim
+
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
 
