@@ -75,8 +75,11 @@ local global_mappings = {
 	{ "n", "+",              '<C-a>',                   { desc = "Increment number" } },
 	{ "n", "-",              '<C-x>',                   { desc = "Decrement number" } },
 
-	{ "n", '<C-a>',          "gg<S-v>G",                { desc = "Select entire buffer" } },
-	{ "n", '<space><space>', "<cmd>b#<CR>",             { desc = "Jump back to previous buffer" } },
+    { "n", '<C-a>',          "gg<S-v>G",                { desc = "Select entire buffer" } },
+    { "n", '<space><space>', "<cmd>b#<CR>",             { desc = "Jump back to previous buffer" } },
+
+    { "v", '<',              "<gv",                     { desc = "Keep selection after indenting" } },
+    { "v", '>',              ">gv",                     { desc = "Keep selection after indenting" } },
 }
 
 add_mappings_from_table(global_mappings)
