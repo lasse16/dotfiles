@@ -15,7 +15,7 @@ M.help_window =
 	    },
 	    show = false,
 	    wo = {
-		    signcolumn = "yes",
+		    signcolumn = "yes:9",
 		    statuscolumn = " ",
 		    conceallevel = 0,
 	    },
