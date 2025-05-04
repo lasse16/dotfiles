@@ -80,6 +80,22 @@ local global_mappings = {
 
     { "v", '<',              "<gv",                     { desc = "Keep selection after indenting" } },
     { "v", '>',              ">gv",                     { desc = "Keep selection after indenting" } },
+
+    { "n", '<space>fn',      "<cmd>enew<CR>",           { desc = "Create new file" } },
+    { "v", '<space>fn', function()
+        local start_pos = vim.fn.getpos("'<")
+        local end_pos = vim.fn.getpos("'>")
+
+        local text = vim.api.nvim_buf_get_text(0, start_pos[2] - 1, start_pos[3] - 1, end_pos[2] - 1, end_pos[3] - 1,
+            {})
+
+        local buf_id = vim.api.nvim_create_buf(true, false)
+
+        vim.api.nvim_buf_set_lines(buf_id, 0, -1, false, text)
+        vim.api.nvim_win_set_buf(0, buf_id)
+        return buf_id
+    end,
+        { desc = "Create a new file from visual selection" } },
 }
 
 add_mappings_from_table(global_mappings)
