@@ -245,4 +245,13 @@ function M.setup_kalula()
     add_mappings_from_table(kalula_mappings)
 end
 
+local help_mappings = {
+    { "n", "q", "<cmd>close<CR>", silent_buffer .. { desc = "Close current buffer" } }
+}
+
+M.help_mappings = help_mappings
+function M.setup_help_mappings()
+    add_mappings_from_table(M.help_mappings)
+end
+
 return M
