@@ -95,7 +95,17 @@ local global_mappings = {
         vim.api.nvim_win_set_buf(0, buf_id)
         return buf_id
     end,
-    { desc = "Create a new file from visual selection" } },
+        { desc = "Create a new file from visual selection" } },
+
+    { "n", '<space>fw', function()
+        vim.ui.input({ prompt = vim.uv.cwd(), completion = "file" }, function(file_name)
+            if file_name then
+                vim.api.nvim_buf_set_name(0, file_name)
+                vim.cmd("write " .. file_name)
+            end
+        end)
+    end,
+        { desc = "Write the current buffer to a file prompting for the name" } },
 }
 
 add_mappings_from_table(global_mappings)
