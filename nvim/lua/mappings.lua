@@ -259,6 +259,16 @@ local help_mappings = {
     { "n", "q", "<cmd>close<CR>", silent_buffer .. { desc = "Close current buffer" } }
 }
 
+function M.setup_schema_mappings()
+    add_mappings_from_table(M.schema_mappings)
+end
+
+M.schema_mappings = {
+    { "n", "", function() require("telescope").extensions.yaml_schema.select_schema() end,                silent_buffer .. { desc = "Select the schema for the current buffer" } },
+    { "n", "", function() require("telescope").extensions.yaml_schema.select_from_matching_schemas() end, silent_buffer .. { desc = "Select the schema from schemas matching the buffer" } },
+    { "n", "", function() require("schema-companion").get_buffer_schema() end,                            silent_buffer .. { desc = "Get the schema for the current buffer" } },
+}
+
 M.help_mappings = help_mappings
 function M.setup_help_mappings()
     add_mappings_from_table(M.help_mappings)
