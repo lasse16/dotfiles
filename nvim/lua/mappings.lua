@@ -264,9 +264,9 @@ function M.setup_schema_mappings()
 end
 
 M.schema_mappings = {
-    { "n", "", function() require("telescope").extensions.yaml_schema.select_schema() end,                silent_buffer .. { desc = "Select the schema for the current buffer" } },
-    { "n", "", function() require("telescope").extensions.yaml_schema.select_from_matching_schemas() end, silent_buffer .. { desc = "Select the schema from schemas matching the buffer" } },
-    { "n", "", function() require("schema-companion").get_buffer_schema() end,                            silent_buffer .. { desc = "Get the schema for the current buffer" } },
+    { "n", "<nop>", function() require("telescope").extensions.yaml_schema.select_schema() end,                silent_buffer .. { desc = "Select the schema for the current buffer" } },
+    { "n", "<nop>", function() require("telescope").extensions.yaml_schema.select_from_matching_schemas() end, silent_buffer .. { desc = "Select the schema from schemas matching the buffer" } },
+    { "n", "<nop>", function() require("schema-companion").get_buffer_schema() end,                            silent_buffer .. { desc = "Get the schema for the current buffer" } },
 }
 
 M.help_mappings = help_mappings
