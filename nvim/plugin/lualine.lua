@@ -5,7 +5,7 @@ require("lualine").setup({
             {
                 function()
                     local schema = require("schema-companion.context").get_buffer_schema()
-                    return ("%s"):format(schema)
+                    return ("Schema: %s"):format(schema.name)
                 end,
                 cond = function()
                     return package.loaded["schema-companion"] ~= nil
