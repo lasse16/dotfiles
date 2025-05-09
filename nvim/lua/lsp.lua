@@ -104,37 +104,6 @@ require("lspconfig")["ltex"].setup({
 	},
 })
 
-require("lspconfig").yamlls.setup({
-	on_attach = on_attach,
-	capabilites = capabilites,
-	flags = {
-		debounce_text_changes = 150,
-	},
-	settings = {
-		yaml = {
-			format =
-			{
-				enable = true
-			},
-			validate =
-			{
-				enable = true
-			},
-			completion =
-			{
-				enable = true
-			},
-			hover =
-			{
-				enable = true
-			},
-			schemaStore =
-			{
-				enable = true
-			},
-		}
-	}
-})
 
 require("lspconfig").marksman.setup({
 	on_attach = on_attach,
