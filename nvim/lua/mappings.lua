@@ -57,10 +57,10 @@ local global_mappings = {
     { "n", "ZW",             "<ESC>:update<CR>" },
 
     -- diagnostics
-    { "n", "<space>e",       vim.diagnostic.open_float, silent_buffer },
-    { "n", "[d",             vim.diagnostic.goto_prev,  silent_buffer },
-    { "n", "]d",             vim.diagnostic.goto_next,  silent_buffer },
-    { "n", "<space>q",       vim.diagnostic.setloclist, silent_buffer },
+    { "n", "<space>d",       vim.diagnostic.open_float, silent_buffer },
+    { "n", "<space>dp",             vim.diagnostic.goto_prev,  silent_buffer },
+    { "n", "<space>dn",             vim.diagnostic.goto_next,  silent_buffer },
+    { "n", "<space>dl",       vim.diagnostic.setloclist, silent_buffer },
 
     -- git
     { "n", "<space>gc",      ":G c<CR>",                silent_buffer },
