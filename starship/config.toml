@@ -1,4 +1,4 @@
-format = '$username$hostname$directory$git_branch$git_state$python$rust$nix_shell${custom.kubernetes}$line_break${custom.live-clock-icon}$time$character'
+format = '$username$hostname$directory$git_branch$git_state$python$rust$nix_shell${custom.kubernetes}$fill${custom.weather}$line_break${custom.live-clock-icon}$time$character'
 
 
 [username]
@@ -19,6 +19,9 @@ truncation_symbol = "..."
 
 repo_root_style = "bright-blue"
 style = "blue"
+
+[fill]
+symbol = " "
 
 [git_branch]
 format = "[]($style)[($symbol$branch)](fg:black bg:$style)[]($style) "
