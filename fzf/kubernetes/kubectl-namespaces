@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+namespaces ()
+{
+    local selection=$(kubectl get namespace --no-headers -o name | cut -d/ -f2 | fzf --preview "kubectl describe namespace {}" ) 
+    if [[ -n "$selection" ]]; then
+        kubectl config set-context --current --namespace="$selection"
+    fi
+}
+
+namespaces
