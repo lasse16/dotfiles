@@ -69,3 +69,9 @@ style = "blue"
 symbol = "󰠳 "
 format = "[]($style)[($symbol$output)](fg:black bg:$style)[]($style) "
 
+[custom.live-clock-icon]
+command = 'h="";echo  ${h:$(date +%H)%12:1}'
+description = "Live updating clock icon, changes hourly"
+when = true
+style = "fg:bright-blue bg:black"
+format = "[$output ]($style)"
