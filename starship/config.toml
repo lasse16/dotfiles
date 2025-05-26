@@ -82,3 +82,10 @@ description = "Live updating clock icon, changes hourly"
 when = true
 style = "fg:bright-blue bg:black"
 format = "[$output ]($style)"
+
+[custom.weather]
+description = "Weather info by wttr.in"
+command = 'curl -s wttr.in/Hamburg?format=3'
+when = true
+symbol = ''
+style = "bright-black"
