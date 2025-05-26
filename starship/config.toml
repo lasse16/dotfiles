@@ -1,4 +1,4 @@
-format = '$username$hostname$directory$git_branch$git_state$python$rust$nix_shell$kubernetes$line_break$time$character'
+format = '$username$hostname$directory$git_branch$git_state$python$rust$nix_shell${custom.kubernetes}$line_break${custom.live-clock-icon}$time$character'
 
 
 [username]
@@ -51,9 +51,21 @@ success_symbol = '[❯](bold cyan)'
 error_symbol = '[❯](bold red)'
 
 [kubernetes]
-disabled = false
+disabled = true
 format = "[]($style)[($symbol$context)](fg:black bg:$style)[]($style) "
 style = "blue"
 symbol = "󰠳 "
 detect_files = [ '.k8s' ]
 detect_folders = [ 'charts' ]
+
+[custom.kubernetes]
+command = "kubectl config current-context"
+when = '''
+test -f .k8s ||
+(git rev-parse --show-toplevel > /dev/null 2>&1 &&
+ test -f "$(git rev-parse --show-toplevel)/.k8s")
+'''
+style = "blue"
+symbol = "󰠳 "
+format = "[]($style)[($symbol$output)](fg:black bg:$style)[]($style) "
+
