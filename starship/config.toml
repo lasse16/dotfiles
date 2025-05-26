@@ -69,6 +69,13 @@ style = "blue"
 symbol = "󰠳 "
 format = "[]($style)[($symbol$output)](fg:black bg:$style)[]($style) "
 
+[custom.git_status_simplified]
+when = 'test -n "$(git status --porcelain)"'
+symbol = '●'
+style = 'yellow bold'
+format = '\[[$symbol]($style)\]'
+shell = [ 'bash' ]
+
 [custom.live-clock-icon]
 command = 'h="";echo  ${h:$(date +%H)%12:1}'
 description = "Live updating clock icon, changes hourly"
