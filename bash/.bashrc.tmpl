@@ -5,7 +5,6 @@ export DOTFILES_BASH=${DOTFILES_BASH:=$DOTFILES/bash}
 source "$DOTFILES_BASH/helpers/pathadd.bash"
 source "$DOTFILES_BASH/helpers/source_dotenv.sh"
 source "$DOTFILES_BASH/helpers/authenticate-jira.bash"
-source "$DOTFILES_BASH/helpers/curl_cache.bash"
 source "$DOTFILES_BASH/commands/env.sh"
 source "$DOTFILES_BASH/commands/nix.sh"
 source "$DOTFILES_BASH/aliases/wsl_aliases.sh"
@@ -143,3 +142,5 @@ export FORGIT_COPY_CMD="win32yank.exe -i"
 {{#if dotter.packages.git}}
 pathadd "$DOTFILES/git/helpers"
 {{/if}}
+
+pathadd "$DOTFILES_BASH/helpers/curl_cache"
