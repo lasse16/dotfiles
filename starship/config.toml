@@ -88,7 +88,7 @@ format = "[$output ]($style)"
 
 [custom.weather]
 description = "Weather info by wttr.in"
-command = 'curl -s wttr.in/Hamburg?format=3'
+command = 'curl_cache wttr.in/Hamburg?format=3'
 when = true
 symbol = ''
 style = "bright-black"
