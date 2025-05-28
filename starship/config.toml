@@ -76,6 +76,7 @@ format = "[]($style)[($symbol$output)](fg:black bg:$style)[]($style) "
 when = 'test -n "$(git status --porcelain)"'
 symbol = '●'
 style = 'yellow bold'
+require_repo = true
 format = '\[[$symbol]($style)\]'
 shell = [ 'bash' ]
 
