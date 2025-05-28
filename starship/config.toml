@@ -1,4 +1,4 @@
-format = '$username$hostname$directory$git_branch${custom.git_status_simplified}$git_state$python$rust$nix_shell${custom.kubernetes}$fill${custom.weather}$line_break${custom.live-clock-icon}$time$character'
+format = '$username$hostname$directory$git_branch${custom.git_status_simplified}${custom.git_status_simplified_closer}$git_state$python$rust$nix_shell${custom.kubernetes}$fill${custom.weather}$line_break${custom.live-clock-icon}$time$character'
 
 
 [username]
@@ -24,7 +24,7 @@ style = "blue"
 symbol = " "
 
 [git_branch]
-format = "[]($style)[($symbol$branch)](fg:black bg:$style)[]($style) "
+format = "[]($style)[($symbol$branch)](fg:black bg:$style)[ ](fg:$style bg:$style)"
 style = "cyan"
 
 [git_state]
@@ -73,12 +73,18 @@ symbol = "󰠳 "
 format = "[]($style)[($symbol$output)](fg:black bg:$style)[]($style) "
 
 [custom.git_status_simplified]
-format = "[]($style)[$symbol](fg:black bg:$style)[]($style) "
+format = "[$symbol](fg:black bg:$style)"
 when = 'test -n "$(git status --porcelain)"'
 symbol = '●'
 style = 'cyan'
 require_repo = true
 shell = [ 'bash' ]
+
+[custom.git_status_simplified_closer]
+format = "[]($style) "
+when = true
+style = 'cyan'
+require_repo = true
 
 [custom.live-clock-icon]
 command = 'h="";echo  ${h:$(date +%H)%12:1}'
