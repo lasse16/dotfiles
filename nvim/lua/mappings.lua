@@ -171,8 +171,8 @@ function M.setup_gitsigns_mappings()
         { { "n", "v" }, "<space>gs", git_signs.stage_hunk, silent_buffer .. { desc = "Stage current hunk" } },
         { "n",          "<space>gb", git_signs.blame_line, silent_buffer .. { desc = "View blame for the current line" } },
         -- git-fugitive
-        { "n",          "<space>gc", ":G c<CR>",           silent_buffer },
-        { "n",          "<space>gp", ":G push<CR>",        silent_buffer },
+        { "n",          "<space>gc", ":G c<CR>",           silent_buffer .. { desc = "Commit staged changes" } },
+        { "n",          "<space>gp", ":G push<CR>",        silent_buffer .. { desc = "Push commits" } },
     }
 
     add_mappings_from_table(signs_mappings)
