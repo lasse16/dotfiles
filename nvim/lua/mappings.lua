@@ -170,8 +170,12 @@ function M.setup_gitsigns_mappings()
     local signs_mappings = {
         { "n", "<space>gs", git_signs.stage_hunk, silent_buffer .. { desc = "Stage current hunk" } },
         { "v", "<space>gs", function() git_signs.stage_hunk({ vim.fn.line('.'), vim.fn.line('v') }) end, silent_buffer .. { desc = "Stage visual selection" } },
+        { "n", "<space>gS", git_signs.stage_buffer,                                                      silent_buffer .. { desc = "Stage current buffer" } },
+
         { "n", "<space>gr", git_signs.reset_hunk,                                                        silent_buffer .. { desc = "Restore current hunk" } },
         { "v", "<space>gr", function() git_signs.reset_hunk({ vim.fn.line('.'), vim.fn.line('v') }) end, silent_buffer .. { desc = "Restore visual selection" } },
+        { "n", "<space>gR", git_signs.reset_buffer,                                                      silent_buffer .. { desc = "Restore current buffer" } },
+
         { "n", "<space>gb", git_signs.blame_line,                                                        silent_buffer .. { desc = "View blame for the current line" } },
         -- git-fugitive
         { "n",          "<space>gc", ":G c<CR>",           silent_buffer .. { desc = "Commit staged changes" } },
