@@ -15,3 +15,4 @@ source "$DOTFILES_FZF/github_select_repo.bash"
 
 # Add subcommands by sourcing files with specific names
 pathadd "$DOTFILES_FZF/kubernetes/"
+pathadd "$DOTFILES_FZF/git/"
