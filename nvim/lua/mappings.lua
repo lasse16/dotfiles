@@ -58,9 +58,9 @@ local global_mappings = {
 
     -- diagnostics
     { "n", "<space>d",       vim.diagnostic.open_float, silent_buffer },
-    { "n", "<space>dp",             vim.diagnostic.goto_prev,  silent_buffer },
-    { "n", "<space>dn",             vim.diagnostic.goto_next,  silent_buffer },
-    { "n", "<space>dl",       vim.diagnostic.setloclist, silent_buffer },
+    { "n", "<space>dp",      vim.diagnostic.goto_prev,  silent_buffer },
+    { "n", "<space>dn",      vim.diagnostic.goto_next,  silent_buffer },
+    { "n", "<space>dl",      vim.diagnostic.setloclist, silent_buffer },
 
     -- git
     { "n", "<space>gc",      ":G c<CR>",                silent_buffer },
@@ -87,7 +87,7 @@ local global_mappings = {
         local end_pos = vim.fn.getpos("'>")
 
         local text = vim.api.nvim_buf_get_text(0, start_pos[2] - 1, start_pos[3] - 1, end_pos[2] - 1, end_pos[3] - 1,
-        {})
+            {})
 
         local buf_id = vim.api.nvim_create_buf(true, false)
 
