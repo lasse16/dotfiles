@@ -1,4 +1,4 @@
-format = '$username$hostname$directory$git_branch$git_state$python$rust$nix_shell${custom.kubernetes}$fill${custom.weather}$line_break${custom.live-clock-icon}$time$character'
+format = '$username$hostname$directory$git_branch${custom.git_status_simplified}$git_state$python$rust$nix_shell${custom.kubernetes}$fill${custom.weather}$line_break${custom.live-clock-icon}$time$character'
 
 
 [username]
