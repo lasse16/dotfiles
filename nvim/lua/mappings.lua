@@ -62,9 +62,6 @@ local global_mappings = {
     { "n", "<space>dn",      vim.diagnostic.goto_next,  silent_buffer },
     { "n", "<space>dl",      vim.diagnostic.setloclist, silent_buffer },
 
-    -- git
-    { "n", "<space>gc",      ":G c<CR>",                silent_buffer },
-    { "n", "<space>gp",      ":G push<CR>",             silent_buffer },
 
     -- 60% keyboard adjust
     { "c", "<c-j>",          "<Down>",                  { desc = "Select next command in Command mode history" } },
@@ -173,6 +170,9 @@ function M.setup_gitsigns_mappings()
     local signs_mappings = {
         { { "n", "v" }, "<space>gs", git_signs.stage_hunk, silent_buffer .. { desc = "Stage current hunk" } },
         { "n",          "<space>gb", git_signs.blame_line, silent_buffer .. { desc = "View blame for the current line" } },
+        -- git-fugitive
+        { "n",          "<space>gc", ":G c<CR>",           silent_buffer },
+        { "n",          "<space>gp", ":G push<CR>",        silent_buffer },
     }
 
     add_mappings_from_table(signs_mappings)
