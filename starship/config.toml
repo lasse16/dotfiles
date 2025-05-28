@@ -73,11 +73,11 @@ symbol = "󰠳 "
 format = "[]($style)[($symbol$output)](fg:black bg:$style)[]($style) "
 
 [custom.git_status_simplified]
+format = "[]($style)[$symbol](fg:black bg:$style)[]($style) "
 when = 'test -n "$(git status --porcelain)"'
 symbol = '●'
-style = 'yellow bold'
+style = 'cyan'
 require_repo = true
-format = '\[[$symbol]($style)\]'
 shell = [ 'bash' ]
 
 [custom.live-clock-icon]
