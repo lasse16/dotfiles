@@ -157,10 +157,10 @@ function M.setup_navigator_keybindings()
     -- Window management plugin with tmux integration and better pane resizing
     local window_key = "<C-w>"
     local tmux_navigator_mappings = {
-        map_key({ "n", "t" }, window_key .. "h", require("Navigator").left),
-        map_key({ "n", "t" }, window_key .. "j", require("Navigator").down),
-        map_key({ "n", "t" }, window_key .. "k", require("Navigator").up),
-        map_key({ "n", "t" }, window_key .. "l", require("Navigator").right),
+        { { "n", "t" }, window_key .. "h", require("Navigator").left },
+        { { "n", "t" }, window_key .. "j", require("Navigator").down },
+        { { "n", "t" }, window_key .. "k", require("Navigator").up },
+        { { "n", "t" }, window_key .. "l", require("Navigator").right },
     }
     add_mappings_from_table(tmux_navigator_mappings)
 end
