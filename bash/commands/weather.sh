@@ -3,7 +3,9 @@
 weather ()
 {
     local location=${1:-"Hamburg"}
-    curl "wttr.in/$location"
-}
+    if [[ $# -ge 1 ]]; then
+       shift
+    fi
 
-export -f weather
+    curl_cache "$@" "wttr.in/$location"
+}
