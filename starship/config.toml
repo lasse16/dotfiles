@@ -90,7 +90,7 @@ require_repo = true
 command = 'h="";echo  ${h:$(date +%H)%12:1}'
 description = "Live updating clock icon, changes hourly"
 when = true
-style = "fg:bright-blue bg:black"
+style = "fg:bright-blue"
 format = "[$output ]($style)"
 
 [custom.weather]
