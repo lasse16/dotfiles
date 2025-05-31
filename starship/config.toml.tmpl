@@ -95,7 +95,7 @@ format = "[$output ]($style)"
 
 [custom.weather]
 description = "Weather info by wttr.in"
-command = 'curl_cache wttr.in/Hamburg?format=3 | sed s/Hamburg/Home/'
+command = 'curl_cache wttr.in/{{ starship.weather-widget-home }}?format=3 | sed s/{{ starship.weather-widget-home }}/Home/'
 when = true
 symbol = ''
 style = "bright-black"

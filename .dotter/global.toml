@@ -87,6 +87,9 @@ depends = ["bash"]
 [starship.files]
 "starship/config.toml.tmpl" = { target = "~/.config/starship/starship.toml", type = "template" }
 
+[starship.variables]
+"starship.weather-widget-home" = ""
+
 [rust.variables]
 "rust.cargo_home" = "~/.cargo"
 "rust.rustup_home" = "~/.rustup"
