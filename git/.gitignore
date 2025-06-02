@@ -1,0 +1,5 @@
+# Kubernetes marker file
+.k8s
+
+# Local development setup
+.envrc
