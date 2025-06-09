@@ -12,6 +12,7 @@ source "$DOTFILES_FZF/fzf-tmux.sh"
 source "$DOTFILES_FZF/key-bindings.bash"
 source "$DOTFILES_FZF/interactive-ripgrep.bash"
 source "$DOTFILES_FZF/github_select_repo.bash"
+source "$DOTFILES_FZF/history-edit.sh"
 
 # Add subcommands by sourcing files with specific names
 pathadd "$DOTFILES_FZF/kubernetes/"
