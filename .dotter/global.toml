@@ -75,6 +75,7 @@ depends = ["bash"]
 "nvim/colors" = { target = "~/.config/nvim/colors", type = "symbolic" }
 "nvim/plugin" = { target = "~/.config/nvim/plugin", type = "symbolic" }
 "nvim/after" = { target = "~/.config/nvim/after", type = "symbolic" }
+"nvim/spell" = { target = "~/.config/nvim/spell", type = "symbolic" }
 
 [tmux.files]
 "tmux/.tmux.conf" = "~/.tmux.conf"
