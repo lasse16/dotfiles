@@ -61,6 +61,7 @@ local global_mappings = {
     { "n", "<space>dp",      vim.diagnostic.goto_prev,  silent_buffer },
     { "n", "<space>dn",      vim.diagnostic.goto_next,  silent_buffer },
     { "n", "<space>dl",      vim.diagnostic.setloclist, silent_buffer },
+    { "n", "<space>ds",      function() require("utils.diagnostics").search_diagnostic() end, silent_buffer .. { desc = "Web search the diagnostic on the current line" } },
 
 
     -- 60% keyboard adjust
