@@ -19,6 +19,8 @@ local function setup(config)
     , config or {})
 end
 
+--- Search the first diagnostic on the current line
+---@param search_engine string? The search engine to use; Must be one of the configured ones
 local function search_diagnostic(search_engine)
     local diagnostics = vim.diagnostic.get(0, { lnum = vim.api.nvim_win_get_cursor(0)[1] - 1 })
     if vim.tbl_isempty(diagnostics) then
