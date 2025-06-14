@@ -17,13 +17,13 @@ telescope.setup({
 						local selection = require("telescope.actions.state").get_selected_entry()
 						require("telescope.actions").close(prompt_bufnr)
 						if selection then
-							require('windows').help_window:show()
+							require("windows").help_window:show()
 							vim.api.nvim_command("help " .. selection.value)
 						end
-					end
-				}
-			}
-		}
+					end,
+				},
+			},
+		},
 	},
 	extensions = {
 		fzf = {
@@ -35,13 +35,13 @@ telescope.setup({
 
 		bibtex = {
 			context = true, -- parse file for bibliography: field
-		}
-	}
+		},
+	},
 })
 require("mappings").setup_telescope_mappings()
 require("commands").enable_telescope_commands()
 
-telescope.load_extension('fzf')
+telescope.load_extension("fzf")
 telescope.load_extension("bibtex")
 telescope.load_extension("luasnip")
 telescope.load_extension("lazy")

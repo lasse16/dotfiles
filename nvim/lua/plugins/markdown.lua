@@ -6,7 +6,7 @@ return {
 			mappings = false,
 			on_attach = function(bufnr)
 				require("mappings").setup_markdown_mappings(bufnr)
-			end
+			end,
 		},
 	},
 	{
@@ -52,6 +52,6 @@ return {
 					download_images = true,
 				},
 			},
-		}
+		},
 	},
 }

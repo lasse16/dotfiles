@@ -63,10 +63,10 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 
 -- Set the characters representing whitespace
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', eol = '⏎' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣", eol = "⏎" }
 
 vim.filetype.add({
 	extension = {
-		['http'] = 'http',
+		["http"] = "http",
 	},
 })

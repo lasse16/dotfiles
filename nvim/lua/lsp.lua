@@ -3,8 +3,7 @@ local on_attach = function(client, bufnr)
 
 	-- Draw hover and signature help windows with a specified border
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help,
-		{ border = "rounded" })
+	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
 
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 		underline = true,
@@ -17,7 +16,7 @@ local on_attach = function(client, bufnr)
 		virtual_text = {
 			prefix = "◁◁◁◁ ",
 		},
-		float = { border = "rounded" }
+		float = { border = "rounded" },
 	})
 
 	-- If LSP-Server can format, format on write
@@ -60,14 +59,14 @@ for _, lsp in ipairs(server_with_default_setup) do
 	})
 end
 
-require("lspconfig").harper_ls.setup {
+require("lspconfig").harper_ls.setup({
 	settings = {
 		["harper-ls"] = {
-			fileDictPath = vim.fn.getcwd() .. "dict.txt"
-		}
+			fileDictPath = vim.fn.getcwd() .. "dict.txt",
+		},
 	},
-	filetypes = { "quarto" }
-}
+	filetypes = { "quarto" },
+})
 
 require("lspconfig").nixd.setup({
 	settings = {
@@ -77,12 +76,10 @@ require("lspconfig").nixd.setup({
 			},
 			options = {
 				nixos = {
-					expr =
-					'(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.k-on.options',
+					expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.k-on.options',
 				},
 				home_manager = {
-					expr =
-					'(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations."ruixi@k-on".options',
+					expr = '(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations."ruixi@k-on".options',
 				},
 			},
 		},
@@ -104,7 +101,6 @@ require("lspconfig")["ltex"].setup({
 	},
 })
 
-
 require("lspconfig").marksman.setup({
 	on_attach = on_attach,
 	capabilites = capabilites,
@@ -121,12 +117,12 @@ require("lspconfig").ruff.setup({
 	flags = {
 		debounce_text_changes = 150,
 	},
-	trace = 'messages',
+	trace = "messages",
 	init_options = {
 		settings = {
-			logLevel = 'debug',
-		}
-	}
+			logLevel = "debug",
+		},
+	},
 })
 
 require("lspconfig").basedpyright.setup({
@@ -140,9 +136,9 @@ require("lspconfig").basedpyright.setup({
 			analysis = {
 				logLevel = "Error",
 				typeCheckingMode = "standard",
-			}
-		}
-	}
+			},
+		},
+	},
 })
 
 --Enable (broadcasting) snippet capability for completion
@@ -151,10 +147,10 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local vscode_lsps = { "cssls", "jsonls", "html" }
 for _, lsp in ipairs(vscode_lsps) do
-	require 'lspconfig'[lsp].setup {
+	require("lspconfig")[lsp].setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
-	}
+	})
 end
 
 return config

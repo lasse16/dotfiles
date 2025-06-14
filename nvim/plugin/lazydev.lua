@@ -1,5 +1,4 @@
-require("lazydev").setup({
-})
+require("lazydev").setup({})
 
 local lsp_config = require("lspconfig")
 local lsp = require("lsp")

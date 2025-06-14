@@ -1,7 +1,7 @@
 return {
 	{ "nvim-lualine/lualine.nvim" },
 	{ "stevearc/dressing.nvim" },
-	{ "folke/trouble.nvim",       branch = "main" },
+	{ "folke/trouble.nvim", branch = "main" },
 	{
 		"folke/zen-mode.nvim",
 		opts = {
@@ -9,7 +9,7 @@ return {
 				options = {
 					number = true,
 					relativenumber = true,
-					conceallevel = 0
+					conceallevel = 0,
 				},
 			},
 			plugins = {

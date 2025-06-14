@@ -1,4 +1,4 @@
-require('commander').setup({
+require("commander").setup({
 	prompt_title = "Commands",
 	components = {
 		"DESC",
@@ -9,7 +9,7 @@ require('commander').setup({
 		"DESC",
 		"KEYS",
 		"CAT",
-		"CMD"
+		"CMD",
 	},
 	integration = {
 		telescope = {
@@ -17,9 +17,9 @@ require('commander').setup({
 		},
 		lazy = {
 			enable = true,
-			set_plugin_name_as_cat = true
-		}
-	}
+			set_plugin_name_as_cat = true,
+		},
+	},
 })
 
 require("commander").add({
@@ -27,8 +27,8 @@ require("commander").add({
 		desc = "Open command palette",
 		cmd = require("commander").show,
 		keys = { "n", "<C-o>" },
-	}
+	},
 })
 
-local commands = require('commands').default_vim_commands
+local commands = require("commands").default_vim_commands
 require("commander").add(commands)

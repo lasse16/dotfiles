@@ -1,3 +1,2 @@
-require'mappings'.setup_quarto_mappings()
+require("mappings").setup_quarto_mappings()
 require("quarto").setup()
-

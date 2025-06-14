@@ -9,4 +9,4 @@ end, {
 	desc = "Display all active snippets for this buffer",
 })
 
-snip.filetype_extend("quarto", {"markdown"})
+snip.filetype_extend("quarto", { "markdown" })

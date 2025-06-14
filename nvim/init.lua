@@ -20,7 +20,7 @@ require("lazy").setup({
 	-- leave nil when passing the spec as the first argument to setup()
 	spec = {
 		{
-			import = "plugins"
+			import = "plugins",
 		},
 	},
 	rocks = {
