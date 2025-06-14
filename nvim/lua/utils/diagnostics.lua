@@ -1,15 +1,22 @@
 local M = {}
 
+---@class Config
+---@field search_engines {[string]: string}
+---@field default_engine string
+local default_config = {
+    search_engines = {
+        google = 'https://www.google.com/search?q=',
+        duck_duck_go = 'https://duckduckgo.com/?q=',
+        perplexity = "https://www.perplexity.ai/search?q=",
+        phind = "https://www.phind.com/search?q=",
+    },
+    default_engine = "google"
+}
+
+---@param config Config
 local function setup(config)
-    M.config = vim.tbl_extend('keep', {
-        search_engines = {
-            google = 'https://www.google.com/search?q=',
-            duck_duck_go = 'https://duckduckgo.com/?q=',
-            perplexity = "https://www.perplexity.ai/search?q=",
-            phind = "https://www.phind.com/search?q=",
-        },
-        default_engine = "google"
-    }, config or {})
+    M.config = vim.tbl_extend('keep', default_config
+    , config or {})
 end
 
 local function search_diagnostic(search_engine)
