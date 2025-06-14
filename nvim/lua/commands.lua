@@ -29,6 +29,13 @@ commands.default_vim_commands = {
 			vim.fn.system('gh repo view --web ' .. current_word)
 		end,
 		keys = { "n", 'gG' }
+	},
+	{
+		desc = "Web search the diagnostic",
+		cmd = function()
+			require("utils.diagnostics").setup()
+			require("utils.diagnostics").search_diagnostic()
+		end,
 	}
 }
 
