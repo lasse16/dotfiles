@@ -69,6 +69,14 @@ local global_mappings = {
 		end,
 		silent_buffer .. { desc = "Web search the diagnostic on the current line" },
 	},
+	{
+		"n",
+		"<space>s",
+		function()
+			require("utils").websearch.search_query()
+		end,
+		silent_buffer .. { desc = "Web search a query" },
+	},
 
 	-- 60% keyboard adjust
 	{

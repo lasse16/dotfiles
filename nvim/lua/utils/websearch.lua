@@ -48,4 +48,5 @@ end
 
 M.setup = setup
 M.search = search
+M.search_query = search_without_query
 return M
