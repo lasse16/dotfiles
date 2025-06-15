@@ -35,6 +35,7 @@ require("lazy").setup({
 })
 
 require("clipboard")
+require("utils")
 require("mappings")
 require("lsp")
 require("treesitter")
