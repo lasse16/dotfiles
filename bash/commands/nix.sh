@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 nix() {
 	if [[ "$1" == "packages" ]]; then
