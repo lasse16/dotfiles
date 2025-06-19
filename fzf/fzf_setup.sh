@@ -6,7 +6,7 @@ export FZF_DEFAULT_COMMAND='fd --hidden -E ".git"'
 # Uncomment when sourcing directly 
 source "$DOTFILES_FZF/marks-fzf.sh"
 source "$DOTFILES_FZF/pkgsearch-fzf.sh"
-source "$DOTFILES_FZF/tmux/tmux-url-parsing-fzf.sh"
+source "$DOTFILES_FZF/tmux/url-runner.sh"
 source "$DOTFILES_FZF/tmux/fzf-tmux.sh"
 source "$DOTFILES_FZF/tmux/list-keys.sh"
 source "$DOTFILES_FZF/key-bindings.bash"
