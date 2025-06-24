@@ -1,18 +1,14 @@
 local on_attach = function(client, bufnr)
 	require("mappings").set_lsp_keymappings()
 
-	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-		underline = true,
-		virtual_text = true,
-		signs = true,
-		update_in_insert = false,
-	})
-
 	vim.diagnostic.config({
 		virtual_text = {
 			prefix = "◁◁◁◁ ",
 		},
-		float = { border = "rounded" },
+        float = { border = "rounded" },
+        signs = true,
+        underline = true,
+        update_in_insert = false,
 	})
 
 	-- If LSP-Server can format, format on write
