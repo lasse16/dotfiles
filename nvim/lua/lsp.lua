@@ -9,6 +9,7 @@ local on_attach = function(client, bufnr)
         signs = true,
         underline = true,
         update_in_insert = false,
+        severity_sort = true
 	})
 
 	-- If LSP-Server can format, format on write
