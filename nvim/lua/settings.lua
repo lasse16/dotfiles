@@ -70,3 +70,5 @@ vim.filetype.add({
 		["http"] = "http",
 	},
 })
+
+vim.opt.winborder = "rounded"
