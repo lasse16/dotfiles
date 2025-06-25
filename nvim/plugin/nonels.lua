@@ -9,6 +9,7 @@ require("null-ls").setup({
 		builtins.formatting.yamlfmt,
 		builtins.formatting.stylelint,
 		builtins.formatting.shfmt,
+		builtins.formatting.stylua,
 		require("none-ls-shellcheck.diagnostics"),
 		require("none-ls-shellcheck.code_actions"),
 	},
