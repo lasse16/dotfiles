@@ -12,7 +12,10 @@ require("nvim-treesitter.configs").setup({
 				["af"] = { query = "@function.outer", desc = "Select outer part of a function" },
 				["if"] = { query = "@function.inner", desc = "Select inner part of a function" },
 				["ac"] = { query = "@class.outer", desc = "Select outer part of a function" },
-				["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+				["ic"] = {
+					query = "@class.inner",
+					desc = "Select inner part of a class region",
+				},
 			},
 			include_surrounding_whitespace = true,
 		},

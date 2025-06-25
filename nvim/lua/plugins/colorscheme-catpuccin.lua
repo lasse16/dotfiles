@@ -33,9 +33,15 @@ return {
 			custom_highlights = function(colors)
 				local utils = require("catppuccin.utils.colors")
 				return {
-					GitSignsStagedAdd = { fg = utils.darken(colors.green, 0.5, colors.base) },
-					GitSignsStagedChange = { fg = utils.darken(colors.yellow, 0.5, colors.base) },
-					GitSignsStagedDelete = { fg = utils.darken(colors.red, 0.5, colors.base) },
+					GitSignsStagedAdd = {
+						fg = utils.darken(colors.green, 0.5, colors.base),
+					},
+					GitSignsStagedChange = {
+						fg = utils.darken(colors.yellow, 0.5, colors.base),
+					},
+					GitSignsStagedDelete = {
+						fg = utils.darken(colors.red, 0.5, colors.base),
+					},
 				}
 			end,
 		},
