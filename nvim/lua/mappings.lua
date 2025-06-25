@@ -647,6 +647,12 @@ M.code_companion_mappings = {
         "<cmd>CodeCompanionActions<CR>",
         silent .. { desc = "View CodeCompanion actions" },
     },
+    {
+        "v",
+        "<space>cc",
+        "<cmd>CodeCompanionChat Add<CR>",
+        silent .. { desc = "Send visual selection to chat" },
+    },
 }
 
 function M.setup_code_companion_mappings()
