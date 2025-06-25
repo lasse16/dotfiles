@@ -11,6 +11,7 @@ return {
                 }
             }
         }
+            "github/copilot.vim",
     },
     dependencies = {
         "nvim-lua/plenary.nvim",
