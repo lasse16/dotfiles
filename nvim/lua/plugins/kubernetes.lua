@@ -12,7 +12,9 @@ return {
 				-- if you have telescope you can register the extension
 				enable_telescope = true,
 				matchers = {
-					require("schema-companion.matchers.kubernetes").setup({ version = "master" }),
+					require("schema-companion.matchers.kubernetes").setup({
+						version = "master",
+					}),
 				},
 			})
 			require("mappings").setup_schema_mappings()

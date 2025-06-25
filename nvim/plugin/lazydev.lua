@@ -16,13 +16,13 @@ lsp_config.lua_ls.setup({
 				-- Get the language server to recognize the `vim` global
 				globals = { "vim" },
 			},
-            hint = {
-                enable = true,
-            },
-            completion = {
-                callSnippets = "Replace",
-                keywordSnippet = "Replace",
-            },
+			hint = {
+				enable = true,
+			},
+			completion = {
+				callSnippets = "Replace",
+				keywordSnippet = "Replace",
+			},
 			workspace = {
 				-- Make the server aware of Neovim runtime files
 				library = vim.api.nvim_get_runtime_file("", true),
@@ -31,7 +31,7 @@ lsp_config.lua_ls.setup({
 			telemetry = {
 				enable = false,
 			},
-            -- Disable builtin formatter
+			-- Disable builtin formatter
 			format = {
 				enable = false,
 			},
