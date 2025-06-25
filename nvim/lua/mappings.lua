@@ -639,7 +639,13 @@ M.code_companion_mappings = {
         "n",
         "<space>cc",
         "<cmd>CodeCompanionChat Toggle<CR>",
-        silent .. { desc = "Toggle Code Companion Chat window" },
+        silent .. { desc = "Toggle CodeCompanion Chat window" },
+    },
+    {
+        "n",
+        "<space>ca",
+        "<cmd>CodeCompanionActions<CR>",
+        silent .. { desc = "View CodeCompanion actions" },
     },
 }
 
