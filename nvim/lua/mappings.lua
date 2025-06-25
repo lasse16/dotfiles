@@ -634,6 +634,19 @@ function M.setup_help_mappings()
     add_mappings_from_table(M.help_mappings)
 end
 
+M.code_companion_mappings = {
+    {
+        "n",
+        "<space>cc",
+        "<cmd>CodeCompanionChat Toggle<CR>",
+        silent .. { desc = "Toggle Code Companion Chat window" },
+    },
+}
+
+function M.setup_code_companion_mappings()
+    add_mappings_from_table(M.code_companion_mappings)
+end
+
 M.treesitter_mappings = {
     {
         { "x", "o" },
