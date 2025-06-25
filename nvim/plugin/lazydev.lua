@@ -28,6 +28,10 @@ lsp_config.lua_ls.setup({
 			telemetry = {
 				enable = false,
 			},
+            -- Disable builtin formatter
+			format = {
+				enable = false,
+			},
 		},
 	},
 })
