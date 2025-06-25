@@ -16,6 +16,9 @@ lsp_config.lua_ls.setup({
 				-- Get the language server to recognize the `vim` global
 				globals = { "vim" },
 			},
+            hint = {
+                enable = true,
+            },
             completion = {
                 callSnippets = "Replace",
                 keywordSnippet = "Replace",
