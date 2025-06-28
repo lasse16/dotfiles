@@ -29,14 +29,5 @@ return {
 			zen = { enabled = true },
 			styles = {},
 		},
-		-- open_repo = require('snacks').gitbrowse.open()
-		-- show_notifier_history = require('snacks').notifier.show_history()
-		-- hide all notifications = Snacks.notifier.hide(id|"all")
-		-- enable/disable dimming = Snacks.dim.disable()/.enable()
-		-- rename current file = Snacks.rename.rename_file()
-		-- toggle_indent_giudes = Snacks.indent.disable()/enable()
-		-- open scratch buffer = Snacks.scratch()
-		-- select scrawtch buffer = Snacks.scratch.select()
-		-- toggle terminal = Snacks.terminal.toggle(cmd, opts)
 	},
 }
