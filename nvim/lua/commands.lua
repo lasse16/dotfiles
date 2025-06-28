@@ -80,6 +80,19 @@ commands.yaml = {
 			insert_yamlls_modeline()
 		end,
 	},
+
+commands.snacks = {
+    {
+        desc = "Toggle indent guides",
+        cmd = function()
+            local Snacks = require("snacks.indent")
+            if Snacks.enabled then
+                Snacks.disable()
+            else
+                Snacks.enable()
+            end
+        end
+    }
 }
 
 return commands
