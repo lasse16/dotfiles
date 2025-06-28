@@ -423,7 +423,7 @@ local snacks_mappings = {
 	},
 	{
 		"n",
-		"<space>un",
+		"<space>nhh",
 		function()
 			require("snacks").notifier.hide()
 		end,
