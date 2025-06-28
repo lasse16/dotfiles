@@ -74,12 +74,13 @@ local function insert_yamlls_modeline()
 end
 
 commands.yaml = {
-	{
-		desc = "Insert a modeline specifying the detected schema for YAMLLS",
-		cmd = function()
-			insert_yamlls_modeline()
-		end,
-	},
+    {
+        desc = "Insert a modeline specifying the detected schema for YAMLLS",
+        cmd = function()
+            insert_yamlls_modeline()
+        end,
+    },
+}
 
 commands.snacks = {
     {

@@ -31,4 +31,6 @@ require("commander").add({
 })
 
 local commands = require("commands").default_vim_commands
+local snacks_commands = require("commands").snacks
 require("commander").add(commands)
+require("commander").add(snacks_commands)
