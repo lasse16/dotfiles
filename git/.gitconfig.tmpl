@@ -29,6 +29,8 @@
 	ls = ls-files
 	pw = preview-changes
 	root = rev-parse --show-toplevel
+    resign = rebase --exec 'git commit --amend --no-edit -n -S' -i 
+
 {{#if dotter.packages.fzf}}
 	cb = forgit checkout_branch
 {{/if}}
