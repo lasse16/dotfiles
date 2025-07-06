@@ -66,9 +66,9 @@ vim.opt.termguicolors = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣", eol = "⏎" }
 
 vim.filetype.add({
-	extension = {
-		["http"] = "http",
-	},
+    extension = {
+        ["http"] = "http",
+    },
 })
 
 vim.opt.winborder = "rounded"
