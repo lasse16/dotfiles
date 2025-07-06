@@ -647,6 +647,57 @@ function M.setup_help_mappings()
     add_mappings_from_table(M.help_mappings)
 end
 
+M.treesitter_mappings = {
+    {
+        { "x", "o" },
+        "af",
+        function()
+            require("nvim-treesitter-textobjects.select").select_textobject("@function.outer", "textobjects")
+        end,
+        silent_buffer .. { desc = "Select around function" },
+    },
+    {
+        { "x", "o" },
+        "if",
+        function()
+            require("nvim-treesitter-textobjects.select").select_textobject("@function.inner", "textobjects")
+        end,
+        silent_buffer .. { desc = "Select inner function" },
+    },
+    {
+        { "x", "o" },
+        "ac",
+        function()
+            require("nvim-treesitter-textobjects.select").select_textobject("@class.outer", "textobjects")
+        end,
+        silent_buffer .. { desc = "Select around class" },
+    },
+    {
+        { "x", "o" },
+        "ic",
+        function()
+            require("nvim-treesitter-textobjects.select").select_textobject("@class.inner", "textobjects")
+        end,
+        silent_buffer .. { desc = "Select inner class" },
+    },
+    {
+        "n",
+        "<space>ma",
+        function()
+            require("nvim-treesitter-textobjects.swap").swap_next("@parameter.inner", "textobjects")
+        end,
+        silent_buffer .. { desc = "Swap with next parameter" },
+    },
+    {
+        "n",
+        "<space>mA",
+        function()
+            require("nvim-treesitter-textobjects.swap").swap_previous("@parameter.inner", "textobjects")
+        end,
+        silent_buffer .. { desc = "Swap with previous parameter" },
+    },
+}
+
 M.rustacean_mappings = {
     {
         -- F17 is identical to <S-F5>

@@ -1,32 +1,6 @@
 require("nvim-treesitter-textobjects").setup({
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-    },
-    textobjects = {
-        select = {
-            enable = true,
-            lookahead = true,
-            keymaps = {
-                -- You can use the capture groups defined in textobjects.scm
-                ["af"] = { query = "@function.outer", desc = "Select outer part of a function" },
-                ["if"] = { query = "@function.inner", desc = "Select inner part of a function" },
-                ["ac"] = { query = "@class.outer", desc = "Select outer part of a function" },
-                ["ic"] = {
-                    query = "@class.inner",
-                    desc = "Select inner part of a class region",
-                },
-            },
-            include_surrounding_whitespace = true,
-        },
-        swap = {
-            enable = true,
-            swap_next = {
-                ["<space>ma"] = "@parameter.inner",
-            },
-            swap_previous = {
-                ["<space>mA"] = "@parameter.inner",
-            },
-        },
+    select = {
+        lookahead = true,
+        include_surrounding_whitespace = true,
     },
 })
