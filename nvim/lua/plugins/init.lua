@@ -3,10 +3,12 @@ return {
     { "neovim/nvim-lspconfig", tag = "v1.0.0" },
     {
         "nvim-treesitter/nvim-treesitter",
-        version = "0.10.0",
+        branch = "main",
+        lazy = false,
+        build = ":TSUpdate",
         dependencies = {
             "nvim-treesitter/nvim-treesitter-context",
-            "nvim-treesitter/nvim-treesitter-textobjects",
+            { "nvim-treesitter/nvim-treesitter-textobjects", branch = "main" },
         },
     },
     {
