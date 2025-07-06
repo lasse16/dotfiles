@@ -42,6 +42,10 @@ end
 
 ------------------------------------------------------
 
+M.setup = function(mappings)
+    add_mappings_from_table(mappings)
+end
+
 local global_mappings = {
     -- Move lines up and down
     { "n", "<A-j>", ":m .+1<CR>==" },
