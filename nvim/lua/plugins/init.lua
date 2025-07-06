@@ -3,7 +3,7 @@ return {
     { "neovim/nvim-lspconfig", tag = "v1.0.0" },
     {
         "nvim-treesitter/nvim-treesitter",
-        version = "0.9.2",
+        version = "0.10.0",
         dependencies = {
             "nvim-treesitter/nvim-treesitter-context",
             "nvim-treesitter/nvim-treesitter-textobjects",
