@@ -644,4 +644,14 @@ function M.setup_help_mappings()
     add_mappings_from_table(M.help_mappings)
 end
 
+M.rustacean_mappings = {
+    {
+        -- F17 is identical to <S-F5>
+        { "n", "<F17>", " :w<CR>:RustLsp runnables<CR>", silent_buffer .. { desc = "Select a runnable target" } },
+        { "n", "<F5>", " :w<CR>:RustLsp debuggables<CR>", silent_buffer .. { desc = "Select a debuggable target" } },
+        { "n", "<space>t", " :w<CR>:RustTest<CR>", silent_buffer .. { desc = "Run the test under cursor" } },
+        { "n", "<space>ta", " :w<CR>:RustTest!<CR>", silent_buffer .. { desc = "Run all test" } },
+    },
+}
+
 return M
