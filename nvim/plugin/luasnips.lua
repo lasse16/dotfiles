@@ -1,5 +1,6 @@
 local snip = require("luasnip")
 require("luasnip.loaders.from_vscode").lazy_load({ exclude = { "html", "css" } })
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
 
 -- Taken from
 -- https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#snippet-list

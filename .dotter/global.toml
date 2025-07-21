@@ -77,6 +77,7 @@ depends = ["bash"]
 "nvim/after" = { target = "~/.config/nvim/after", type = "symbolic" }
 "nvim/spell" = { target = "~/.config/nvim/spell", type = "symbolic" }
 "nvim/ftdetect" = { target = "~/.config/nvim/ftdetect", type = "symbolic" }
+"nvim/snippets" = { target = "~/.config/nvim/snippets", type = "symbolic" }
 
 [tmux.files]
 "tmux/.tmux.conf" = "~/.tmux.conf"
