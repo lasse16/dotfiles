@@ -18,7 +18,7 @@ return {
     },
     {
         "L3MON4D3/LuaSnip",
-        version = "2.2.0",
+        version = "2.4.0",
         dependencies = "lasse16/friendly-snippets",
     },
     {
