@@ -14,6 +14,10 @@ vim.opt.shortmess:append({ I = true })
 vim.opt.number = true
 vim.opt.numberwidth = 4
 
+-- Highlight current line number
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
+
 -- Disable line wrapping
 vim.opt.wrap = false
 
