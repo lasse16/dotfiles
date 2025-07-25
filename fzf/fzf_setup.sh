@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export DOTFILES_FZF=${DOTFILES_FZF:="$DOTFILES/fzf"}
-export FZF_DEFAULT_COMMAND='fd --hidden -E ".git"'
+export FZF_DEFAULT_COMMAND='fd --hidden -I -E ".git"'
 
 # Uncomment when sourcing directly 
 source "$DOTFILES_FZF/marks-fzf.sh"
