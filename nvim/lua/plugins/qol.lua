@@ -21,7 +21,10 @@ return {
             },
             lazygit = { enabled = false },
             notifier = { enabled = true },
-            picker = { enabled = false },
+            picker = {
+                enabled = true,
+                ui_select = true,
+            },
             profiler = { enabled = false },
             quickfile = { enabled = true },
             scope = { enabled = false },
