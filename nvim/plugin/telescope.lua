@@ -16,7 +16,7 @@ telescope.setup({
                     ["<CR>"] = function(prompt_bufnr)
                         local selection = require("telescope.actions.state").get_selected_entry()
                         require("telescope.actions").close(prompt_bufnr)
-                        if selection then
+                        if selection and selection.value and selection.value ~= "" then
                             require("windows").help_window:show()
                             vim.api.nvim_command("help " .. selection.value)
                         end
