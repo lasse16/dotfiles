@@ -33,7 +33,32 @@ return {
             win = { enabled = true },
             words = { enabled = false },
             zen = { enabled = true },
-            styles = {},
+            styles = {
+                lsp_rename = {
+                    backdrop = false,
+                    position = "float",
+                    border = "rounded",
+                    title_pos = "left",
+                    height = 1,
+                    width = 60,
+                    relative = "cursor",
+                    noautocmd = true,
+                    wo = {
+                        winhighlight = "NormalFloat:SnacksInputNormal,FloatBorder:SnacksInputBorder,FloatTitle:SnacksInputTitle",
+                        cursorline = false,
+                    },
+                    bo = {
+                        filetype = "snacks_input",
+                        buftype = "prompt",
+                    },
+                    keys = {
+                        n_esc = { "<esc>", { "cmp_close", "cancel" }, mode = "n", expr = true },
+                        i_esc = { "<esc>", { "cmp_close", "stopinsert" }, mode = "i", expr = true },
+                        i_cr = { "<cr>", { "cmp_accept", "confirm" }, mode = { "i", "n" }, expr = true },
+                        q = "cancel",
+                    },
+                },
+            },
         },
     },
 }
