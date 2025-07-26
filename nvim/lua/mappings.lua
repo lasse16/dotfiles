@@ -209,7 +209,7 @@ function M.set_lsp_keymappings()
         { "n", "<C-k>", vim.lsp.buf.signature_help, silent_buffer },
 
         -- Refactorings
-        { "n", "<C-r>r", vim.lsp.buf.rename, silent_buffer },
+        { "n", "<C-r>r", require("utils.lsp").rename, silent_buffer },
         { { "n", "v" }, "<C-r><space>", vim.lsp.buf.code_action, silent_buffer },
         { "n", "<C-r>f", vim.lsp.buf.format, silent_buffer },
     }
