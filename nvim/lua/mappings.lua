@@ -595,7 +595,14 @@ function M.setup_kalula()
 end
 
 M.help_mappings = {
-    { "n", "q", "<cmd>close<CR>", silent_buffer .. { desc = "Close current buffer" } },
+    {
+        "n",
+        "q",
+        function()
+            require("windows").help_window:hide()
+        end,
+        silent_buffer .. { desc = "Hide help window" },
+    },
 }
 
 function M.setup_schema_mappings()
