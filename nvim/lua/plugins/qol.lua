@@ -12,7 +12,13 @@ return {
             dim = { enabled = true },
             gitbrowse = { enabled = true },
             indent = { enabled = true },
-            input = { enabled = false },
+            input = {
+                enabled = true,
+                win = {
+                    style = "input",
+                    border = "rounded",
+                },
+            },
             lazygit = { enabled = false },
             notifier = { enabled = true },
             picker = { enabled = false },
