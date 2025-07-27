@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# [Requirement] fzf
+# Open modified and untracked files in editor with diff preview
+
+# Get modified and untracked files with fzf selection and diff preview
+git ls-files --modified --others --exclude-standard "$(git rev-parse --show-toplevel)" | \
+    fzf --multi \
+        --preview='
+            if git ls-files --error-unmatch {} 2>/dev/null; then
+                git diff --color=always {}
+            else
+                echo "=== UNTRACKED FILE ==="
+                cat {}
+            fi
+        ' \
+        --preview-window='right:60%' \
+        --bind='ctrl-a:select-all' \
+        --bind='ctrl-d:deselect-all' | \
+    xargs -r ${EDITOR:-nvim}
