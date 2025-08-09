@@ -13,8 +13,4 @@ return {
             require("mappings").setup_copilot_chat_mappings()
         end,
     },
-    {
-        "ravitemer/mcphub.nvim",
-        opts = {},
-    },
 }
