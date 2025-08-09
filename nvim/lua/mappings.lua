@@ -643,9 +643,15 @@ M.copilot_chat_mappings = {
     },
     {
         "n",
-        "<space>ca",
+        "<space>cca",
         "<cmd>CopilotChatPrompts<CR>",
         silent .. { desc = "View CopilotChat actions" },
+    },
+    {
+        "n",
+        "<space>ccm",
+        "<cmd>CopilotChatModels<CR>",
+        silent .. { desc = "Change CopilotChat model" },
     },
     -- {
     --     "v",
