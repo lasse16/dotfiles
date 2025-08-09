@@ -636,7 +636,7 @@ end
 
 M.copilot_chat_mappings = {
     {
-        "n",
+        { "n", "v" },
         "<space>cc",
         "<cmd>CopilotChatToggle<CR>",
         silent .. { desc = "Toggle CopilotChat window" },
@@ -653,12 +653,6 @@ M.copilot_chat_mappings = {
         "<cmd>CopilotChatModels<CR>",
         silent .. { desc = "Change CopilotChat model" },
     },
-    -- {
-    --     "v",
-    --     "<space>cc",
-    --     "<cmd>CopilotChatVisual<CR>",
-    --     silent .. { desc = "Send visual selection to chat" },
-    -- },
 }
 
 function M.setup_copilot_chat_mappings()
