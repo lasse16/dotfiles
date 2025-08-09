@@ -634,29 +634,29 @@ function M.setup_help_mappings()
     add_mappings_from_table(M.help_mappings)
 end
 
-M.code_companion_mappings = {
+M.copilot_chat_mappings = {
     {
         "n",
         "<space>cc",
-        "<cmd>CodeCompanionChat Toggle<CR>",
-        silent .. { desc = "Toggle CodeCompanion Chat window" },
+        "<cmd>CopilotChatToggle<CR>",
+        silent .. { desc = "Toggle CopilotChat window" },
     },
     {
         "n",
         "<space>ca",
-        "<cmd>CodeCompanionActions<CR>",
-        silent .. { desc = "View CodeCompanion actions" },
+        "<cmd>CopilotChatPrompts<CR>",
+        silent .. { desc = "View CopilotChat actions" },
     },
-    {
-        "v",
-        "<space>cc",
-        "<cmd>CodeCompanionChat Add<CR>",
-        silent .. { desc = "Send visual selection to chat" },
-    },
+    -- {
+    --     "v",
+    --     "<space>cc",
+    --     "<cmd>CopilotChatVisual<CR>",
+    --     silent .. { desc = "Send visual selection to chat" },
+    -- },
 }
 
-function M.setup_code_companion_mappings()
-    add_mappings_from_table(M.code_companion_mappings)
+function M.setup_copilot_chat_mappings()
+    add_mappings_from_table(M.copilot_chat_mappings)
 end
 
 M.treesitter_mappings = {
