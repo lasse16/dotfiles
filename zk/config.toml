@@ -28,6 +28,7 @@ colon-tags = true
 # NAMED FILTERS
 [filter]
 recents = "--sort created- --created-after 'last two weeks'"
+daily = "--sort created journal"
 
 # COMMAND ALIASES
 [alias]
@@ -56,6 +57,12 @@ send-paths = "zk list --quiet --format path --delimiter0 $@ | xargs -0 "
 # Open local zk configuration file
 config = '$EDITOR "$ZK_NOTEBOOK_DIR/.zk/config.toml"'
 
+# See the git history of selected notes
+log = "zk send-paths 'git log --patch --'"
+
+# Create a new note in the daily collection
+daily = "zk new --no-input ~/src/daily"
+
 # LSP
 [lsp]
 [lsp.completion]
@@ -76,3 +83,10 @@ use-additional-text-edits = false
 wiki-title = "hint"
 # Warn for dead links between notes.
 dead-link = "error"
+
+[group.daily]
+paths = [ "~/notes/daily"]
+
+[group.daily.note]
+default-title = "{{format-date now '%Y-%m-%d'}}"
+filename = "{{format-date now '%Y-%m-%d'}}-daily"
