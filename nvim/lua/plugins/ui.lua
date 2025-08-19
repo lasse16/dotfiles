@@ -38,6 +38,9 @@ return {
                 },
             },
             file_types = { "markdown", "copilot-chat" },
+            heading = {
+                sign = false,
+            }
         },
     },
 }
