@@ -32,6 +32,7 @@ return {
                     vim.opt_local.conceallevel = 0
                 end,
             })
+            vim.api.nvim_set_hl(0, "CopilotChatHelp", { link = "Comment" })
             require("mappings").setup_copilot_chat_mappings()
         end,
     },
