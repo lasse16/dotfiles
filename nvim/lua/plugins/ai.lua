@@ -16,6 +16,11 @@ return {
             },
             temperature = 0.1,
             auto_insert_mode = false,
+
+            -- disable ui stuff
+            highlight_headers = false,
+            separator = "---",
+            error_header = "> [!ERROR] Error",
         },
         config = function(_, opts)
             require("CopilotChat").setup(opts)
