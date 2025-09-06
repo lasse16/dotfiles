@@ -21,6 +21,15 @@ return {
             highlight_headers = false,
             separator = "---",
             error_header = "> [!ERROR] Error",
+
+            prompts = {
+                rubberduck = {
+                    prompt = "Discuss how certain features are implemented.",
+                    system_prompt = "You are a Senior Developer with Architecture experience, that is asked to look through a well-known code base.",
+                    description = "A Senior Developer to bounce ideas off."
+                }
+
+            }
         },
         config = function(_, opts)
             require("CopilotChat").setup(opts)
