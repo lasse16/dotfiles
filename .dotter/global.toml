@@ -82,6 +82,7 @@ depends = ["bash"]
 
 [opencode.files]
 "opencode/config.jsonc" = "~/.config/opencode/opencode.jsonc"
+"opencode/agents" = "~/.config/opencode/agent"
 
 [tmux.files]
 "tmux/.tmux.conf" = "~/.tmux.conf"
