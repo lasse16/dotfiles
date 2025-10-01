@@ -1,48 +1,30 @@
 return {
     {
-        "CopilotC-Nvim/CopilotChat.nvim",
+        "sudo-tee/opencode.nvim",
         branch = "main",
         dependencies = {
             { "nvim-lua/plenary.nvim" },
         },
-        ---@module 'CopilotChat'
-        ---@type CopilotChat.config.Config
+        ---@module 'opencode'
+        ---@type OpencodeConfig
         opts = {
-            debug = true,
-            model = "claude-sonnet-4",
-            window = {
-                layout = "vertical",
-                width = 0.4,
+            preferred_picker = "telescope",
+            default_global_keymaps = false,
+            default_mode = "plan",
+            debug = {
+                enabled = true,
             },
-            temperature = 0.1,
-            auto_insert_mode = false,
-
-            -- disable ui stuff
-            highlight_headers = false,
-            separator = "---",
-            error_header = "> [!ERROR] Error",
-
-            prompts = {
-                rubberduck = {
-                    prompt = "Discuss how certain features are implemented.",
-                    system_prompt = "You are a Senior Developer with Architecture experience, that is asked to look through a well-known code base.",
-                    description = "A Senior Developer to bounce ideas off."
-                }
-
-            }
+            model = "claude-sonnet-4",
+            ui = {
+                window_width = 0.4,
+                icons = {
+                    preset = "text",
+                },
+            },
         },
-        config = function(_, opts)
-            require("CopilotChat").setup(opts)
-            vim.api.nvim_create_autocmd("BufEnter", {
-                pattern = "copilot-*",
-                callback = function()
-                    vim.opt_local.relativenumber = false
-                    vim.opt_local.number = false
-                    vim.opt_local.conceallevel = 0
-                end,
-            })
-            vim.api.nvim_set_hl(0, "CopilotChatHelp", { link = "Comment" })
-            require("mappings").setup_copilot_chat_mappings()
+        config = function(opts)
+            require("opencode").setup(opts)
+            require("mappings").setup_ai_mappings()
         end,
     },
 }
