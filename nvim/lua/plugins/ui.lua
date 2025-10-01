@@ -37,7 +37,7 @@ return {
                     enabled = true,
                 },
             },
-            file_types = { "markdown", "copilot-chat" },
+            file_types = { "markdown", "opencode_output" },
             heading = {
                 sign = false,
             }
