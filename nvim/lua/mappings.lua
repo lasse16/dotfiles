@@ -634,6 +634,37 @@ function M.setup_help_mappings()
     add_mappings_from_table(M.help_mappings)
 end
 
+M.ai_mappings = {
+    {
+        { "n", "v" },
+        "<space>cc",
+        function()
+            require("opencode.api").toggle()
+        end,
+        silent .. { desc = "Toggle chat window" },
+    },
+    {
+        "n",
+        "<space>cca",
+        function()
+            require("opencode.api").select_agent()
+        end,
+        silent .. { desc = "View CopilotChat actions" },
+    },
+    {
+        "n",
+        "<space>ccm",
+        function()
+            require("opencode.api").configure_provider()
+        end,
+        silent .. { desc = "Change CopilotChat model" },
+    },
+}
+
+function M.setup_ai_mappings()
+    add_mappings_from_table(M.ai_mappings)
+end
+
 M.treesitter_mappings = {
     {
         { "x", "o" },
