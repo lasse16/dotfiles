@@ -3,16 +3,19 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    dev-envs = {
+      url = "github:lasse16/dev-envs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs }:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
-    in
-    {
-      devShells.${system}.default = with pkgs; mkShell {
-        buildInputs = [ shfmt shellcheck ];
-      };
-    };
+  outputs = {
+    self,
+    nixpkgs,
+    dev-envs,
+  }: let
+    system = "x86_64-linux";
+  in {
+    devShells.${system}.default = dev-envs.devShells.${system}.bash;
+  };
 }
