@@ -11,7 +11,6 @@ depends = ["environment"]
 [gpg]
 [himalaya]
 [khard]
-[lf]
 [nixos]
 [nvim]
 [opencode]
@@ -62,9 +61,6 @@ depends = ["bash"]
 
 [khard.files]
 "khard/khard.conf" = { target = "~/.config/khard/khard.conf", type = "symbolic" }
-
-[lf.files]
-"lf/lfrc.tmpl" = { target = "~/.config/lf/lfrc", type = "template" }
 
 [nixos.files]
 "nixos/configuration.nix" = { target = "/etc/nixos/configuration.nix", type ="symbolic" }
