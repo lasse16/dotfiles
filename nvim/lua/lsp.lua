@@ -146,4 +146,6 @@ for _, lsp in ipairs(vscode_lsps) do
     })
 end
 
+vim.lsp.enable("rumdl")
+
 return config
