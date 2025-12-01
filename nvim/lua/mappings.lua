@@ -717,7 +717,6 @@ M.treesitter_mappings = {
 }
 
 M.rustacean_mappings = {
-    {
         -- F17 is identical to <S-F5>
         { "n", "<F17>", " :w<CR>:RustLsp runnables<CR>", silent_buffer .. { desc = "Select a runnable target" } },
         { "n", "<F5>", " :w<CR>:RustLsp debuggables<CR>", silent_buffer .. { desc = "Select a debuggable target" } },
@@ -739,7 +738,6 @@ M.rustacean_mappings = {
             end,
             silent_buffer .. { desc = "Display the diagnostic" },
         },
-    },
 }
 
 return M
