@@ -219,7 +219,20 @@ function M.set_debugger_keymappings()
         { "n", "<F12>", require("dap").step_out, silent },
         { "n", "<space>b", require("dap").toggle_breakpoint, silent },
         { "n", "<space>B", require("dap").set_breakpoint, silent },
-        { "n", "<space>lp", require("dap").set_breakpoint, silent },
+        {
+            "n",
+            "<space>bl",
+            function()
+                require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+            end,
+        },
+        {
+            "n",
+            "<space>bc",
+            function()
+                require("dap").set_breakpoint(vim.fn.input("Condition: "))
+            end,
+        },
         { "n", "<space>dr", require("dap").repl.open, silent },
         { "n", "<space>dl", require("dap").run_last, silent },
     }
