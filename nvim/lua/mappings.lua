@@ -730,27 +730,27 @@ M.treesitter_mappings = {
 }
 
 M.rustacean_mappings = {
-        -- F17 is identical to <S-F5>
-        { "n", "<F17>", " :w<CR>:RustLsp runnables<CR>", silent_buffer .. { desc = "Select a runnable target" } },
-        { "n", "<F5>", " :w<CR>:RustLsp debuggables<CR>", silent_buffer .. { desc = "Select a debuggable target" } },
-        { "n", "<space>t", " :w<CR>:RustTest<CR>", silent_buffer .. { desc = "Run the test under cursor" } },
-        { "n", "<space>ta", " :w<CR>:RustTest!<CR>", silent_buffer .. { desc = "Run all test" } },
-        {
-            "n",
-            "<space>k",
-            function()
-                vim.cmd.RustLsp("openDocs")
-            end,
-            silent_buffer .. { desc = "Open the external documentation" },
-        },
-        {
-            "n",
-            "<space>d",
-            function()
-                vim.cmd.RustLsp("renderDiagnostic")
-            end,
-            silent_buffer .. { desc = "Display the diagnostic" },
-        },
+    -- F17 is identical to <S-F5>
+    { "n", "<F17>", " :w<CR>:RustLsp runnables<CR>", silent_buffer .. { desc = "Select a runnable target" } },
+    { "n", "<F5>", " :w<CR>:RustLsp debuggables<CR>", silent_buffer .. { desc = "Select a debuggable target" } },
+    { "n", "<space>t", " :w<CR>:RustTest<CR>", silent_buffer .. { desc = "Run the test under cursor" } },
+    { "n", "<space>ta", " :w<CR>:RustTest!<CR>", silent_buffer .. { desc = "Run all test" } },
+    {
+        "n",
+        "<space>k",
+        function()
+            vim.cmd.RustLsp("openDocs")
+        end,
+        silent_buffer .. { desc = "Open the external documentation" },
+    },
+    {
+        "n",
+        "<space>d",
+        function()
+            vim.cmd.RustLsp("renderDiagnostic")
+        end,
+        silent_buffer .. { desc = "Display the diagnostic" },
+    },
 }
 
 return M
