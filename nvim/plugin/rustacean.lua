@@ -14,6 +14,10 @@ local rust_analyzer_opts = {
             checkOnSave = {
                 command = "clippy",
             },
+            -- https://github.com/rust-lang/rust-analyzer/issues/20051
+            cargo = {
+                extraEnv = { RUSTUP_TOOLCHAIN = "stable" },
+            },
         },
     },
 }
