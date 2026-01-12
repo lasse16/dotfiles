@@ -3,11 +3,16 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
         priority = 1000,
+        ---@type  CatppuccinOptions
         opts = {
             flavour = "mocha", -- latte, frappe, macchiato, mocha
             background = { -- :h background
                 light = "latte",
                 dark = "mocha",
+            },
+            float = {
+                transparent = true,
+                solid = false,
             },
             transparent_background = true, -- disables setting the background color.
             show_end_of_buffer = true, -- shows the '~' characters after the end of buffers
