@@ -8,7 +8,6 @@ require("null-ls").setup({
         builtins.diagnostics.stylelint,
         builtins.code_actions.gitsigns,
         builtins.code_actions.refactoring,
-        builtins.formatting.stylelint,
         require("none-ls-shellcheck.diagnostics"),
         require("none-ls-shellcheck.code_actions"),
     },

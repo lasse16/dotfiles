@@ -7,6 +7,7 @@ return {
             lua = { "stylua" },
             yaml = { "yamlfmt" },
             bash = { "shfmt" },
+            css = { "stylelint" },
             ["_"] = { "trim_whitespace" },
         },
         default_format_opts = {
