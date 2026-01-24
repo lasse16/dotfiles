@@ -75,6 +75,7 @@ depends = ["bash"]
 "nvim/spell" = { target = "~/.config/nvim/spell", type = "symbolic" }
 "nvim/ftdetect" = { target = "~/.config/nvim/ftdetect", type = "symbolic" }
 "nvim/snippets" = { target = "~/.config/nvim/snippets", type = "symbolic" }
+"nvim/lazy-lock.json" = { target = "~/.config/nvim/lazy-lock.json", type = "symbolic" }
 
 [opencode.files]
 "opencode/config.jsonc" = "~/.config/opencode/opencode.jsonc"
