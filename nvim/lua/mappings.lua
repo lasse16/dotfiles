@@ -205,7 +205,7 @@ function M.set_lsp_keymappings()
         -- Refactorings
         { "n", "<C-r>r", require("utils.lsp").rename, silent_buffer },
         { { "n", "v" }, "<C-r><space>", vim.lsp.buf.code_action, silent_buffer },
-        { "n", "<C-r>f", vim.lsp.buf.format, silent_buffer },
+        { "n", "<C-r>f", require("conform").format, silent_buffer },
     }
 
     add_mappings_from_table(lsp_mappings)
@@ -750,17 +750,6 @@ M.rustacean_mappings = {
             vim.cmd.RustLsp("renderDiagnostic")
         end,
         silent_buffer .. { desc = "Display the diagnostic" },
-    },
-}
-
-M.conform_mappings = {
-    {
-        "n",
-        "<C-r>f",
-        function()
-            require("conform").format()
-        end,
-        silent_buffer .. { desc = "Format current buffer with setup linters or fallback to LSP" },
     },
 }
 
