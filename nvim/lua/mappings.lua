@@ -753,4 +753,15 @@ M.rustacean_mappings = {
     },
 }
 
+M.conform_mappings = {
+    {
+        "n",
+        "<C-r>f",
+        function()
+            require("conform").format()
+        end,
+        silent_buffer .. { desc = "Format current buffer with setup linters or fallback to LSP" },
+    },
+}
+
 return M
