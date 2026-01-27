@@ -6,9 +6,13 @@ local commander = require("commander")
 ---@param command Command
 ---@return CommanderItem
 local function convert(command)
+    local desc = nil
+    if command.opts then
+        desc = command.opts.desc or nil
+    end
     local converted_command = {
         cmd = command.cmd,
-        desc = command.opts.desc or nil,
+        desc = desc,
     }
     return converted_command
 end
