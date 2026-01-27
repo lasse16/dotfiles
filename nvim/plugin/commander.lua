@@ -13,6 +13,7 @@ local function convert(command)
     local converted_command = {
         cmd = command.cmd,
         desc = desc,
+        keys = command.keys or nil,
     }
     return converted_command
 end
