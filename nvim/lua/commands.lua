@@ -3,10 +3,6 @@
 ---@field cmd fun(args: vim.api.keyset.create_user_command.command_args?) Replacement command to execute when this user command is executed
 ---@field opts? vim.api.keyset.user_command Optional command flags
 
-vim.cmd([[
-	command DiffOrig vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis | wincmd p | diffthis
-	]])
-
 commands = {}
 
 ---- utils -----
