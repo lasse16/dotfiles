@@ -1,6 +1,6 @@
 ---@class Command
 ---@field name string  Name of the new user command. Must begin with an uppercase letter.
----@field cmd fun(args: vim.api.keyset.create_user_command.command_args) Replacement command to execute when this user command is executed
+---@field cmd fun(args: vim.api.keyset.create_user_command.command_args?) Replacement command to execute when this user command is executed
 ---@field opts? vim.api.keyset.user_command Optional command flags
 
 vim.cmd([[
@@ -120,7 +120,7 @@ commands.formatting = {
         name = "Format",
         cmd = function(args)
             local range = nil
-            if args.count ~= -1 then
+            if args and args.count ~= -1 then
                 local end_line = vim.api.nvim_buf_get_lines(0, args.line2 - 1, args.line2, true)[1]
                 range = {
                     start = { args.line1, 0 },
