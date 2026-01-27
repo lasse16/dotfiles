@@ -107,9 +107,11 @@ commands.yaml = {
     },
 }
 
+---@type Command[]
 commands.snacks = {
     {
-        desc = "Toggle indent guides",
+        name = "ToggleIndentGuides",
+        opts = { desc = "Toggle indent guides" },
         cmd = function()
             local Snacks = require("snacks.indent")
             if Snacks.enabled then

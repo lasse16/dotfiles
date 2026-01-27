@@ -50,5 +50,5 @@ commander.add({
 })
 
 commander.add(map(commands.default_vim_commands, convert))
-commander.add(commands.snacks)
+commander.add(map(commands.snacks, convert))
 commander.add(map(commands.formatting, convert))
