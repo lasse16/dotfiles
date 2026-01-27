@@ -1,3 +1,7 @@
+local map = require("utils.map").map
+local commands = require("commands")
+local commander = require("commander")
+
 ---Convert a UserCommand to a CommanderItem
 ---@param command Command
 ---@return CommanderItem
@@ -9,7 +13,7 @@ local function convert(command)
     return converted_command
 end
 
-require("commander").setup({
+commander.setup({
     prompt_title = "Commands",
     components = {
         "DESC",
@@ -33,7 +37,7 @@ require("commander").setup({
     },
 })
 
-require("commander").add({
+commander.add({
     {
         desc = "Open command palette",
         cmd = require("commander").show,
@@ -42,7 +46,5 @@ require("commander").add({
 })
 
 local commands = require("commands").default_vim_commands
-local snacks_commands = require("commands").snacks
-require("commander").add(commands)
-require("commander").add(snacks_commands)
-require("commander").add(require("utils.map").map(require("commands").formatting, convert))
+commander.add(commands.snacks)
+commander.add(map(commands.formatting, convert))
