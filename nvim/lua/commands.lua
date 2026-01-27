@@ -143,6 +143,31 @@ commands.formatting = {
             range = true,
         },
     },
+    {
+        name = "FormatDisable",
+        cmd = function(args)
+            if args and args.bang then
+                -- FormatDisable! will disable formatting just for this buffer
+                vim.b.disable_autoformat = true
+            else
+                vim.g.disable_autoformat = true
+            end
+        end,
+        opts = {
+            desc = "Disable auto-formatting",
+            bang = true,
+        },
+    },
+    {
+        name = "FormatEnable",
+        cmd = function()
+            vim.b.disable_autoformat = false
+            vim.g.disable_autoformat = false
+        end,
+        opts = {
+            desc = "Enable auto-formatting",
+        },
+    },
 }
 
 register_commands(commands.default_vim_commands)
