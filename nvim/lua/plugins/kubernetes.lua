@@ -17,7 +17,6 @@ return {
                     }),
                 },
             })
-            require("mappings").setup_schema_mappings()
             local config = require("lsp")
             require("lspconfig").yamlls.setup(require("schema-companion").setup_client({
                 on_attach = config.on_attach,

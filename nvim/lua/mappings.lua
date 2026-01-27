@@ -612,10 +612,6 @@ M.help_mappings = {
     },
 }
 
-function M.setup_schema_mappings()
-    add_mappings_from_table(M.schema_mappings)
-end
-
 M.schema_mappings = {
     {
         "n",
