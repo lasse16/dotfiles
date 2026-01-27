@@ -25,7 +25,8 @@ commands.default_vim_commands = {
     {
         desc = "Look for repo on github",
         cmd = function()
-            local current_word = vim.fn.expand("<cWORD>"):gsub("[^%w_/-.]", "")
+            local current_word = vim.fn.expand("<cWORD>"):gsub("[^%w_/.-]", "")
+            vim.notify(string.format("Looking for `%s` on Github ", current_word), "info")
             vim.fn.system("gh repo view --web " .. current_word)
         end,
         keys = { "n", "gG" },
