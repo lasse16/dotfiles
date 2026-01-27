@@ -135,4 +135,7 @@ commands.formatting = {
         },
     },
 }
+
+register_commands(commands.formatting)
+
 return commands
