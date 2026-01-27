@@ -1,3 +1,14 @@
+---Convert a UserCommand to a CommanderItem
+---@param command Command
+---@return CommanderItem
+local function convert(command)
+    local converted_command = {
+        cmd = command.cmd,
+        desc = command.opts.desc or nil,
+    }
+    return converted_command
+end
+
 require("commander").setup({
     prompt_title = "Commands",
     components = {
@@ -34,3 +45,4 @@ local commands = require("commands").default_vim_commands
 local snacks_commands = require("commands").snacks
 require("commander").add(commands)
 require("commander").add(snacks_commands)
+require("commander").add(require("utils.map").map(require("commands").formatting, convert))
