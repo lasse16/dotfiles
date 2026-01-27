@@ -49,6 +49,6 @@ commander.add({
     },
 })
 
-local commands = require("commands").default_vim_commands
+commander.add(map(commands.default_vim_commands, convert))
 commander.add(commands.snacks)
 commander.add(map(commands.formatting, convert))

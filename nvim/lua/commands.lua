@@ -21,13 +21,19 @@ end
 
 -----------------
 
+---@type Command[]
 commands.default_vim_commands = {
     {
-        desc = "Diff to original file",
-        cmd = "<CMD>vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis | wincmd p | diffthis<CR>",
+        name = "DiffOrig",
+        cmd = function()
+            vim.cmd([[ vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis | wincmd p | diffthis ]])
+        end,
+        opts = {
+            desc = "Diff to original file",
+        },
     },
     {
-        desc = "Move selection to different file",
+        name = "WriteSelection",
         cmd = function()
             vim.ui.input({ prompt = "File: " }, function(input)
                 if input ~= nil and input ~= "" then
@@ -37,23 +43,28 @@ commands.default_vim_commands = {
                 end
             end)
         end,
+        opts = {
+            desc = "Move selection to different file",
+        },
         keys = { "v", "<C-r>m" },
     },
     {
-        desc = "Look for repo on github",
+        name = "RepoLookUp",
         cmd = function()
             local current_word = vim.fn.expand("<cWORD>"):gsub("[^%w_/.-]", "")
             vim.notify(string.format("Looking for `%s` on Github ", current_word), "info")
             vim.fn.system("gh repo view --web " .. current_word)
         end,
+        opts = { desc = "Look for repo on github" },
         keys = { "n", "gG" },
     },
     {
-        desc = "Web search the diagnostic",
+        name = "WebSearch",
         cmd = function()
             require("utils.diagnostics").setup()
             require("utils.diagnostics").search_diagnostic()
         end,
+        opts = { desc = "Web search the diagnostic" },
     },
 }
 
@@ -136,6 +147,7 @@ commands.formatting = {
     },
 }
 
+register_commands(commands.default_vim_commands)
 register_commands(commands.formatting)
 
 return commands
