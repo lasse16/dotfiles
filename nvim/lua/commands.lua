@@ -9,6 +9,18 @@ vim.cmd([[
 
 commands = {}
 
+---- utils -----
+
+---@param commands Command[]
+--- Register commands as UserCommands *|user-commands|*
+local function register_commands(commands)
+    for _, command in ipairs(commands) do
+        vim.api.nvim_create_user_command(command.name, command.cmd, command.opts or {})
+    end
+end
+
+-----------------
+
 commands.default_vim_commands = {
     {
         desc = "Diff to original file",
