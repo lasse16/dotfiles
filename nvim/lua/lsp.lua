@@ -29,7 +29,7 @@ for _, server in pairs(servers_to_enable) do
     vim.lsp.enable(server)
 end
 
-require("lspconfig").harper_ls.setup({
+vim.lsp.config("harper_ls", {
     settings = {
         ["harper-ls"] = {
             fileDictPath = vim.fn.getcwd() .. "dict.txt",
@@ -38,7 +38,7 @@ require("lspconfig").harper_ls.setup({
     filetypes = { "quarto" },
 })
 
-require("lspconfig").nixd.setup({
+vim.lsp.config("nixd", {
     settings = {
         nixd = {
             formatting = {
@@ -55,7 +55,7 @@ require("lspconfig").nixd.setup({
         },
     },
 })
-require("lspconfig")["ltex"].setup({
+vim.lsp.config("ltex", {
     flags = {
         debounce_text_changes = 150,
     },
@@ -69,7 +69,7 @@ require("lspconfig")["ltex"].setup({
     },
 })
 
-require("lspconfig").marksman.setup({
+vim.lsp.config("marksman", {
     flags = {
         debounce_text_changes = 150,
     },
@@ -77,7 +77,7 @@ require("lspconfig").marksman.setup({
     root_dir = require("lspconfig.util").root_pattern(".git", ".marksman.toml", "_quarto.yml"),
 })
 
-require("lspconfig").ruff.setup({
+vim.lsp.config("ruff", {
     flags = {
         debounce_text_changes = 150,
     },
@@ -89,7 +89,7 @@ require("lspconfig").ruff.setup({
     },
 })
 
-require("lspconfig").basedpyright.setup({
+vim.lsp.config("basedpyright", {
     flags = {
         debounce_text_changes = 150,
     },
