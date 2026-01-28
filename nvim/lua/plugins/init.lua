@@ -37,7 +37,6 @@ return {
         ft = "quarto",
         dependencies = { "jmbuhr/otter.nvim" },
     },
-    { "folke/lazydev.nvim" },
     -- additional features
     { "junegunn/vim-easy-align" },
     { "tpope/vim-surround" },
