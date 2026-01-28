@@ -4,8 +4,6 @@ local lsp_config = require("lspconfig")
 local lsp = require("lsp")
 
 lsp_config.lua_ls.setup({
-    on_attach = lsp.on_attach,
-    capabilities = lsp.capabilities,
     settings = {
         Lua = {
             runtime = {
