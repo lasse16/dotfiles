@@ -30,6 +30,7 @@ local servers_to_enable = {
     "ruff",
     "basedpyright",
     "lua_ls",
+    "yamlls",
 }
 
 for _, server in pairs(servers_to_enable) do
@@ -139,6 +140,28 @@ vim.lsp.config("lua_ls", {
             -- Disable builtin formatter
             format = {
                 enable = false,
+            },
+        },
+    },
+})
+
+vim.lsp.config("yamlls", {
+    settings = {
+        yaml = {
+            format = {
+                enable = false,
+            },
+            validate = {
+                enable = true,
+            },
+            completion = {
+                enable = true,
+            },
+            hover = {
+                enable = true,
+            },
+            schemaStore = {
+                enable = true,
             },
         },
     },
