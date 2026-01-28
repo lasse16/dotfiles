@@ -33,7 +33,6 @@
   "quarto-nvim": { "branch": "main", "commit": "a6e7452de5944f7f38a4b12f1d50e460c1dccd95" },
   "render-markdown.nvim": { "branch": "main", "commit": "8314d14b9f56306bc876fb3b386f31dc8c5a2711" },
   "rustaceanvim": { "branch": "master", "commit": "047f9c9d8cd2861745eb9de6c1570ee0875aa795" },
-  "schema-companion.nvim": { "branch": "main", "commit": "9a8cbeb9429958524331f49a4bd9c25cfbc2c208" },
   "smart-splits.nvim": { "branch": "master", "commit": "5442c06d2003a342c27213e580f58af8ddd577c4" },
   "snacks.nvim": { "branch": "main", "commit": "fe7cfe9800a182274d0f868a74b7263b8c0c020b" },
   "targets.vim": { "branch": "master", "commit": "6325416da8f89992b005db3e4517aaef0242602e" },

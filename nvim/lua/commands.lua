@@ -170,37 +170,6 @@ commands.formatting = {
     },
 }
 
----@type Command[]
-commands.schema = {
-    {
-        name = "SelectSchema",
-        cmd = function()
-            require("schema-companion").select_schema()
-        end,
-        opts = {
-            desc = "Select the schema for the current buffer",
-        },
-    },
-    {
-        name = "SelectMatchingSchema",
-        cmd = function()
-            require("schema-companion").select_from_matching_schemas()
-        end,
-        opts = {
-            desc = "Select the schema from schemas matching the buffer",
-        },
-    },
-    {
-        name = "GetBufferSchema",
-        cmd = function()
-            require("schema-companion").get_current_schemas()
-        end,
-        opts = {
-            desc = "Get the schema for the current buffer",
-        },
-    },
-}
-
 register_commands(commands.default_vim_commands)
 register_commands(commands.formatting)
 

@@ -601,33 +601,6 @@ function M.setup_kalula()
     add_mappings_from_table(kalula_mappings)
 end
 
-M.schema_mappings = {
-    {
-        "n",
-        "<nop>",
-        function()
-            require("telescope").extensions.yaml_schema.select_schema()
-        end,
-        silent_buffer .. { desc = "Select the schema for the current buffer" },
-    },
-    {
-        "n",
-        "<nop>",
-        function()
-            require("telescope").extensions.yaml_schema.select_from_matching_schemas()
-        end,
-        silent_buffer .. { desc = "Select the schema from schemas matching the buffer" },
-    },
-    {
-        "n",
-        "<nop>",
-        function()
-            require("schema-companion").get_buffer_schema()
-        end,
-        silent_buffer .. { desc = "Get the schema for the current buffer" },
-    },
-}
-
 M.ai_mappings = {
     {
         { "n", "v" },
