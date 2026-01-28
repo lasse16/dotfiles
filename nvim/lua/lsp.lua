@@ -1,33 +1,14 @@
-local on_attach = function(client, bufnr)
-    require("mappings").set_lsp_keymappings()
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("my.lsp", {}),
+    callback = function(args)
+        require("mappings").set_lsp_keymappings()
+        local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
-    vim.diagnostic.config({
-        virtual_text = {
-            prefix = "◁◁◁◁ ",
-        },
-        float = { border = "rounded" },
-        signs = true,
-        underline = true,
-        update_in_insert = false,
-        severity_sort = true,
-    })
-
-    -- If LSP-Server can format, format on write
-    if client.server_capabilities.document_formatting then
-        vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-    end
-
-    vim.lsp.inlay_hint.enable(true)
-end
-
--- Setup completion engine
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
-
-config = {
-    on_attach = on_attach,
-    capabilites = capabilities,
-}
+        if client:supports_method("textDocument/inlayHints") then
+            vim.lsp.inlay_hint.enable(true)
+        end
+    end,
+})
 
 -- Setup default config for specified servers
 local server_with_default_setup = {
@@ -79,8 +60,6 @@ require("lspconfig").nixd.setup({
     },
 })
 require("lspconfig")["ltex"].setup({
-    on_attach = on_attach,
-    capabilites = capabilites,
     flags = {
         debounce_text_changes = 150,
     },
@@ -95,8 +74,6 @@ require("lspconfig")["ltex"].setup({
 })
 
 require("lspconfig").marksman.setup({
-    on_attach = on_attach,
-    capabilites = capabilites,
     flags = {
         debounce_text_changes = 150,
     },
@@ -105,8 +82,6 @@ require("lspconfig").marksman.setup({
 })
 
 require("lspconfig").ruff.setup({
-    on_attach = on_attach,
-    capabilites = capabilites,
     flags = {
         debounce_text_changes = 150,
     },
@@ -119,8 +94,6 @@ require("lspconfig").ruff.setup({
 })
 
 require("lspconfig").basedpyright.setup({
-    on_attach = on_attach,
-    capabilites = capabilites,
     flags = {
         debounce_text_changes = 150,
     },

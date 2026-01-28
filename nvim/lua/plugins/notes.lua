@@ -8,11 +8,6 @@ return {
                     enabled = true,
                     filetypes = { "markdown" },
                 },
-                lsp = {
-                    config = {
-                        on_attach = require("lsp").on_attach,
-                    },
-                },
             })
         end,
     },
