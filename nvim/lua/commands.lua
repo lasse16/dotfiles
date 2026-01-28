@@ -175,7 +175,7 @@ commands.schema = {
     {
         name = "SelectSchema",
         cmd = function()
-            require("telescope").extensions.yaml_schema.select_schema()
+            require("schema-companion").select_schema()
         end,
         opts = {
             desc = "Select the schema for the current buffer",
@@ -184,7 +184,7 @@ commands.schema = {
     {
         name = "SelectMatchingSchema",
         cmd = function()
-            require("telescope").extensions.yaml_schema.select_from_matching_schemas()
+            require("schema-companion").select_from_matching_schemas()
         end,
         opts = {
             desc = "Select the schema from schemas matching the buffer",
@@ -193,7 +193,7 @@ commands.schema = {
     {
         name = "GetBufferSchema",
         cmd = function()
-            require("schema-companion").get_buffer_schema()
+            require("schema-companion").get_current_schemas()
         end,
         opts = {
             desc = "Get the schema for the current buffer",
