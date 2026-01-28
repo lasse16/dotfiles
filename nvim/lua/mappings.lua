@@ -601,17 +601,6 @@ function M.setup_kalula()
     add_mappings_from_table(kalula_mappings)
 end
 
-M.help_mappings = {
-    {
-        "n",
-        "q",
-        function()
-            require("windows").help_window:hide()
-        end,
-        silent_buffer .. { desc = "Hide help window" },
-    },
-}
-
 M.schema_mappings = {
     {
         "n",
@@ -638,10 +627,6 @@ M.schema_mappings = {
         silent_buffer .. { desc = "Get the schema for the current buffer" },
     },
 }
-
-function M.setup_help_mappings()
-    add_mappings_from_table(M.help_mappings)
-end
 
 M.ai_mappings = {
     {
