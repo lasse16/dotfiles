@@ -23,14 +23,9 @@ local server_with_default_setup = {
     "tflint",
     "gopls",
 }
-for _, lsp in ipairs(server_with_default_setup) do
-    require("lspconfig")[lsp].setup({
-        on_attach = on_attach,
-        capabilites = capabilites,
-        flags = {
-            debounce_text_changes = 150,
-        },
-    })
+
+for _, server in pairs(server_with_default_setup) do
+    vim.lsp.enable(server)
 end
 
 require("lspconfig").harper_ls.setup({
