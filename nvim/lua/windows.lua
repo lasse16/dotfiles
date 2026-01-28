@@ -18,6 +18,11 @@ M.help_window = require("snacks").win({
         statuscolumn = " ",
         conceallevel = 0,
     },
+    keys = {
+        q = function(self)
+            self:hide()
+        end,
+    },
 })
 
 -- TODO: Fix windows creating each other
