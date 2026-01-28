@@ -136,17 +136,6 @@ require("lspconfig").basedpyright.setup({
 
 vim.lsp.enable("rumdl")
 
---Enable (broadcasting) snippet capability for completion
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-local vscode_lsps = { "cssls", "jsonls", "html" }
-for _, lsp in ipairs(vscode_lsps) do
-    require("lspconfig")[lsp].setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-    })
-end
 
 vim.lsp.enable("rumdl")
 
