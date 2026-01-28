@@ -42,5 +42,6 @@ require("lsp")
 require("treesitter")
 require("nvim-dap")
 require("commands")
+require("diagnostics")
 
 vim.cmd("colorscheme catppuccin-macchiato")
