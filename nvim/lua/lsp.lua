@@ -22,6 +22,7 @@ local server_with_default_setup = {
     "terraformls",
     "tflint",
     "gopls",
+    "rumdl",
 }
 
 for _, server in pairs(server_with_default_setup) do
@@ -101,10 +102,3 @@ require("lspconfig").basedpyright.setup({
         },
     },
 })
-
-vim.lsp.enable("rumdl")
-
-
-vim.lsp.enable("rumdl")
-
-return config
