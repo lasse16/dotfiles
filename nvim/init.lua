@@ -23,6 +23,7 @@ require("lazy").setup({
             import = "plugins",
         },
     },
+    lockfile = vim.fs.joinpath(vim.fn.expand("$DOTFILES"), "nvim/lazy-lock.json"),
     rocks = {
         enabled = false,
     },
