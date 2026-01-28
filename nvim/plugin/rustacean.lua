@@ -1,8 +1,4 @@
-local config = require("lsp")
-
 local rust_analyzer_opts = {
-    on_attach = config.on_attach,
-    capabilities = config.capabilities,
     flags = {
         debounce_text_changes = 200,
     },
