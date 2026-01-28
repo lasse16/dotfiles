@@ -1,6 +1,6 @@
 return {
     -- core neovim features
-    { "neovim/nvim-lspconfig", tag = "v2.5.0" },
+    { "neovim/nvim-lspconfig" },
     {
         "nvim-treesitter/nvim-treesitter",
         branch = "main",
