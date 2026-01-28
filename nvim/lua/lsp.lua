@@ -23,6 +23,12 @@ local servers_to_enable = {
     "tflint",
     "gopls",
     "rumdl",
+    "harper_ls",
+    "nixd",
+    "ltex",
+    "marksman",
+    "ruff",
+    "basedpyright",
 }
 
 for _, server in pairs(servers_to_enable) do
