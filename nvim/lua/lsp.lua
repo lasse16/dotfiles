@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- Setup default config for specified servers
-local server_with_default_setup = {
+local servers_to_enable = {
     "pylsp",
     "ansiblels",
     "ts_ls",
@@ -25,7 +25,7 @@ local server_with_default_setup = {
     "rumdl",
 }
 
-for _, server in pairs(server_with_default_setup) do
+for _, server in pairs(servers_to_enable) do
     vim.lsp.enable(server)
 end
 
