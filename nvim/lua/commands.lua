@@ -108,17 +108,12 @@ commands.yaml = {
     {
         desc = "Get current schemas for buffer",
         cmd = function()
-            local schemas = vim.print(require("utils.lsp").yamlls.get_current_schemas())
-            local message = nil
-            for _, schema in pairs(schemas) do
-                message = message .. schema.name
+            local schemas = require("utils.lsp").yamlls.get_current_schemas()
+            if schemas == {} then
+                vim.notify("No schema assigned", vim.log.levels.WARN)
+            else
+                vim.print(schemas)
             end
-
-            if not message then
-                message = "No schema assigned"
-            end
-
-            vim.notify(message, vim.log.levels.INFO)
         end,
     },
 }
