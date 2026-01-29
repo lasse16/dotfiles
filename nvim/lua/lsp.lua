@@ -164,5 +164,10 @@ vim.lsp.config("yamlls", {
                 enable = true,
             },
         },
+        redhat = {
+            telemetry = {
+                enable = false,
+            },
+        },
     },
 })
