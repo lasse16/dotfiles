@@ -56,19 +56,28 @@ local yamlls = {
 
         return response.result
     end,
-    insert_yamlls_modeline = function()
-        local schema = require("schema-companion.context").get_buffer_schema()
-        if schema and schema.uri then
-            local modeline = "# yaml-language-server: $schema=" .. schema.uri
-            local lines = vim.api.nvim_buf_get_lines(0, 0, 1, false)
-
-            -- Check if modeline already exists
-            if not vim.startswith(lines[1] or "", "# yaml-language-server:") then
-                vim.api.nvim_buf_set_lines(0, 0, 0, false, { modeline })
-            end
-        end
-    end,
 }
+
+yamlls.insert_modeline = function()
+    local schemas = yamlls.get_current_schemas()
+    local schema = nil
+    if not schemas then
+        vim.notify("No schema attached to buffer")
+        return
+    end
+
+    schema = schemas[1]
+
+    if schema and schema.uri then
+        local modeline = "# yaml-language-server: $schema=" .. schema.uri
+        local lines = vim.api.nvim_buf_get_lines(0, 0, 1, false)
+
+        -- Check if modeline already exists
+        if not vim.startswith(lines[1] or "", "# yaml-language-server:") then
+            vim.api.nvim_buf_set_lines(0, 0, 0, false, { modeline })
+        end
+    end
+end
 
 M.setup = setup
 M.rename = rename

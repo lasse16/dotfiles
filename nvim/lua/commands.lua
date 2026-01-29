@@ -89,7 +89,7 @@ commands.yaml = {
     {
         desc = "Insert a modeline specifying the detected schema for YAMLLS",
         cmd = function()
-            require("utils.lsp").yamlls.insert_yamlls_modeline()
+            require("utils.lsp").yamlls.insert_modeline()
         end,
     },
     {
