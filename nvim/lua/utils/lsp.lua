@@ -56,6 +56,18 @@ local yamlls = {
 
         return response.result
     end,
+    insert_yamlls_modeline = function()
+        local schema = require("schema-companion.context").get_buffer_schema()
+        if schema and schema.uri then
+            local modeline = "# yaml-language-server: $schema=" .. schema.uri
+            local lines = vim.api.nvim_buf_get_lines(0, 0, 1, false)
+
+            -- Check if modeline already exists
+            if not vim.startswith(lines[1] or "", "# yaml-language-server:") then
+                vim.api.nvim_buf_set_lines(0, 0, 0, false, { modeline })
+            end
+        end
+    end,
 }
 
 M.setup = setup
