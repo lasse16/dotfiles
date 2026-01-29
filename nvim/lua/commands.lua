@@ -105,6 +105,22 @@ commands.yaml = {
             insert_yamlls_modeline()
         end,
     },
+    {
+        desc = "Get current schemas for buffer",
+        cmd = function()
+            local schemas = vim.print(require("utils.lsp").yamlls.get_current_schemas())
+            local message = nil
+            for _, schema in pairs(schemas) do
+                message = message .. schema.name
+            end
+
+            if not message then
+                message = "No schema assigned"
+            end
+
+            vim.notify(message, vim.log.levels.INFO)
+        end,
+    },
 }
 
 ---@type Command[]
