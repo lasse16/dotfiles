@@ -163,6 +163,11 @@ vim.lsp.config("yamlls", {
             schemaStore = {
                 enable = true,
             },
+            schemas = {
+                ["https://json.schemastore.org/kustomization.json"] = "kustomization.{yml,yaml}",
+                ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+                ["https://json.schemastore.org/helm-chart.json"] = "Chart.{yml,yaml}",
+            },
         },
         redhat = {
             telemetry = {
