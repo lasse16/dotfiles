@@ -3,7 +3,10 @@ require("null-ls").setup({
     sources = {
         builtins.diagnostics.actionlint,
         builtins.diagnostics.yamllint.with({
-            extra_args = { "-d", "{extends: default, rules: {line-length: {max: 120}, document-start: disable}}" },
+            extra_args = {
+                "-d",
+                "{extends: default, rules: {line-length: {max: 120}, document-start: disable, truthy: disable}}",
+            },
         }),
         builtins.diagnostics.stylelint,
         builtins.code_actions.gitsigns,
