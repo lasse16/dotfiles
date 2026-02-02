@@ -31,6 +31,7 @@ local servers_to_enable = {
     "basedpyright",
     "lua_ls",
     "yamlls",
+    "just",
 }
 
 for _, server in pairs(servers_to_enable) do
