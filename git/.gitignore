@@ -4,3 +4,6 @@
 # Local development setup
 .envrc
 .direnv/
+
+# Markdown
+.rumdl_cache/
