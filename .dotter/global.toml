@@ -105,3 +105,4 @@ depends = ["bash"]
 
 [zk.files]
 "zk/config.toml" = { target = "~/.config/zk/config.toml", type = "symbolic" }
+"zk/templates" = { target = "~/.config/zk/templates", type = "symbolic" }
