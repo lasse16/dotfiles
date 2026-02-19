@@ -1,4 +1,5 @@
-## NVIM Setup
+# NVIM Setup
+
 Neovim requires two packages to be setup with Python support and Clipboard integration.
 
 In WSL install win32yank in your path on windows side.
