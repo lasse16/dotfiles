@@ -67,8 +67,22 @@ local global_mappings = {
 
     -- diagnostics
     { "n", "<space>d", vim.diagnostic.open_float, silent_buffer },
-    { "n", "<space>dp", vim.diagnostic.goto_prev, silent_buffer },
-    { "n", "<space>dn", vim.diagnostic.goto_next, silent_buffer },
+    {
+        "n",
+        "<space>dp",
+        function()
+            vim.diagnostic.jump({ count = -1, float = true })
+        end,
+        silent_buffer,
+    },
+    {
+        "n",
+        "<space>dn",
+        function()
+            vim.diagnostic.jump({ count = 1, float = true })
+        end,
+        silent_buffer,
+    },
     { "n", "<space>dl", vim.diagnostic.setloclist, silent_buffer },
     {
         "n",
