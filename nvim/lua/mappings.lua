@@ -74,7 +74,7 @@ local global_mappings = {
         "n",
         "<space>ds",
         function()
-            require("utils.diagnostics").search_diagnostic()
+            require("rulebook").lookupRule()
         end,
         silent_buffer .. { desc = "Web search the diagnostic on the current line" },
     },
