@@ -64,4 +64,10 @@ return {
             },
         },
     },
+    {
+        "chrisgrieser/nvim-rulebook",
+        ---@module 'rulebook'
+        ---@type Rulebook.Config
+        opts = {},
+    },
 }
