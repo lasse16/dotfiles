@@ -1,6 +1,6 @@
 vim.diagnostic.config({
     virtual_text = {
-        prefix = "◁◁◁◁ ",
+        prefix = "● ",
         suffix = function(diagnostic)
             return require("rulebook").hasDocs(diagnostic) and " ↗" or ""
         end,
@@ -11,4 +11,3 @@ vim.diagnostic.config({
     update_in_insert = false,
     severity_sort = true,
 })
-
