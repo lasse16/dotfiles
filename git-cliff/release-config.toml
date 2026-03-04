@@ -1,0 +1,55 @@
+## git-cliff ~ configuration file
+# https://git-cliff.org/docs/configuration/
+
+[changelog]
+header = ""
+
+# ASSUMPTION: remote will always be github, otherwise url and changelog comparison links do not work
+# Create a list of releases with their commits sorted by group and a full changelog link printed at the end
+body = """
+{%- macro remote_url() -%}
+  https://github.com/{{ remote.github.owner }}/{{ remote.github.repo }}
+{%- endmacro -%}
+
+{% if version -%}
+# {{ version }}
+
+< human description here>
+
+  {% for group, commits in commits | filter(attribute="merge_commit", value=false) | group_by(attribute="group") %}
+      ### {{ group | upper_first }}
+      {%- for commit in commits %}
+          - {{ commit.message | trim }}
+      {% endfor %}
+  {% endfor %}
+
+  {% if previous.version %}
+            **Full Changelog**: <{{ self::remote_url() }}/compare/{{ previous.version }}...{{ version }}>
+  {% endif %}
+
+{% endif -%}
+"""
+
+footer = ""
+
+trim = true
+output = "release.md"
+
+[git]
+# Set up group for unparsed, non-conventional commits
+filter_unconventional = false
+
+#https://semver.org/#is-there-a-suggested-regular-expression-regex-to-check-a-semver-string
+tag_pattern = '^v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$' # https://semver.org/#is-there-a-suggested-regular-expression-regex-to-check-a-semver-string# https://semver.org/#is-there-a-suggested-regular-expression-regex-to-check-a-semver-string# https://semver.org/#is-there-a-suggested-regular-expression-regex-to-check-a-semver-string# Tsting
+
+fail_on_unmatched_commit = false
+
+sort_commits = "newest"
+
+commit_parsers = [
+    { message = "^feat", group = "features" },
+    { message = "^fix", group = "fixes" },
+    { message = "^doc", group = "documentation" },
+    { message = "^refactor", group = "refactorings" },
+    { message = "^chore", group = "misc" },
+]

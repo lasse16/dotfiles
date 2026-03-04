@@ -53,6 +53,7 @@ depends = ["bash"]
 
 [git-cliff.files]
 "git-cliff/config.toml" = { target = "~/.config/git-cliff/cliff.toml", type = "symbolic" }
+"git-cliff/release-config.toml" = { target = "~/.config/git-cliff/release.toml", type = "symbolic" }
 
 [gpg.variables]
 "gpg.signingKey" = ""
