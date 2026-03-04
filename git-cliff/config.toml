@@ -57,4 +57,5 @@ commit_parsers = [
     { message = "^doc", group = "documentation" },
     { message = "^refactor", group = "refactorings" },
     { message = "^chore", group = "misc" },
+    { message = ".*bump.*", group = "updates" },
 ]
