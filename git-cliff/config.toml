@@ -24,7 +24,7 @@ body = """
   {% for group, commits in commits | filter(attribute="merge_commit", value=false) | group_by(attribute="group") %}
       ### {{ group | upper_first }}
       {%- for commit in commits %}
-          - {% if commit.breaking %} [**BREAKING**] {% endif %}{{ commit.message | trim }}
+          - {% if commit.breaking %} [**BREAKING**] {% endif %}{{ commit.scope | default(value="") }}{{ commit.message | trim }} ({{ commit.id | truncate(length=7, end="") }})
       {% endfor %}
   {% endfor %}
 
