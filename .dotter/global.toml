@@ -68,8 +68,8 @@ depends = ["bash"]
 "khard/khard.conf" = { target = "~/.config/khard/khard.conf", type = "symbolic" }
 
 [nixos.files]
-"nixos/configuration.nix" = { target = "/etc/nixos/configuration.nix", type ="symbolic" }
-"nixos/flake.nix" = { target = "/etc/nixos/flake.nix", type ="symbolic" }
+"nixos/configuration.nix" = { target = "/etc/nixos/configuration.nix", type = "symbolic" }
+"nixos/flake.nix" = { target = "/etc/nixos/flake.nix", type = "symbolic" }
 
 [nvim.files]
 "nvim/init.lua" = { target = "~/.config/nvim/init.lua", type = "symbolic" }
