@@ -1,6 +1,9 @@
 ## git-cliff ~ configuration file
 # https://git-cliff.org/docs/configuration/
 
+[bump]
+initial_tag = "v0.1.0"
+
 [changelog]
 header = """
 # Changelog
