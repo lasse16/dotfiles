@@ -30,8 +30,10 @@
 	pw = preview-changes
 	root = rev-parse --show-toplevel
     resign = rebase --exec 'git commit --amend --no-edit -n -S' -i 
-
-{{#if dotter.packages.fzf}}
+{{~#if dotter.packages.git-cliff}}
+    release = !git-cliff --bumped-version -o - | xargs -I{} git tag -a -m "Release {}" {}
+{{/if}}
+{{~#if dotter.packages.fzf}}
 	cb = forgit checkout_branch
 {{/if}}
 [core]
