@@ -4,5 +4,11 @@
         "prefix": "url",
         "body": ["<${0}>"],
         "description": "Add a url appearing as a link"
+    },
+    "reference-link":
+    {
+        "prefix": "ref",
+        "body": ["[${1:title}][${2:reference}]", "[${2}]: <${3:url}>"],
+        "description": "Create a reference-style link"
     }
 }
