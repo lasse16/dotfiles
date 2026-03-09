@@ -105,6 +105,16 @@ commands.yaml = {
     },
 }
 
+commands.markdown = {
+    {
+        name = "MarkdownMoveLinksToEOF",
+        cmd = function()
+            require("utils.treesitter").markdown.move_reference_links_to_file_end(0)
+        end,
+        desc = "Move reference-style links to the end of file",
+    },
+}
+
 ---@type Command[]
 commands.snacks = {
     {
