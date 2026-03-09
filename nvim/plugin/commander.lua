@@ -18,6 +18,14 @@ local function convert(command)
     return converted_command
 end
 
+---Convert UserCommands to CommanderItems and add them to Commander
+---@param commands_to_add Command[] Commands to be added
+function convert_add(commands_to_add)
+    commander.add(map(commands_to_add, convert))
+end
+
+------------------------------------------
+
 commander.setup({
     prompt_title = "Commands",
     components = {
@@ -50,6 +58,6 @@ commander.add({
     },
 })
 
-commander.add(map(commands.default_vim_commands, convert))
-commander.add(map(commands.snacks, convert))
-commander.add(map(commands.formatting, convert))
+convert_add(commands.default_vim_commands)
+convert_add(commands.snacks)
+convert_add(commands.formatting)
