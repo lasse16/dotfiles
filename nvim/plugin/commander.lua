@@ -7,7 +7,7 @@ local commander = require("commander")
 ---@return CommanderItem
 local function convert(command)
     local desc = nil
-    if command.opts then
+    if command.opts and command.opts.desc then
         desc = command.opts.desc or nil
     end
     local converted_command = {
