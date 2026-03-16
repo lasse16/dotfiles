@@ -33,6 +33,7 @@ depends = ["bash"]
 "bash/.bashrc.tmpl" = { target = "~/.bashrc", type = "template" }
 "bash/.inputrc" = "~/.inputrc"
 "bash/.profile.tmpl" = { target = "~/.profile", type = "template" }
+"bash/scripts/daily.sh" = { target = "~/src/daily.sh", type = "symbolic" }
 
 [bash.variables]
 "bash.browser" = "firefox"
