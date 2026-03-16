@@ -30,6 +30,7 @@
 	pw = preview-changes
 	root = rev-parse --show-toplevel
     resign = rebase --exec 'git commit --amend --no-edit -n -S' -i 
+	my-commits-since = !git log --all --author=$(git config user.email) --since
 {{~#if dotter.packages.git-cliff}}
     release = !git-cliff --bumped-version -o - | xargs -I{} git tag -a -m "Release {}" {}
 {{/if}}
