@@ -29,17 +29,17 @@
 	ls = ls-files
 	pw = preview-changes
 	root = rev-parse --show-toplevel
-    resign = rebase --exec 'git commit --amend --no-edit -n -S' -i 
+	resign = rebase --exec 'git commit --amend --no-edit -n -S' -i
 	my-commits-since = !git log --all --author=$(git config user.email) --since
 {{~#if dotter.packages.git-cliff}}
-    release = !git-cliff --bumped-version -o - | xargs -I{} git tag -a -m "Release {}" {}
+	release = !git-cliff --bumped-version -o - | xargs -I{} git tag -a -m "Release {}" {}
 {{/if}}
 {{~#if dotter.packages.fzf}}
 	cb = forgit checkout_branch
 {{/if}}
 [core]
 	sshCommand = "ssh -i {{git.default_ssh_key}}"
-    excludesFile = ~/.gitignore
+	excludesFile = ~/.gitignore
 
 [help]
 	autocorrect = prompt
@@ -47,40 +47,40 @@
 [merge]
 	conflictstyle = zdiff3
 {{#if dotter.packages.nvim}}
-    tool = neovim
+	tool = neovim
 		{{/if}}
 [mergetool "vscode"]
-    cmd = code --wait $MERGED
+	cmd = code --wait $MERGED
 
 [mergetool "neovim"]
-    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [diff]
-    algorithm = histogram
-    colorMoved = zebra
-    mnemomicPrefix = true
-    tool = neovim
+	algorithm = histogram
+	colorMoved = zebra
+	mnemomicPrefix = true
+	tool = neovim
 
 [difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+	cmd = code --wait --diff $LOCAL $REMOTE
 
 [difftool "neovim"]
-    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [fetch]
-    all = true
-    prune = true
+	all = true
+	prune = true
 
 [push]
 	default = current
-    autoSetupRemote = true
-    followTags = true
+	autoSetupRemote = true
+	followTags = true
 
 [branch]
-    sort = -committerdate
+	sort = -committerdate
 
 [tag]
-    sort = version:refname
+	sort = version:refname
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -96,7 +96,7 @@
 
 [tag]
 {{#if dotter.packages.gpg}} 
-    gpgSign = true 
+	gpgSign = true
 {{/if}}
 
 {{~#each git.special-dirs}}
