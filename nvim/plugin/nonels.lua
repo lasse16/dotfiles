@@ -5,7 +5,7 @@ require("null-ls").setup({
         builtins.diagnostics.yamllint.with({
             extra_args = {
                 "-d",
-                "{extends: default, rules: {line-length: {max: 120}, document-start: disable, truthy: disable}}",
+                "{extends: default, rules: {line-length: {max: 120}, document-start: disable, truthy: disable, comments: {min-spaces-from-content: 1}}}",
             },
         }),
         builtins.diagnostics.stylelint,
