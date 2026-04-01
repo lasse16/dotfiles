@@ -20,7 +20,19 @@ in {
   wsl.defaultUser = user;
   wsl.usbip.enable = true;
   users.users.${user} = {
-      packages = with pkgs; [neovim starship eza fzf tmux direnv fd gh ripgrep git-trim just];
+    packages = with pkgs; [
+      neovim
+      starship
+      eza
+      fzf
+      tmux
+      direnv
+      fd
+      gh
+      ripgrep
+      git-trim
+      just
+    ];
   };
 
   time = {
@@ -28,7 +40,10 @@ in {
     hardwareClockInLocalTime = true;
   };
 
-  environment.systemPackages = [pkgs.wslu pkgs.git ];
+  environment.systemPackages = [
+    pkgs.wslu
+    pkgs.git
+  ];
 
   services = {
     openssh.enable = true;
@@ -39,13 +54,16 @@ in {
     gnupg.agent = {
       enable = true;
       settings = {
-	      default-cache-ttl = 28800;
-	      max-cache-ttl =  28800;
+        default-cache-ttl = 28800;
+        max-cache-ttl = 28800;
       };
     };
   };
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
