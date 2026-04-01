@@ -21,7 +21,6 @@ in {
   wsl.usbip.enable = true;
   users.users.${user} = {
       packages = with pkgs; [neovim starship eza fzf tmux direnv fd gh ripgrep git-trim just];
-      extraGroups = ["docker"];
   };
 
   time = {
@@ -34,8 +33,6 @@ in {
   services = {
     openssh.enable = true;
   };
-
-  virtualisation.docker.enable = true;
 
   programs = {
     ssh.startAgent = true;
