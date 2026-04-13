@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+contexts ()
+{
+    local selection=$(kubectl config get-contexts --no-headers -o name | fzf \
+        --preview "kubectl config get-contexts {}" \
+        --preview-window=right:50%:wrap)
+    
+    if [[ -n "$selection" ]]; then
+        echo "Switching to context: $selection"
+        kubectl config use-context "$selection"
+        echo "Current context: $(kubectl config current-context)"
+        echo "Current namespace: $(kubectl config view --minify --output 'jsonpath={..namespace}' 2>/dev/null || echo 'default')"
+    fi
+}
+
+contexts
