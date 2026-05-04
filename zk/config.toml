@@ -57,6 +57,9 @@ send-paths = "zk list --quiet --format path --delimiter0 $@ | xargs -0 "
 # Open local zk configuration file
 config = '$EDITOR "$ZK_NOTEBOOK_DIR/.zk/config.toml"'
 
+# Open global zk configuration file
+config-global = '$EDITOR "${XDG_CONFIG_HOME:-$HOME/.config}/zk/config.toml"'
+
 # See the git history of selected notes
 log = "zk send-paths 'git log --patch --'"
 
