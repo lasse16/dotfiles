@@ -72,6 +72,9 @@ unlinked-mentions = "zk list --mentioned-by $1 --no-linked-by $1"
 # List all aliases
 aliases = "zk config --list aliases"
 
+# Find outbound links to notes that don't exist (broken wiki-links and markdown links)
+dead-links = "${ZK_CONFIG_DIR:-$HOME/.config/zk}/scripts/dead-links.sh"
+
 # LSP
 [lsp]
 [lsp.completion]
