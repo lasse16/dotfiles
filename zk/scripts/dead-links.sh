@@ -11,5 +11,5 @@ if [ ! -f "$DB" ]; then
   exit 1
 fi
 
-sqlite3 -- "$DB" -separator ' ' \
+sqlite3 "$DB" --separator ' ' \
   "SELECT source_path, href FROM resolved_links WHERE target_id IS NULL AND external = 0;"
