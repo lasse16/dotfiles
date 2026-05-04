@@ -66,6 +66,9 @@ log = "zk send-paths 'git log --patch --'"
 # Create a new note in the daily collection
 daily = "zk new --no-input ~/src/daily"
 
+# See notes with might be mentioned and not properly linked
+unlinked-mentions = "zk list --mentioned-by $1 --no-linked-by $1"
+
 # LSP
 [lsp]
 [lsp.completion]
