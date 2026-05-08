@@ -111,7 +111,7 @@ depends = ["bash"]
 "volta.home" = "~/.config/volta"
 
 [yaml.files]
-"linters/yaml/yamlfmt.yml" = { target = "~/.config/yamlfmt/yamlfmt.yml", type = "symbolic" }
+"formatters/yaml/yamlfmt.yml" = { target = "~/.config/yamlfmt/yamlfmt.yml", type = "symbolic" }
 
 [zk.files]
 "zk/config.toml" = { target = "~/.config/zk/config.toml", type = "symbolic" }
