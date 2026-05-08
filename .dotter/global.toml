@@ -23,6 +23,7 @@ depends = ["environment"]
 depends = ["bash"]
 [starship]
 [rust]
+[yaml]
 [zk]
 
 ################################################################################
@@ -108,6 +109,9 @@ depends = ["bash"]
 
 [volta.variables]
 "volta.home" = "~/.config/volta"
+
+[yaml.files]
+"linters/yaml/yamlfmt.yml" = { target = "~/.config/yamlfmt/yamlfmt.yml", type = "symbolic" }
 
 [zk.files]
 "zk/config.toml" = { target = "~/.config/zk/config.toml", type = "symbolic" }
