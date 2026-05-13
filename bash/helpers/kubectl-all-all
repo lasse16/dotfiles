@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  echo "Usage: kubectl all-all [kubectl-get-flags...]"
+  echo "Get all installed resources on the cluster. All flags are forwarded to 'kubectl get'."
+  echo "Examples:"
+  echo "  kubectl all-all -A"
+  echo "  kubectl all-all -n kube-system"
+  exit 0
+fi
+
+RESOURCE_TYPES=$(kubectl api-resources --verbs=list --output=name 2>/dev/null)
+
+if [[ -z "$RESOURCE_TYPES" ]]; then
+  echo "Failed to retrieve API resources" >&2
+  exit 1
+fi
+
+for resource in $RESOURCE_TYPES; do
+  output=$(kubectl get "$resource" --ignore-not-found "$@" 2>/dev/null)
+  if [[ -n "$output" ]]; then
+    echo "=== $resource ==="
+    echo "$output"
+    echo ""
+  fi
+done
