@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+
+usage() {
+  echo "Usage: kubectl conditions <resource> <name> [-o format] [kubectl-get-flags...]"
+  echo "Get the status conditions of a specific Kubernetes object."
+  echo ""
+  echo "Output formats:"
+  echo "  table   Formatted table (default)"
+  echo "  json    JSON array"
+  echo ""
+  echo "Examples:"
+  echo "  kubectl conditions pod my-pod"
+  echo "  kubectl conditions deployment my-app -n kube-system"
+  echo "  kubectl conditions node worker-1 -o json"
+  exit "${1:-0}"
+}
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  usage
+fi
+
+if [[ -z "$1" || -z "$2" ]]; then
+  echo "Error: resource type and name are required" >&2
+  usage 1
+fi
+
+RESOURCE="$1"
+NAME="$2"
+shift 2
+
+OUTPUT="table"
+KUBECTL_ARGS=()
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -o|--output)
+      OUTPUT="$2"
+      shift 2
+      ;;
+    -o=*|--output=*)
+      OUTPUT="${1#*=}"
+      shift
+      ;;
+    *)
+      KUBECTL_ARGS+=("$1")
+      shift
+      ;;
+  esac
+done
+
+case "$OUTPUT" in
+  table)
+    if ! CONDITIONS=$(kubectl get "$RESOURCE" "$NAME" "${KUBECTL_ARGS[@]}" \
+      -o jsonpath='{range .status.conditions[*]}{.type}{"\t"}{.status}{"\t"}{.reason}{"\t"}{.message}{"\n"}{end}' 2>&1); then
+      echo "Error: $CONDITIONS" >&2
+      exit 1
+    fi
+    if [[ -z "$CONDITIONS" ]]; then
+      echo "No conditions found for $RESOURCE/$NAME" >&2
+      exit 1
+    fi
+    printf "%-30s %-10s %-30s %s\n" "TYPE" "STATUS" "REASON" "MESSAGE"
+    printf "%-30s %-10s %-30s %s\n" "----" "------" "------" "-------"
+    while IFS=$'\t' read -r type status reason message; do
+      printf "%-30s %-10s %-30s %s\n" "$type" "$status" "$reason" "$message"
+    done <<< "$CONDITIONS"
+    ;;
+  json)
+    kubectl get "$RESOURCE" "$NAME" "${KUBECTL_ARGS[@]}" \
+      -o jsonpath='{.status.conditions}' 2>&1
+    echo
+    ;;
+  *)
+    echo "Error: unknown output format '$OUTPUT' (supported: table, json)" >&2
+    exit 1
+    ;;
+esac
