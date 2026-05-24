@@ -112,6 +112,7 @@ depends = ["bash"]
 
 [yaml.files]
 "formatters/yaml/yamlfmt.yml" = { target = "~/.config/yamlfmt/yamlfmt.yml", type = "symbolic" }
+"linters/yaml/yamllint.yml" = { target = "~/.config/yamllint/config", type = "symbolic" }
 
 [zk.files]
 "zk/config.toml" = { target = "~/.config/zk/config.toml", type = "symbolic" }
