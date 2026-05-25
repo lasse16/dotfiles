@@ -3,7 +3,7 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
   };
 
   outputs = {
@@ -17,7 +17,7 @@
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
-	inherit system;
+        inherit system;
         specialArgs = {inherit system;};
 
         modules = [./configuration.nix];
