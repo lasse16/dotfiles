@@ -21,9 +21,9 @@ exclude = [ "README.md" ]
 # MARKDOWN SETTINGS
 [format.markdown]
 # Enable support for #hashtags
-hashtags = true
+hashtags = false
 # Enable support for :colon:separated:tags:
-colon-tags = true
+colon-tags = false
 
 # NAMED FILTERS
 [filter]
