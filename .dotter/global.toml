@@ -43,6 +43,9 @@ depends = ["bash"]
 # Replace this by future dotter built-in variable (Maybe)
 "environment.dotfile_folder" = "$DOTFILES"
 
+[fzf.files]
+"fzf/git/git-forgit-completions.bash" = { target  = "~/.local/share/bash-completion/completions/git-forgit", type = "symbolic" }
+
 [git.files]
 "git/.gitconfig.tmpl" = { target = "~/.gitconfig", type = "template" }
 "git/.gitignore" = { target = "~/.gitignore", type = "symbolic" }
