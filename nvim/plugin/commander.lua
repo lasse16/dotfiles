@@ -54,7 +54,7 @@ commander.add({
     {
         desc = "Open command palette",
         cmd = require("commander").show,
-        keys = { "n", "<C-o>" },
+        keys = { "n", "<C-Space>" },
     },
 })
 
