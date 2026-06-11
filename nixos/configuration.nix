@@ -7,6 +7,7 @@
   config,
   lib,
   pkgs,
+  pkgs-neovim,
   ...
 }: let
   user = "lasse";
@@ -21,7 +22,7 @@ in {
   wsl.usbip.enable = true;
   users.users.${user} = {
     packages = with pkgs; [
-      neovim
+      pkgs-neovim.neovim
       starship
       eza
       fzf
