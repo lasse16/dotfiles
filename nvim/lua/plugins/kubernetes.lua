@@ -1,5 +1,4 @@
 return {
-    "kcl-lang/kcl.nvim",
     {
         "cwrau/yaml-schema-detect.nvim",
         ---@module "yaml-schema-detect"
