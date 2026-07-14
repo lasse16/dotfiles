@@ -13,6 +13,7 @@ source "$DOTFILES_FZF/key-bindings.bash"
 source "$DOTFILES_FZF/general/interactive-ripgrep.bash"
 source "$DOTFILES_FZF/github/repo-select.bash"
 source "$DOTFILES_FZF/general/history-edit.bash"
+source "$DOTFILES_FZF/git/git-checkout-completion.bash"
 
 # Add subcommands by sourcing files with specific names
 pathadd "$DOTFILES_FZF/kubernetes/"
