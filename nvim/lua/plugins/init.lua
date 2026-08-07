@@ -58,7 +58,7 @@ return {
         "NvChad/nvim-colorizer.lua",
         opts = {
             filetypes = { "html", "css", "scss", "yaml", "toml", "markdown" },
-            user_default_options = { css = true },
+            options = { parsers = { css = true } },
         },
     },
     -- improvements on builtins
