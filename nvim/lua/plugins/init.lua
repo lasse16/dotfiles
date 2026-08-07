@@ -54,7 +54,13 @@ return {
         },
     },
     { "FeiyouG/commander.nvim", dependencies = { "nvim-telescope/telescope.nvim" }, tag = "v0.2.0" },
-    { "NvChad/nvim-colorizer.lua" },
+    {
+        "NvChad/nvim-colorizer.lua",
+        opts = {
+            filetypes = { "html", "css", "scss", "yaml", "toml", "markdown" },
+            user_default_options = { css = true },
+        },
+    },
     -- improvements on builtins
     { "numToStr/Navigator.nvim" },
     { "rhysd/clever-f.vim" },
