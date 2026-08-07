@@ -27,7 +27,27 @@ return {
         dependencies = { "nvim-lua/plenary.nvim", "gbprod/none-ls-shellcheck.nvim" },
     },
     -- git
-    { "lewis6991/gitsigns.nvim" },
+    {
+        "lewis6991/gitsigns.nvim",
+        opts = {
+            signs = {
+                add = { text = "┃" },
+                change = { text = "┃" },
+                delete = { text = "_" },
+                topdelete = { text = "‾" },
+                changedelete = { text = "~" },
+                untracked = { text = "┆" },
+            },
+            preview_config = {
+                border = "rounded",
+                style = "minimal",
+                relative = "cursor",
+                row = 0,
+                col = 1,
+            },
+            on_attach = require("mappings").setup_gitsigns_mappings,
+        },
+    },
     { "tpope/vim-fugitive" },
     -- development
     { "mrcjkb/rustaceanvim", version = "^4", lazy = false },
