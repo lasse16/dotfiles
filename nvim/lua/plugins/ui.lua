@@ -1,5 +1,15 @@
 return {
-    { "nvim-lualine/lualine.nvim" },
+    {
+        "nvim-lualine/lualine.nvim",
+        opts = {
+            options = { theme = "onedark" },
+            sections = {
+                lualine_c = {
+                    "filename",
+                },
+            },
+        },
+    },
     {
         "folke/trouble.nvim",
         branch = "main",
