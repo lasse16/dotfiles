@@ -1,4 +1,9 @@
-vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false}")
+vim.api.nvim_create_autocmd("TextYankPost", {
+    pattern = "*",
+    callback = function()
+        vim.hl.on_yank({ on_visual = false })
+    end,
+})
 
 -- bootstrap lazy
 
