@@ -46,7 +46,34 @@ return {
     },
     { "tpope/vim-fugitive" },
     -- development
-    { "mrcjkb/rustaceanvim", version = "^4", lazy = false },
+    {
+        "mrcjkb/rustaceanvim",
+        version = "^4",
+        lazy = false,
+        init = function()
+            vim.g.rustaceanvim = {
+                server = {
+                    flags = {
+                        debounce_text_changes = 200,
+                    },
+                    default_settings = {
+                        ["rust-analyzer"] = {
+                            procMacro = {
+                                enable = false,
+                            },
+                            checkOnSave = {
+                                command = "clippy",
+                            },
+                            -- https://github.com/rust-lang/rust-analyzer/issues/20051
+                            cargo = {
+                                extraEnv = { RUSTUP_TOOLCHAIN = "stable" },
+                            },
+                        },
+                    },
+                },
+            }
+        end,
+    },
 
     -- additional features
     { "junegunn/vim-easy-align" },
