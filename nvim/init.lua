@@ -50,3 +50,14 @@ require("commands")
 require("diagnostics")
 
 vim.cmd("colorscheme catppuccin-macchiato")
+
+-- Set buffer-local treesitter textobject keymaps only when a parser exists
+vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("treesitter_mappings", { clear = true }),
+    desc = "Set treesitter keymaps when a parser is available",
+    callback = function(args)
+        if vim.treesitter.get_parser(args.buf, nil, { error = false }) then
+            require("mappings").setup(require("mappings").treesitter_mappings)
+        end
+    end,
+})
