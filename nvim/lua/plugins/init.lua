@@ -67,7 +67,6 @@ return {
         "nvim-telescope/telescope.nvim",
         dependencies = {
             "nvim-lua/plenary.nvim",
-            { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
             "nvim-telescope/telescope-bibtex.nvim",
             "benfowler/telescope-luasnip.nvim",
             "tsakirist/telescope-lazy.nvim",
