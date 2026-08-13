@@ -33,7 +33,6 @@ return {
                 telescope = {
                     enabled = true,
                 },
-                lsp_trouble = true,
             },
             custom_highlights = function(colors)
                 local utils = require("catppuccin.utils.colors")
