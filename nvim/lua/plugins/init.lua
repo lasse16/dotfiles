@@ -51,12 +51,7 @@ return {
     { "tpope/vim-fugitive" },
     -- development
     { "mrcjkb/rustaceanvim", version = "^4", lazy = false },
-    {
-        "quarto-dev/quarto-nvim",
-        tag = "v0.18.2",
-        ft = "quarto",
-        dependencies = { "jmbuhr/otter.nvim" },
-    },
+
     -- additional features
     { "junegunn/vim-easy-align" },
     { "tpope/vim-surround" },
