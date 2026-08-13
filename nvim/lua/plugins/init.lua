@@ -19,7 +19,7 @@ return {
     {
         "L3MON4D3/LuaSnip",
         version = "2.4.0",
-        dependencies = "lasse16/friendly-snippets",
+        dependencies = "rafamadriz/friendly-snippets",
     },
 
     -- git
