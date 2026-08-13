@@ -21,11 +21,7 @@ return {
         version = "2.4.0",
         dependencies = "lasse16/friendly-snippets",
     },
-    {
-        "nvimtools/none-ls.nvim",
-        branch = "main",
-        dependencies = { "nvim-lua/plenary.nvim", "gbprod/none-ls-shellcheck.nvim" },
-    },
+
     -- git
     {
         "lewis6991/gitsigns.nvim",
