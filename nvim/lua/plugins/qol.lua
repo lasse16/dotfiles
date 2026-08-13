@@ -70,4 +70,11 @@ return {
         ---@type Rulebook.Config
         opts = {},
     },
+    {
+        "numToStr/Navigator.nvim",
+        config = function()
+            require("Navigator").setup()
+            require("mappings").setup_navigator_keybindings()
+        end,
+    },
 }
