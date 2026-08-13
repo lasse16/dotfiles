@@ -77,4 +77,62 @@ return {
             require("mappings").setup_navigator_keybindings()
         end,
     },
+    {
+        "FeiyouG/commander.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim" },
+        tag = "v0.2.0",
+        config = function()
+            local map = require("utils.map").map
+            local commands = require("commands")
+            local commander = require("commander")
+
+            local function convert(command)
+                return {
+                    cmd = command.cmd,
+                    desc = command.opts and command.opts.desc or nil,
+                    keys = command.keys or nil,
+                }
+            end
+
+            local function convert_add(commands_to_add)
+                commander.add(map(commands_to_add, convert))
+            end
+
+            commander.setup({
+                prompt_title = "Commands",
+                components = {
+                    "DESC",
+                    "KEYS",
+                    "CAT",
+                },
+                sort_by = {
+                    "DESC",
+                    "KEYS",
+                    "CAT",
+                    "CMD",
+                },
+                integration = {
+                    telescope = {
+                        enable = true,
+                    },
+                    lazy = {
+                        enable = true,
+                        set_plugin_name_as_cat = true,
+                    },
+                },
+            })
+
+            commander.add({
+                {
+                    desc = "Open command palette",
+                    cmd = require("commander").show,
+                    keys = { "n", "<C-Space>" },
+                },
+            })
+
+            convert_add(commands.default_vim_commands)
+            convert_add(commands.snacks)
+            convert_add(commands.formatting)
+        end,
+    },
 }

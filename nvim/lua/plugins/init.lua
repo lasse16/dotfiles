@@ -130,7 +130,7 @@ return {
             telescope.load_extension("lazy")
         end,
     },
-    { "FeiyouG/commander.nvim", dependencies = { "nvim-telescope/telescope.nvim" }, tag = "v0.2.0" },
+
     {
         "NvChad/nvim-colorizer.lua",
         opts = {
