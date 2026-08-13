@@ -77,7 +77,7 @@ vim.lsp.config("ltex", {
 
 vim.lsp.config("marksman", {
     filetypes = { "markdown", "quarto" },
-    root_dir = require("lspconfig.util").root_pattern(".git", ".marksman.toml", "_quarto.yml"),
+    root_markers = { { ".marksman.toml", "_quarto.yml" }, ".git" },
 })
 
 vim.lsp.config("ruff", {
