@@ -17,9 +17,7 @@ return {
         dependencies = { { "rcarriga/nvim-dap-ui", dependencies = { "nvim-neotest/nvim-nio" } } },
     },
     {
-        "L3MON4D3/LuaSnip",
-        version = "2.4.0",
-        dependencies = "rafamadriz/friendly-snippets",
+        "rafamadriz/friendly-snippets",
     },
 
     -- git
@@ -86,7 +84,6 @@ return {
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope-bibtex.nvim",
-            "benfowler/telescope-luasnip.nvim",
             "tsakirist/telescope-lazy.nvim",
         },
         config = function()
@@ -126,7 +123,6 @@ return {
             require("mappings").setup_telescope_mappings()
             require("commands").enable_telescope_commands()
             telescope.load_extension("bibtex")
-            telescope.load_extension("luasnip")
             telescope.load_extension("lazy")
         end,
     },
