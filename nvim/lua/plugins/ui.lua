@@ -1,6 +1,15 @@
 return {
-    { "nvim-lualine/lualine.nvim" },
-    { "folke/trouble.nvim", branch = "main" },
+    {
+        "nvim-lualine/lualine.nvim",
+        opts = {
+            options = { theme = "onedark" },
+            sections = {
+                lualine_c = {
+                    "filename",
+                },
+            },
+        },
+    },
     {
         "folke/zen-mode.nvim",
         opts = {
@@ -40,7 +49,7 @@ return {
             file_types = { "markdown", "opencode_output" },
             heading = {
                 sign = false,
-            }
+            },
         },
     },
 }

@@ -65,9 +65,6 @@ vim.lsp.config("nixd", {
     },
 })
 vim.lsp.config("ltex", {
-    flags = {
-        debounce_text_changes = 150,
-    },
     settings = {
         ltex = {
             language = "en-GB",
@@ -79,17 +76,11 @@ vim.lsp.config("ltex", {
 })
 
 vim.lsp.config("marksman", {
-    flags = {
-        debounce_text_changes = 150,
-    },
     filetypes = { "markdown", "quarto" },
-    root_dir = require("lspconfig.util").root_pattern(".git", ".marksman.toml", "_quarto.yml"),
+    root_markers = { { ".marksman.toml", "_quarto.yml" }, ".git" },
 })
 
 vim.lsp.config("ruff", {
-    flags = {
-        debounce_text_changes = 150,
-    },
     trace = "messages",
     init_options = {
         settings = {
@@ -99,9 +90,6 @@ vim.lsp.config("ruff", {
 })
 
 vim.lsp.config("basedpyright", {
-    flags = {
-        debounce_text_changes = 150,
-    },
     settings = {
         basedpyright = {
             analysis = {

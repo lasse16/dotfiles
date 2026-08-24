@@ -1,5 +1,15 @@
 return {
     {
+        "quarto-dev/quarto-nvim",
+        tag = "v0.18.2",
+        ft = "quarto",
+        dependencies = { "jmbuhr/otter.nvim" },
+        config = function()
+            require("mappings").setup_quarto_mappings()
+            require("quarto").setup()
+        end,
+    },
+    {
         "HakonHarnes/img-clip.nvim",
         event = "VeryLazy",
         opts = {

@@ -13,6 +13,19 @@ return {
         },
         sources = {
             default = { "lsp", "path", "snippets", "buffer" },
+            providers = {
+                snippets = {
+                    opts = {
+                        friendly_snippets = true,
+                        extended_filetypes = {
+                            markdown = { "quarto" },
+                        },
+                        filter_snippets = function(ft, _)
+                            return ft ~= "html" and ft ~= "css"
+                        end,
+                    },
+                },
+            },
         },
         completion = {
             menu = { auto_show = false, border = "rounded" },
@@ -24,9 +37,6 @@ return {
             list = { selection = { preselect = true, auto_insert = false } },
         },
         signature = { window = { border = "rounded" }, enabled = true },
-        snippets = {
-            preset = "luasnip",
-        },
     },
     opts_extend = { "sources.default" },
 }

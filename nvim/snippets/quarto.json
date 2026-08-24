@@ -1,0 +1,31 @@
+{
+    "Insert citation": {
+	"prefix": "cite",
+	"body": [
+	    "[@${1:city-key}]"
+	],
+	"description": "Insert a citation"
+    },
+    "Insert an inline footnote": {
+	"prefix": "footnote-inline",
+	"body": [
+	    "[^${1:note text}]"
+	],
+	"description": "Insert an inline footnote"
+    },
+    "Insert a footnote": {
+	"prefix": "footnote",
+	"body": [
+	    "[^${1:note identifier}]",
+	    "[^$1]: ${2:note text}"
+	],
+	"description": "Insert an inline footnote"
+    },
+    "bibliography": {
+	"body": [
+	    "bibliography: references.bib"
+	],
+	"description": "add bibliography yaml",
+	"prefix": "bib"
+    }
+}
