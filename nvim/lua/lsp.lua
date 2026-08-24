@@ -14,6 +14,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 local servers_to_enable = {
     "ansiblels",
     "basedpyright",
+    "cooklang",
     "emmet_ls",
     "gopls",
     "harper_ls",
@@ -164,4 +165,11 @@ vim.lsp.config("yamlls", {
             },
         },
     },
+})
+
+vim.lsp.config("cooklang", {
+    cmd = { "cook", "lsp" },
+    filetypes = { "cook" },
+    root_markers = { ".git", "config" },
+    settings = {},
 })
