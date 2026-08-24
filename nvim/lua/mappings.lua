@@ -626,6 +626,14 @@ M.ai_mappings = {
     },
     {
         "n",
+        "<space>cci",
+        function()
+            require("opencode.api").open_input()
+        end,
+        silent .. { desc = "Toggle chat window" },
+    },
+    {
+        "n",
         "<space>cca",
         function()
             require("opencode.api").select_agent()
