@@ -1,4 +1,4 @@
-M = {}
+local M = {}
 
 -- utils
 local function map_key(...)

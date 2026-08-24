@@ -1,4 +1,4 @@
-M = {}
+local M = {}
 
 ---Apply a function to each element of a list and return the updated list
 ---@generic T
