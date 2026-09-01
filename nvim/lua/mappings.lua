@@ -326,6 +326,24 @@ function M.setup_gitsigns_mappings()
             silent_buffer .. { desc = "View blame for the current line" },
         },
 
+        {
+            "n",
+            "[gc",
+            function()
+                git_signs.nav_hunk("prev")
+            end,
+            silent_buffer .. { desc = "Jump to the previous change" },
+        },
+
+        {
+            "n",
+            "]gc",
+            function()
+                git_signs.nav_hunk("next")
+            end,
+            silent_buffer .. { desc = "Jump to the next change" },
+        },
+
         -- git-fugitive
         {
             "n",
