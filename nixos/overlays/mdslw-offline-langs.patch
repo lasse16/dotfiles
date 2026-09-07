@@ -1,0 +1,16 @@
+--- a/build.rs
++++ b/build.rs
+@@ -53,9 +53,6 @@
+         eprintln!("building suppressions for language {}", lang);
+-        let data = reqwest::blocking::get(format!(
+-            "{}/{}/suppressions.json",
+-            LANG_SUPPRESSION_URL, lang
+-        ))
+-        .expect("downloading language")
+-        .json::<Value>()
+-        .expect("parsing response as json");
++        let path = std::env::var(format!("MDSLW_LANG_{}", lang.to_uppercase()))
++            .expect("language file path env var must be set");
++        let data = serde_json::from_str::<Value>(&fs::read_to_string(path).expect("reading language file"))
++            .expect("parsing language file as json");
+         // Get words from here:
