@@ -15,12 +15,17 @@
     pkgs = import nixpkgs {inherit system;};
     pkgs-neovim = import nixpkgs-neovim {inherit system;};
   in {
+    overlays.default = import ./overlays;
+
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {inherit system pkgs-neovim;};
 
-        modules = [./configuration.nix];
+        modules = [
+          ./configuration.nix
+          {nixpkgs.overlays = [self.overlays.default];}
+        ];
       };
     };
   };
