@@ -81,7 +81,6 @@ depends = ["bash"]
 "nvim/init.lua" = { target = "~/.config/nvim/init.lua", type = "symbolic" }
 "nvim/lua" = { target = "~/.config/nvim/lua", type = "symbolic" }
 "nvim/colors" = { target = "~/.config/nvim/colors", type = "symbolic" }
-"nvim/plugin" = { target = "~/.config/nvim/plugin", type = "symbolic" }
 "nvim/after" = { target = "~/.config/nvim/after", type = "symbolic" }
 "nvim/spell" = { target = "~/.config/nvim/spell", type = "symbolic" }
 "nvim/ftdetect" = { target = "~/.config/nvim/ftdetect", type = "symbolic" }
