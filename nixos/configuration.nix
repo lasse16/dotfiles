@@ -33,6 +33,7 @@ in {
       ripgrep
       git-trim
       just
+      mdslw
     ];
     extraGroups = ["podman"];
   };
