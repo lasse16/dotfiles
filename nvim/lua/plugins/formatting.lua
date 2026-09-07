@@ -29,7 +29,7 @@ return {
                 yaml = { "yamlfmt", "injected" },
                 bash = { "shfmt" },
                 css = { "stylelint" },
-                markdown = { "rumdl", "injected" },
+                markdown = { "rumdl", "mdslw", "injected" },
             },
             default_format_opts = {
                 lsp_format = "fallback",
