@@ -13,6 +13,7 @@ depends = ["environment"]
 [himalaya]
 [khard]
 [nixos]
+[markdown]
 [nvim]
 [opencode]
 [tmux]
@@ -71,6 +72,9 @@ depends = ["bash"]
 
 [khard.files]
 "khard/khard.conf" = { target = "~/.config/khard/khard.conf", type = "symbolic" }
+
+[markdown.files]
+"formatters/markdown/.mdslw.toml" = { target = "~/.mdslw.toml", type = "symbolic" }
 
 [nixos.files]
 "nixos/configuration.nix" = { target = "/etc/nixos/configuration.nix", type = "symbolic" }
