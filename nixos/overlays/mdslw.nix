@@ -1,8 +1,10 @@
 {
   lib,
+  stdenv,
   rustPlatform,
   fetchFromGitHub,
   fetchurl,
+  installShellFiles,
   nix-update-script,
 }: let
   # build.rs downloads CLDR suppressions at compile time; pre-fetch them instead
@@ -29,6 +31,16 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   cargoHash = "sha256-emaBv9b9WjFKbyN5V0A5N8NHea8YMBvj256gv9P116E=";
+
+  nativeBuildInputs = [ installShellFiles ];
+
+  # Generate shell completions with the built binary (clap_complete)
+  postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
+    installShellCompletion --cmd mdslw \
+      --bash <($out/bin/mdslw --completion bash) \
+      --fish <($out/bin/mdslw --completion fish) \
+      --zsh <($out/bin/mdslw --completion zsh)
+  '';
 
   # build.rs downloads CLDR suppressions per language over HTTP; read the
   # pre-fetched files from disk instead (the Nix sandbox blocks networking)
