@@ -31,6 +31,13 @@ return {
                 css = { "stylelint" },
                 markdown = { "rumdl", "mdslw", "injected" },
             },
+            formatters = {
+                mdslw = {
+                    -- Anchor config discovery at the real file path;
+                    -- otherwise mdslw searches upward from nvim's cwd in stdin mode
+                    args = { "--stdin-filepath", "$FILENAME" },
+                },
+            },
             default_format_opts = {
                 lsp_format = "fallback",
             },
