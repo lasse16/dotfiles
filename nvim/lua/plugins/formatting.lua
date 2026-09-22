@@ -27,6 +27,7 @@ return {
             formatters_by_ft = {
                 lua = { "stylua" },
                 yaml = { "yamlfmt", "injected" },
+                json = { "jq" },
                 bash = { "shfmt" },
                 css = { "stylelint" },
                 markdown = { "rumdl", "mdslw", "injected" },
