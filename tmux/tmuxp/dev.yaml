@@ -1,0 +1,10 @@
+session_name: dev-${PWD}
+start_directory: ${PWD}
+windows:
+  - window_name: copilot
+    panes:
+      - shell: copilot
+  - panes:
+      - shell_command:
+          - cmd: nix dev
+            enter: false
