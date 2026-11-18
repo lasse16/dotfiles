@@ -45,7 +45,7 @@ depends = ["bash"]
 "environment.dotfile_folder" = "$DOTFILES"
 
 [fzf.files]
-"fzf/git/git-forgit-completions.bash" = { target  = "~/.local/share/bash-completion/completions/git-forgit", type = "symbolic" }
+"fzf/git/git-forgit-completions.bash" = { target = "~/.local/share/bash-completion/completions/git-forgit", type = "symbolic" }
 
 [git.files]
 "git/.gitconfig.tmpl" = { target = "~/.gitconfig", type = "template" }
@@ -97,6 +97,7 @@ depends = ["bash"]
 
 [tmux.files]
 "tmux/.tmux.conf" = "~/.tmux.conf"
+"tmux/tmuxp" = { target = "~/.config/tmuxp/", type = "symbolic" }
 
 [ssh.files]
 "bash/helpers/ssh_agent.sh.tmpl" = "bash/helpers/ssh_agent.sh"

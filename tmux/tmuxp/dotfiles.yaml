@@ -1,0 +1,6 @@
+session_name: dotfiles
+start_directory: "~/dotfiles"
+windows:
+  - window_name: dotfiles
+    panes:
+      - "blank"
